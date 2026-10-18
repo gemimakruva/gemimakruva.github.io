@@ -196,7 +196,7 @@ tr:nth-child(even) td { background: var(--surface-up); }
 <div class="day-panel active" id="day-1">
   <div class="subject-picker" id="picker-1">
     <div class="subject-card" data-subject="apts"><div class="sc-name">APTS</div><div class="sc-full">Asas dan Penerapan Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>7 sesi</span><span>3 arsip soal</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">PTS</div><div class="sc-full">Pengantar Teknik Sistem</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Supranto &amp; Prof. Dr.-Ing. Ir. Agus Maryono</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
+    <div class="subject-card" data-subject="pts"><div class="sc-name">PTS</div><div class="sc-full">Pengantar Teknik Sistem</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Supranto &amp; Prof. Dr.-Ing. Ir. Agus Maryono</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
 
   <!-- ====================== APTS ====================== -->
@@ -1959,6 +1959,640 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
       </div></div>
 
     </div>
+  </div>
+
+  <!-- ====================== PTS ====================== -->
+  <div class="subject-view" id="sv-pts">
+    <button class="back-btn" data-back="1">&larr; Kembali ke Hari 1</button>
+    <div class="exam-banner"><strong>UTS PTS:</strong> Senin, 19 Okt 2026 &bull; 13:00&ndash;15:00 WIB &bull; Closed Book (Buku Tertutup)<br><strong>Dosen:</strong> Ir. Supranto (supranto@ugm.ac.id) &amp; Prof. Dr.-Ing. Ir. Agus Maryono<br><strong>Format:</strong> 16 soal teori (&times;5 poin = 80) + 2 soal praktek wawasan sistemik (&times;10 poin = 20) = 100 poin, 60 menit</div>
+    <div class="content-tabs" data-tabgroup="pts">
+      <button class="ctab-btn active" data-ctab="pts-rangkuman">Rangkuman</button>
+      <button class="ctab-btn" data-ctab="pts-materi">Materi</button>
+      <button class="ctab-btn" data-ctab="pts-cheatsheet">Cheatsheet</button>
+      <button class="ctab-btn" data-ctab="pts-prediksi">Prediksi Soal</button>
+      <button class="ctab-btn" data-ctab="pts-latihan">Latihan Soal</button>
+    </div>
+
+    <!-- PTS RANGKUMAN -->
+    <div class="ctab-panel active" id="pts-rangkuman">
+      <div class="toc"><a href="#pts-r1">Rekayasa Sistem</a><a href="#pts-r2">Wawasan Sistemik</a><a href="#pts-r3">PSOME</a><a href="#pts-r4">4 Aspek Indikator</a><a href="#pts-r5">Kehandalan &amp; Resiko</a><a href="#pts-r6">Optimasi &amp; Tools</a></div>
+
+      <div class="card" id="pts-r1"><div class="card-header"><span class="badge">Topik 1</span> Rekayasa Sistem</div>
+        <h4>Definisi Rekayasa</h4>
+        <ul>
+          <li><strong>REKAYASA</strong> = MERANCANG, MEMBANGUN, MENGOPERASIKAN, MENGANALISIS, MENGOPTIMALKAN KINERJA, MENGEVALUASI, MENGEMBANGKAN</li>
+          <li>Teknik = Engineering. Teknik Sistem = Rekayasa Sistem = Systems Engineering</li>
+          <li>Ada 9 bidang teknik di FT UGM, masing-masing punya versi rekayasa-nya</li>
+        </ul>
+        <h4>Cakupan MeTSi (Magister Teknik Sistem)</h4>
+        <ul>
+          <li><strong>Belum ada sistem &rarr; ada:</strong> Rancang &ndash; Bangun &ndash; Operasi &ndash; Monitoring &ndash; Evaluasi &ndash; Optimasi</li>
+          <li><strong>Sudah ada sistem &rarr; lebih baik:</strong> Teliti &ndash; Identifikasi &ndash; Analisis &ndash; Operasi &ndash; Monitoring &ndash; Evaluasi &ndash; Optimasi</li>
+          <li><strong>Sudah ada sistem &rarr; buat baru yang lebih baik</strong></li>
+        </ul>
+        <h4>Character Building</h4>
+        <ul>
+          <li>Membentuk SDM yang <strong>faham bekerja dalam sistem</strong>, berwawasan sistemik</li>
+          <li>Memiliki pola pikir <strong>holistik, organismik, sintetik</strong></li>
+          <li>Mampu berperan sebagai <strong>elemen sistem</strong> maupun <strong>pengelola sistem</strong></li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-r2"><div class="card-header"><span class="badge">Topik 2&ndash;3</span> Wawasan Sistemik: Holistik, Organismik, Sintetik</div>
+        <div class="key"><strong>Tiga Pilar Wawasan Sistemik:</strong><br>
+          1. <strong>HOLISTIK</strong> &mdash; menyeluruh tiada yang terlewat<br>
+          2. <strong>ORGANISMIK</strong> &mdash; koordinasi program, sumber daya dan komponen sistem<br>
+          3. <strong>SINTETIK</strong> &mdash; optimalkan kinerja sistem untuk target tertentu</div>
+        <h4>Holistik (Topik 2)</h4>
+        <ul>
+          <li>Melihat sistem secara menyeluruh &mdash; tidak ada komponen yang terlewat</li>
+          <li>Contoh: sistem tubuh manusia &rarr; semua subsistem (rangka, otot, darah, pencernaan, pernapasan, saraf) harus teridentifikasi</li>
+          <li>Contoh: Indonesia sebagai sistem &rarr; 34 provinsi (menyeluruh, tiada yang terlewat)</li>
+        </ul>
+        <h4>Organismik (Topik 3)</h4>
+        <ul>
+          <li>Interkoneksi dan koordinasi antar komponen/anggota sistem</li>
+          <li>Setiap elemen harus terkoordinasi untuk mencapai tujuan bersama</li>
+          <li>Contoh: tubuh manusia &rarr; koordinasi antara saraf, otot, rangka untuk bergerak</li>
+          <li>Contoh: MeTSi &rarr; koordinasi mahasiswa, dosen, pamong, karyawan, kurikulum, fasilitas</li>
+        </ul>
+        <h4>Sintetik</h4>
+        <ul>
+          <li>Optimalkan kinerja melalui koordinasi antar komponen untuk target tertentu</li>
+          <li>Bukan hanya satu elemen yang baik, tapi <strong>keseluruhan sistem</strong> yang optimal</li>
+        </ul>
+        <h4>Learning Framework</h4>
+        <ul>
+          <li>Learning to Know, Learning to Do, Learning to Be</li>
+          <li>Learning to Live Together: Know Together, Do Together, Be Together, Work Together</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-r3"><div class="card-header"><span class="badge">Topik 4, 9&ndash;11</span> PSOME &amp; Continuous Improvement</div>
+        <h4>Continuous Improvement (Topik 4)</h4>
+        <ul>
+          <li>Sistem dibentuk &rarr; PSOME dijalankan terus menerus &rarr; kinerja meningkat berkelanjutan</li>
+          <li>Setiap siklus PSOME menghasilkan perbaikan untuk siklus berikutnya</li>
+        </ul>
+        <h4>Siklus PSOME</h4>
+        <div class="key"><strong>P</strong>lanning &rarr; <strong>S</strong>taffing &rarr; <strong>O</strong>perating &amp; <strong>M</strong>onitoring &rarr; <strong>E</strong>valuating &rarr; <strong>P</strong>lanning tahap berikutnya</div>
+        <h4>Planning (Topik 9)</h4>
+        <ul>
+          <li>Menetapkan <strong>tujuan sistem</strong>, sasaran, dan strategi pencapaian</li>
+          <li>Identifikasi komponen sistem, interkoneksi, dan resource yang dibutuhkan</li>
+          <li>Membuat program kerja, timeline, dan indikator keberhasilan</li>
+          <li>Mempertimbangkan 4 aspek norma (teknik, ekonomi, lingkungan FKBN, sosial budaya)</li>
+        </ul>
+        <h4>Staffing (Topik 9)</h4>
+        <ul>
+          <li>Penempatan SDM yang tepat sesuai peran dan kompetensi</li>
+          <li>Setiap elemen sistem harus memiliki penanggung jawab</li>
+          <li>Kualitas dan kuantitas SDM sesuai kebutuhan sistem</li>
+        </ul>
+        <h4>Operating &amp; Organizing (Topik 10)</h4>
+        <ul>
+          <li><strong>Operating:</strong> menjalankan sistem sesuai rencana dan prosedur</li>
+          <li><strong>Organizing:</strong> mengatur koordinasi antar komponen, alokasi sumber daya</li>
+          <li>Menerapkan wawasan organismik: koordinasi optimal antar subsistem</li>
+        </ul>
+        <h4>Monitoring &amp; Evaluation (Topik 11)</h4>
+        <ul>
+          <li><strong>Monitoring:</strong> pengawasan kinerja sistem secara real-time/berkala menggunakan indikator</li>
+          <li><strong>Evaluation:</strong> penilaian menyeluruh terhadap kinerja sistem berdasarkan 4 aspek norma</li>
+          <li>Hasil evaluasi menjadi input untuk planning tahap berikutnya (continuous improvement)</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-r4"><div class="card-header"><span class="badge">Topik 5&ndash;6</span> 4 Aspek Indikator Unjuk Kerja Sistem</div>
+        <h4>Aspek Teknik &amp; Ekonomi (Topik 5)</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek Teknik</th><th>Aspek Ekonomi</th></tr>
+          <tr><td>Efisiensi Materi</td><td>Payback Period</td></tr>
+          <tr><td>Efisiensi Energi</td><td>Break Even Point (BEP)</td></tr>
+          <tr><td>Kapasitas Sistem</td><td>Total Investasi</td></tr>
+          <tr><td>Kualitas Hasil</td><td>Harga per Kapita</td></tr>
+          <tr><td>Kemudahan Operasional</td><td>Return on Investment (ROI)</td></tr>
+          <tr><td>Compatibility</td><td>Net Present Value (NPV)</td></tr>
+          <tr><td>Keandalan dan Resiko</td><td>dll.</td></tr>
+        </table></div>
+        <h4>Aspek Lingkungan Fisik &amp; Budaya (Topik 6)</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek Lingkungan FKBN</th><th>Aspek Lingkungan Sosial Budaya</th></tr>
+          <tr><td>Dampak Fisika</td><td>Safety (Keselamatan)</td></tr>
+          <tr><td>Dampak Kimia</td><td>Kenyamanan</td></tr>
+          <tr><td>Dampak Biologi</td><td>Kreatifitas</td></tr>
+          <tr><td>Dampak Nuklir/Radioaktivitas</td><td>Agresifitas</td></tr>
+          <tr><td>Dampak Kesehatan Manusia</td><td>Agility (Kelincahan)</td></tr>
+          <tr><td>dll.</td><td>Productivity (Produktivitas)</td></tr>
+        </table></div>
+        <h4>Performance Index</h4>
+        <ul>
+          <li>Nilai gabungan dari 4 aspek &rarr; menentukan baik/buruknya sistem</li>
+          <li>Tantangan: satuan berbeda antar aspek, perlu metode penggabungan (kualitatif &amp; kuantitatif)</li>
+          <li>Memungkinkan perbandingan antar sistem</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-r5"><div class="card-header"><span class="badge">Topik 7&ndash;8</span> Kehandalan, Resiko, ROI &amp; Payback Period</div>
+        <h4>Kehandalan dan Resiko (Topik 7)</h4>
+        <ul>
+          <li><strong>Kehandalan (Reliability):</strong> probabilitas sistem beroperasi tanpa kegagalan selama periode tertentu dalam kondisi operasi tertentu</li>
+          <li><strong>Resiko (Risk):</strong> kemungkinan terjadinya kegagalan dan dampaknya terhadap sistem</li>
+          <li>Kehandalan tinggi = resiko rendah. Trade-off: meningkatkan kehandalan memerlukan investasi lebih besar</li>
+          <li>Termasuk dalam aspek teknik dari 4 aspek indikator</li>
+        </ul>
+        <h4>Return on Investment / ROI (Topik 8)</h4>
+        <div class="formula">ROI = (Keuntungan Bersih / Total Investasi) &times; 100%</div>
+        <ul>
+          <li>Mengukur efisiensi investasi: berapa persen pengembalian dari modal yang ditanamkan</li>
+          <li>ROI tinggi = investasi efisien, ROI rendah = perlu evaluasi</li>
+        </ul>
+        <h4>Payback Period (Topik 8)</h4>
+        <div class="formula">Payback Period = Total Investasi / Keuntungan per Periode</div>
+        <ul>
+          <li>Waktu yang dibutuhkan untuk mengembalikan modal investasi</li>
+          <li>Semakin pendek payback period, semakin baik dari aspek ekonomi</li>
+          <li>Termasuk dalam aspek ekonomi dari 4 aspek indikator</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-r6"><div class="card-header"><span class="badge">Topik 12&ndash;16</span> Optimasi, Pemodelan, Big Data</div>
+        <h4>Optimasi (Topik 12)</h4>
+        <ul>
+          <li>Mengoptimalkan kinerja sistem, subsistem, dan subsubsistem</li>
+          <li>Inti dari wawasan sintetik: mencapai target tertentu dengan sumber daya yang ada</li>
+          <li>Metode: trial &amp; error, metode numerik, linear programming, heuristik</li>
+        </ul>
+        <h4>Pemodelan dan Simulasi (Topik 13)</h4>
+        <ul>
+          <li><strong>Pemodelan:</strong> representasi sistem dalam bentuk matematis, fisik, atau komputer</li>
+          <li><strong>Simulasi:</strong> menjalankan model untuk memprediksi perilaku sistem</li>
+          <li>Tujuan: memahami perilaku sistem tanpa harus menguji sistem asli (mengurangi biaya &amp; resiko)</li>
+        </ul>
+        <h4>Analisis Multivariat (Topik 14)</h4>
+        <ul>
+          <li>Analisis dengan banyak variabel secara bersamaan</li>
+          <li>Relevan karena performance index = gabungan 4 aspek dengan satuan berbeda</li>
+          <li>Metode: regresi multivariat, PCA (Principal Component Analysis), clustering</li>
+        </ul>
+        <h4>Decision Making Support System / DMSS (Topik 15)</h4>
+        <ul>
+          <li>Sistem yang mendukung pengambilan keputusan berdasarkan data dan analisis</li>
+          <li>Membantu pengelola sistem memilih alternatif terbaik</li>
+          <li>Metode: AHP (Analytic Hierarchy Process), scoring system, weighted criteria</li>
+        </ul>
+        <h4>Big Data (Topik 16)</h4>
+        <ul>
+          <li>Penggunaan data dalam jumlah besar untuk mendukung pengambilan keputusan dalam sistem</li>
+          <li>5V: Volume, Velocity, Variety, Veracity, Value</li>
+          <li>Aplikasi: monitoring real-time, predictive analytics, pattern recognition dalam sistem</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PTS MATERI -->
+    <div class="ctab-panel" id="pts-materi">
+      <div class="toc"><a href="#pts-m1">Rekayasa Sistem</a><a href="#pts-m2">Holistik</a><a href="#pts-m3">Organismik</a><a href="#pts-m4">Continuous Improvement</a><a href="#pts-m5">Aspek Teknik &amp; Ekonomi</a><a href="#pts-m6">Aspek Lingkungan</a><a href="#pts-m7">Kehandalan &amp; Resiko</a><a href="#pts-m8">ROI &amp; Payback Period</a><a href="#pts-m9">PSOME Detail</a><a href="#pts-m10">Optimasi &ndash; Big Data</a></div>
+
+      <div class="card" id="pts-m1"><div class="card-header"><span class="badge">1</span> Rekayasa Sistem</div>
+        <p><strong>Definisi Rekayasa</strong> (dari slide Ir. Supranto):</p>
+        <div class="key">REKAYASA = MERANCANG, MEMBANGUN, MENGOPERASIKAN, MENGANALISIS, MENGOPTIMALKAN KINERJA, MENGEVALUASI, MENGEMBANGKAN</div>
+        <p>Kata kunci: 7 kata kerja ini harus dihafal. Setiap ujian selalu meminta definisi rekayasa.</p>
+        <h4>Konteks MeTSi</h4>
+        <ul>
+          <li>Ada 9 prodi teknik di FT UGM, masing-masing punya versi &ldquo;rekayasa&rdquo;-nya</li>
+          <li>Teknik Sistem = Rekayasa Sistem &rarr; mengelola sistem secara holistik, organismik, sintetik</li>
+          <li>MeTSi bukan hanya soal hardware, tapi juga software, SDM, organisasi, prosedur</li>
+        </ul>
+        <h4>3 Skenario Rekayasa Sistem</h4>
+        <ol>
+          <li><strong>Belum ada &rarr; ada:</strong> Rancang &ndash; Bangun &ndash; Operasi &ndash; Monitoring &ndash; Evaluasi &ndash; Optimasi</li>
+          <li><strong>Sudah ada &rarr; lebih baik:</strong> Teliti &ndash; Identifikasi &ndash; Analisis &ndash; Operasi &ndash; Monitoring &ndash; Evaluasi &ndash; Optimasi (modifikasi software/hardware)</li>
+          <li><strong>Sudah ada &rarr; buat baru yang lebih baik</strong></li>
+        </ol>
+      </div>
+
+      <div class="card" id="pts-m2"><div class="card-header"><span class="badge">2</span> Holistik</div>
+        <div class="key"><strong>HOLISTIK</strong> = menyeluruh tiada yang terlewat</div>
+        <p>Prinsip pertama dari wawasan sistemik. Melihat sistem secara utuh, semua elemen teridentifikasi.</p>
+        <h4>Contoh Penerapan</h4>
+        <ul>
+          <li><strong>Tubuh manusia:</strong> subsistem rangka, otot, darah, pencernaan, pernapasan, saraf &mdash; semua harus teridentifikasi, tidak boleh ada yang terlewat</li>
+          <li><strong>Indonesia:</strong> 34 provinsi, masing-masing dengan subsistem pertanian, peternakan, industri, kesehatan, pendidikan, transportasi, komunikasi, sosial &mdash; holistik = menyeluruh</li>
+          <li><strong>Sistem keluarga:</strong> ayah, ibu, anak, kakek, nenek, saudara, menantu, cucu &mdash; semuanya teridentifikasi</li>
+          <li><strong>MeTSi:</strong> mahasiswa, dosen, pamong, karyawan, kurikulum, fasilitas, visi, misi, lulusan</li>
+          <li><strong>Sistem energi:</strong> listrik, mekanik, potensial, panas, kimia, nuklir &mdash; semua bentuk energi teridentifikasi</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m3"><div class="card-header"><span class="badge">3</span> Organismik</div>
+        <div class="key"><strong>ORGANISMIK</strong> = koordinasi program, sumber daya dan komponen sistem</div>
+        <p>Prinsip kedua dari wawasan sistemik. Fokus pada <strong>interkoneksi dan koordinasi</strong> antar komponen.</p>
+        <h4>Contoh Penerapan</h4>
+        <ul>
+          <li><strong>Tubuh manusia:</strong> saraf mengoordinasi otot, otot menggerakkan rangka, darah membawa nutrisi dari pencernaan &mdash; interkoneksi kompleks</li>
+          <li><strong>MeTSi:</strong> dosen mengajar sesuai kurikulum, mahasiswa belajar dengan fasilitas, karyawan mendukung operasional &mdash; semua terkoordinasi</li>
+          <li><strong>Sleman (subsistem DIY):</strong> pertanian, peternakan, industri tekstil, kesehatan, pendidikan, transportasi &mdash; semua saling terhubung</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m4"><div class="card-header"><span class="badge">4</span> Continuous Improvement</div>
+        <div class="key"><strong>Continuous Improvement</strong> = PSOME yang dijalankan terus menerus berkelanjutan</div>
+        <ul>
+          <li>Sintetik = prinsip ketiga wawasan sistemik: optimalkan kinerja untuk target tertentu</li>
+          <li>Continuous improvement = penerapan sintetik melalui siklus PSOME berulang</li>
+          <li>Setiap siklus: Planning &rarr; Staffing &rarr; Operating &amp; Monitoring &rarr; Evaluating &rarr; Planning berikutnya</li>
+          <li>Hasil evaluasi siklus ke-n menjadi input planning siklus ke-(n+1)</li>
+          <li>Tujuan: sistem terus berkembang dan meningkat kinerjanya</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m5"><div class="card-header"><span class="badge">5</span> Indikator Aspek Teknik &amp; Ekonomi</div>
+        <h4>Aspek Teknik</h4>
+        <ul>
+          <li><strong>Efisiensi Materi:</strong> seberapa efisien penggunaan bahan baku/material dalam sistem</li>
+          <li><strong>Efisiensi Energi:</strong> rasio output energi terhadap input energi</li>
+          <li><strong>Kapasitas Sistem:</strong> kemampuan maksimal sistem dalam menghasilkan output</li>
+          <li><strong>Kualitas Hasil:</strong> mutu produk/output yang dihasilkan sistem</li>
+          <li><strong>Kemudahan Operasional:</strong> tingkat kesulitan dalam mengoperasikan sistem</li>
+          <li><strong>Compatibility:</strong> kemampuan sistem berinteraksi dengan sistem lain</li>
+          <li><strong>Keandalan dan Resiko:</strong> probabilitas beroperasi tanpa kegagalan vs. kemungkinan gagal</li>
+        </ul>
+        <h4>Aspek Ekonomi</h4>
+        <ul>
+          <li><strong>Payback Period:</strong> waktu pengembalian investasi</li>
+          <li><strong>Break Even Point (BEP):</strong> titik impas di mana pendapatan = biaya total</li>
+          <li><strong>Total Investasi:</strong> jumlah total modal yang dibutuhkan</li>
+          <li><strong>Harga per Kapita:</strong> biaya per unit output atau per orang</li>
+          <li><strong>ROI (Return on Investment):</strong> persentase pengembalian atas investasi</li>
+          <li><strong>NPV (Net Present Value):</strong> nilai sekarang dari arus kas masa depan dikurangi investasi awal</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m6"><div class="card-header"><span class="badge">6</span> Indikator Aspek Lingkungan FKBN &amp; Sosial Budaya</div>
+        <h4>Aspek Lingkungan FKBN</h4>
+        <p><strong>FKBN</strong> = Fisika, Kimia, Biologi, Nuklir</p>
+        <ul>
+          <li><strong>Dampak Fisika:</strong> kebisingan, getaran, radiasi elektromagnetik, perubahan suhu, tekanan</li>
+          <li><strong>Dampak Kimia:</strong> emisi gas, limbah cair, kontaminasi tanah, polusi udara</li>
+          <li><strong>Dampak Biologi:</strong> gangguan ekosistem, deforestasi, hilangnya biodiversitas</li>
+          <li><strong>Dampak Nuklir/Radioaktivitas:</strong> kontaminasi radioaktif, paparan radiasi, limbah nuklir</li>
+          <li><strong>Dampak Kesehatan Manusia:</strong> efek jangka pendek dan panjang terhadap kesehatan</li>
+        </ul>
+        <h4>Aspek Lingkungan Sosial Budaya</h4>
+        <ul>
+          <li><strong>Safety (Keselamatan):</strong> tingkat keselamatan kerja dan pengguna sistem</li>
+          <li><strong>Kenyamanan:</strong> tingkat kenyamanan dalam menggunakan/berada di sekitar sistem</li>
+          <li><strong>Kreatifitas:</strong> apakah sistem mendorong atau menghambat kreativitas</li>
+          <li><strong>Agresifitas:</strong> dampak terhadap perilaku agresif masyarakat</li>
+          <li><strong>Agility (Kelincahan):</strong> kemampuan adaptasi sistem dan masyarakat terhadap perubahan</li>
+          <li><strong>Productivity (Produktivitas):</strong> dampak terhadap produktivitas masyarakat/pekerja</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m7"><div class="card-header"><span class="badge">7</span> Kehandalan dan Resiko</div>
+        <h4>Kehandalan (Reliability)</h4>
+        <ul>
+          <li>Probabilitas sistem beroperasi tanpa kegagalan selama waktu tertentu, dalam kondisi operasi yang ditentukan</li>
+          <li>Diukur dengan: MTBF (Mean Time Between Failures), MTTF (Mean Time To Failure)</li>
+          <li>Faktor yang mempengaruhi: desain, material, lingkungan operasi, pemeliharaan</li>
+        </ul>
+        <h4>Resiko</h4>
+        <ul>
+          <li>Resiko = Probabilitas Kegagalan &times; Konsekuensi Kegagalan</li>
+          <li>Manajemen resiko: identifikasi &rarr; analisis &rarr; mitigasi &rarr; monitoring</li>
+          <li>Trade-off: biaya meningkatkan kehandalan vs. kerugian akibat kegagalan</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m8"><div class="card-header"><span class="badge">8</span> ROI dan Payback Period</div>
+        <h4>Return on Investment (ROI)</h4>
+        <div class="formula">ROI = (Keuntungan Bersih / Total Investasi) &times; 100%</div>
+        <ul>
+          <li>Mengukur efisiensi investasi dalam bentuk persentase</li>
+          <li>ROI &gt; 0% berarti investasi menguntungkan</li>
+          <li>Digunakan untuk membandingkan kelayakan ekonomi beberapa alternatif sistem</li>
+        </ul>
+        <h4>Payback Period</h4>
+        <div class="formula">Payback Period = Total Investasi / Keuntungan Bersih per Periode</div>
+        <ul>
+          <li>Waktu yang dibutuhkan agar kumulatif keuntungan = total investasi</li>
+          <li>Semakin pendek &rarr; semakin baik (modal lebih cepat kembali)</li>
+          <li>Kelemahan: tidak memperhitungkan time value of money (berbeda dengan NPV)</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m9"><div class="card-header"><span class="badge">9&ndash;11</span> PSOME: Planning, Staffing, Operating, Monitoring, Evaluating</div>
+        <h4>Planning (Perencanaan)</h4>
+        <ul>
+          <li>Menetapkan tujuan sistem dan target yang ingin dicapai</li>
+          <li>12 pertanyaan kunci pembentukan sistem:
+            <ol>
+              <li>Apa target/tujuan sistem?</li>
+              <li>Apa komponen sistem?</li>
+              <li>Bagaimana koordinasi/interkoneksi antar komponen?</li>
+              <li>Bagaimana mengorganisir sistem?</li>
+              <li>Apa program kerja untuk mencapai target?</li>
+              <li>Bagaimana optimalisasi kinerja sistem?</li>
+              <li>Bagaimana optimalisasi kinerja subsistem?</li>
+              <li>Bagaimana optimalisasi kinerja subsubsistem?</li>
+              <li>Apa indikator keberhasilan kinerja?</li>
+              <li>Aspek Teknik &amp; Aspek Ekonomi?</li>
+              <li>Aspek Lingkungan FKBN &amp; Sosial Budaya?</li>
+              <li>Interaksi sistem dengan lingkungannya?</li>
+            </ol>
+          </li>
+        </ul>
+        <h4>Staffing (Pengelolaan SDM)</h4>
+        <ul>
+          <li>Menempatkan orang yang tepat di posisi yang tepat</li>
+          <li>Memastikan setiap komponen sistem memiliki SDM yang kompeten</li>
+          <li>Pengembangan kapasitas SDM melalui pelatihan</li>
+        </ul>
+        <h4>Operating &amp; Organizing</h4>
+        <ul>
+          <li><strong>Operating:</strong> menjalankan sistem sesuai planning dan prosedur</li>
+          <li><strong>Organizing:</strong> mengatur koordinasi, alur kerja, dan alokasi sumber daya</li>
+          <li>Penerapan wawasan organismik secara praktikal</li>
+        </ul>
+        <h4>Monitoring</h4>
+        <ul>
+          <li>Pengawasan kinerja real-time menggunakan performance indicators</li>
+          <li>Deteksi dini penyimpangan dari target/rencana</li>
+          <li>Data monitoring menjadi bahan evaluasi</li>
+        </ul>
+        <h4>Evaluation</h4>
+        <ul>
+          <li>Penilaian kinerja berdasarkan 4 aspek norma</li>
+          <li>Analisis gap antara kinerja aktual vs. target</li>
+          <li>Rekomendasi perbaikan &rarr; input untuk planning berikutnya</li>
+        </ul>
+      </div>
+
+      <div class="card" id="pts-m10"><div class="card-header"><span class="badge">12&ndash;16</span> Optimasi, Pemodelan, Analisis Multivariat, DMSS, Big Data</div>
+        <h4>Optimasi (Topik 12)</h4>
+        <ul>
+          <li>Inti dari wawasan sintetik: mencari kondisi terbaik untuk mencapai target</li>
+          <li>Optimasi kinerja sistem, subsistem, dan subsubsistem</li>
+          <li>Metode: numerik, linear programming, heuristik, metaheuristik</li>
+          <li>Tujuan: efisiensi maksimal dengan sumber daya yang terbatas</li>
+        </ul>
+        <h4>Pemodelan dan Simulasi (Topik 13)</h4>
+        <ul>
+          <li><strong>Pemodelan:</strong> membuat representasi sistem (matematis, fisik, komputer)</li>
+          <li><strong>Simulasi:</strong> menjalankan model untuk memahami perilaku dan memprediksi kinerja</li>
+          <li>Keuntungan: biaya lebih rendah, lebih aman, bisa menguji skenario what-if</li>
+          <li>Contoh: simulasi dinamika fluida, simulasi Monte Carlo, simulasi agen</li>
+        </ul>
+        <h4>Analisis Multivariat (Topik 14)</h4>
+        <ul>
+          <li>Teknik statistik untuk menganalisis banyak variabel secara bersamaan</li>
+          <li>Relevan: performance index = gabungan 4 aspek &rarr; satuan berbeda, perlu normalisasi</li>
+          <li>Metode: regresi multivariat, PCA, clustering, analisis faktor, analisis diskriminan</li>
+          <li>Aplikasi: menentukan variabel mana yang paling berpengaruh terhadap kinerja sistem</li>
+        </ul>
+        <h4>Decision Making Support System / DMSS (Topik 15)</h4>
+        <ul>
+          <li>Sistem berbasis data dan model yang membantu pengambilan keputusan</li>
+          <li>Komponen: database, model base, user interface</li>
+          <li>Metode: AHP (Analytic Hierarchy Process), TOPSIS, SAW, ELECTRE</li>
+          <li>Aplikasi: pemilihan alternatif sistem terbaik berdasarkan multi-kriteria</li>
+        </ul>
+        <h4>Big Data (Topik 16)</h4>
+        <ul>
+          <li>Data bervolume besar yang memerlukan teknologi khusus untuk diproses</li>
+          <li><strong>5V:</strong> Volume (jumlah besar), Velocity (kecepatan masuk), Variety (ragam jenis), Veracity (kebenaran), Value (nilai guna)</li>
+          <li>Aplikasi dalam teknik sistem: monitoring real-time, predictive maintenance, optimasi berbasis data</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PTS CHEATSHEET -->
+    <div class="ctab-panel" id="pts-cheatsheet">
+      <h2>PTS Cheatsheet &mdash; Quick Reference</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Ringkasan singkat untuk review cepat sebelum ujian. 16 topik teori + 2 topik praktek.</p>
+
+      <div class="card"><div class="card-header">Definisi Wajib Hafal</div>
+        <div class="key"><strong>REKAYASA</strong> = MERANCANG, MEMBANGUN, MENGOPERASIKAN, MENGANALISIS, MENGOPTIMALKAN KINERJA, MENGEVALUASI, MENGEMBANGKAN (7 kata kerja)</div>
+        <div class="key" style="margin-top:.5rem"><strong>HOLISTIK</strong> = menyeluruh tiada yang terlewat<br>
+        <strong>ORGANISMIK</strong> = koordinasi program, sumber daya dan komponen sistem<br>
+        <strong>SINTETIK</strong> = optimalkan kinerja sistem untuk target tertentu</div>
+        <div class="key" style="margin-top:.5rem"><strong>PSOME</strong> = Planning &rarr; Staffing &rarr; Operating &amp; Monitoring &rarr; Evaluating &rarr; Planning berikutnya</div>
+      </div>
+
+      <div class="card"><div class="card-header">4 Aspek Indikator Unjuk Kerja</div>
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Contoh Indikator</th></tr>
+          <tr><td><strong>Teknik</strong></td><td>Efisiensi materi/energi, kapasitas, kualitas, kemudahan operasional, compatibility, keandalan</td></tr>
+          <tr><td><strong>Ekonomi</strong></td><td>Payback period, BEP, total investasi, harga/kapita, ROI, NPV</td></tr>
+          <tr><td><strong>Lingkungan FKBN</strong></td><td>Dampak fisika, kimia, biologi, nuklir, kesehatan manusia</td></tr>
+          <tr><td><strong>Sosial Budaya</strong></td><td>Safety, kenyamanan, kreatifitas, agresifitas, agility, productivity</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card"><div class="card-header">Rumus Ekonomi</div>
+        <div class="formula">ROI = (Keuntungan Bersih / Total Investasi) &times; 100%</div>
+        <div class="formula" style="margin-top:.3rem">Payback Period = Total Investasi / Keuntungan Bersih per Periode</div>
+        <div class="formula" style="margin-top:.3rem">BEP (unit) = Biaya Tetap / (Harga Jual &minus; Biaya Variabel per Unit)</div>
+        <div class="formula" style="margin-top:.3rem">NPV = &Sigma; [Cash Flow<sub>t</sub> / (1+r)<sup>t</sup>] &minus; Investasi Awal</div>
+      </div>
+
+      <div class="card"><div class="card-header">12 Pertanyaan Membentuk Sistem</div>
+        <ol style="font-size:.9rem;line-height:1.5">
+          <li>Target/tujuan sistem</li>
+          <li>Komponen sistem</li>
+          <li>Koordinasi/interkoneksi antar komponen</li>
+          <li>Cara mengorganisir sistem</li>
+          <li>Program kerja mencapai target</li>
+          <li>Optimalisasi kinerja sistem</li>
+          <li>Optimalisasi kinerja subsistem</li>
+          <li>Optimalisasi kinerja subsubsistem</li>
+          <li>Indikator keberhasilan kinerja</li>
+          <li>Aspek Teknik &amp; Ekonomi</li>
+          <li>Aspek Lingkungan FKBN &amp; Sosial Budaya</li>
+          <li>Interaksi sistem dengan lingkungannya</li>
+        </ol>
+      </div>
+
+      <div class="card"><div class="card-header">Topik 12&ndash;16: Kata Kunci</div>
+        <div class="tw"><table>
+          <tr><th>Topik</th><th>Kata Kunci</th></tr>
+          <tr><td><strong>12. Optimasi</strong></td><td>Sintetik, target tertentu, efisiensi maksimal, sumber daya terbatas</td></tr>
+          <tr><td><strong>13. Pemodelan &amp; Simulasi</strong></td><td>Representasi sistem, prediksi perilaku, what-if, biaya rendah</td></tr>
+          <tr><td><strong>14. Analisis Multivariat</strong></td><td>Banyak variabel, satuan berbeda, PCA, regresi, normalisasi</td></tr>
+          <tr><td><strong>15. DMSS</strong></td><td>Pengambilan keputusan, AHP, multi-kriteria, database + model</td></tr>
+          <tr><td><strong>16. Big Data</strong></td><td>5V (Volume, Velocity, Variety, Veracity, Value), predictive analytics</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- PTS PREDIKSI SOAL -->
+    <div class="ctab-panel" id="pts-prediksi">
+      <h2>Prediksi Soal UTS PTS</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Berdasarkan kisi-kisi UTS PTS Pra Kuliah (10 April 2026). Format: 16 teori (&times;5 poin) + 2 praktek (&times;10 poin) = 100 poin, 60 menit, buku tertutup.</p>
+
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="toggle-all" data-action="expand" data-target="pts-prediksi">Buka Semua</button>
+        <button class="toggle-all" data-action="collapse" data-target="pts-prediksi">Tutup Semua</button>
+      </div>
+
+      <h3>Bagian A &mdash; Teori (16 &times; 5 poin = 80 poin)</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">#1</span> <span class="arsip-label">5 poin</span> Jelaskan apa yang dimaksud dengan <strong>Rekayasa Sistem</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Rekayasa</strong> = MERANCANG, MEMBANGUN, MENGOPERASIKAN, MENGANALISIS, MENGOPTIMALKAN KINERJA, MENGEVALUASI, MENGEMBANGKAN.</p>
+        <p><strong>Rekayasa Sistem</strong> adalah penerapan 7 aktivitas rekayasa tersebut pada suatu <strong>sistem</strong> secara menyeluruh. Teknik Sistem (MeTSi) membekali lulusan dengan kemampuan:</p>
+        <ul>
+          <li>Membentuk sistem baru dari nol (belum ada &rarr; ada)</li>
+          <li>Memperbaiki sistem yang sudah ada (sudah ada &rarr; lebih baik) melalui identifikasi, analisis, dan optimasi</li>
+          <li>Membuat sistem baru yang lebih baik dari yang sudah ada</li>
+        </ul>
+        <p>Kunci: rekayasa sistem bukan hanya soal teknis/hardware, tapi mencakup software, SDM, organisasi, dan prosedur. Lulusan MeTSi harus berwawasan <strong>holistik, organismik, dan sintetik</strong>.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#2</span> <span class="arsip-label">5 poin</span> Jelaskan apa yang dimaksud dengan <strong>Holistik</strong> dalam wawasan sistemik.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Holistik = menyeluruh tiada yang terlewat.</strong></p>
+        <p>Holistik adalah pilar pertama wawasan sistemik. Prinsipnya: melihat dan mengidentifikasi sistem secara utuh dan menyeluruh, memastikan tidak ada komponen, subsistem, atau aspek yang terlewat.</p>
+        <p><strong>Contoh:</strong> tubuh manusia (semua subsistem teridentifikasi), Indonesia (34 provinsi), MeTSi (mahasiswa, dosen, pamong, kurikulum, fasilitas).</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#3</span> <span class="arsip-label">5 poin</span> Jelaskan apa yang dimaksud dengan <strong>Organismik</strong> dalam wawasan sistemik.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Organismik = koordinasi program, sumber daya dan komponen sistem.</strong></p>
+        <p>Pilar kedua wawasan sistemik. Fokus pada <strong>interkoneksi dan koordinasi</strong> antar komponen sistem, seperti organisme hidup di mana setiap organ terkoordinasi.</p>
+        <p><strong>Contoh:</strong> tubuh manusia (saraf-otot-rangka terkoordinasi), MeTSi (dosen-kurikulum-mahasiswa-fasilitas saling terhubung).</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#4</span> <span class="arsip-label">5 poin</span> Jelaskan apa yang dimaksud dengan <strong>Continuous Improvement</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Continuous Improvement</strong> = perbaikan berkelanjutan melalui siklus PSOME yang dijalankan terus menerus. Setiap siklus menghasilkan temuan evaluasi yang menjadi input untuk planning berikutnya, sehingga sistem berkembang dari &ldquo;berfungsi baik&rdquo; menjadi &ldquo;berfungsi lebih baik&rdquo; secara bertahap. Berkaitan erat dengan wawasan <strong>sintetik</strong>.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#5</span> <span class="arsip-label">5 poin</span> Jelaskan indikator unjuk kerja sistem: <strong>aspek teknik</strong> dan <strong>aspek ekonomi</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Aspek Teknik:</strong> efisiensi materi, efisiensi energi, kapasitas sistem, kualitas hasil, kemudahan operasional, compatibility, keandalan dan resiko.</p>
+        <p><strong>Aspek Ekonomi:</strong> payback period, BEP, total investasi, harga per kapita, ROI, NPV.</p>
+        <p>Keduanya merupakan 2 dari 4 aspek indikator yang digunakan untuk menilai unjuk kerja (performance) suatu sistem.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#6</span> <span class="arsip-label">5 poin</span> Jelaskan indikator unjuk kerja sistem: <strong>aspek lingkungan fisik</strong> dan <strong>aspek lingkungan budaya</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Aspek Lingkungan FKBN:</strong> dampak fisika (kebisingan, getaran), dampak kimia (emisi, limbah), dampak biologi (ekosistem), dampak nuklir/radioaktivitas, dampak kesehatan manusia.</p>
+        <p><strong>Aspek Lingkungan Sosial Budaya:</strong> safety, kenyamanan, kreatifitas, agresifitas, agility, productivity.</p>
+        <p>Gabungan 4 aspek (teknik, ekonomi, FKBN, sosial budaya) menghasilkan <strong>Performance Index</strong> yang menentukan kualitas sistem secara keseluruhan.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#7</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Kehandalan dan Resiko</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Kehandalan (Reliability)</strong> = probabilitas sistem beroperasi tanpa kegagalan selama periode tertentu. Diukur: MTBF, MTTF.</p>
+        <div class="formula">Resiko = Probabilitas Kegagalan &times; Konsekuensi Kegagalan</div>
+        <p>Kehandalan tinggi = resiko rendah. Trade-off: meningkatkan kehandalan memerlukan investasi lebih besar. Manajemen resiko: identifikasi &rarr; analisis &rarr; mitigasi &rarr; monitoring.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#8</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>ROI</strong> dan <strong>Payback Period</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="formula">ROI = (Keuntungan Bersih / Total Investasi) &times; 100%</div>
+        <div class="formula" style="margin-top:.3rem">Payback Period = Total Investasi / Keuntungan Bersih per Periode</div>
+        <p>ROI mengukur efisiensi investasi (ROI &gt; 0% = untung). Payback period mengukur waktu pengembalian modal (semakin pendek semakin baik). Keduanya termasuk indikator <strong>aspek ekonomi</strong>. Kelemahan payback period: tidak memperhitungkan time value of money.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#9</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Planning and Staffing</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Planning:</strong> tahap pertama PSOME. Menetapkan tujuan, identifikasi komponen dan interkoneksi, menyusun program kerja, menentukan performance indicators, dan standar 4 aspek norma. Menggunakan 12 pertanyaan kunci pembentukan sistem.</p>
+        <p><strong>Staffing:</strong> tahap kedua PSOME. Menempatkan SDM yang tepat pada posisi yang tepat, memastikan kompetensi sesuai kebutuhan, dan pengembangan kapasitas melalui pelatihan.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#10</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Operating and Organizing</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Operating:</strong> menjalankan sistem sesuai perencanaan dan prosedur. Implementasi program kerja, memastikan setiap komponen berfungsi.</p>
+        <p><strong>Organizing:</strong> mengatur koordinasi antar komponen, alokasi sumber daya, menetapkan alur kerja dan hierarki. Penerapan praktis dari wawasan <strong>organismik</strong>.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#11</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Monitoring and Evaluation</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Monitoring:</strong> pengawasan kinerja real-time/berkala menggunakan performance indicators, deteksi dini penyimpangan, pengumpulan data.</p>
+        <p><strong>Evaluation:</strong> penilaian menyeluruh berdasarkan 4 aspek norma, analisis gap (aktual vs. target), rekomendasi perbaikan. Hasil evaluasi menjadi <strong>input planning berikutnya</strong> (continuous improvement).</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#12</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Optimasi</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Optimasi</strong> = mencari kondisi terbaik untuk mencapai target tertentu dengan sumber daya terbatas. Inti dari wawasan <strong>sintetik</strong>. Dilakukan pada 3 level: sistem, subsistem, dan subsubsistem. Metode: numerik, linear/non-linear programming, heuristik, metaheuristik. Mempertimbangkan semua 4 aspek norma.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#13</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Pemodelan dan Simulasi</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Pemodelan:</strong> membuat representasi/tiruan sistem (matematis, fisik, komputer/digital twin). <strong>Simulasi:</strong> menjalankan model untuk memprediksi perilaku dan kinerja. Manfaat: biaya lebih rendah, lebih aman, what-if analysis, mencari konfigurasi optimal.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#14</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Analisis Multivariat</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Teknik statistik untuk menganalisis <strong>banyak variabel secara bersamaan</strong>. Relevan karena performance index = gabungan 4 aspek dengan satuan berbeda, perlu normalisasi dan pembobotan. Metode: regresi multivariat, PCA, clustering, analisis faktor. Aplikasi: menentukan variabel dominan dalam kinerja sistem.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#15</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Decision Making Support System (DMSS)</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Sistem berbasis data dan model yang membantu pengambilan keputusan secara terstruktur. Komponen: database, model base, user interface. Metode: AHP, TOPSIS, SAW, scoring system. Aplikasi: pemilihan alternatif sistem terbaik berdasarkan multi-kriteria.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#16</span> <span class="arsip-label">5 poin</span> Jelaskan tentang <strong>Big Data</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Data bervolume sangat besar yang memerlukan teknologi khusus. Karakteristik <strong>5V:</strong> Volume (jumlah besar), Velocity (kecepatan masuk), Variety (ragam jenis), Veracity (kebenaran), Value (nilai guna). Penerapan dalam teknik sistem: monitoring real-time, predictive maintenance, optimasi berbasis data, dashboard analytics.</p>
+      </div></div>
+
+      <h3>Bagian B &mdash; Praktek Wawasan Sistemik (2 &times; 10 poin = 20 poin)</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">#B1</span> <span class="arsip-label">10 poin</span> Jelaskan <strong>peran elemen sistem</strong> dan berikan contoh dari <strong>pengalaman pribadi</strong> Anda.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Elemen sistem</strong> = anggota/komponen yang menjalankan fungsi spesifik. Harus: sadar posisi, menjalankan fungsi, berkoordinasi (organismik), berkontribusi pada tujuan.</p>
+        <div class="key"><strong>Template jawaban:</strong> Identifikasi sistem &rarr; peran Anda sebagai elemen &rarr; tunjukkan holistik (komponen lain), organismik (koordinasi), sintetik (kontribusi ke target). Berikan contoh konkret, bukan abstrak.</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">#B2</span> <span class="arsip-label">10 poin</span> Jelaskan <strong>peran pengelola sistem</strong> dan berikan contoh dari <strong>pengalaman pribadi</strong> Anda.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Pengelola sistem</strong> = pihak yang merencanakan, mengorganisir, menjalankan, dan mengevaluasi sistem secara keseluruhan. Harus berwawasan holistik, menerapkan organismik, berorientasi sintetik, menjalankan PSOME.</p>
+        <div class="key"><strong>Template jawaban:</strong> Identifikasi sistem yang Anda kelola &rarr; tunjukkan Planning, Staffing, Operating &amp; Monitoring, Evaluating yang Anda lakukan &rarr; tunjukkan continuous improvement. Bedakan jelas dari peran elemen.</div>
+      </div></div>
+    </div>
+
+    <!-- PTS LATIHAN SOAL -->
+    <div class="ctab-panel" id="pts-latihan">
+      <h2>Latihan Soal PTS</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Latihan mandiri untuk persiapan UTS. Kerjakan tanpa melihat jawaban terlebih dahulu.</p>
+
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="toggle-all" data-action="expand" data-target="pts-latihan">Buka Semua</button>
+        <button class="toggle-all" data-action="collapse" data-target="pts-latihan">Tutup Semua</button>
+      </div>
+
+      <h3>Soal Pemahaman Konsep</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">L1</span> Sebutkan dan jelaskan <strong>3 pilar wawasan sistemik</strong> beserta contoh penerapannya pada sistem pendidikan MeTSi FT UGM.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <ol>
+          <li><strong>Holistik:</strong> Semua komponen MeTSi teridentifikasi &mdash; mahasiswa, dosen, pamong, karyawan, kurikulum, fasilitas, visi, misi.</li>
+          <li><strong>Organismik:</strong> Dosen mengajar sesuai kurikulum, mahasiswa belajar menggunakan fasilitas, karyawan mendukung administrasi &mdash; semuanya terkoordinasi.</li>
+          <li><strong>Sintetik:</strong> Target = lulusan berkualitas. Seluruh komponen dioptimalkan untuk mencapai target ini.</li>
+        </ol>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">L2</span> Jelaskan perbedaan antara <strong>elemen sistem</strong> dan <strong>pengelola sistem</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Elemen sistem:</strong> menjalankan fungsi spesifik, fokus pada peran optimal dan koordinasi. <strong>Pengelola sistem:</strong> merencanakan, mengorganisir, mengevaluasi keseluruhan, menjalankan PSOME. Lulusan MeTSi harus mampu berperan di kedua posisi.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">L3</span> Gambarkan siklus <strong>PSOME</strong> dan jelaskan hubungannya dengan <strong>continuous improvement</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="key">P &rarr; S &rarr; O&amp;M &rarr; E &rarr; P (berikutnya) &rarr; ...</div>
+        <p>PSOME berulang tanpa henti. Setiap siklus menghasilkan evaluasi yang menjadi input perbaikan untuk siklus berikutnya. Sistem terus berkembang = continuous improvement.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">L4</span> Jelaskan <strong>4 aspek indikator unjuk kerja</strong> sistem dan berikan masing-masing 3 contoh indikatornya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>3 Contoh Indikator</th></tr>
+          <tr><td><strong>Teknik</strong></td><td>Efisiensi energi, kapasitas sistem, keandalan</td></tr>
+          <tr><td><strong>Ekonomi</strong></td><td>ROI, payback period, BEP</td></tr>
+          <tr><td><strong>FKBN</strong></td><td>Dampak fisika, dampak kimia, dampak biologi</td></tr>
+          <tr><td><strong>Sosial Budaya</strong></td><td>Safety, kenyamanan, productivity</td></tr>
+        </table></div>
+      </div></div>
+
+      <h3>Soal Aplikasi</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">L5</span> Pilih satu sistem nyata. Analisis menggunakan <strong>framework holistik-organismik-sintetik</strong> dan identifikasi <strong>4 aspek indikator</strong>-nya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p><strong>Contoh: Sistem Transportasi MRT Jakarta</strong></p>
+        <p><strong>Holistik:</strong> kereta, stasiun, rel, sinyal CBTC, pusat kendali, ticketing AFC, SDM (masinis, petugas, teknisi).</p>
+        <p><strong>Organismik:</strong> sinyal mengkoordinasi kereta, pusat kendali memantau, ticketing terkoneksi semua stasiun.</p>
+        <p><strong>Sintetik:</strong> target angkut X juta/hari &rarr; optimalkan jadwal, kapasitas, rute.</p>
+        <p><strong>Aspek:</strong> Teknik (headway, on-time), Ekonomi (biaya/trip, ROI), FKBN (kebisingan, getaran), Sosial Budaya (safety, kenyamanan).</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">L6</span> Pabrik investasi Rp 10 miliar, keuntungan Rp 2,5 miliar/tahun. Hitung <strong>ROI</strong> dan <strong>Payback Period</strong>.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="formula">ROI = (2,5M / 10M) &times; 100% = 25%</div>
+        <div class="formula" style="margin-top:.3rem">Payback Period = 10M / 2,5M = 4 tahun</div>
+        <p>ROI 25% &gt; 0% = menguntungkan. Payback 4 tahun = dapat diterima. Catatan: ini hanya aspek ekonomi &mdash; keputusan menyeluruh harus pertimbangkan 4 aspek.</p>
+      </div></div>
+    </div>
+
   </div>
 
 </div>
