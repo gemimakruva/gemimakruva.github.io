@@ -989,224 +989,13 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
     <!-- APTS LATIHAN -->
     <div class="ctab-panel" id="apts-latihan">
       <h2>Arsip Soal UTS &amp; Model Jawaban</h2>
-      <p style="color:var(--fg-muted);font-size:.88rem">Dari arsip 2023, 2024, dan 2025. Klik &ldquo;Lihat Jawaban&rdquo; untuk model jawaban.</p>
+      <p style="color:var(--fg-muted);font-size:.88rem">Dikategorikan per kisi-kisi tahun. Soal teori (#3&ndash;8) muncul setiap tahun &mdash; jawaban lengkap ada di Kisi-kisi 2024.</p>
       <div><button class="toggle-all" data-action="expand" data-target="apts-latihan">Buka Semua Jawaban</button><button class="toggle-all" data-action="collapse" data-target="apts-latihan">Tutup Semua</button></div>
-      <h3>Soal Rutin (muncul setiap tahun)</h3>
-      <div class="soal"><div class="soal-q"><span class="num">1.</span> <span class="arsip-label">2023 #2 / 2024 #3-4 / 2025 #3</span> (a) Jelaskan perbedaan mendasar antara <strong>conceptual design, preliminary design</strong> dan <strong>detailed design and development.</strong> (b) Apa output dari masing-masing tahap design? (15+15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) Perbedaan Mendasar</h4>
-        <div class="tw"><table>
-          <tr><th>Aspek</th><th>Conceptual Design</th><th>Preliminary Design</th><th>Detail Design &amp; Dev</th></tr>
-          <tr><td><strong>Level</strong></td><td>Sistem (keseluruhan)</td><td>Sub-sistem</td><td>Komponen individual</td></tr>
-          <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;APA yang dibutuhkan?&rdquo;</td><td>&ldquo;BAGAIMANA kerjanya?&rdquo;</td><td>&ldquo;BAGAIMANA membuatnya?&rdquo;</td></tr>
-          <tr><td><strong>Fokus</strong></td><td>Need analysis, feasibility, konsep, operational requirements</td><td>Functional analysis, alokasi requirements ke subsistem, trade-off</td><td>Desain komponen, prototipe, pengujian, preparation for production</td></tr>
-          <tr><td><strong>Aktivitas</strong></td><td>Problem definition, studi kelayakan, maintenance concept, TPM, QFD</td><td>Functional decomposition, ICOM, subsystem specs, design reviews</td><td>Engineering drawings, prototipe, fab &amp; test, production planning</td></tr>
-          <tr><td><strong>Tim</strong></td><td>SE dominan, customer/stakeholder</td><td>SE + discipline engineers</td><td>Discipline engineers dominan, SE oversight</td></tr>
-          <tr><td><strong>Biaya perubahan</strong></td><td>Rendah (mudah berubah)</td><td>Sedang</td><td>Tinggi (sangat mahal berubah)</td></tr>
-        </table></div>
-        <h4>(b) Output Masing-masing Tahap</h4>
-        <div class="tw"><table>
-          <tr><th>Fase</th><th>Specification</th><th>Baseline</th><th>Review Gate</th><th>Output Lain</th></tr>
-          <tr><td><strong>Conceptual</strong></td><td>System Spec (Type A)</td><td>Functional Baseline</td><td>SDR (System Design Review)</td><td>Operational requirements, maintenance concept, TPM, feasibility study, FFBD level 0-1</td></tr>
-          <tr><td><strong>Preliminary</strong></td><td>Development Spec (Type B)</td><td>Allocation Baseline</td><td>PDR (Preliminary Design Review)</td><td>Functional analysis, allocated requirements, trade-off studies, subsystem specs</td></tr>
-          <tr><td><strong>Detail</strong></td><td>Product/Process/Material Spec (Type C/D/E)</td><td>Product Baseline</td><td>CDR (Critical Design Review) + EOCDR</td><td>Engineering drawings, prototipe, test results, production planning</td></tr>
-        </table></div>
-        <p><strong>Prinsip penting:</strong> semakin lanjut fase, semakin detail dan semakin mahal untuk mengubah. Keputusan di conceptual menentukan 70-80% total LCC.</p>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">2.</span> <span class="arsip-label">2023 #4 / 2024 #5 / 2025 #4</span> Jelaskan tahap-tahap dari <strong>test dan evaluasi</strong> sistem selama life cycle, berikan contoh pada masing-masing tahap. (10 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <div class="tw"><table>
-          <tr><th>Kategori</th><th>Fase LC</th><th>Pelaku</th><th>Metode</th><th>Contoh</th></tr>
-          <tr><td><strong>0. Analitis/Simulasi</strong></td><td>Conceptual</td><td>SE team</td><td>Model komputer, simulasi, analisis matematis</td><td>Simulasi CFD turbin, stress analysis FEA, Monte Carlo LCC</td></tr>
-          <tr><td><strong>1. Type 1</strong></td><td>Preliminary</td><td>Engineers + lab</td><td>Mock-up, bread-board, model skala, prototipe awal</td><td>Model skala jembatan di wind tunnel, breadboard elektronik</td></tr>
-          <tr><td><strong>2. Type 2</strong></td><td>Detail</td><td>Test engineers</td><td>Prototipe mendekati final, pengujian kinerja subsistem</td><td>Uji ketahanan mesin 1000 jam, environmental testing (suhu, getaran)</td></tr>
-          <tr><td><strong>3. Type 3</strong></td><td>Production</td><td>Operator + QC</td><td>Uji di lingkungan nyata, acceptance test, commissioning</td><td>Pesawat diuji terbang oleh test pilot, commissioning PLTU</td></tr>
-          <tr><td><strong>4. Type 4</strong></td><td>Operational</td><td>User/operator</td><td>Evaluasi berkelanjutan, monitoring, field data analysis</td><td>Monitoring performa MRT Jakarta, tracking MTBF lapangan</td></tr>
-        </table></div>
-        <div class="key"><strong>Validasi</strong> = "Are we building the RIGHT system?" (apakah sesuai kebutuhan?)<br><strong>Verifikasi</strong> = "Are we building the system RIGHT?" (apakah sesuai spesifikasi?)</div>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">3.</span> <span class="arsip-label">2023 #5 / 2024 #6 / 2025 #5</span> Apa tujuan dari perancangan <strong>maintainability system</strong>, apa elemen-elemennya? (10 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>Tujuan Maintainability</h4>
-        <ul>
-          <li>Minimasi system downtime (MDT) sehingga sistem lebih banyak beroperasi</li>
-          <li>Maksimasi operational availability (A<sub>o</sub>)</li>
-          <li>Reduksi biaya maintenance dalam Life Cycle Cost (O&amp;S cost = 60-80% LCC)</li>
-          <li>Memastikan sistem bisa diperbaiki dengan cepat, mudah, dan ekonomis</li>
-        </ul>
-        <h4>3 Level Maintenance</h4>
-        <div class="tw"><table>
-          <tr><th>Level</th><th>Lokasi</th><th>Aktivitas</th><th>Skill</th></tr>
-          <tr><td><strong>Organizational</strong></td><td>Lapangan (in-situ)</td><td>Inspeksi rutin, penggantian modular sederhana, cleaning</td><td>Dasar</td></tr>
-          <tr><td><strong>Intermediate</strong></td><td>Workshop/bengkel</td><td>Perbaikan moderat, kalibrasi, testing komponen</td><td>Menengah</td></tr>
-          <tr><td><strong>Depot</strong></td><td>Pabrik/depot/OEM</td><td>Overhaul besar, rebuild total, modifikasi mayor</td><td>Tinggi/spesialis</td></tr>
-        </table></div>
-        <h4>Elemen-elemen Design for Maintainability</h4>
-        <ul>
-          <li><strong>Accessibility:</strong> komponen mudah dijangkau (clearance, reach, visual access)</li>
-          <li><strong>Diagnostics &amp; Testability:</strong> built-in test (BIT), test points, fault indicators, error codes</li>
-          <li><strong>Modular Design:</strong> LRU/LRA (Line Replaceable Unit/Assembly), plug-and-play</li>
-          <li><strong>Standardization:</strong> fasteners standar, common tools, interchangeable parts</li>
-          <li><strong>Labeling &amp; Coding:</strong> identifikasi jelas pada setiap komponen dan koneksi</li>
-          <li><strong>Spare Parts &amp; Logistics:</strong> ketersediaan suku cadang, inventory management</li>
-          <li><strong>Training &amp; Documentation:</strong> manual, prosedur, program pelatihan</li>
-        </ul>
-        <h4>Parameter Kuantitatif</h4>
-        <div class="formula">Mct = Corrective maintenance time<br>Mpt = Preventive maintenance time<br>MDT = Mct + Mpt + logistic delay + admin delay<br><strong>A<sub>i</sub> = MTBF / (MTBF + Mct)</strong> &nbsp; <strong>A<sub>o</sub> = MTBM / (MTBM + MDT)</strong></div>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">4.</span> <span class="arsip-label">2023 #6 / 2024 #7 / 2025 #6</span> Jelaskan kaitan antara persyaratan <strong>human factor, reliability</strong> dan <strong>maintainability.</strong> Apa impact terhadap satu sama lain. Berikan contohnya. (10 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>Hubungan Tiga Arah</h4>
-        <div class="tw"><table>
-          <tr><th>Kaitan</th><th>Mekanisme</th><th>Contoh</th></tr>
-          <tr><td><strong>HF &rarr; Reliability</strong></td><td>HF baik &rarr; human error turun &rarr; failure rate (&lambda;) turun &rarr; R(t) naik</td><td>Cockpit ergonomis &rarr; pilot error turun &rarr; insiden berkurang</td></tr>
-          <tr><td><strong>HF &rarr; Maintainability</strong></td><td>Interface baik &rarr; akses mudah &rarr; perbaikan cepat &rarr; Mct turun &rarr; MDT turun</td><td>Panel inspeksi mudah dibuka &rarr; teknisi kerja cepat &rarr; downtime singkat</td></tr>
-          <tr><td><strong>Reliability &rarr; Maintainability</strong></td><td>R rendah &rarr; maintenance sering &rarr; beban maintenance naik &rarr; biaya O&amp;S naik</td><td>Pompa sering rusak &rarr; teknisi terus dipanggil &rarr; spare parts habis</td></tr>
-          <tr><td><strong>Maintainability &rarr; Reliability</strong></td><td>Maintenance buruk &rarr; degradasi tidak terdeteksi &rarr; R turun &rarr; kegagalan makin sering</td><td>Kalibrasi terlambat &rarr; sensor drift &rarr; false alarm &rarr; operator abaikan alarm</td></tr>
-          <tr><td><strong>Reliability &rarr; HF</strong></td><td>Sering gagal &rarr; stres operator naik &rarr; fatigue &rarr; decision error</td><td>False alarm berulang &rarr; alarm fatigue &rarr; operator abaikan alarm sungguhan</td></tr>
-          <tr><td><strong>Maintainability &rarr; HF</strong></td><td>Desain maintenance sulit &rarr; postur kerja buruk &rarr; cedera &rarr; error naik</td><td>Akses engine di ruang sempit &rarr; teknisi cedera punggung &rarr; kesalahan pemasangan</td></tr>
-        </table></div>
-        <div class="key"><strong>Kesimpulan:</strong> Ketiga aspek saling terkait dan HARUS dioptimasi bersama sejak conceptual design. Optimasi satu aspek saja tidak cukup. Contoh integrasi: desain MRT Jakarta dengan accessibility tinggi (maint), komponen redundan (rel), dan kontrol operator ergonomis (HF).</div>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">5.</span> <span class="arsip-label">2023 #7 / 2024 #8 / 2025 #7</span> Jelaskan dan identifikasi ukuran dari <strong>disposability</strong> dan <strong>sustainability.</strong> (10 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>Disposability</h4>
-        <p><strong>Definisi:</strong> kemampuan sistem untuk dibuang, didaur ulang, atau di-decommission secara aman, ekonomis, dan sesuai regulasi di akhir life cycle.</p>
-        <p><strong>Ukuran kuantitatif:</strong></p>
-        <ul>
-          <li>% material yang bisa di-recycle (target &gt;80%)</li>
-          <li>Biaya disposal per unit (dibandingkan total LCC)</li>
-          <li>Waktu dekomisioning (minggu/bulan)</li>
-          <li>Compliance terhadap regulasi lingkungan (AMDAL, B3, dll.)</li>
-          <li>Volume limbah berbahaya yang dihasilkan</li>
-          <li>Disposal cost sebagai persentase total LCC</li>
-        </ul>
-        <p><em>Contoh: dekomisioning PLTN harus mengelola limbah radioaktif selama puluhan tahun. Kapal yang di-scrap harus menangani asbestos dan cat berbahaya.</em></p>
-        <h4>Sustainability</h4>
-        <p><strong>Definisi:</strong> kemampuan desain sistem untuk beroperasi dengan dampak lingkungan minimal sepanjang life cycle, mendukung keberlangsungan sumber daya untuk generasi mendatang.</p>
-        <p><strong>Ukuran kuantitatif:</strong></p>
-        <ul>
-          <li>Carbon footprint (kg CO<sub>2</sub> equivalent per unit output)</li>
-          <li>Efisiensi energi (output/input, kWh per unit produk)</li>
-          <li>% material ramah lingkungan (renewable, biodegradable)</li>
-          <li>Water usage per unit output</li>
-          <li>Waste generation per unit output</li>
-          <li>Life Cycle Assessment (LCA) score</li>
-          <li>Emisi (SOx, NOx, particulate matter)</li>
-        </ul>
-        <p><em>Contoh: PLTP Geo Dipa menggunakan energi geotermal (renewable) dengan zero-emission direct use, tapi harus mengelola emisi H<sub>2</sub>S dan limbah scaling.</em></p>
-      </div></div>
-      <h3>Soal LCC (Arsip 2025)</h3>
-      <div class="soal"><div class="soal-q"><span class="num">6.</span> <span class="arsip-label">2025 #8</span> (a) Apa 4 aspek utama dari <strong>Life Cycle Costing</strong> dan jelaskan masing-masing, komponen pembiayaan apa dari aspek tersebut. (b) Apa saja <strong>12 langkah dasar</strong> dalam proses Life-Cycle Cost? (15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) 4 Aspek Utama LCC</h4>
-        <ol>
-          <li><strong>Research &amp; Development Cost:</strong>
-            <ul><li>Program management, advanced R&amp;D</li>
-            <li>Engineering design (system, electrical, mechanical, software)</li>
-            <li>Design documentation (drawings, specs, technical data)</li>
-            <li>System test &amp; evaluation (T&amp;E plan, model, pelaksanaan)</li>
-            <li><em>Contoh: biaya riset material, pembuatan prototipe, simulasi CFD</em></li></ul></li>
-          <li><strong>Production/Construction Cost:</strong>
-            <ul><li>Industrial engineering &amp; operations analysis</li>
-            <li>Manufacturing (recurring &amp; non-recurring)</li>
-            <li>Quality control/assurance</li>
-            <li>Facilities, tooling, test equipment</li>
-            <li>Initial logistics support (supply, training, technical data)</li>
-            <li><em>Contoh: biaya pabrik, mesin CNC, pelatihan operator produksi</em></li></ul></li>
-          <li><strong>Operation &amp; Support Cost (TERBESAR: 60-80% total LCC):</strong>
-            <ul><li>Operating personnel (gaji, benefit)</li>
-            <li>Energy/utilities (listrik, BBM)</li>
-            <li>Maintenance personnel &amp; materials</li>
-            <li>Spare parts &amp; inventory</li>
-            <li>Test &amp; support equipment maintenance</li>
-            <li>Transportation &amp; handling</li>
-            <li>Facilities (sewa, maintenance gedung)</li>
-            <li>Technical data updates</li>
-            <li>System/software modifications</li>
-            <li><em>Contoh: biaya perawatan rutin MRT, gaji teknisi, suku cadang</em></li></ul></li>
-          <li><strong>Retirement &amp; Disposal Cost:</strong>
-            <ul><li>Decommissioning (shutdown, pembersihan)</li>
-            <li>Disposal (pembuangan limbah, B3)</li>
-            <li>Recycling/reclamation</li>
-            <li>Regulatory compliance</li>
-            <li><em>Contoh: dekomisioning PLTN, remediasi lahan, pengelolaan limbah radioaktif</em></li></ul></li>
-        </ol>
-        <div class="key"><strong>Kunci:</strong> Keputusan di fase conceptual design menentukan 70-80% total LCC, meskipun biaya aktual saat itu masih kecil (&lt;10%). Oleh karena itu LCC HARUS dipertimbangkan sejak awal.</div>
-        <h4>(b) 12 Langkah Dasar Proses LCC</h4>
-        <ol>
-          <li><strong>Define the problem:</strong> tentukan scope, system boundary, horizon waktu analisis, dan asumsi dasar</li>
-          <li><strong>Identify feasible alternatives:</strong> minimal 2 alternatif desain/konfigurasi untuk dibandingkan</li>
-          <li><strong>Develop system operational requirements &amp; maintenance concept:</strong> definisikan bagaimana sistem akan dioperasikan dan dipelihara sepanjang life cycle</li>
-          <li><strong>Select evaluation model:</strong> pilih metode analisis: present value, annual cost, payback period, atau benefit-cost ratio</li>
-          <li><strong>Estimate cost factors:</strong> perkirakan biaya per kategori (R&amp;D, production, O&amp;S, retirement) untuk setiap alternatif</li>
-          <li><strong>Apply discount rate:</strong> konversi ke present value dengan rumus PV = Future / (1+i)<sup>n</sup>, untuk membandingkan biaya di waktu berbeda pada basis yang sama</li>
-          <li><strong>Establish evaluation criteria:</strong> tetapkan kriteria keputusan (minimize LCC, maximize ROI, payback period target, dll.)</li>
-          <li><strong>Perform sensitivity analysis:</strong> variasikan parameter kritis (&plusmn;10-20%) untuk melihat dampak terhadap keputusan; identifikasi parameter yang paling berpengaruh</li>
-          <li><strong>Rank alternatives:</strong> urutkan alternatif berdasarkan criteria yang ditetapkan di langkah 7</li>
-          <li><strong>Document assumptions &amp; results:</strong> catat semua asumsi, sumber data, metode, dan hasil analisis secara formal</li>
-          <li><strong>Review by management/stakeholders:</strong> presentasikan ke pengambil keputusan untuk review dan persetujuan</li>
-          <li><strong>Select preferred alternative:</strong> pilih alternatif terbaik berdasarkan hasil ranking, review, dan pertimbangan non-kuantitatif</li>
-        </ol>
-        <p><em>Proses bersifat iteratif: cost estimates di-update seiring desain menjadi lebih mature. Sensitivity analysis menunjukkan parameter mana yang paling berpengaruh.</em></p>
-      </div></div>
-      <h3>Arsip 2023 (30 Okt 2023, 7 soal, Nilai: 1.30; 2.15; 3.15; 4-7.10)</h3>
-      <div class="soal"><div class="soal-q"><span class="num">7.</span> <span class="arsip-label">2023 #1</span> Jelaskan: (a) Desain Konseptual <strong>PLTBM Kalimantan Barat</strong> yang menggunakan biomassa. (b) Proses pembuatan semen di <strong>Pabrik Semen Bima.</strong> Gambarkan flow diagram proses masing-masing, jelaskan proses, kondisi operasinya dan alatnya. (30 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) PLTBM Kalimantan Barat</h4>
-        <p><strong>PLTBM</strong> = Pembangkit Listrik Tenaga Biomassa. Menggunakan limbah kelapa sawit (cangkang, fiber, tandan kosong) sebagai bahan bakar.</p>
-        <p><strong>Flow Diagram:</strong> Biomassa (storage) &rarr; Conveyor &rarr; Boiler (pembakaran, 800-1000&deg;C) &rarr; Steam Drum (uap bertekanan tinggi) &rarr; Steam Turbine &rarr; Generator &rarr; Transformer &rarr; Grid PLN. Sisa: Flue Gas &rarr; Economizer &rarr; Bag Filter/ESP &rarr; Stack. Air: Condenser &rarr; Deaerator &rarr; Feed Water Pump &rarr; kembali ke Boiler.</p>
-        <p><strong>Alat utama:</strong></p>
-        <ul>
-          <li><strong>Boiler:</strong> stoker/fluidized bed, pembakaran biomassa, menghasilkan uap superheated</li>
-          <li><strong>Steam Turbine:</strong> mengubah energi termal uap menjadi energi mekanik rotasi</li>
-          <li><strong>Generator:</strong> energi mekanik &rarr; listrik (AC)</li>
-          <li><strong>Condenser:</strong> uap bekas &rarr; air (vakum), meningkatkan efisiensi turbin</li>
-          <li><strong>Economizer:</strong> preheat feed water menggunakan flue gas (heat recovery)</li>
-          <li><strong>Bag Filter/ESP:</strong> menangkap partikel dari flue gas sebelum ke stack</li>
-        </ul>
-        <p><strong>Kondisi operasi:</strong> tekanan uap 40-65 bar, temperatur 400-485&deg;C, kapasitas 5-15 MW per unit</p>
-        <h4>(b) Pabrik Semen Bima</h4>
-        <p><strong>Flow Diagram:</strong> Raw Material (limestone, clay, silica, iron ore) &rarr; Crusher &rarr; Raw Mill (grinding + mixing) &rarr; Blending Silo &rarr; Preheater (cyclone, 4-5 stage, 300-800&deg;C) &rarr; Rotary Kiln (1400-1450&deg;C, clinker formation) &rarr; Clinker Cooler &rarr; Clinker Storage &rarr; Cement Mill (clinker + gypsum grinding) &rarr; Cement Silo &rarr; Packing &rarr; Distribusi</p>
-        <p><strong>Alat dan proses kunci:</strong></p>
-        <ul>
-          <li><strong>Crusher:</strong> limestone dipecah dari &gt;1m menjadi &lt;75mm</li>
-          <li><strong>Raw Mill:</strong> vertical roller mill, grinding + drying bahan baku</li>
-          <li><strong>Preheater:</strong> cyclone bertingkat, preheat raw meal sebelum kiln</li>
-          <li><strong>Rotary Kiln:</strong> tabung berputar, 1450&deg;C, proses calcination dan clinkering</li>
-          <li><strong>Cement Mill:</strong> ball mill, clinker + gypsum (3-5%) digiling menjadi semen</li>
-        </ul>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">8.</span> <span class="arsip-label">2023 #2</span> Jelaskan perbedaan mendasar antara <strong>conceptual design, preliminary design</strong> dan <strong>detailed design and development,</strong> dan terapkan untuk PLTBM. (15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <div class="tw"><table>
-          <tr><th>Fase</th><th>Umum</th><th>Terapan PLTBM</th></tr>
-          <tr><td><strong>Conceptual</strong></td><td>Level sistem. &ldquo;APA?&rdquo; Output: Type A, Functional Baseline, SDR</td><td>Studi kelayakan biomassa Kalbar, analisis potensi limbah sawit, lokasi, kapasitas 10 MW, operational requirements (18 jam/hari), maintenance concept</td></tr>
-          <tr><td><strong>Preliminary</strong></td><td>Level sub-sistem. &ldquo;BAGAIMANA kerja?&rdquo; Output: Type B, Allocation Baseline, PDR</td><td>Spesifikasi boiler (stoker vs fluidized bed), turbin, generator. Functional analysis: fuel handling, pembakaran, pembangkitan, distribusi. Trade-off study alternatif.</td></tr>
-          <tr><td><strong>Detail</strong></td><td>Level komponen. &ldquo;BAGAIMANA buat?&rdquo; Output: Type C/D/E, Product Baseline, CDR</td><td>Engineering drawing boiler tubes, piping layout, control system wiring. Prototipe/commissioning. Production planning: procurement komponen, jadwal konstruksi.</td></tr>
-        </table></div>
-      </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">9.</span> <span class="arsip-label">2023 #3</span> Apa problem yang dihadapi pada <strong>Rawmill di Pabrik Semen Bima,</strong> bagaimana mengidentifikasi, dan bagaimana cara penyelesaian problem juga apa penyelesaian yang dilakukan. (15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>Problem Rawmill</h4>
-        <ul>
-          <li><strong>Problem utama:</strong> penurunan kapasitas produksi raw mill (output di bawah design capacity), kualitas produk tidak konsisten (fineness dan komposisi kimia bervariasi)</li>
-          <li><strong>Gejala:</strong> vibrasi tinggi, suhu bearing naik, output per jam menurun, reject rate naik</li>
-        </ul>
-        <h4>Identifikasi Problem</h4>
-        <ul>
-          <li><strong>Root Cause Analysis:</strong> Fishbone diagram (6M) untuk identifikasi penyebab</li>
-          <li><strong>Man:</strong> operator kurang training untuk setting optimal</li>
-          <li><strong>Machine:</strong> keausan roller dan table liner, bearing degradation</li>
-          <li><strong>Method:</strong> parameter grinding tidak optimal (tekanan, kecepatan, feed rate)</li>
-          <li><strong>Material:</strong> variasi moisture dan hardness raw material</li>
-          <li><strong>Measurement:</strong> sensor monitoring tidak terkalibrasi</li>
-          <li><strong>Mother Nature:</strong> kelembaban tinggi mempengaruhi drying capacity</li>
-        </ul>
-        <h4>Penyelesaian</h4>
-        <ul>
-          <li><strong>Corrective:</strong> penggantian roller liner dan table liner yang aus</li>
-          <li><strong>Preventive:</strong> jadwal inspeksi dan penggantian rutin (condition-based maintenance)</li>
-          <li><strong>Improvement:</strong> optimasi parameter grinding, training operator, kalibrasi sensor</li>
-          <li><strong>Design:</strong> evaluasi apakah perlu upgrade ke vertical roller mill yang lebih efisien</li>
-          <li><strong>Monitoring:</strong> implementasi vibration monitoring dan online quality analyzer</li>
-        </ul>
-        <p><strong>Framework:</strong> Problem identification &rarr; Root cause analysis (Fishbone/FTA) &rarr; Alternative solutions &rarr; Evaluation (cost-benefit) &rarr; Implementation &rarr; Monitoring</p>
-      </div></div>
 
-      <h3>Arsip 2024 (6 Mei 2024, 8 soal, Nilai: 1.20; 2.10; 3-4.15; 5-8.10)</h3>
-      <div class="soal"><div class="soal-q"><span class="num">10.</span> <span class="arsip-label">2024 #1</span> Jelaskan summary masing-masing: (a) Implementation of Maintainability Process in UWILD Survey of Rig X Qatar. (b) Analisis Human Error dalam Peningkatan Self Awareness Menggunakan 3 Tahap Pengendalian Resiko di PT PLN (Persero) Yogyakarta. Apa Tujuan, Need dan bagaimana project tersebut dilaksanakan. (20 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+      <!-- ==================== KISI-KISI 2024 ==================== -->
+      <h3 id="kisi2024">Kisi-kisi 2024 <span style="font-weight:400;font-size:.8rem;color:var(--fg-muted)">(Senin 6 Mei 2024 &bull; 100 menit &bull; Closed book &bull; 8 soal &bull; Nilai: 1.20; 2.10; 3-4.15; 5-8.10)</span></h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">2024 #1</span> <span class="arsip-label">20 poin</span> Jelaskan summary masing-masing: (a) Implementation of Maintainability Process in <strong>UWILD Survey of Rig X Qatar.</strong> (b) Analisis Human Error dalam Peningkatan Self Awareness Menggunakan 3 Tahap Pengendalian Resiko di <strong>PT PLN (Persero) Yogyakarta.</strong> Apa Tujuan, Need dan bagaimana project tsb dilaksanakan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>(a) UWILD Rig X Qatar</h4>
         <p><strong>UWILD</strong> (Underwater Inspection in Lieu of Dry-docking) = inspeksi bawah air yang menggantikan dry-docking konvensional pada rig minyak lepas pantai.</p>
         <ul>
@@ -1239,7 +1028,8 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li><strong>Rekomendasi:</strong> redesign interface, program self-awareness, SOP revision, fatigue monitoring</li>
         </ul>
       </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">11.</span> <span class="arsip-label">2024 #2</span> (a) Maintainability Factor UWILD Rig X Qatar. (b) Apa Job Safety Analysis dan jelaskan 10 tahapannya. (10 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+
+      <div class="soal"><div class="soal-q"><span class="num">2024 #2</span> <span class="arsip-label">10 poin</span> (a) <strong>Maintainability Factor</strong> UWILD Rig X Qatar. (b) Apa <strong>Job Safety Analysis</strong> dan jelaskan 10 tahapannya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>(a) Maintainability Factors UWILD</h4>
         <ul>
           <li><strong>Accessibility:</strong> ROV dan diver bisa akses struktur bawah air tanpa dry-dock</li>
@@ -1252,7 +1042,6 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
         <h4>(b) Job Safety Analysis (JSA)</h4>
         <p>JSA = metode sistematis mengidentifikasi bahaya di setiap tahapan pekerjaan dan menentukan pengendalian.</p>
         <p><strong>Format:</strong> Tahapan Kerja &rarr; Bahaya Potensial &rarr; Tindakan Pengendalian</p>
-        <p><strong>Contoh 10 tahapan UWILD:</strong></p>
         <div class="tw"><table>
           <tr><th>#</th><th>Tahapan</th><th>Bahaya</th><th>Pengendalian</th></tr>
           <tr><td>1</td><td>Mobilisasi peralatan</td><td>Terjatuh, tertimpa</td><td>Crane inspection, lifting plan</td></tr>
@@ -1267,67 +1056,249 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><td>10</td><td>Demobilisasi</td><td>Terjatuh, lelah</td><td>Post-dive medical, rest</td></tr>
         </table></div>
       </div></div>
-      <h3>Arsip 2025 (5 Mei 2025, 8 soal, Nilai: 1.15; 2.15; 3.15; 4-7.10; 8.15)</h3>
-      <div class="soal"><div class="soal-q"><span class="num">12.</span> <span class="arsip-label">2025 #1</span> (a) Gambarkan Flow Diagram Proses dan jelaskan bagaimana pembangkitan listrik di PT Geo Dipa Energi, jelaskan alat dan proses yang terjadi. (b) Jelaskan penerapan Design for Reliability pada komponen PLTP PT Geo Dipa. (15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) Flow Diagram Proses PLTP</h4>
-        <p><strong>Reservoir</strong> (sumber panas bumi) &rarr; <strong>Production Well</strong> (sumur produksi, uap + air panas naik) &rarr; <strong>Separator</strong> (pisahkan uap dari brine/air panas) &rarr; <strong>Demister/Scrubber</strong> (bersihkan uap dari partikel) &rarr; <strong>Steam Turbine</strong> (uap putar turbin) &rarr; <strong>Generator</strong> (mekanik &rarr; listrik) &rarr; <strong>Condenser</strong> (uap kembali ke air) &rarr; <strong>Cooling Tower</strong> (dinginkan air) &rarr; <strong>Injection Well</strong> (kembalikan air ke reservoir) &rarr; <strong>Switchyard/Transformer</strong> &rarr; <strong>Grid PLN</strong></p>
-        <p><strong>Alat dan proses kunci:</strong></p>
+
+      <div class="soal" id="s2024-3"><div class="soal-q"><span class="num">2024 #3</span> <span class="arsip-label">15 poin</span> Jelaskan perbedaan mendasar antara <strong>conceptual design, preliminary design</strong> dan <strong>detailed design and development.</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Conceptual Design</th><th>Preliminary Design</th><th>Detail Design &amp; Dev</th></tr>
+          <tr><td><strong>Level</strong></td><td>Sistem (keseluruhan)</td><td>Sub-sistem</td><td>Komponen individual</td></tr>
+          <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;APA yang dibutuhkan?&rdquo;</td><td>&ldquo;BAGAIMANA kerjanya?&rdquo;</td><td>&ldquo;BAGAIMANA membuatnya?&rdquo;</td></tr>
+          <tr><td><strong>Fokus</strong></td><td>Need analysis, feasibility, konsep, operational requirements</td><td>Functional analysis, alokasi requirements ke subsistem, trade-off</td><td>Desain komponen, prototipe, pengujian, preparation for production</td></tr>
+          <tr><td><strong>Aktivitas</strong></td><td>Problem definition, studi kelayakan, maintenance concept, TPM, QFD</td><td>Functional decomposition, ICOM, subsystem specs, design reviews</td><td>Engineering drawings, prototipe, fab &amp; test, production planning</td></tr>
+          <tr><td><strong>Tim</strong></td><td>SE dominan, customer/stakeholder</td><td>SE + discipline engineers</td><td>Discipline engineers dominan, SE oversight</td></tr>
+          <tr><td><strong>Biaya perubahan</strong></td><td>Rendah (mudah berubah)</td><td>Sedang</td><td>Tinggi (sangat mahal berubah)</td></tr>
+        </table></div>
+      </div></div>
+
+      <div class="soal" id="s2024-4"><div class="soal-q"><span class="num">2024 #4</span> <span class="arsip-label">15 poin</span> Apa <strong>output</strong> dari masing-masing tahap design: conceptual, preliminary dan detailed design and development?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Fase</th><th>Specification</th><th>Baseline</th><th>Review Gate</th><th>Output Lain</th></tr>
+          <tr><td><strong>Conceptual</strong></td><td>System Spec (Type A)</td><td>Functional Baseline</td><td>SDR (System Design Review)</td><td>Operational requirements, maintenance concept, TPM, feasibility study, FFBD level 0-1</td></tr>
+          <tr><td><strong>Preliminary</strong></td><td>Development Spec (Type B)</td><td>Allocation Baseline</td><td>PDR (Preliminary Design Review)</td><td>Functional analysis, allocated requirements, trade-off studies, subsystem specs</td></tr>
+          <tr><td><strong>Detail</strong></td><td>Product/Process/Material Spec (Type C/D/E)</td><td>Product Baseline</td><td>CDR (Critical Design Review) + EOCDR</td><td>Engineering drawings, prototipe, test results, production planning</td></tr>
+        </table></div>
+        <p><strong>Prinsip penting:</strong> semakin lanjut fase, semakin detail dan semakin mahal untuk mengubah. Keputusan di conceptual menentukan 70-80% total LCC.</p>
+      </div></div>
+
+      <div class="soal" id="s2024-5"><div class="soal-q"><span class="num">2024 #5</span> <span class="arsip-label">10 poin</span> Jelaskan tahap-tahap dari <strong>test dan evaluasi</strong> sistem selama life cycle, berikan contoh pada masing-masing tahap.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Kategori</th><th>Fase LC</th><th>Pelaku</th><th>Metode</th><th>Contoh</th></tr>
+          <tr><td><strong>0. Analitis/Simulasi</strong></td><td>Conceptual</td><td>SE team</td><td>Model komputer, simulasi, analisis matematis</td><td>Simulasi CFD turbin, stress analysis FEA, Monte Carlo LCC</td></tr>
+          <tr><td><strong>1. Type 1</strong></td><td>Preliminary</td><td>Engineers + lab</td><td>Mock-up, bread-board, model skala, prototipe awal</td><td>Model skala jembatan di wind tunnel, breadboard elektronik</td></tr>
+          <tr><td><strong>2. Type 2</strong></td><td>Detail</td><td>Test engineers</td><td>Prototipe mendekati final, pengujian kinerja subsistem</td><td>Uji ketahanan mesin 1000 jam, environmental testing (suhu, getaran)</td></tr>
+          <tr><td><strong>3. Type 3</strong></td><td>Production</td><td>Operator + QC</td><td>Uji di lingkungan nyata, acceptance test, commissioning</td><td>Pesawat diuji terbang oleh test pilot, commissioning PLTU</td></tr>
+          <tr><td><strong>4. Type 4</strong></td><td>Operational</td><td>User/operator</td><td>Evaluasi berkelanjutan, monitoring, field data analysis</td><td>Monitoring performa MRT Jakarta, tracking MTBF lapangan</td></tr>
+        </table></div>
+        <div class="key"><strong>Validasi</strong> = "Are we building the RIGHT system?" (apakah sesuai kebutuhan?)<br><strong>Verifikasi</strong> = "Are we building the system RIGHT?" (apakah sesuai spesifikasi?)</div>
+      </div></div>
+
+      <div class="soal" id="s2024-6"><div class="soal-q"><span class="num">2024 #6</span> <span class="arsip-label">10 poin</span> Apa tujuan dari perancangan <strong>maintainability system</strong>, apa elemen-elemennya?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Tujuan Maintainability</h4>
         <ul>
-          <li>Separator: gravitasi, cyclone. Brine dialirkan ke injection well.</li>
-          <li>Turbin: single/double flash atau binary cycle. Putar generator.</li>
-          <li>Condenser: direct contact atau shell-and-tube. Vakum untuk efisiensi.</li>
-          <li>NCG removal: ejector/vacuum pump untuk non-condensable gas (CO<sub>2</sub>, H<sub>2</sub>S)</li>
+          <li>Minimasi system downtime (MDT) sehingga sistem lebih banyak beroperasi</li>
+          <li>Maksimasi operational availability (A<sub>o</sub>)</li>
+          <li>Reduksi biaya maintenance dalam Life Cycle Cost (O&amp;S cost = 60-80% LCC)</li>
+          <li>Memastikan sistem bisa diperbaiki dengan cepat, mudah, dan ekonomis</li>
+        </ul>
+        <h4>3 Level Maintenance</h4>
+        <div class="tw"><table>
+          <tr><th>Level</th><th>Lokasi</th><th>Aktivitas</th><th>Skill</th></tr>
+          <tr><td><strong>Organizational</strong></td><td>Lapangan (in-situ)</td><td>Inspeksi rutin, penggantian modular sederhana, cleaning</td><td>Dasar</td></tr>
+          <tr><td><strong>Intermediate</strong></td><td>Workshop/bengkel</td><td>Perbaikan moderat, kalibrasi, testing komponen</td><td>Menengah</td></tr>
+          <tr><td><strong>Depot</strong></td><td>Pabrik/depot/OEM</td><td>Overhaul besar, rebuild total, modifikasi mayor</td><td>Tinggi/spesialis</td></tr>
+        </table></div>
+        <h4>Elemen-elemen Design for Maintainability</h4>
+        <ul>
+          <li><strong>Accessibility:</strong> komponen mudah dijangkau (clearance, reach, visual access)</li>
+          <li><strong>Diagnostics &amp; Testability:</strong> built-in test (BIT), test points, fault indicators, error codes</li>
+          <li><strong>Modular Design:</strong> LRU/LRA (Line Replaceable Unit/Assembly), plug-and-play</li>
+          <li><strong>Standardization:</strong> fasteners standar, common tools, interchangeable parts</li>
+          <li><strong>Labeling &amp; Coding:</strong> identifikasi jelas pada setiap komponen dan koneksi</li>
+          <li><strong>Spare Parts &amp; Logistics:</strong> ketersediaan suku cadang, inventory management</li>
+          <li><strong>Training &amp; Documentation:</strong> manual, prosedur, program pelatihan</li>
+        </ul>
+        <div class="formula">Mct = Corrective maintenance time<br>Mpt = Preventive maintenance time<br>MDT = Mct + Mpt + logistic delay + admin delay<br><strong>A<sub>i</sub> = MTBF / (MTBF + Mct)</strong> &nbsp; <strong>A<sub>o</sub> = MTBM / (MTBM + MDT)</strong></div>
+      </div></div>
+
+      <div class="soal" id="s2024-7"><div class="soal-q"><span class="num">2024 #7</span> <span class="arsip-label">10 poin</span> Jelaskan kaitan antara persyaratan <strong>human factor, reliability</strong> dan <strong>maintainability.</strong> Apa impact terhadap satu sama lain. Berikan contohnya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Kaitan</th><th>Mekanisme</th><th>Contoh</th></tr>
+          <tr><td><strong>HF &rarr; Reliability</strong></td><td>HF baik &rarr; human error turun &rarr; failure rate (&lambda;) turun &rarr; R(t) naik</td><td>Cockpit ergonomis &rarr; pilot error turun &rarr; insiden berkurang</td></tr>
+          <tr><td><strong>HF &rarr; Maintainability</strong></td><td>Interface baik &rarr; akses mudah &rarr; perbaikan cepat &rarr; Mct turun &rarr; MDT turun</td><td>Panel inspeksi mudah dibuka &rarr; teknisi kerja cepat &rarr; downtime singkat</td></tr>
+          <tr><td><strong>Reliability &rarr; Maintainability</strong></td><td>R rendah &rarr; maintenance sering &rarr; beban maintenance naik &rarr; biaya O&amp;S naik</td><td>Pompa sering rusak &rarr; teknisi terus dipanggil &rarr; spare parts habis</td></tr>
+          <tr><td><strong>Maintainability &rarr; Reliability</strong></td><td>Maintenance buruk &rarr; degradasi tidak terdeteksi &rarr; R turun &rarr; kegagalan makin sering</td><td>Kalibrasi terlambat &rarr; sensor drift &rarr; false alarm &rarr; operator abaikan alarm</td></tr>
+          <tr><td><strong>Reliability &rarr; HF</strong></td><td>Sering gagal &rarr; stres operator naik &rarr; fatigue &rarr; decision error</td><td>False alarm berulang &rarr; alarm fatigue &rarr; operator abaikan alarm sungguhan</td></tr>
+          <tr><td><strong>Maintainability &rarr; HF</strong></td><td>Desain maintenance sulit &rarr; postur kerja buruk &rarr; cedera &rarr; error naik</td><td>Akses engine di ruang sempit &rarr; teknisi cedera punggung &rarr; kesalahan pemasangan</td></tr>
+        </table></div>
+        <div class="key"><strong>Kesimpulan:</strong> Ketiga aspek saling terkait dan HARUS dioptimasi bersama sejak conceptual design. Optimasi satu aspek saja tidak cukup.</div>
+      </div></div>
+
+      <div class="soal" id="s2024-8"><div class="soal-q"><span class="num">2024 #8</span> <span class="arsip-label">10 poin</span> Jelaskan dan identifikasi ukuran dari <strong>disposability</strong> dan <strong>sustainability.</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Disposability</h4>
+        <p><strong>Definisi:</strong> kemampuan sistem untuk dibuang, didaur ulang, atau di-decommission secara aman, ekonomis, dan sesuai regulasi di akhir life cycle.</p>
+        <ul>
+          <li>% material yang bisa di-recycle (target &gt;80%)</li>
+          <li>Biaya disposal per unit (dibandingkan total LCC)</li>
+          <li>Waktu dekomisioning (minggu/bulan)</li>
+          <li>Compliance terhadap regulasi lingkungan (AMDAL, B3)</li>
+          <li>Volume limbah berbahaya yang dihasilkan</li>
+        </ul>
+        <h4>Sustainability</h4>
+        <p><strong>Definisi:</strong> kemampuan desain sistem untuk beroperasi dengan dampak lingkungan minimal sepanjang life cycle.</p>
+        <ul>
+          <li>Carbon footprint (kg CO<sub>2</sub>eq per unit output)</li>
+          <li>Efisiensi energi (output/input, kWh per unit produk)</li>
+          <li>% material ramah lingkungan (renewable, biodegradable)</li>
+          <li>Water usage dan waste generation per unit output</li>
+          <li>Life Cycle Assessment (LCA) score</li>
+          <li>Emisi (SOx, NOx, particulate matter)</li>
+        </ul>
+      </div></div>
+
+      <!-- ==================== KISI-KISI 2025 ==================== -->
+      <h3 id="kisi2025">Kisi-kisi 2025 <span style="font-weight:400;font-size:.8rem;color:var(--fg-muted)">(Senin 5 Mei 2025 &bull; 100 menit &bull; Closed book &bull; 8 soal &bull; Nilai: 1.15; 2.15; 3.15; 4-7.10; 8.15)</span></h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #1</span> <span class="arsip-label">15 poin</span> (a) Gambarkan Flow Diagram Proses dan jelaskan bagaimana pembangkitan listrik di <strong>PT Geo Dipa Energi</strong>, jelaskan alat dan proses yang terjadi. (b) Jelaskan penerapan <strong>Design for Reliability</strong> pada komponen PLTP PT Geo Dipa.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Flow Diagram Proses PLTP</h4>
+        <p><strong>Reservoir</strong> (sumber panas bumi) &rarr; <strong>Production Well</strong> (uap + air panas naik) &rarr; <strong>Separator</strong> (pisahkan uap dari brine) &rarr; <strong>Demister/Scrubber</strong> (bersihkan uap dari partikel) &rarr; <strong>Steam Turbine</strong> (uap putar turbin) &rarr; <strong>Generator</strong> (mekanik &rarr; listrik) &rarr; <strong>Condenser</strong> (uap &rarr; air) &rarr; <strong>Cooling Tower</strong> (dinginkan air) &rarr; <strong>Injection Well</strong> (kembalikan air ke reservoir) &rarr; <strong>Switchyard</strong> &rarr; <strong>Grid PLN</strong></p>
+        <p><strong>Alat kunci:</strong></p>
+        <ul>
+          <li><strong>Separator:</strong> gravitasi/cyclone, pisahkan uap dari brine</li>
+          <li><strong>Steam Turbine:</strong> single/double flash atau binary cycle</li>
+          <li><strong>Condenser:</strong> direct contact atau shell-and-tube, vakum untuk efisiensi</li>
+          <li><strong>NCG removal:</strong> ejector/vacuum pump untuk CO<sub>2</sub>, H<sub>2</sub>S</li>
         </ul>
         <h4>(b) Design for Reliability pada Komponen PLTP</h4>
         <ul>
-          <li><strong>Komponen kritis:</strong> turbin, separator, pompa injeksi, heat exchanger, control valve</li>
-          <li><strong>Failure modes utama:</strong>
+          <li><strong>Failure modes utama:</strong> korosi (H<sub>2</sub>S, Cl<sup>-</sup>), scaling/fouling (silika, calcite), erosi (partikel pada blade turbin), fatigue (thermal cycling)</li>
+          <li><strong>Strategi:</strong>
             <ul>
-              <li>Korosi: H<sub>2</sub>S, Cl<sup>-</sup>, CO<sub>2</sub> menyerang material</li>
-              <li>Scaling/fouling: deposit silika, calcite di pipa dan heat exchanger</li>
-              <li>Erosi: partikel dalam uap mengikis blade turbin</li>
-              <li>Fatigue: thermal cycling, vibrasi pada turbin dan pompa</li>
-            </ul>
-          </li>
-          <li><strong>Strategi reliability:</strong>
-            <ul>
-              <li><em>Material selection:</em> stainless steel (SS316L, duplex) tahan korosi</li>
-              <li><em>Redundansi:</em> multiple production wells (paralel), standby pump, dual scrubber</li>
-              <li><em>Derating:</em> operasikan turbin di bawah max capacity</li>
-              <li><em>Condition monitoring:</em> vibration analysis, corrosion coupons, thickness measurement</li>
+              <li><em>Material selection:</em> SS316L, duplex stainless steel</li>
+              <li><em>Redundansi:</em> multiple wells (paralel), standby pump, dual scrubber</li>
+              <li><em>Derating:</em> operasi di bawah max capacity</li>
+              <li><em>Condition monitoring:</em> vibration analysis, corrosion coupons</li>
               <li><em>Preventive maintenance:</em> cleaning scaling periodik, overhaul turbin terjadwal</li>
             </ul>
           </li>
         </ul>
       </div></div>
-      <div class="soal"><div class="soal-q"><span class="num">13.</span> <span class="arsip-label">2025 #2</span> Masing-masing dijelaskan bagaimana <strong>Producibility, Sustainability</strong> dan <strong>Disposibility</strong> diterapkan di Proyek Modul Minyak &amp; Gas Marjan MIP Package 01, Offshore GOSP-4 Development di PT. McDermott Indonesia. (15 poin)</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #2</span> <span class="arsip-label">15 poin</span> Masing-masing dijelaskan bagaimana <strong>Producibility, Sustainability</strong> dan <strong>Disposibility</strong> diterapkan di Proyek Modul Minyak &amp; Gas <strong>Marjan MIP Package 01, Offshore GOSP-4 Development</strong> di PT. McDermott Indonesia.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>Producibility (Design for Manufacturing)</h4>
         <ul>
           <li><strong>DFM:</strong> modul platform dirancang agar bisa difabrikasi di yard (darat) lalu diangkut ke laut</li>
-          <li><strong>Standardization:</strong> komponen offshore mengikuti standar API, ASME, DNV; mengurangi variasi dan mempermudah QC</li>
-          <li><strong>Modular construction:</strong> modul besar prefab di workshop, mengurangi pekerjaan di laut (lebih aman, lebih cepat)</li>
-          <li><strong>QC:</strong> welding inspection (NDT: radiography, ultrasonic), hydrostatic test, coating inspection per batch</li>
-          <li><strong>DFA:</strong> desain koneksi flange standar, lifting lug terintegrasi untuk crane installation</li>
+          <li><strong>Standardization:</strong> komponen offshore mengikuti standar API, ASME, DNV</li>
+          <li><strong>Modular construction:</strong> modul besar prefab di workshop, mengurangi pekerjaan di laut</li>
+          <li><strong>QC:</strong> welding inspection (NDT: radiography, ultrasonic), hydrostatic test</li>
+          <li><strong>DFA:</strong> koneksi flange standar, lifting lug terintegrasi</li>
         </ul>
         <h4>Sustainability</h4>
         <ul>
-          <li><strong>Efisiensi energi:</strong> waste heat recovery, optimasi proses separasi untuk minimasi energi</li>
-          <li><strong>Flaring minimization:</strong> gas recovery system, flaring hanya untuk emergency. Target zero routine flaring.</li>
-          <li><strong>Perlindungan ekosistem laut:</strong> oil spill prevention (double containment), marine growth management, coral avoidance</li>
-          <li><strong>Emisi:</strong> monitoring SOx, NOx, CO<sub>2</sub> sesuai regulasi Saudi Aramco dan international standards</li>
-          <li><strong>Water management:</strong> produced water treatment sebelum disposal, zero discharge ke laut</li>
+          <li>Waste heat recovery, flaring minimization (zero routine flaring)</li>
+          <li>Perlindungan ekosistem laut: oil spill prevention, marine growth management</li>
+          <li>Monitoring emisi SOx, NOx, CO<sub>2</sub></li>
+          <li>Produced water treatment, zero discharge ke laut</li>
         </ul>
         <h4>Disposibility</h4>
         <ul>
-          <li><strong>Decommissioning plan:</strong> dibuat sejak awal desain (bagian dari LCC), mencakup well plugging, structure removal, seabed clearance</li>
-          <li><strong>Pengelolaan limbah B3:</strong> prosedur handling asbestos insulation, cat berbahaya, chemical treatment, hydrocarbon residue</li>
-          <li><strong>Remediasi area sumur:</strong> well abandonment sesuai regulasi, soil/seabed remediation</li>
-          <li><strong>Material recycling:</strong> steel structure bisa di-scrap dan di-recycle (&gt;90% recyclable)</li>
-          <li><strong>Regulasi:</strong> compliance dengan Saudi Aramco decommissioning standards dan OSPAR convention</li>
+          <li><strong>Decommissioning plan:</strong> dibuat sejak awal desain, mencakup well plugging, structure removal, seabed clearance</li>
+          <li>Pengelolaan limbah B3: asbestos, cat berbahaya, hydrocarbon residue</li>
+          <li>Steel structure &gt;90% recyclable</li>
+          <li>Compliance OSPAR convention dan Saudi Aramco standards</li>
         </ul>
       </div></div>
-    </div>
 
+      <div class="soal"><div class="soal-q"><span class="num">2025 #3</span> <span class="arsip-label">15 poin</span> (a) Jelaskan perbedaan mendasar antara conceptual design, preliminary design dan detailed design. (b) Apa output dari masing-masing tahap design?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-3" style="color:var(--accent);font-weight:600">2024 #3</a> (perbedaan) dan <a href="#s2024-4" style="color:var(--accent);font-weight:600">2024 #4</a> (output).</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #4</span> <span class="arsip-label">10 poin</span> Jelaskan tahap-tahap dari test dan evaluasi sistem selama life cycle, berikan contoh.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-5" style="color:var(--accent);font-weight:600">2024 #5</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #5</span> <span class="arsip-label">10 poin</span> Apa tujuan dari perancangan maintainability system, apa elemen-elemennya?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-6" style="color:var(--accent);font-weight:600">2024 #6</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #6</span> <span class="arsip-label">10 poin</span> Jelaskan kaitan antara persyaratan human factor, reliability dan maintainability.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-7" style="color:var(--accent);font-weight:600">2024 #7</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #7</span> <span class="arsip-label">10 poin</span> Jelaskan dan identifikasi ukuran dari disposability, sustainability.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-8" style="color:var(--accent);font-weight:600">2024 #8</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2025 #8</span> <span class="arsip-label">15 poin — BARU</span> (a) Apa 4 aspek utama dari <strong>Life Cycle Costing</strong> dan jelaskan masing-masing, komponen pembiayaan apa dari aspek tersebut. (b) Apa saja <strong>12 langkah dasar</strong> dalam proses Life-Cycle Cost?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) 4 Aspek Utama LCC</h4>
+        <ol>
+          <li><strong>Research &amp; Development Cost:</strong> program management, engineering design, design documentation, system T&amp;E</li>
+          <li><strong>Production/Construction Cost:</strong> industrial engineering, manufacturing (recurring/non-recurring), QC/QA, facilities, tooling, initial logistics</li>
+          <li><strong>Operation &amp; Support Cost (TERBESAR: 60-80% LCC):</strong> operating personnel, energy/utilities, maintenance, spare parts, transportation, facilities, technical data updates, system modifications</li>
+          <li><strong>Retirement &amp; Disposal Cost:</strong> decommissioning, disposal limbah, recycling/reclamation, regulatory compliance</li>
+        </ol>
+        <div class="key"><strong>Kunci:</strong> Keputusan di conceptual design menentukan 70-80% total LCC, meskipun biaya aktual masih &lt;10%.</div>
+        <h4>(b) 12 Langkah Dasar Proses LCC</h4>
+        <ol>
+          <li>Define the problem (scope, boundary, horizon, asumsi)</li>
+          <li>Identify feasible alternatives (min. 2 alternatif)</li>
+          <li>Develop operational requirements &amp; maintenance concept</li>
+          <li>Select evaluation model (present value, annual cost, payback, B/C ratio)</li>
+          <li>Estimate cost factors per kategori per alternatif</li>
+          <li>Apply discount rate: PV = Future / (1+i)<sup>n</sup></li>
+          <li>Establish evaluation criteria (minimize LCC, maximize ROI, dll.)</li>
+          <li>Perform sensitivity analysis (&plusmn;10-20% parameter kritis)</li>
+          <li>Rank alternatives berdasarkan criteria</li>
+          <li>Document assumptions &amp; results</li>
+          <li>Review by management/stakeholders</li>
+          <li>Select preferred alternative</li>
+        </ol>
+      </div></div>
+
+      <!-- ==================== KISI-KISI 2023 ==================== -->
+      <h3 id="kisi2023">Kisi-kisi 2023 <span style="font-weight:400;font-size:.8rem;color:var(--fg-muted)">(Senin 30 Okt 2023 &bull; 100 menit &bull; 7 soal &bull; Nilai: 1.30; 2.15; 3.15; 4-7.10)</span></h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #1</span> <span class="arsip-label">30 poin</span> Jelaskan: (a) Desain Konseptual <strong>PLTBM Kalimantan Barat</strong> yang menggunakan biomassa. (b) Proses pembuatan semen di <strong>Pabrik Semen Bima.</strong> Gambarkan flow diagram proses masing-masing, jelaskan proses, kondisi operasinya dan alatnya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) PLTBM Kalimantan Barat</h4>
+        <p><strong>PLTBM</strong> = Pembangkit Listrik Tenaga Biomassa. Menggunakan limbah kelapa sawit (cangkang, fiber, tandan kosong).</p>
+        <p><strong>Flow Diagram:</strong> Biomassa (storage) &rarr; Conveyor &rarr; Boiler (800-1000&deg;C) &rarr; Steam Drum &rarr; Steam Turbine &rarr; Generator &rarr; Transformer &rarr; Grid PLN. Sisa: Flue Gas &rarr; Economizer &rarr; Bag Filter/ESP &rarr; Stack. Air: Condenser &rarr; Deaerator &rarr; Feed Water Pump &rarr; Boiler.</p>
+        <p><strong>Alat utama:</strong> Boiler (stoker/fluidized bed), Steam Turbine, Generator, Condenser, Economizer, Bag Filter/ESP</p>
+        <p><strong>Kondisi operasi:</strong> tekanan uap 40-65 bar, temperatur 400-485&deg;C, kapasitas 5-15 MW per unit</p>
+        <h4>(b) Pabrik Semen Bima</h4>
+        <p><strong>Flow Diagram:</strong> Raw Material (limestone, clay, silica, iron ore) &rarr; Crusher &rarr; Raw Mill &rarr; Blending Silo &rarr; Preheater (cyclone, 300-800&deg;C) &rarr; Rotary Kiln (1400-1450&deg;C) &rarr; Clinker Cooler &rarr; Cement Mill (clinker + gypsum 3-5%) &rarr; Cement Silo &rarr; Packing</p>
+        <p><strong>Alat kunci:</strong> Crusher, Raw Mill (vertical roller mill), Preheater (cyclone bertingkat), Rotary Kiln (tabung berputar, 1450&deg;C), Cement Mill (ball mill)</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #2</span> <span class="arsip-label">15 poin</span> Jelaskan perbedaan mendasar antara <strong>conceptual design, preliminary design</strong> dan <strong>detailed design and development,</strong> dan terapkan untuk PLTBM.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <div class="tw"><table>
+          <tr><th>Fase</th><th>Umum</th><th>Terapan PLTBM</th></tr>
+          <tr><td><strong>Conceptual</strong></td><td>Level sistem. Output: Type A, Functional Baseline, SDR</td><td>Studi kelayakan biomassa Kalbar, analisis potensi limbah sawit, lokasi, kapasitas 10 MW, operational requirements, maintenance concept</td></tr>
+          <tr><td><strong>Preliminary</strong></td><td>Level sub-sistem. Output: Type B, Allocation Baseline, PDR</td><td>Spesifikasi boiler (stoker vs fluidized bed), turbin, generator. Functional analysis. Trade-off study.</td></tr>
+          <tr><td><strong>Detail</strong></td><td>Level komponen. Output: Type C/D/E, Product Baseline, CDR</td><td>Engineering drawing boiler tubes, piping layout, control system. Prototipe/commissioning. Procurement.</td></tr>
+        </table></div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #3</span> <span class="arsip-label">15 poin</span> Apa problem yang dihadapi pada <strong>Rawmill di Pabrik Semen Bima,</strong> bagaimana mengidentifikasi, dan bagaimana cara penyelesaian problem juga apa penyelesaian yang dilakukan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Problem</h4>
+        <ul>
+          <li>Penurunan kapasitas produksi raw mill, kualitas produk tidak konsisten (fineness dan komposisi kimia bervariasi)</li>
+          <li><strong>Gejala:</strong> vibrasi tinggi, suhu bearing naik, output per jam menurun, reject rate naik</li>
+        </ul>
+        <h4>Identifikasi (Root Cause Analysis &mdash; Fishbone 6M)</h4>
+        <ul>
+          <li><strong>Man:</strong> operator kurang training untuk setting optimal</li>
+          <li><strong>Machine:</strong> keausan roller dan table liner, bearing degradation</li>
+          <li><strong>Method:</strong> parameter grinding tidak optimal (tekanan, kecepatan, feed rate)</li>
+          <li><strong>Material:</strong> variasi moisture dan hardness raw material</li>
+          <li><strong>Measurement:</strong> sensor monitoring tidak terkalibrasi</li>
+          <li><strong>Mother Nature:</strong> kelembaban tinggi mempengaruhi drying capacity</li>
+        </ul>
+        <h4>Penyelesaian</h4>
+        <ul>
+          <li><strong>Corrective:</strong> penggantian roller liner dan table liner yang aus</li>
+          <li><strong>Preventive:</strong> jadwal inspeksi rutin (condition-based maintenance)</li>
+          <li><strong>Improvement:</strong> optimasi parameter grinding, training operator, kalibrasi sensor</li>
+          <li><strong>Monitoring:</strong> implementasi vibration monitoring dan online quality analyzer</li>
+        </ul>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #4</span> <span class="arsip-label">10 poin</span> Jelaskan tahap-tahap dari test dan evaluasi sistem selama life cycle, berikan contoh.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-5" style="color:var(--accent);font-weight:600">2024 #5</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #5</span> <span class="arsip-label">10 poin</span> Apa tujuan dari perancangan maintainability system, apa elemen-elemennya?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-6" style="color:var(--accent);font-weight:600">2024 #6</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #6</span> <span class="arsip-label">10 poin</span> Jelaskan kaitan antara persyaratan human factor, reliability dan maintainability.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-7" style="color:var(--accent);font-weight:600">2024 #7</a>.</p></div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2023 #7</span> <span class="arsip-label">10 poin</span> Jelaskan dan identifikasi ukuran dari disposability, sustainability.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>&#8635; Soal rutin &mdash; jawaban identik dengan <a href="#s2024-8" style="color:var(--accent);font-weight:600">2024 #8</a>.</p></div></div>
+
+    </div>
     <!-- APTS STUDI KASUS -->
     <div class="ctab-panel" id="apts-casestudy">
       <h2>Pembahasan Studi Kasus</h2>
@@ -1872,6 +1843,119 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         </table></div>
         <p><strong>Persamaan:</strong> Keduanya menunjukkan bahwa <strong>gangguan suplai listrik PLN</strong> adalah common cause failure yang dominan. Keduanya juga menunjukkan pentingnya redundansi dan evaluasi berkala.</p>
         <p><strong>Perbedaan kunci:</strong> RSG-GAS berfokus pada kuantitatif (probabilitas), sementara MRT berfokus pada kualitatif (respons manusia dan pemulihan). RSG-GAS menggunakan FTA (top-down), MRT menggunakan FMECA (bottom-up).</p>
+      </div></div>
+
+
+      <!-- ========== SOAL STUDI KASUS (Model Kisi-kisi 2024 & 2025) ========== -->
+      <h2 style="margin-top:3rem">Prediksi Soal Studi Kasus (Model Kisi-kisi 2024 &amp; 2025)</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Soal nomor 1&ndash;2 selalu berupa studi kasus dengan konteks baru setiap tahun. Berikut prediksi soal dengan model yang sama dari kisi-kisi 2024 dan 2025, diterapkan pada studi kasus tahun ini (RSG-GAS &amp; MRT Jakarta).</p>
+
+      <h3>Model Kisi-kisi 2024: Soal #1 &amp; #2</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #1</span> <span class="arsip-label">Model 2024 #1 &bull; 20 poin</span> Jelaskan summary masing-masing: (a) Analisis PSA/FTA pada Sistem Pendingin Primer <strong>Reaktor Riset RSG-GAS BRIN.</strong> (b) Analisis Penanganan Blackout Berdasarkan Human Factors, Maintainability, dan FMECA pada <strong>MRT Jakarta.</strong> Apa Tujuan, Need dan bagaimana project tsb dilaksanakan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) PSA/FTA Sistem Pendingin Primer RSG-GAS</h4>
+        <ul>
+          <li><strong>Tujuan:</strong> mengevaluasi reliability sistem pendingin primer RSG-GAS secara kuantitatif menggunakan Fault Tree Analysis (FTA) dan Probabilistic Safety Assessment (PSA)</li>
+          <li><strong>Need:</strong> RSG-GAS adalah reaktor riset nuklir berusia 36+ tahun. Perlu verifikasi apakah redundansi yang didesain masih memadai dan identifikasi komponen kritis yang harus diprioritaskan dalam program maintenance</li>
+          <li><strong>Pelaksanaan:</strong>
+            <ol>
+              <li><strong>Identifikasi Top Event:</strong> Loss of Cooling Flow (LOF) &mdash; hilangnya aliran pendingin primer</li>
+              <li><strong>Dekomposisi sistem:</strong> 3 subsistem &mdash; pompa primer (3 unit, 2oo3), heat exchanger (2 unit paralel), isolation valve</li>
+              <li><strong>Konstruksi fault tree:</strong> top event terhubung via OR gate ke 3 intermediate events. Pompa: AND gate (2+ gagal). HE: AND gate (kedua gagal). Valve: OR gate</li>
+              <li><strong>Kuantifikasi:</strong> failure rate dari database (IEEE Std 500), metode rare event approximation</li>
+              <li><strong>Hasil:</strong> 101 Minimal Cut Sets, reliability 99,94%, PLN_TRIP dominan (F-Vesely 99,76%)</li>
+              <li><strong>Rekomendasi:</strong> redundansi suplai listrik (diesel generator, UPS, dual PLN feeder)</li>
+            </ol>
+          </li>
+        </ul>
+        <h4>(b) Penanganan Blackout MRT Jakarta</h4>
+        <ul>
+          <li><strong>Tujuan:</strong> menganalisis respons penanganan blackout MRT Jakarta dari perspektif Human Factors, Maintainability, dan FMECA/RCM</li>
+          <li><strong>Need:</strong> insiden blackout 9 April 2026 mengungkap kelemahan sistem cadangan (ARD, UPS, lampu darurat) dan respons manusia. Perlu evaluasi untuk mencegah dampak serupa di masa depan</li>
+          <li><strong>Pelaksanaan:</strong>
+            <ol>
+              <li><strong>Human Factors:</strong> identifikasi 9 tugas manusia selama blackout, evaluasi kekuatan (0 korban, evakuasi berhasil) dan kelemahan (tim terbatas, komunikasi terganggu, PA gagal 2-3 jam)</li>
+              <li><strong>FMECA:</strong> identifikasi 4 failure modes utama &mdash; lift berhenti (severity sangat tinggi), lampu darurat mati, PA/radio gagal, pemulihan lambat</li>
+              <li><strong>RCM:</strong> klasifikasi konsekuensi kegagalan (safety / operational / hidden failure), penentuan maintenance task yang tepat</li>
+              <li><strong>Rekomendasi:</strong> failure-finding test berkala, simulasi blackout rutin, redundansi komunikasi, evaluasi umur baterai UPS</li>
+            </ol>
+          </li>
+        </ul>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #2</span> <span class="arsip-label">Model 2024 #2 &bull; 10 poin</span> (a) <strong>Reliability/Safety Factor</strong> Reaktor Riset RSG-GAS BRIN. (b) Apa analisis <strong>FMECA</strong> dan jelaskan penerapannya pada kasus Blackout MRT Jakarta.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Reliability/Safety Factor RSG-GAS</h4>
+        <ul>
+          <li><strong>Redundansi pompa:</strong> 3 unit konfigurasi 2-out-of-3 (2 operasi, 1 standby). R<sub>pompa</sub> tinggi karena 2+ harus gagal</li>
+          <li><strong>Redundansi HE:</strong> 2 unit paralel, masing-masing kapasitas 50%. AND gate: kedua harus gagal</li>
+          <li><strong>Defense in depth:</strong> multiple barriers &mdash; active cooling, passive shutdown, containment</li>
+          <li><strong>Common cause awareness:</strong> PLN_TRIP sebagai single point of failure terbesar (F-Vesely 99,76%)</li>
+          <li><strong>Safety margin:</strong> reliability keseluruhan 99,94%, di atas target IAEA untuk reaktor riset</li>
+          <li><strong>Kelemahan:</strong> ketergantungan pada suplai listrik PLN. Mitigasi: diesel generator, UPS, evaluasi common cause</li>
+        </ul>
+        <h4>(b) FMECA pada Kasus Blackout MRT Jakarta</h4>
+        <p><strong>FMECA</strong> (Failure Mode, Effects, and Criticality Analysis) = metode bottom-up yang mengidentifikasi failure mode setiap komponen, efeknya pada sistem, dan tingkat kekritisannya.</p>
+        <div class="tw"><table>
+          <tr><th>Failure Mode</th><th>Penyebab</th><th>Efek</th><th>Severity</th></tr>
+          <tr><td>Lift berhenti, penumpang terjebak</td><td>Hilangnya suplai listrik, ARD gagal</td><td>Keselamatan penumpang terancam</td><td>Sangat Tinggi</td></tr>
+          <tr><td>Lampu emergency mati</td><td>Baterai habis/degradasi, ATS gagal</td><td>Area gelap, evakuasi terhambat</td><td>Sangat Tinggi</td></tr>
+          <tr><td>PA dan radio tidak berfungsi</td><td>UPS tidak aktif/tidak bertahan</td><td>Koordinasi terganggu, informasi terhambat</td><td>Tinggi</td></tr>
+          <tr><td>Pemulihan lambat</td><td>Teknisi terbatas, SOP tidak lengkap</td><td>Downtime diperpanjang</td><td>Tinggi</td></tr>
+        </table></div>
+        <p><strong>Rekomendasi FMECA:</strong> failure-finding test berkala, evaluasi kapasitas baterai UPS, investigasi ARD, redundansi jalur komunikasi darurat</p>
+      </div></div>
+
+      <h3>Model Kisi-kisi 2025: Soal #1 &amp; #2</h3>
+
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #3</span> <span class="arsip-label">Model 2025 #1 &bull; 15 poin</span> (a) Gambarkan diagram sistem pendingin primer <strong>Reaktor Riset RSG-GAS BRIN,</strong> jelaskan komponen dan proses yang terjadi. (b) Jelaskan penerapan <strong>Design for Reliability</strong> pada komponen RSG-GAS.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Diagram Sistem Pendingin Primer RSG-GAS</h4>
+        <p><strong>Teras Reaktor</strong> (fisi nuklir, panas) &rarr; <strong>Pompa Primer</strong> (3 unit, 2 operasi + 1 standby, sirkulasi paksa) &rarr; <strong>Heat Exchanger</strong> (2 unit paralel, transfer panas ke sekunder) &rarr; <strong>Cooling Tower</strong> (buang panas ke atmosfer) &rarr; kembali ke teras. <strong>Isolation Valve</strong> pada pipa utama untuk isolasi darurat.</p>
+        <p><strong>Komponen dan proses:</strong></p>
+        <ul>
+          <li><strong>Teras reaktor:</strong> elemen bakar U<sub>3</sub>Si<sub>2</sub>-Al, daya 30 MWth, menghasilkan panas dari reaksi fisi</li>
+          <li><strong>Pompa primer:</strong> 3 unit sentrifugal, konfigurasi 2oo3 (2 beroperasi, 1 standby hot). Memastikan aliran pendingin kontinyu ke teras</li>
+          <li><strong>Heat exchanger:</strong> 2 unit shell-and-tube, masing-masing kapasitas 50% (15 MWth). Transfer panas dari loop primer ke loop sekunder</li>
+          <li><strong>Isolation valve:</strong> motor-operated valve pada pipa utama. Fungsi: isolasi darurat saat maintenance atau LOCA</li>
+          <li><strong>Sistem proteksi:</strong> SCRAM otomatis jika flow turun di bawah threshold</li>
+        </ul>
+        <h4>(b) Design for Reliability pada Komponen RSG-GAS</h4>
+        <ul>
+          <li><strong>Redundansi:</strong> pompa 2oo3 (paralel), HE 2 unit paralel &rarr; single failure tidak menyebabkan LOF</li>
+          <li><strong>Diversity:</strong> suplai listrik dari PLN + diesel generator + UPS untuk sistem kritis</li>
+          <li><strong>Fail-safe design:</strong> isolation valve gagal di posisi open (tidak menghentikan aliran); SCRAM otomatis</li>
+          <li><strong>Derating:</strong> pompa dioperasikan di bawah kapasitas maksimum untuk memperpanjang MTBF</li>
+          <li><strong>Material selection:</strong> stainless steel tahan korosi untuk komponen yang kontak dengan air pendingin</li>
+          <li><strong>Condition monitoring:</strong> vibration monitoring pompa, flow measurement, temperature monitoring</li>
+          <li><strong>Preventive maintenance:</strong> jadwal overhaul pompa, inspeksi tube HE, testing valve berkala</li>
+        </ul>
+        <div class="formula">R<sub>sistem</sub> = 1 - [(1-R<sub>pompa</sub>)<sup>2oo3</sup>] &times; ... = 99,94%<br>Komponen dominan: PLN_TRIP (F-Vesely = 0,9976)</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #4</span> <span class="arsip-label">Model 2025 #2 &bull; 15 poin</span> Masing-masing dijelaskan bagaimana <strong>Producibility, Sustainability</strong> dan <strong>Disposibility</strong> diterapkan pada sistem <strong>MRT Jakarta.</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Producibility (Design for Manufacturing)</h4>
+        <ul>
+          <li><strong>DFM:</strong> kereta MRT diproduksi oleh Nippon Sharyo (Jepang) dengan standar manufacturing ketat, lalu dikirim via kapal ke Indonesia</li>
+          <li><strong>Modular construction:</strong> stasiun dan viaduct menggunakan segmen precast concrete yang difabrikasi di batching plant, lalu dirakit di lokasi</li>
+          <li><strong>Standardization:</strong> komponen mengikuti standar JIS (Japanese Industrial Standards) dan EN (European Norm) untuk interoperability</li>
+          <li><strong>QC:</strong> inspeksi rail alignment, pengujian sinyal CBTC, commissioning bertahap per seksi</li>
+          <li><strong>DFA:</strong> sistem modular pada peralatan stasiun (gate AFC, escalator, elevator) untuk kemudahan instalasi</li>
+        </ul>
+        <h4>Sustainability</h4>
+        <ul>
+          <li><strong>Efisiensi energi:</strong> regenerative braking pada kereta (energi pengereman dikembalikan ke grid), LED lighting di stasiun</li>
+          <li><strong>Pengurangan emisi:</strong> mengurangi kendaraan bermotor di jalan &mdash; setiap penumpang MRT mengurangi emisi CO<sub>2</sub> dibanding kendaraan pribadi</li>
+          <li><strong>Green building:</strong> stasiun dirancang dengan ventilasi alami (stasiun elevated), solar panel pada atap depo</li>
+          <li><strong>Noise &amp; vibration control:</strong> floating slab track pada seksi underground untuk minimasi dampak getaran ke bangunan sekitar</li>
+          <li><strong>Water management:</strong> sistem drainase terpadu, pengelolaan air tanah selama konstruksi underground</li>
+        </ul>
+        <h4>Disposibility</h4>
+        <ul>
+          <li><strong>Kereta:</strong> umur desain 30 tahun. End-of-life: bodi aluminium 90%+ recyclable, komponen elektronik didaur ulang sesuai regulasi e-waste</li>
+          <li><strong>Infrastruktur:</strong> beton dan baja viaduct/stasiun dapat di-demolish dan di-recycle. Tanah bekas konstruksi harus diremediasi</li>
+          <li><strong>Peralatan stasiun:</strong> escalator, elevator, AFC gate memiliki umur pakai 15-20 tahun, diganti secara modular tanpa menghentikan operasi stasiun</li>
+          <li><strong>Limbah operasional:</strong> minyak pelumas, brake pad, filter AC &mdash; dikelola sesuai regulasi B3</li>
+          <li><strong>Decommissioning plan:</strong> belum urgent (MRT masih baru), tapi harus sudah masuk perhitungan LCC sejak fase conceptual</li>
+        </ul>
       </div></div>
 
     </div>
