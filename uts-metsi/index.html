@@ -104,6 +104,11 @@ h4 { font-size: 0.9375rem; font-weight: 650; margin: 1rem 0 0.5rem; letter-spaci
 .ctab-btn:hover { color: var(--fg); }
 .ctab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 .ctab-panel { display: none; } .ctab-panel.active { display: block; }
+.cstab-bar { display: flex; gap: .5rem; margin: 1rem 0; flex-wrap: wrap; }
+.cstab-btn { padding: .5rem 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--fg-muted); cursor: pointer; font-size: .88rem; font-weight: 600; transition: all .15s; }
+.cstab-btn:hover { color: var(--fg); border-color: var(--fg-muted); }
+.cstab-btn.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+.cstab-panel { display: none; } .cstab-panel.active { display: block; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: var(--shadow-sm); }
 .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; font-weight: 650; font-size: 1rem; letter-spacing: -0.01em; }
 .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; background: var(--accent-light); color: var(--accent); white-space: nowrap; }
@@ -1305,9 +1310,16 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <p style="color:var(--fg-muted);font-size:.88rem">Dua studi kasus kelompok yang menjadi bahan ujian. Pembahasan detail per kasus, diikuti perkiraan pertanyaan UTS.</p>
       <div><button class="toggle-all" data-action="expand" data-target="apts-casestudy">Buka Semua</button><button class="toggle-all" data-action="collapse" data-target="apts-casestudy">Tutup Semua</button></div>
 
+      <div class="cstab-bar">
+        <button class="cstab-btn active" data-cstab="cs1">Kelompok 1: RSG-GAS</button>
+        <button class="cstab-btn" data-cstab="cs2">Kelompok 4: MRT Jakarta</button>
+      </div>
+
       <!-- ========== CASE STUDY 1: RSG-GAS ========== -->
-      <h2 id="cs1">Studi Kasus 1 (Kelompok 1)</h2>
-      <p style="font-size:.88rem;color:var(--fg-dim)"><strong>Design for Reliability Analysis pada Sistem Pendingin Primer Reaktor Riset RSG &ndash; G.A. Siwabessy di Badan Riset dan Inovasi Nasional menggunakan Fault Tree Analysis</strong></p>
+      <div class="cstab-panel active" id="cstab-cs1">
+      <h2 id="cs1">Studi Kasus 1 &mdash; Kelompok 1</h2>
+      <p style="font-weight:600;font-size:1.05rem;margin-bottom:.3rem">Design for Reliability Analysis pada Sistem Pendingin Primer Reaktor Riset RSG&ndash;G.A. Siwabessy di BRIN menggunakan Fault Tree Analysis</p>
+      <p style="font-size:.88rem;color:var(--fg-dim);margin-bottom:1.5rem">Reaktor Serba Guna G.A. Siwabessy (RSG-GAS) adalah reaktor riset nuklir tipe kolam terbuka berdaya 30 MW<sub>th</sub> yang berlokasi di PUSPIPTEK Serpong dan telah beroperasi sejak 1987. Studi ini mengevaluasi keandalan (<em>reliability</em>) sistem pendingin primer menggunakan <strong>Fault Tree Analysis (FTA)</strong> sesuai <strong>IEC 61025</strong> dan <strong>Probabilistic Safety Assessment (PSA) Level 1</strong>. FTA adalah metode analisis deduktif (<em>top-down</em>) yang memulai dari kejadian puncak (<em>top event</em>)&mdash;dalam hal ini <em>Loss of Cooling Flow</em>&mdash;lalu menelusuri penyebab hingga ke kegagalan komponen dasar (<em>basic events</em>) melalui gerbang logika AND dan OR. Tujuannya adalah mengidentifikasi <em>minimal cut sets</em>, menghitung probabilitas kegagalan sistem, dan menemukan komponen paling kritis yang harus diprioritaskan dalam program pemeliharaan.</p>
 
       <div class="card">
         <div class="card-header"><span class="badge">Profil</span> Reaktor RSG-GAS (G.A. Siwabessy)</div>
@@ -1532,9 +1544,13 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         <p>Keduanya menunjukkan bahwa memperbaiki keandalan suplai listrik PLN akan memberikan dampak paling signifikan pada reliability sistem pendingin primer.</p>
       </div></div>
 
+      </div><!-- /cstab-cs1 -->
+
       <!-- ========== CASE STUDY 2: MRT JAKARTA ========== -->
-      <h2 id="cs2" style="margin-top:3rem">Studi Kasus 2 (Kelompok 4)</h2>
-      <p style="font-size:.88rem;color:var(--fg-dim)"><strong>Analisis Penanganan Blackout MRT Jakarta Berdasarkan Human Factors, Maintainability, dan Failure Modes, Effects, and Criticality Analysis (FMECA)</strong></p>
+      <div class="cstab-panel" id="cstab-cs2">
+      <h2 id="cs2">Studi Kasus 2 &mdash; Kelompok 4</h2>
+      <p style="font-weight:600;font-size:1.05rem;margin-bottom:.3rem">Analisis Penanganan Blackout MRT Jakarta Berdasarkan Human Factors, Maintainability, dan FMECA</p>
+      <p style="font-size:.88rem;color:var(--fg-dim);margin-bottom:1.5rem">MRT Jakarta adalah sistem transportasi massal sepanjang 16 km dengan 13 stasiun yang melayani sekitar 120.000 penumpang/hari. Pada 9 April 2026 pukul 17:57 WIB, gangguan suplai PLN dari Gardu Induk CSW menyebabkan <em>blackout</em> total di 7 stasiun <em>elevated</em>, menghentikan elevator, eskalator, lampu darurat, dan sistem komunikasi. Studi ini menganalisis insiden tersebut menggunakan tiga kerangka: <strong>Human Factors</strong> (evaluasi respons manusia dan organisasi), <strong>Maintainability</strong> (analisis waktu dan proses pemulihan fasilitas), serta <strong>FMECA</strong> (<em>Failure Mode, Effects, and Criticality Analysis</em>) sesuai <strong>IEC 60812</strong> dan <strong>MIL-STD-1629A</strong> yang mengidentifikasi mode kegagalan, dampak, dan tingkat kekritisannya. Evaluasi dilanjutkan dengan <strong>RCM</strong> (<em>Reliability-Centered Maintenance</em>) untuk menentukan tugas pemeliharaan yang paling tepat berdasarkan konsekuensi kegagalan.</p>
 
       <div class="card">
         <div class="card-header"><span class="badge">Profil</span> Kronologi Insiden Blackout</div>
@@ -1845,6 +1861,8 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         <p><strong>Perbedaan kunci:</strong> RSG-GAS berfokus pada kuantitatif (probabilitas), sementara MRT berfokus pada kualitatif (respons manusia dan pemulihan). RSG-GAS menggunakan FTA (top-down), MRT menggunakan FMECA (bottom-up).</p>
       </div></div>
 
+
+      </div><!-- /cstab-cs2 -->
 
       <!-- ========== SOAL STUDI KASUS (Model Kisi-kisi 2024 & 2025) ========== -->
       <h2 style="margin-top:3rem">Prediksi Soal Studi Kasus (Model Kisi-kisi 2024 &amp; 2025)</h2>
@@ -4577,6 +4595,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
   try{var sd=localStorage.getItem('uts-day');if(sd){var db=document.querySelector('.day-btn[data-day="'+sd+'"]');if(db)db.click()}var ss=localStorage.getItem('uts-subject');if(ss){var sc=document.querySelector('.subject-card[data-subject="'+ss+'"]');if(sc)sc.click();var sv=document.getElementById('sv-'+ss);if(sv){var tb=sv.querySelector('.content-tabs');var g=tb?tb.dataset.tabgroup:null;if(g){var st=localStorage.getItem('uts-tab-'+g);if(st){var tb2=sv.querySelector('.ctab-btn[data-ctab="'+st+'"]');if(tb2)tb2.click()}}}}}catch(e){}
   var btt=document.getElementById('btt');window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)},{passive:true});
   document.querySelectorAll('.toggle-all').forEach(function(b){b.addEventListener('click',function(){var act=b.dataset.action,panel=document.getElementById(b.dataset.target);if(!panel)return;var cls=act==='expand'?'add':'remove';panel.querySelectorAll('.pred').forEach(function(p){p.classList[cls]('open')});panel.querySelectorAll('.soal').forEach(function(s){s.classList[cls]('open')})})});
+  document.querySelectorAll('.cstab-btn').forEach(function(b){b.addEventListener('click',function(){var t=b.dataset.cstab;b.closest('.cstab-bar').querySelectorAll('.cstab-btn').forEach(function(x){x.classList.toggle('active',x===b)});var container=b.closest('.ctab-panel')||b.closest('.cstab-bar').parentElement;container.querySelectorAll('.cstab-panel').forEach(function(p){p.classList.toggle('active',p.id==='cstab-'+t)});window.scrollTo({top:b.closest('.cstab-bar').offsetTop-80,behavior:'smooth'})})});
 })();
 </script>
 </body></html>
