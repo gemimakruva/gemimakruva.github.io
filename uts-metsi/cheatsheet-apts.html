@@ -3,291 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>APTS Cheatsheet A4</title>
+<meta name="robots" content="noindex,nofollow">
+<title>APTS Cheatsheet A4 — UTS MeTSi</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-@page { size: A4 portrait; margin: 6mm 7mm 6mm 7mm; }
 :root {
-  --fg: #1a1a1a; --dim: #444; --mut: #666;
-  --blue: oklch(58% 0.185 252); --blue-bg: oklch(95% 0.04 245); --blue-dark: oklch(42% 0.16 252);
-  --orange: oklch(55% 0.16 50); --orange-bg: oklch(96% 0.05 55);
-  --green: oklch(45% 0.15 145); --green-bg: oklch(95% 0.04 145);
-  --red: oklch(50% 0.22 25); --red-bg: oklch(97% 0.04 25);
-  --border: oklch(85% 0.008 85); --surface: oklch(97% 0.005 85);
+  --fg: oklch(24% 0.012 75); --dim: oklch(40% 0.012 75);
+  --bg: #fff; --surface: oklch(97.5% 0.005 85);
+  --blue: oklch(50% 0.185 252); --blue-bg: oklch(95% 0.04 245); --blue-dark: oklch(38% 0.14 252);
+  --orange: oklch(50% 0.15 50); --orange-bg: oklch(96% 0.05 55);
+  --green: oklch(42% 0.14 145); --green-bg: oklch(95.5% 0.04 145);
+  --red: oklch(48% 0.2 25); --purple: oklch(45% 0.18 300); --purple-bg: oklch(96% 0.04 300);
+  --border: oklch(88% 0.008 85);
   --font: 'Plus Jakarta Sans', system-ui, sans-serif;
   --mono: 'JetBrains Mono', monospace;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: var(--font); font-size: 6.2pt; line-height: 1.35; color: var(--fg);
-  width: 196mm; min-height: 285mm; max-height: 285mm; overflow: hidden;
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font); font-size: 5.8pt; line-height: 1.3;
   -webkit-font-smoothing: antialiased;
+  width: 198mm; margin: 0 auto;
 }
-.page { columns: 3; column-gap: 4mm; height: 285mm; overflow: hidden; }
-.sec { break-inside: avoid; margin-bottom: 2.5pt; border: 0.4pt solid var(--border); border-radius: 2pt; padding: 2.5pt 3pt; background: #fff; }
-.sec-title { font-size: 7pt; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin: -2.5pt -3pt 2pt; padding: 2pt 4pt; border-radius: 2pt 2pt 0 0; }
-.t-blue { background: var(--blue); }
-.t-orange { background: var(--orange); }
-.t-green { background: var(--green); }
-.t-red { background: var(--red); }
-.t-dark { background: var(--fg); }
-h3 { font-size: 6.2pt; font-weight: 700; color: var(--blue-dark); margin: 2pt 0 0.5pt; letter-spacing: -0.01em; }
-table { width: 100%; border-collapse: collapse; font-size: 5.6pt; margin: 1pt 0; }
-th, td { padding: 1pt 2pt; border: 0.3pt solid var(--border); text-align: left; line-height: 1.25; }
-th { background: var(--blue-bg); color: var(--blue-dark); font-weight: 700; font-size: 5.2pt; text-transform: uppercase; letter-spacing: 0.03em; }
-.formula { background: var(--surface); border: 0.4pt solid var(--border); border-radius: 1.5pt; padding: 2pt 3pt; margin: 1.5pt 0; font-family: var(--mono); font-size: 6pt; line-height: 1.4; }
+@page { size: A4 portrait; margin: 5mm 6mm; }
+@media print { body { width: auto; margin: 0; } .sec { box-shadow: none !important; } .note { display: none; } }
+.page { columns: 3; column-gap: 3.5mm; }
+.sec { break-inside: avoid; margin-bottom: 2pt; border: 0.3pt solid var(--border); border-radius: 2pt; padding: 2pt 2.5pt; background: var(--bg); }
+.sec-title { font-size: 6.5pt; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin: -2pt -2.5pt 1.5pt; padding: 1.5pt 3pt; border-radius: 2pt 2pt 0 0; }
+.t-blue { background: var(--blue); } .t-orange { background: var(--orange); } .t-green { background: var(--green); } .t-red { background: var(--red); } .t-dark { background: var(--fg); } .t-purple { background: var(--purple); }
+h3 { font-size: 5.8pt; font-weight: 700; color: var(--blue-dark); margin: 1.5pt 0 0.3pt; }
+table { width: 100%; border-collapse: collapse; font-size: 5.2pt; margin: 0.5pt 0; }
+th, td { padding: 0.8pt 1.5pt; border: 0.3pt solid var(--border); text-align: left; line-height: 1.2; }
+th { background: var(--blue-bg); color: var(--blue-dark); font-weight: 700; font-size: 4.8pt; text-transform: uppercase; letter-spacing: 0.03em; }
+.formula { background: var(--surface); border: 0.3pt solid var(--border); border-radius: 1.5pt; padding: 1.5pt 2.5pt; margin: 1pt 0; font-family: var(--mono); font-size: 5.4pt; line-height: 1.35; }
 .formula b { color: var(--blue-dark); }
-.key { background: var(--orange-bg); border-left: 1.5pt solid var(--orange); padding: 1.5pt 3pt; margin: 1.5pt 0; border-radius: 0 1.5pt 1.5pt 0; font-size: 5.8pt; }
+.key { background: var(--orange-bg); border-left: 1.5pt solid var(--orange); padding: 1pt 2.5pt; margin: 1pt 0; border-radius: 0 1.5pt 1.5pt 0; font-size: 5.4pt; }
 .key b { color: var(--orange); }
-ul, ol { padding-left: 8pt; margin: 0.5pt 0; }
-li { margin-bottom: 0.3pt; }
-b { font-weight: 700; }
-.small { font-size: 5.5pt; color: var(--dim); }
-.two-col { columns: 2; column-gap: 3mm; }
-.badge { display: inline-block; font-size: 5pt; font-weight: 700; padding: 0.5pt 3pt; border-radius: 1.5pt; color: #fff; vertical-align: middle; }
-.b-red { background: var(--red); }
-.b-blue { background: var(--blue); }
-.header-bar { text-align: center; margin-bottom: 3pt; padding: 2pt 0; border-bottom: 0.5pt solid var(--border); }
-.header-bar h1 { font-size: 9pt; font-weight: 800; letter-spacing: -0.03em; color: var(--blue-dark); }
-.header-bar p { font-size: 5.5pt; color: var(--dim); }
-@media print {
-  body { width: auto; min-height: auto; max-height: auto; }
-  .page { height: auto; }
-}
+.pkey { background: var(--purple-bg); border-left: 1.5pt solid var(--purple); padding: 1pt 2.5pt; margin: 1pt 0; border-radius: 0 1.5pt 1.5pt 0; font-size: 5.4pt; }
+ul, ol { padding-left: 7pt; margin: 0.3pt 0; } li { margin-bottom: 0.2pt; } b { font-weight: 700; }
+.small { font-size: 5pt; color: var(--dim); }
+.two-col { columns: 2; column-gap: 2.5mm; }
+.badge { display: inline-block; font-size: 4.5pt; font-weight: 700; padding: 0.3pt 2.5pt; border-radius: 1.5pt; color: #fff; vertical-align: middle; margin-left: 1.5pt; background: var(--red); }
+.header-bar { text-align: center; margin-bottom: 2pt; padding: 1.5pt 0 2pt; border-bottom: 0.4pt solid var(--border); }
+.header-bar h1 { font-size: 8pt; font-weight: 800; letter-spacing: -0.03em; color: var(--blue-dark); margin: 0; }
+.header-bar p { font-size: 5pt; color: var(--dim); margin: 0; }
 </style>
 </head>
 <body>
 <div class="header-bar">
-  <h1>APTS &mdash; Contekan UTS</h1>
-  <p>Blanchard &amp; Fabrycky Ch 1&ndash;6, 12&ndash;17 &bull; Closed Book &bull; 100 menit &bull; 7&ndash;8 soal</p>
+  <h1>APTS — Contekan UTS</h1>
+  <p>Blanchard &amp; Fabrycky Ch 1–6, 12–17 · Closed Book · 100 menit · 7–8 soal</p>
 </div>
 
 <div class="page">
 
-<!-- ===== 1. 3 FASE DESIGN ===== -->
 <div class="sec">
-  <div class="sec-title t-blue">1. TIGA FASE DESIGN <span class="badge b-red">100% KELUAR</span></div>
+  <div class="sec-title t-blue">1. TIGA FASE DESIGN <span class="badge">100%</span></div>
   <table>
-    <tr><th>Aspek</th><th>Conceptual</th><th>Preliminary</th><th>Detail</th></tr>
+    <tr><th></th><th>Conceptual</th><th>Preliminary</th><th>Detail</th></tr>
     <tr><td><b>Level</b></td><td>Sistem</td><td>Subsistem</td><td>Komponen</td></tr>
-    <tr><td><b>Pertanyaan</b></td><td>"APA?"</td><td>"BAGAIMANA kerja?"</td><td>"BAGAIMANA buat?"</td></tr>
-    <tr><td><b>Spec</b></td><td>Type A (System)</td><td>Type B (Development)</td><td>Type C/D/E (Product/Process/Material)</td></tr>
+    <tr><td><b>?</b></td><td>"APA?"</td><td>"BAGAIMANA kerja?"</td><td>"BAGAIMANA buat?"</td></tr>
+    <tr><td><b>Spec</b></td><td>Type A (System)</td><td>Type B (Dev)</td><td>Type C/D/E</td></tr>
     <tr><td><b>Baseline</b></td><td>Functional</td><td>Allocation</td><td>Product</td></tr>
-    <tr><td><b>Review</b></td><td>SDR</td><td>PDR</td><td>CDR + EOCDR</td></tr>
-    <tr><td><b>Aktivitas</b></td><td>Need analysis, feasibility, OpReq, FFBD, QFD</td><td>Functional analysis, requirement allocation</td><td>Component design, prototyping, eng model</td></tr>
-    <tr><td><b>Output</b></td><td>Type A Spec, Maint Concept, TPMs, FFBD</td><td>Type B/C Specs, subsystem layouts</td><td>Mfg drawings, test procedures</td></tr>
+    <tr><td><b>Review</b></td><td>SDR</td><td>PDR</td><td>CDR+EOCDR</td></tr>
+    <tr><td><b>Output</b></td><td>Type A Spec, Maint Concept, TPMs</td><td>Type B/C Specs</td><td>Mfg drawings</td></tr>
   </table>
-  <div class="key"><b>Cascading WHAT/HOW:</b> HOWs di Conceptual &rarr; WHATs di Preliminary &rarr; HOWs jadi WHATs di Detail. <b>50&ndash;75% LCC terkunci di Conceptual.</b> SE influence tinggi di awal, discipline influence tinggi di detail.</div>
+  <div class="key"><b>WHAT/HOW cascade:</b> HOW Conceptual → WHAT Preliminary → HOW → WHAT Detail. <b>50–75% LCC terkunci di Conceptual.</b></div>
 </div>
 
-<!-- ===== 2. TEST & EVALUATION ===== -->
 <div class="sec">
-  <div class="sec-title t-blue">2. TEST &amp; EVALUATION <span class="badge b-red">100% KELUAR</span></div>
+  <div class="sec-title t-blue">2. TEST &amp; EVALUATION <span class="badge">100%</span></div>
   <table>
-    <tr><th>Kategori</th><th>Fase</th><th>Metode</th><th>Contoh</th></tr>
-    <tr><td><b>Analitis</b></td><td>Conceptual</td><td>Modeling, simulasi</td><td>CFD turbin, FEA struktur, Monte Carlo</td></tr>
-    <tr><td><b>Type 1</b></td><td>Preliminary</td><td>Uji model/prototipe skala lab</td><td>Wind tunnel, test rig compressor</td></tr>
-    <tr><td><b>Type 2</b></td><td>Detail</td><td>Uji prototipe full-scale</td><td>Engine test stand, environmental test</td></tr>
-    <tr><td><b>Type 3</b></td><td>Production</td><td>Uji sistem lengkap real env</td><td>Flight test, sea trial, commissioning</td></tr>
-    <tr><td><b>Type 4</b></td><td>Operational</td><td>Monitoring kinerja aktual</td><td>MRT daily monitor, field reliability data</td></tr>
+    <tr><th>Tipe</th><th>Fase</th><th>Metode</th><th>Contoh</th></tr>
+    <tr><td><b>Analitis</b></td><td>Conceptual</td><td>Modeling, simulasi</td><td>CFD, FEA, Monte Carlo</td></tr>
+    <tr><td><b>Type 1</b></td><td>Preliminary</td><td>Model/prototipe skala</td><td>Wind tunnel</td></tr>
+    <tr><td><b>Type 2</b></td><td>Detail</td><td>Prototipe full-scale</td><td>Engine test stand</td></tr>
+    <tr><td><b>Type 3</b></td><td>Production</td><td>Sistem lengkap real env</td><td>Flight test, sea trial</td></tr>
+    <tr><td><b>Type 4</b></td><td>Operational</td><td>Monitoring aktual</td><td>Field reliability data</td></tr>
   </table>
-  <p class="small"><b>Validasi:</b> "Are we building the RIGHT system?" &bull; <b>Verifikasi:</b> "Are we building the system RIGHT?"</p>
+  <p class="small"><b>Validasi:</b> "RIGHT system?" · <b>Verifikasi:</b> "system RIGHT?"</p>
 </div>
 
-<!-- ===== 3. MAINTAINABILITY ===== -->
 <div class="sec">
-  <div class="sec-title t-blue">3. MAINTAINABILITY <span class="badge b-red">100% KELUAR</span></div>
-  <p><b>Maintainability</b> = design characteristic (di-design). <b>Maintenance</b> = operational activity (dilakukan).</p>
-  <h3>3 Tujuan:</h3>
-  <ol>
-    <li>Minimasi system downtime (MDT)</li>
-    <li>Maksimasi A<sub>o</sub> = MTBM / (MTBM + MDT)</li>
-    <li>Reduksi biaya maintenance (O&amp;S = 60&ndash;80% LCC)</li>
-  </ol>
-  <h3>3 Level Maintenance:</h3>
+  <div class="sec-title t-blue">3. MAINTAINABILITY <span class="badge">100%</span></div>
+  <p><b>Maintainability</b>=design characteristic. <b>Maintenance</b>=operational activity.</p>
+  <p><b>3 Tujuan:</b> ①Minimasi MDT ②Maksimasi Ao ③Reduksi biaya O&amp;S (60–80% LCC)</p>
   <table>
     <tr><th>Level</th><th>Lokasi</th><th>Aktivitas</th></tr>
-    <tr><td><b>Organizational</b></td><td>Lapangan</td><td>Inspeksi rutin, ganti modular, cleaning</td></tr>
-    <tr><td><b>Intermediate</b></td><td>Workshop</td><td>Kalibrasi, component repair</td></tr>
-    <tr><td><b>Depot</b></td><td>Pabrik/OEM</td><td>Overhaul besar, rebuild, remanufacture</td></tr>
+    <tr><td><b>Organizational</b></td><td>Lapangan</td><td>Inspeksi, ganti modular</td></tr>
+    <tr><td><b>Intermediate</b></td><td>Workshop</td><td>Kalibrasi, repair</td></tr>
+    <tr><td><b>Depot</b></td><td>Pabrik/OEM</td><td>Overhaul, rebuild</td></tr>
   </table>
-  <h3>6 Elemen Desain Maintainability:</h3>
-  <div class="two-col">
-    <ol>
-      <li><b>Accessibility</b> &mdash; akses fisik komponen</li>
-      <li><b>Testability</b> &mdash; kemudahan diagnosis/deteksi</li>
-      <li><b>Standardization</b> &mdash; interchangeability parts</li>
-      <li><b>Modularization</b> &mdash; plug-in/remove tanpa tool khusus</li>
-      <li><b>Labeling</b> &mdash; identifikasi jelas</li>
-      <li><b>Simplification</b> &mdash; minimalkan step &amp; tools</li>
-    </ol>
-  </div>
-  <h3>10 Ukuran Maintainability:</h3>
-  <p class="small">Mct, Mpt, M&#772;, MDT, &lambda;m, MTBM, maintenance manhours/ophr, turnaround time, logistics delay, admin delay</p>
+  <p><b>6 Elemen:</b> ①Accessibility ②Testability ③Standardization ④Modularization ⑤Labeling ⑥Simplification</p>
 </div>
 
-<!-- ===== 4. FORMULA KUNCI ===== -->
 <div class="sec">
   <div class="sec-title t-red">FORMULA KUNCI</div>
   <div class="formula">
-    <b>Reliability:</b> R(t) = e<sup>&minus;&lambda;t</sup> &nbsp; &theta; = MTBF = 1/&lambda;<br>
-    <b>Seri:</b> R<sub>s</sub> = R<sub>1</sub>&times;R<sub>2</sub>&times;&hellip;&times;R<sub>n</sub><br>
-    <b>Paralel:</b> R<sub>p</sub> = 1&minus;(1&minus;R<sub>1</sub>)(1&minus;R<sub>2</sub>)&hellip;(1&minus;R<sub>n</sub>)<br><br>
-    <b>A<sub>i</sub></b> = MTBF / (MTBF + Mct) &mdash; inherent<br>
-    <b>A<sub>a</sub></b> = MTBM / (MTBM + M&#772;) &mdash; achieved<br>
-    <b>A<sub>o</sub></b> = MTBM / (MTBM + MDT) &mdash; operational<br>
-    <b>MDT</b> = Mct + Mpt + logistic delay + admin delay<br><br>
-    <b>FTA:</b> AND = P(A)&times;P(B) &nbsp; OR = P(A)+P(B)&minus;P(A)&times;P(B)<br>
-    <b>RPN</b> = Severity &times; Occurrence &times; Detection<br>
-    <b>BEP</b> = Fixed Cost / (Revenue/unit &minus; Variable Cost/unit)
+    <b>R(t)</b> = e<sup>−λt</sup>   θ=MTBF=1/λ<br>
+    <b>Seri:</b> R<sub>s</sub>=R₁×R₂×…×Rₙ   <b>Paralel:</b> R<sub>p</sub>=1−∏(1−Rᵢ)<br>
+    <b>Aᵢ</b>=MTBF/(MTBF+Mct)  <b>Aₐ</b>=MTBM/(MTBM+M̄)<br>
+    <b>Aₒ</b>=MTBM/(MTBM+MDT)<br>
+    <b>MDT</b>=Mct+Mpt+logistic delay+admin delay<br>
+    <b>FTA:</b> AND=P(A)×P(B)  OR=P(A)+P(B)−P(A)×P(B)<br>
+    <b>RPN</b>=Severity×Occurrence×Detection<br>
+    <b>BEP</b>=FC/(Rev/unit−VC/unit)
   </div>
 </div>
 
-<!-- ===== 5. HF-R-M TRIANGLE ===== -->
 <div class="sec">
-  <div class="sec-title t-blue">4. HUBUNGAN HF &harr; RELIABILITY &harr; MAINTAINABILITY <span class="badge b-red">100%</span></div>
+  <div class="sec-title t-blue">4. HF ↔ RELIABILITY ↔ MAINT <span class="badge">100%</span></div>
   <table>
-    <tr><th>Hubungan</th><th>Mekanisme</th><th>Contoh</th></tr>
-    <tr><td><b>HF&rarr;Rel</b></td><td>HF buruk &rarr; human error &uarr; &rarr; &lambda; &uarr; &rarr; R &darr;</td><td>Cockpit ergonomis &rarr; pilot error &darr; &rarr; insiden &darr;</td></tr>
-    <tr><td><b>HF&rarr;Maint</b></td><td>Akses sulit &rarr; Mct &uarr; &rarr; MDT &uarr; &rarr; A<sub>o</sub> &darr;</td><td>Panel sempit &rarr; teknisi 4 jam bukan 30 menit</td></tr>
-    <tr><td><b>Rel&rarr;Maint</b></td><td>R rendah &rarr; maintenance sering &rarr; biaya &uarr;</td><td>MTBF 100jam &rarr; maint tiap 4 hari</td></tr>
-    <tr><td><b>Maint&rarr;Rel</b></td><td>Maint buruk &rarr; degradasi &rarr; R &darr;</td><td>Over-torque saat service &rarr; premature failure</td></tr>
+    <tr><th>Arah</th><th>Mekanisme</th><th>Contoh</th></tr>
+    <tr><td><b>HF→R</b></td><td>HF buruk→human error↑→λ↑→R↓</td><td>Cockpit ergonomis→error↓</td></tr>
+    <tr><td><b>HF→M</b></td><td>Akses sulit→Mct↑→MDT↑→Ao↓</td><td>Panel sempit→4jam bukan 30min</td></tr>
+    <tr><td><b>R→M</b></td><td>R rendah→maint sering→biaya↑</td><td>MTBF 100jam→maint tiap 4hari</td></tr>
+    <tr><td><b>M→R</b></td><td>Maint buruk→degradasi→R↓</td><td>Over-torque→premature failure</td></tr>
   </table>
-  <div class="formula"><b>A<sub>o</sub> = MTBM / (MTBM + MDT)</b><br>MTBM dipengaruhi Reliability (R&uarr; &rarr; MTBM&uarr;). MDT dipengaruhi Maintainability (desain mudah &rarr; MDT&darr;). Keduanya dipengaruhi HF (ergonomis &rarr; human error&darr;).</div>
 </div>
 
-<!-- ===== 6. DISPOSABILITY & SUSTAINABILITY ===== -->
 <div class="sec">
-  <div class="sec-title t-green">5. DISPOSABILITY &amp; SUSTAINABILITY <span class="badge b-red">100%</span></div>
+  <div class="sec-title t-green">5. DISPOSABILITY &amp; SUSTAINABILITY <span class="badge">100%</span></div>
   <div class="two-col">
     <div>
-      <h3>Disposability:</h3>
-      <ul>
-        <li>% material recyclable</li>
-        <li>Biaya disposal per unit</li>
-        <li>Waktu dekomisioning</li>
-        <li>Compliance regulasi lingkungan</li>
-        <li>Disposal cost % dari total LCC</li>
-      </ul>
+      <b>Disposability:</b>
+      <ul><li>% recyclable</li><li>Biaya disposal/unit</li><li>Waktu dekomisioning</li><li>Compliance regulasi</li><li>Disposal % LCC</li></ul>
     </div>
     <div>
-      <h3>Sustainability:</h3>
-      <ul>
-        <li>Carbon footprint (kg CO<sub>2</sub> eq)</li>
-        <li>Energy efficiency (output/input)</li>
-        <li>% material ramah lingkungan</li>
-        <li>Water &amp; waste per unit output</li>
-        <li>Life cycle assessment (LCA) score</li>
-      </ul>
+      <b>Sustainability:</b>
+      <ul><li>Carbon footprint (kgCO₂eq)</li><li>Energy efficiency</li><li>% material hijau</li><li>Water/waste per unit</li><li>LCA score</li></ul>
     </div>
   </div>
 </div>
 
-<!-- ===== 7. LCC ===== -->
 <div class="sec">
-  <div class="sec-title t-orange">6. LIFE CYCLE COST (LCC)</div>
-  <h3>4 Aspek Biaya:</h3>
+  <div class="sec-title t-orange">6. LIFE CYCLE COST</div>
   <table>
-    <tr><th>Aspek</th><th>Isi</th><th>Proporsi</th></tr>
-    <tr><td><b>R&amp;D</b></td><td>Riset, desain, testing, dokumentasi</td><td>10&ndash;15%</td></tr>
-    <tr><td><b>Production</b></td><td>Manufaktur, QC, tooling, facility</td><td>15&ndash;20%</td></tr>
-    <tr><td><b>O&amp;S</b></td><td>Operasi, maintenance, supply, training</td><td><b>60&ndash;80%</b></td></tr>
-    <tr><td><b>Disposal</b></td><td>Dekomisioning, recycling, limbah</td><td>1&ndash;5%</td></tr>
+    <tr><th>Aspek</th><th>%</th><th>Isi</th></tr>
+    <tr><td><b>R&amp;D</b></td><td>10–15</td><td>Riset, desain, testing, docs</td></tr>
+    <tr><td><b>Production</b></td><td>15–20</td><td>Manufaktur, QC, tooling</td></tr>
+    <tr><td><b>O&amp;S</b></td><td><b>60–80</b></td><td>Operasi, maintenance, supply</td></tr>
+    <tr><td><b>Disposal</b></td><td>1–5</td><td>Dekomisioning, recycling</td></tr>
   </table>
-  <h3>12 Langkah LCC:</h3>
-  <ol class="small">
-    <li>Define problem</li><li>Identify alternatives</li><li>Select evaluation model</li><li>Estimate cost data</li><li>Establish cost profile</li><li>Discount to present value</li><li>Establish evaluation criteria</li><li>Perform sensitivity analysis</li><li>Rank alternatives</li><li>Document &amp; review</li><li>Update cost estimates (iteratif)</li><li>Select preferred alternative</li>
-  </ol>
+  <p class="small"><b>12 Langkah:</b> ①Define problem ②Identify alternatives ③Select model ④Estimate costs ⑤Cost profile ⑥Discount PV ⑦Eval criteria ⑧Sensitivity analysis ⑨Rank ⑩Document ⑪Update ⑫Select</p>
 </div>
 
-<!-- ===== 8. FTA / FMEA / RCM ===== -->
 <div class="sec">
   <div class="sec-title t-dark">7. FTA vs FMEA vs RCM</div>
   <table>
-    <tr><th>Metode</th><th>Arah</th><th>Pendekatan</th><th>Output</th></tr>
-    <tr><td><b>FTA</b></td><td>Top-down</td><td>Mulai dari system failure &rarr; cari root causes</td><td>Fault tree, cut sets, probabilitas</td></tr>
-    <tr><td><b>FMEA</b></td><td>Bottom-up</td><td>Mulai dari komponen &rarr; identifikasi failure modes</td><td>RPN = S&times;O&times;D, corrective actions</td></tr>
-    <tr><td><b>RCM</b></td><td>Function-based</td><td>Fungsi &rarr; functional failure &rarr; strategi optimal</td><td>Maintenance strategy per komponen</td></tr>
+    <tr><th>Metode</th><th>Arah</th><th>Dari</th><th>Output</th></tr>
+    <tr><td><b>FTA</b></td><td>Top↓</td><td>System failure→root causes</td><td>Cut sets, probabilitas</td></tr>
+    <tr><td><b>FMEA</b></td><td>Bottom↑</td><td>Komponen→failure modes</td><td>RPN, corrective actions</td></tr>
+    <tr><td><b>RCM</b></td><td>Function</td><td>Fungsi→failure→strategi</td><td>Maint strategy</td></tr>
   </table>
-  <p class="small"><b>FTA gates:</b> AND (semua harus gagal) = P(A)&times;P(B). OR (salah satu cukup) = P(A)+P(B)&minus;P(A)&times;P(B). <b>RPN:</b> prioritaskan tertinggi untuk corrective action.</p>
 </div>
 
-<!-- ===== 9. DESIGN CONSIDERATIONS ===== -->
 <div class="sec">
-  <div class="sec-title t-dark">8. 12 DESIGN CONSIDERATIONS (-ilities)</div>
-  <div class="two-col" style="font-size:5.6pt">
-    <ol>
-      <li><b>Performance</b> &mdash; kinerja fungsional</li>
-      <li><b>Reliability</b> &mdash; tanpa gagal selama t</li>
-      <li><b>Maintainability</b> &mdash; mudah diperbaiki</li>
-      <li><b>Human Factors</b> &mdash; ergonomi operator</li>
-      <li><b>Supportability</b> &mdash; dukungan logistik</li>
-      <li><b>Producibility</b> &mdash; mudah diproduksi</li>
-      <li><b>Disposability</b> &mdash; mudah di-dispose</li>
-      <li><b>Sustainability</b> &mdash; ramah lingkungan</li>
-      <li><b>Affordability</b> &mdash; LCC wajar</li>
-      <li><b>Safety</b> &mdash; minim risiko bahaya</li>
-      <li><b>Quality</b> &mdash; sesuai standar</li>
-      <li><b>Aesthetics</b> &mdash; tampilan/form factor</li>
-    </ol>
-  </div>
+  <div class="sec-title t-dark">8. DESIGN CONSIDERATIONS &amp; OP.REQ</div>
+  <p><b>12 -ilities:</b> ①Performance ②Reliability ③Maintainability ④Human Factors ⑤Supportability ⑥Producibility ⑦Disposability ⑧Sustainability ⑨Affordability ⑩Safety ⑪Quality ⑫Aesthetics</p>
+  <p><b>7 Operational Req:</b> ①Distribution/Deployment ②Mission Profile ③Performance Params ④Utilization Rate ⑤Effectiveness Factors ⑥Operational Life Cycle ⑦Environment</p>
 </div>
 
-<!-- ===== 10. OPERATIONAL REQUIREMENTS ===== -->
 <div class="sec">
-  <div class="sec-title t-dark">9. 7 OPERATIONAL REQUIREMENTS</div>
-  <div class="two-col" style="font-size:5.6pt">
-    <ol>
-      <li><b>Distribution/Deployment</b> &mdash; dimana dipakai</li>
-      <li><b>Mission Profile</b> &mdash; skenario operasi</li>
-      <li><b>Performance Parameters</b> &mdash; TPM target</li>
-      <li><b>Utilization Rate</b> &mdash; frekuensi penggunaan</li>
-      <li><b>Effectiveness Factors</b> &mdash; ukuran keberhasilan</li>
-      <li><b>Operational Life Cycle</b> &mdash; umur desain</li>
-      <li><b>Environment</b> &mdash; kondisi operasi</li>
-    </ol>
-  </div>
-</div>
-
-<!-- ===== 11. BATHTUB CURVE ===== -->
-<div class="sec">
-  <div class="sec-title t-dark">10. BATHTUB CURVE &amp; RELIABILITY CONCEPTS</div>
+  <div class="sec-title t-dark">9. BATHTUB CURVE</div>
   <table>
-    <tr><th>Region</th><th>Failure Rate</th><th>Penyebab</th></tr>
-    <tr><td><b>Infant mortality</b></td><td>&lambda; menurun</td><td>Cacat manufaktur, burn-in, QC lolos</td></tr>
-    <tr><td><b>Useful life</b></td><td>&lambda; konstan</td><td>Random failures. R(t)=e<sup>&minus;&lambda;t</sup> berlaku</td></tr>
-    <tr><td><b>Wear-out</b></td><td>&lambda; meningkat</td><td>Degradasi, fatigue, korosi, aging</td></tr>
+    <tr><th>Region</th><th>λ</th><th>Penyebab</th></tr>
+    <tr><td><b>Infant mortality</b></td><td>↓</td><td>Cacat manufaktur, QC lolos</td></tr>
+    <tr><td><b>Useful life</b></td><td>Konstan</td><td>Random. R(t)=e<sup>−λt</sup></td></tr>
+    <tr><td><b>Wear-out</b></td><td>↑</td><td>Fatigue, korosi, aging</td></tr>
   </table>
-  <p class="small"><b>DDP:</b> parameter yang bisa dikendalikan desainer (MTBF, Mct). <b>DDI:</b> parameter inherent bawaan komponen. <b>Repairable:</b> MTBF. <b>Non-repairable:</b> MTTF.</p>
+  <p class="small"><b>DDP:</b> controllable (MTBF, Mct). <b>DDI:</b> inherent. <b>Repairable:</b> MTBF. <b>Non-repairable:</b> MTTF.</p>
 </div>
 
-<!-- ===== 12. SE PRINCIPLES ===== -->
 <div class="sec">
-  <div class="sec-title t-blue">11. 7 PRINSIP SE</div>
-  <ol style="font-size:5.6pt">
-    <li><b>Top-down life-cycle</b> &mdash; level sistem dulu, turun ke detail</li>
-    <li><b>WHAT before HOW</b> &mdash; definisikan kebutuhan sebelum solusi</li>
-    <li><b>Interdisciplinary team</b> &mdash; semua disiplin sejak awal</li>
-    <li><b>Iterative with feedback</b> &mdash; synthesis-analysis-evaluation berulang</li>
-    <li><b>Multiple criteria</b> &mdash; jangan optimasi satu parameter saja</li>
-    <li><b>Requirements traceability</b> &mdash; customer need &rarr; komponen</li>
-    <li><b>Early decisions matter most</b> &mdash; 70&ndash;80% LCC terkunci di awal</li>
-  </ol>
+  <div class="sec-title t-blue">10. 7 PRINSIP SE</div>
+  <p>①Top-down life-cycle ②WHAT before HOW ③Interdisciplinary team ④Iterative+feedback ⑤Multiple criteria ⑥Requirements traceability ⑦Early decisions matter (70–80% LCC)</p>
 </div>
 
-<!-- ===== 13. CASE STUDY FRAMEWORK ===== -->
 <div class="sec">
-  <div class="sec-title t-orange">12. FRAMEWORK STUDI KASUS</div>
-  <p class="small">Soal studi kasus selalu berupa kasus baru. Gunakan framework ini:</p>
-  <ol style="font-size:5.6pt">
-    <li><b>Identifikasi masalah</b> &mdash; apa yang gagal/perlu diperbaiki</li>
-    <li><b>Analisis kebutuhan</b> &mdash; operational requirements (7 komponen)</li>
-    <li><b>Kaitkan dengan SE concepts</b> &mdash; 3 fase design, T&amp;E, -ilities</li>
-    <li><b>Analisis teknis</b> &mdash; FTA/FMEA/RCM, reliability, maintainability</li>
-    <li><b>Solusi &amp; rekomendasi</b> &mdash; design changes, trade-offs</li>
-    <li><b>Evaluasi LCC</b> &mdash; cost-benefit dari solusi yang diusulkan</li>
-  </ol>
-  <p class="small"><b>Tools yang sering diminta:</b> FTA (top-down untuk safety-critical), FMEA (bottom-up per komponen), RCM (optimasi strategi maintenance).</p>
+  <div class="sec-title t-purple">CS1: RSG-GAS — FTA Pendingin Primer</div>
+  <p><b>Reaktor 30MW<sub>th</sub>, &gt;35thn, BRIN Serpong.</b> Sistem pendingin primer = safety-critical.</p>
+  <h3>Komponen &amp; Konfigurasi:</h3>
+  <table>
+    <tr><th>Komponen</th><th>Jumlah</th><th>Konfigurasi</th></tr>
+    <tr><td><b>Pompa primer</b></td><td>3</td><td>2 operasi + 1 standby (k-out-of-n)</td></tr>
+    <tr><td><b>Heat exchanger</b></td><td>2</td><td>Masing-masing 50% (AND gate)</td></tr>
+    <tr><td><b>MOV (valve)</b></td><td>beberapa</td><td>Isolasi aliran (OR gate)</td></tr>
+  </table>
+  <h3>FTA Structure:</h3>
+  <div class="formula">
+    <b>Top Event:</b> Loss of Cooling Flow (LOF)<br>
+    = LOF-ISO-VAL <b>OR</b> LOF_HE_CH <b>OR</b> LOF_PRI_MP<br>
+    Valve: OR gate · HE: AND gate · Pompa: AND (2/3 gagal)
+  </div>
+  <h3>Failure Rates (kunci):</h3>
+  <table>
+    <tr><th>Komponen</th><th>λ (/jam)</th></tr>
+    <tr><td>PLN (trip)</td><td><b>1.0×10⁻³</b> ← dominan!</td></tr>
+    <tr><td>Pompa sentrifugal</td><td>3.0×10⁻⁵</td></tr>
+    <tr><td>Motor listrik</td><td>1.0×10⁻⁵</td></tr>
+    <tr><td>Heat exchanger</td><td>1.0×10⁻⁶</td></tr>
+    <tr><td>MOV</td><td>5.0×10⁻⁷</td></tr>
+  </table>
+  <h3>Hasil Kuantitatif:</h3>
+  <div class="pkey">
+    <b>101 MCS</b> (Minimal Cut Sets). Pompa=91(90%), HE=6(6%), Valve=4(4%).<br>
+    <b>System Unavailability:</b> 5.57×10⁻⁴ → <b>Reliability: 99.94%</b><br>
+    <b>F-Vesely:</b> PLN_TRIP = <b>0.9976</b> (99.76%) = kontributor #1.<br>
+    Pompa PP01/02/03 = 0.33 masing-masing.
+  </div>
+  <h3>Rekomendasi:</h3>
+  <p>①Redundansi suplai listrik (diesel generator, UPS, dual PLN) ②Preventive maint pompa ③Vibration monitoring ④Pisahkan suplai listrik pompa (common cause)</p>
+  <div class="key"><b>Lesson:</b> PLN = common cause failure. Redundansi komponen sia-sia jika suplai listrik tunggal.</div>
+</div>
+
+<div class="sec">
+  <div class="sec-title t-purple">CS2: MRT JAKARTA — HF + FMECA + RCM</div>
+  <p><b>9 Apr 2026, 17:57 WIB.</b> Gangguan PLN GI CSW → 7 stasiun elevated blackout. 10 orang terjebak di lift. <b>0 korban jiwa.</b> Listrik pulih 4 menit, tapi fasilitas 2–3 jam.</p>
+  <h3>Human Factors — 4 Fase Respons:</h3>
+  <p>①<b>Deteksi</b> (alarm SCADA) ②<b>Kendali</b> (koordinasi PLN) ③<b>Proteksi</b> (evakuasi lift, lampu darurat) ④<b>Pemulihan</b> (reset sistem, verifikasi)</p>
+  <p><b>6 Kekuatan:</b> 0 fatality, evakuasi berhasil, koordinasi PLN cepat, SOP diikuti</p>
+  <p><b>6 Gap:</b> Teknisi terbatas, radio terganggu, simulasi belum menyeluruh, evakuasi lift belum standar, PA gagal 2–3jam, ketergantungan vendor</p>
+  <h3>FMECA — 4 Failure Modes:</h3>
+  <table>
+    <tr><th>Failure Mode</th><th>Penyebab</th><th>Severity</th></tr>
+    <tr><td>Lift berhenti, terjebak</td><td>ARD tidak fungsi</td><td style="font-weight:700">Sangat Tinggi</td></tr>
+    <tr><td>Lampu emergency mati</td><td>Baterai/ATS gagal</td><td style="font-weight:700">Sangat Tinggi</td></tr>
+    <tr><td>PA &amp; radio mati</td><td>UPS tidak aktif</td><td>Tinggi</td></tr>
+    <tr><td>Recovery lambat</td><td>Teknisi terbatas, SOP</td><td>Tinggi</td></tr>
+  </table>
+  <h3>RCM — 3 Klasifikasi Konsekuensi:</h3>
+  <table>
+    <tr><th>Klasifikasi</th><th>Contoh</th><th>Pendekatan</th></tr>
+    <tr><td><b>Safety</b></td><td>Elevator, lampu, PA</td><td>Redesign jika maint tak efektif</td></tr>
+    <tr><td><b>Operational</b></td><td>CCTV, AC, AFC/gate</td><td>On-condition, functional test</td></tr>
+    <tr><td><b>Hidden failure</b></td><td>ARD, UPS, baterai</td><td><b>Failure-finding task</b></td></tr>
+  </table>
+  <div class="pkey"><b>Temuan kunci: Hidden failure.</b> ARD &amp; UPS sudah terpasang &amp; dirawat, tapi GAGAL saat blackout. Pemeliharaan hanya cek visual, bukan <b>uji fungsi</b>. Solusi: <b>failure-finding test</b> = simulasi blackout berkala.</div>
+  <div class="key"><b>MDT breakdown:</b> Listrik 4min (PLN), PA 2–3jam (vendor+reset). MDT ≠ Mct saja. MDT = Mct + logistic delay + admin delay. PA didominasi logistic delay.</div>
+</div>
+
+<div class="sec">
+  <div class="sec-title t-purple">RSG-GAS vs MRT — Perbandingan</div>
+  <table>
+    <tr><th>Aspek</th><th>RSG-GAS</th><th>MRT Jakarta</th></tr>
+    <tr><td><b>Fokus</b></td><td>Design for Reliability</td><td>HF + Maintainability</td></tr>
+    <tr><td><b>Metode</b></td><td>FTA (top-down, kuantitatif)</td><td>FMECA+RCM (bottom-up, kualitatif)</td></tr>
+    <tr><td><b>Timing</b></td><td>Before-the-fact</td><td>After-the-fact</td></tr>
+    <tr><td><b>Common cause</b></td><td>PLN_TRIP</td><td>PLN GI CSW</td></tr>
+    <tr><td><b>Peran manusia</b></td><td>Minimal (otomatis)</td><td>Dominan (9 tugas)</td></tr>
+  </table>
+  <div class="key"><b>Persamaan:</b> PLN = common cause failure di kedua kasus. Keduanya butuh redundansi suplai listrik.</div>
+</div>
+
+<div class="sec">
+  <div class="sec-title t-orange">FRAMEWORK STUDI KASUS BARU</div>
+  <p>①Identifikasi masalah ②Analisis kebutuhan (7 OpReq) ③Kaitkan SE concepts (3 fase, T&amp;E, -ilities) ④Analisis teknis (FTA/FMEA/RCM) ⑤Solusi &amp; trade-offs ⑥Evaluasi LCC</p>
 </div>
 
 </div>
