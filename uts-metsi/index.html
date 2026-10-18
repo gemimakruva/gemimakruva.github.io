@@ -190,14 +190,13 @@ tr:nth-child(even) td { background: var(--surface-up); }
   <button class="day-btn" data-day="2" role="tab">Hari 2<span class="day-label">Sel, 20 Okt</span></button>
   <button class="day-btn" data-day="3" role="tab">Hari 3<span class="day-label">Rab, 21 Okt</span></button>
   <button class="day-btn" data-day="4" role="tab">Hari 4<span class="day-label">Kam, 22 Okt</span></button>
-  <button class="day-btn" data-day="5" role="tab">Hari 5<span class="day-label">Jum, 23 Okt</span></button>
 </nav>
 
 <!-- ========================= HARI 1 =============================== -->
 <div class="day-panel active" id="day-1">
   <div class="subject-picker" id="picker-1">
     <div class="subject-card" data-subject="apts"><div class="sc-name">APTS</div><div class="sc-full">Asas dan Penerapan Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>7 sesi</span><span>3 arsip soal</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-    <div class="subject-card" data-subject="ddk"><div class="sc-name">DDK</div><div class="sc-full">Dasar-Dasar Komputasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>4 sesi</span><span>Tanpa arsip</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
+    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">PTS</div><div class="sc-full">Pengantar Teknik Sistem</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Supranto &amp; Prof. Dr.-Ing. Ir. Agus Maryono</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
 
   <!-- ====================== APTS ====================== -->
@@ -1878,10 +1877,12 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
     </div>
   </div>
 
-  <!-- ====================== DDK ====================== -->
-  <div class="subject-view" id="sv-ddk">
-    <button class="back-btn" data-back="1">&larr; Kembali ke Hari 1</button>
-    <div class="exam-banner"><strong>UTS DDK:</strong> Rabu, 21 Okt 2026 &bull; 13:00&ndash;15:00 WIB<br><strong>Dosen:</strong> Dr. Joko Wintoko (Sesi 1&ndash;2) &amp; Ir. Ayodya Pradhipta Tenggara (Sesi 3&ndash;4)<br><strong>Format:</strong> Tidak ada kisi-kisi resmi, prediksi berdasarkan materi kuliah &amp; PR</div>
+</div>
+
+<!-- ====================== DDK (Hari 3) ====================== -->
+<div class="subject-view" id="sv-ddk">
+    <button class="back-btn" data-back="3">&larr; Kembali ke Hari 3</button>
+    <div class="exam-banner"><strong>Pra Kuliah DDK:</strong> Rabu, 21 Okt 2026 &bull; 13:00&ndash;15:00 WIB<br><strong>Dosen:</strong> Dr. Joko Wintoko (Sesi 1&ndash;2) &amp; Ir. Ayodya Pradhipta Tenggara (Sesi 3&ndash;4)<br><strong>Format:</strong> Tidak ada kisi-kisi resmi, prediksi berdasarkan materi kuliah &amp; PR</div>
     <div class="content-tabs" data-tabgroup="ddk">
       <button class="ctab-btn active" data-ctab="ddk-rangkuman">Rangkuman</button>
       <button class="ctab-btn" data-ctab="ddk-materi">Materi Kunci</button>
@@ -2312,9 +2313,8 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
       </div>
     </div>
   </div>
-</div>
 
-<!-- ========================= HARI 2-5 ============================= -->
+<!-- ========================= HARI 2-4 ============================= -->
 <div class="day-panel" id="day-2">
   <div class="subject-picker">
     <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">SDTS</div><div class="sc-full">Statistika dalam Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Ir. Muhammad Mufti Azis</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
@@ -2325,7 +2325,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
 <div class="day-panel" id="day-3">
   <div class="subject-picker">
     <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">MAN-OP</div><div class="sc-full">Manajemen Operasi</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Dr. Ir. Nugroho Dewayanto</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">DDK</div><div class="sc-full">Dasar-Dasar Komputasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Dr. Joko Wintoko &amp; Ir. Ayodya P.T.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
+    <div class="subject-card" data-subject="ddk"><div class="sc-name">DDK</div><div class="sc-full">Dasar-Dasar Komputasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Dr. Joko Wintoko &amp; Ir. Ayodya P.T.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
   <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi MAN-OP &amp; DDK (ujian) akan ditambahkan.</p></div>
 </div>
@@ -2335,12 +2335,6 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
     <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">MST</div><div class="sc-full">Matematika dan Statistika Teknik</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Andi R.W. &amp; Dr. Ir. Nugroho D.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
   <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi PSD &amp; MST akan ditambahkan.</p></div>
-</div>
-<div class="day-panel" id="day-5">
-  <div class="subject-picker">
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">Metopen</div><div class="sc-full">Metode Penelitian dalam Teknik Sistem</div><div class="sc-meta"><span>09:00&ndash;11:00</span><span>Prof. Dr.Eng. Ir. Arief Budiman</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-  </div>
-  <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi Metopen akan ditambahkan.</p></div>
 </div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
