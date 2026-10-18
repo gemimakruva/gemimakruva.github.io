@@ -234,7 +234,7 @@ tr:nth-child(even) td { background: var(--surface-up); }
           <tr><td>1</td><td><strong>Reliability</strong></td><td>Probabilitas beroperasi tanpa failure <span class="vid">APTS 01 00:30:00</span></td></tr>
           <tr><td>2</td><td><strong>Maintainability</strong></td><td>Kemudahan memelihara dan memperbaiki <span class="vid">APTS 01 00:42:00</span></td></tr>
           <tr><td>3</td><td><strong>Human Factors</strong></td><td>Interaksi manusia-mesin, ergonomi <span class="vid">APTS 01 00:50:00</span></td></tr>
-          <tr><td>4</td><td><strong>Producibility</strong></td><td>Konsistensi kualitas produksi (DFM, DFA) <span class="vid">APTS 01 01:04:00</span></td></tr>
+          <tr><td>4</td><td><strong>Producibility</strong></td><td>Konsistensi kualitas produksi (DFM/Design for Manufacturing, DFA/Design for Assembly) <span class="vid">APTS 01 01:04:00</span></td></tr>
           <tr><td>5</td><td><strong>Disposability</strong></td><td>End-of-life: recycle, disposal aman <span class="vid">APTS 01 01:04:04</span></td></tr>
           <tr><td>6</td><td><strong>Sustainability</strong></td><td>Dampak lingkungan minimal, carbon footprint</td></tr>
           <tr><td>7</td><td><strong>Affordability/LCC</strong></td><td>Biaya total sepanjang life cycle <span class="vid">APTS 01 01:08:07</span></td></tr>
@@ -258,11 +258,11 @@ tr:nth-child(even) td { background: var(--surface-up); }
           <div class="ci"><h4>Spiral</h4><p>Iteratif + risk assessment tiap cycle.</p></div>
         </div>
         <h4>10-Block Morphology <span class="vid">APTS 02 00:15:30</span></h4>
-        <p>Need identification &rarr; Feasibility &rarr; Operational requirements &rarr; SMS &rarr; TPM &rarr; Functional analysis &rarr; Requirements allocation &rarr; Optimization &rarr; Synthesis &rarr; T&amp;E</p>
+        <p>Need identification &rarr; Feasibility &rarr; Operational requirements &rarr; SMS (System Maintenance Spec) &rarr; TPM &rarr; Functional analysis &rarr; Requirements allocation &rarr; Optimization &rarr; Synthesis &rarr; T&amp;E</p>
         <h4>DDP, DIP, dan TPM</h4>
-        <ul><li><strong>DDP:</strong> parameter yang bisa dikendalikan desainer (MTBF, Mct)</li>
-        <li><strong>DIP:</strong> parameter di luar kendali desainer (lingkungan, regulasi)</li>
-        <li><strong>TPM:</strong> metrik kuantitatif pencapaian desain terhadap requirement</li></ul>
+        <ul><li><strong>DDP (Design Dependent Parameter):</strong> parameter yang bisa dikendalikan desainer (MTBF/Mean Time Between Failure, Mct/Mean Corrective maintenance Time)</li>
+        <li><strong>DIP (Design Independent Parameter):</strong> parameter di luar kendali desainer (lingkungan, regulasi)</li>
+        <li><strong>TPM (Technical Performance Measure):</strong> metrik kuantitatif pencapaian desain terhadap requirement</li></ul>
       </div>
 
       <div class="card" id="ap3"><div class="card-header"><span class="badge">Bab 3</span> Conceptual Design (Ch 3)</div>
@@ -296,7 +296,7 @@ tr:nth-child(even) td { background: var(--surface-up); }
         <ul><li><strong>System Specification (Type A)</strong></li><li><strong>Functional Baseline</strong></li><li>Review: System Design Review (SDR)</li></ul>
       </div>
 
-      <div class="card" id="ap4"><div class="card-header"><span class="badge">Bab 4</span> Preliminary &amp; Detail Design, T&amp;E (Ch 4&ndash;6)</div>
+      <div class="card" id="ap4"><div class="card-header"><span class="badge">Bab 4</span> Preliminary &amp; Detail Design, T&amp;E/Test &amp; Evaluation (Ch 4&ndash;6)</div>
         <h4>Perbandingan 3 Fase Design</h4>
         <div class="cg">
           <div class="ci"><h4>Conceptual</h4><p>Level: Sistem</p><p>Output: Type A Spec</p><p>Baseline: Functional</p><p>&ldquo;APA dibutuhkan?&rdquo;</p></div>
@@ -306,15 +306,15 @@ tr:nth-child(even) td { background: var(--surface-up); }
         <h4>4 Formal Design Reviews</h4>
         <div class="tw"><table>
           <tr><th>Review</th><th>Kapan</th><th>Outcome</th></tr>
-          <tr><td><strong>SDR</strong></td><td>Akhir Conceptual</td><td>Approve Functional Baseline</td></tr>
-          <tr><td><strong>PDR</strong></td><td>Akhir Preliminary</td><td>Approve Allocation Baseline</td></tr>
-          <tr><td><strong>CDR</strong></td><td>Akhir Detail</td><td>Approve Product Baseline</td></tr>
-          <tr><td><strong>EOCDR</strong></td><td>Selama Detail</td><td>Approve komponen spesifik</td></tr>
+          <tr><td><strong>SDR</strong> (System Design Review)</td><td>Akhir Conceptual</td><td>Approve Functional Baseline</td></tr>
+          <tr><td><strong>PDR</strong> (Preliminary Design Review)</td><td>Akhir Preliminary</td><td>Approve Allocation Baseline</td></tr>
+          <tr><td><strong>CDR</strong> (Critical Design Review)</td><td>Akhir Detail</td><td>Approve Product Baseline</td></tr>
+          <tr><td><strong>EOCDR</strong> (Equipment/Component CDR)</td><td>Selama Detail</td><td>Approve komponen spesifik</td></tr>
         </table></div>
         <h4>5 Kategori T&amp;E <span class="vid">APTS 03 01:12:46</span></h4>
         <div class="tw"><table>
           <tr><th>#</th><th>Kategori</th><th>Fase</th><th>Contoh</th></tr>
-          <tr><td>0</td><td>Analitis/Simulasi</td><td>Conceptual</td><td>Simulasi CFD turbin</td></tr>
+          <tr><td>0</td><td>Analitis/Simulasi</td><td>Conceptual</td><td>Simulasi CFD (Computational Fluid Dynamics) turbin</td></tr>
           <tr><td>1</td><td>Type 1</td><td>Preliminary</td><td>Model skala di lab</td></tr>
           <tr><td>2</td><td>Type 2</td><td>Detail</td><td>Uji kinerja mesin</td></tr>
           <tr><td>3</td><td>Type 3</td><td>Production</td><td>Pesawat diuji pilot</td></tr>
@@ -337,15 +337,15 @@ tr:nth-child(even) td { background: var(--surface-up); }
           <div class="ci"><h4>Paralel</h4><div class="formula">R<sub>p</sub> = 1-(1-R<sub>1</sub>)(1-R<sub>2</sub>)...(1-R<sub>n</sub>)</div><p>Minimal SATU berfungsi.</p></div>
         </div>
         <h4>Availability</h4>
-        <div class="formula">A<sub>i</sub> = MTBF / (MTBF + Mct)<br>A<sub>o</sub> = MTBM / (MTBM + MDT)</div>
+        <div class="formula">A<sub>i</sub> (Inherent Availability) = MTBF / (MTBF + Mct)<br>A<sub>o</sub> (Operational Availability) = MTBM (Mean Time Between Maintenance) / (MTBM + MDT/Mean Down Time)</div>
         <h4>FTA, FMEA, Tools</h4>
         <div class="tw"><table>
           <tr><th>Tool</th><th>Arah</th><th>Fungsi</th></tr>
-          <tr><td>FTA</td><td>Top-down</td><td>Kegagalan &rarr; penyebab dasar. AND/OR gates.</td></tr>
-          <tr><td>FMEA/FMECA</td><td>Bottom-up</td><td>Komponen &rarr; efek kegagalan &rarr; RPN</td></tr>
-          <tr><td>ETA</td><td>Forward</td><td>Initiating event &rarr; skenario</td></tr>
+          <tr><td>FTA (Fault Tree Analysis)</td><td>Top-down</td><td>Kegagalan &rarr; penyebab dasar. AND/OR gates.</td></tr>
+          <tr><td>FMEA/FMECA (Failure Mode, Effects &amp; Criticality Analysis)</td><td>Bottom-up</td><td>Komponen &rarr; efek kegagalan &rarr; RPN (Risk Priority Number)</td></tr>
+          <tr><td>ETA (Event Tree Analysis)</td><td>Forward</td><td>Initiating event &rarr; skenario</td></tr>
           <tr><td>Fishbone</td><td>6M</td><td>Man, Machine, Method, Material, Measurement, Mother Nature</td></tr>
-          <tr><td>QFD/HOQ</td><td>Matriks</td><td>Customer &rarr; Technical Requirements</td></tr>
+          <tr><td>QFD (Quality Function Deployment) / HOQ (House of Quality)</td><td>Matriks</td><td>Customer &rarr; Technical Requirements</td></tr>
         </table></div>
       </div>
 
@@ -354,7 +354,7 @@ tr:nth-child(even) td { background: var(--surface-up); }
         <h4>HF dalam Lifecycle <span class="vid">APTS 05 00:15:33</span></h4>
         <p>Dipertimbangkan di SEMUA fase, dari conceptual sampai operational.</p>
         <h4>Tools HF Analysis</h4>
-        <ul><li><strong>OSD:</strong> urutan operasi operator-mesin <span class="vid">APTS 05 00:20:49</span></li>
+        <ul><li><strong>OSD (Operational Sequence Diagram):</strong> urutan operasi operator-mesin <span class="vid">APTS 05 00:20:49</span></li>
         <li><strong>Workload Analysis:</strong> jumlah, kompleksitas, durasi, frekuensi, stres <span class="vid">APTS 05 00:22:27</span></li>
         <li><strong>Timeline Analysis:</strong> alokasi waktu per task</li>
         <li><strong>Link Analysis:</strong> interaksi antar workstation</li></ul>
@@ -384,7 +384,7 @@ tr:nth-child(even) td { background: var(--surface-up); }
         <ul><li>Accessibility, Diagnostics &amp; Testability, Modular Design</li>
         <li>Standardization, Spare Parts &amp; Logistics</li>
         <li>Training &amp; Documentation</li></ul>
-        <div class="formula">Mct = Corrective Time &nbsp; Mpt = Preventive Time &nbsp; MDT = Mct + Mpt + logistic + admin<br>A<sub>o</sub> = MTBM / (MTBM + MDT)</div>
+        <div class="formula">Mct (Mean Corrective maintenance Time) = Corrective Time &nbsp; Mpt (Mean Preventive maintenance Time) = Preventive Time &nbsp; MDT = Mct + Mpt + logistic + admin<br>A<sub>o</sub> = MTBM / (MTBM + MDT)</div>
       </div>
     </div>
 
@@ -568,11 +568,11 @@ tr:nth-child(even) td { background: var(--surface-up); }
           <tr><th>Type</th><th>Nama</th><th>Level</th><th>Keterangan</th></tr>
           <tr><td><strong>A</strong></td><td>System Spec</td><td>Sistem</td><td>Top-level, output Conceptual</td></tr>
           <tr><td><strong>B</strong></td><td>Development Spec</td><td>Subsistem</td><td>Item baru yang butuh R&amp;D</td></tr>
-          <tr><td><strong>C</strong></td><td>Product Spec</td><td>Komponen</td><td>Item COTS/existing</td></tr>
+          <tr><td><strong>C</strong></td><td>Product Spec</td><td>Komponen</td><td>Item COTS (Commercial Off-The-Shelf) / existing</td></tr>
           <tr><td><strong>D</strong></td><td>Process Spec</td><td>Proses</td><td>Manufacturing, assembly, testing</td></tr>
           <tr><td><strong>E</strong></td><td>Material Spec</td><td>Material</td><td>Spesifikasi bahan/material</td></tr>
         </table></div>
-        <h4>ICOM Model (per Fungsi)</h4>
+        <h4>ICOM (Input-Control-Output-Mechanism) Model (per Fungsi)</h4>
         <ul>
           <li><strong>I</strong>nput: apa yang masuk</li>
           <li><strong>C</strong>ontrol/Constraint: aturan, batasan, standar</li>
@@ -655,8 +655,8 @@ Unit C: MTBM = 9,050 hr, Mct = 0.3 hr</div>
         <h4>Design Principles</h4>
         <ul>
           <li><strong>Accessibility:</strong> clearance, reach, visual access</li>
-          <li><strong>Diagnostics:</strong> built-in test (BIT), external test points, fault indicators</li>
-          <li><strong>Modular design:</strong> replaceable modules (LRU/LRA), plug-and-play</li>
+          <li><strong>Diagnostics:</strong> BIT (Built-In Test), external test points, fault indicators</li>
+          <li><strong>Modular design:</strong> replaceable modules (LRU/Line Replaceable Unit, LRA/Line Replaceable Assembly), plug-and-play</li>
           <li><strong>Standardization:</strong> fasteners standar, common tools, interchangeable parts</li>
           <li><strong>Labeling &amp; coding:</strong> identifikasi jelas pada setiap komponen</li>
         </ul>
@@ -683,7 +683,7 @@ Admin delay = tunggu keputusan, approval, paperwork</div>
           <li>Pertimbangkan: reach envelope, eye height, grip strength</li>
           <li>Adaptasi: adjustable controls, multiple sizes</li>
         </ul>
-        <h4>OSD Detail</h4>
+        <h4>OSD (Operational Sequence Diagram) Detail</h4>
         <ul>
           <li>Kolom: Operator | Sistem/Mesin | Waktu</li>
           <li>Simbol: operation (lingkaran), decision (diamond), inspect (segitiga), delay (D), transport (panah)</li>
@@ -691,13 +691,13 @@ Admin delay = tunggu keputusan, approval, paperwork</div>
         </ul>
         <h4>Safety Analysis Hierarchy</h4>
         <ul>
-          <li><strong>PHA:</strong> Preliminary Hazard Analysis (conceptual phase)</li>
-          <li><strong>SHA:</strong> Subsystem Hazard Analysis</li>
-          <li><strong>SSHA:</strong> System Safety Hazard Analysis</li>
+          <li><strong>PHA (Preliminary Hazard Analysis):</strong> fase conceptual</li>
+          <li><strong>SHA (Subsystem Hazard Analysis):</strong> fase preliminary</li>
+          <li><strong>SSHA (System Safety Hazard Analysis):</strong> level sistem</li>
           <li><strong>O&amp;SHA:</strong> Operating &amp; Support Hazard Analysis</li>
         </ul>
         <h4>Human Error Probability</h4>
-        <div class="formula"><span class="label">HEP</span>
+        <div class="formula"><span class="label">HEP (Human Error Probability)</span>
 HEP = Number of errors / Number of opportunities for error<br>
 Faktor: training, stress, fatigue, complexity, interface design</div>
       </div>
@@ -707,7 +707,7 @@ Faktor: training, stress, fatigue, complexity, interface design</div>
         <ul>
           <li><strong>DFM (Design for Manufacturing):</strong> minimasi part count, standarkan proses</li>
           <li><strong>DFA (Design for Assembly):</strong> kurangi fastener, self-aligning parts</li>
-          <li>QC: Statistical Process Control (SPC), Six Sigma, acceptance sampling</li>
+          <li>QC (Quality Control): Statistical Process Control (SPC), Six Sigma, acceptance sampling</li>
         </ul>
         <h4>LCC: 12 Langkah Detail</h4>
         <ol>
@@ -741,11 +741,11 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li>Energy efficiency (output/input)</li>
           <li>% material ramah lingkungan</li>
           <li>Water &amp; waste per unit output</li>
-          <li>Life cycle assessment (LCA) score</li>
+          <li>Life Cycle Assessment (LCA) score</li>
         </ul>
       </div>
 
-      <h3>7 Prinsip Konsisten SE</h3>
+      <h3>7 Prinsip Konsisten SE (Systems Engineering)</h3>
       <div class="card">
         <ol>
           <li><strong>Top-down life-cycle:</strong> mulai dari level sistem, turun ke detail</li>
@@ -803,7 +803,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;APA yang dibutuhkan?&rdquo;</td><td>&ldquo;BAGAIMANA sistem bekerja?&rdquo;</td><td>&ldquo;BAGAIMANA membuat?&rdquo;</td></tr>
           <tr><td><strong>Spesifikasi</strong></td><td>Type A (System Spec)</td><td>Type B (Development Spec)</td><td>Type C (Product), D (Process), E (Material)</td></tr>
           <tr><td><strong>Baseline</strong></td><td>Functional Baseline</td><td>Allocation Baseline</td><td>Product Baseline</td></tr>
-          <tr><td><strong>Review Gate</strong></td><td>SDR (System Design Review)</td><td>PDR (Preliminary Design Review)</td><td>CDR (Critical Design Review) + EOCDR</td></tr>
+          <tr><td><strong>Review Gate</strong></td><td>SDR (System Design Review)</td><td>PDR (Preliminary Design Review)</td><td>CDR (Critical Design Review) + EOCDR (Equipment/Component CDR)</td></tr>
           <tr><td><strong>Aktivitas</strong></td><td>Need analysis, feasibility study, operational requirements (7 komponen), FFBD, QFD/trade-off</td><td>Functional analysis, requirements allocation, subsystem design, T&amp;E Type 1</td><td>Component design, prototyping, engineering model, T&amp;E Type 2</td></tr>
           <tr><td><strong>Output</strong></td><td>Type A Spec, Maintenance Concept, TPMs, FFBD, functional baseline</td><td>Type B/C Specs, subsystem layouts, allocation baseline</td><td>Manufacturing drawings, test procedures, Type C/D/E specs, product baseline</td></tr>
         </table></div>
@@ -897,7 +897,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li>% material yang bisa di-recycle (target: &gt;85%)</li>
           <li>Biaya disposal per unit (sebagai % dari total LCC)</li>
           <li>Waktu dekomisioning (minggu/bulan)</li>
-          <li>Compliance terhadap regulasi lingkungan (WEEE, RoHS, Basel Convention)</li>
+          <li>Compliance terhadap regulasi lingkungan (WEEE/Waste Electrical and Electronic Equipment, RoHS/Restriction of Hazardous Substances, Basel Convention)</li>
           <li>Volume hazardous waste yang dihasilkan (kg/unit)</li>
         </ul>
         <p><strong>Contoh:</strong> Pesawat tua: badan aluminium 90% recyclable, engine dikirim ke depot untuk rebuild, avionics mengandung hazardous material (perlu special handling).</p>
@@ -939,15 +939,15 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><td>FTA</td><td>Kegagalan sistem, cari root cause (top-down)</td></tr>
           <tr><td>FMEA/FMECA</td><td>Identifikasi failure modes komponen (bottom-up), RPN</td></tr>
           <tr><td>JSA (Job Safety Analysis)</td><td>Analisis keselamatan per langkah kerja (10 step)</td></tr>
-          <tr><td>RCM</td><td>Tentukan strategi maintenance per komponen</td></tr>
-          <tr><td>ETA</td><td>Skenario dari initiating event ke konsekuensi</td></tr>
+          <tr><td>RCM (Reliability-Centered Maintenance)</td><td>Tentukan strategi maintenance per komponen</td></tr>
+          <tr><td>ETA (Event Tree Analysis)</td><td>Skenario dari initiating event ke konsekuensi</td></tr>
         </table></div>
         <p>Lihat <strong>tab Studi Kasus</strong> untuk pembahasan lengkap RSG-GAS (FTA/PSA) dan MRT Jakarta (HF/FMECA/RCM).</p>
       </div></div>
       <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob pm">66%</span><strong>Life Cycle Costing (4 aspek &amp; 12 langkah)</strong></div><div class="pred-b">
         <p><strong>Pola:</strong> Baru muncul 2025 #8 (15 poin). Kemungkinan muncul lagi karena bobot besar.</p>
         <h4>Jawaban:</h4>
-        <p><strong>LCC</strong> = total biaya sistem dari lahir sampai mati (cradle-to-grave). Tujuan: memilih alternatif desain yang paling cost-effective sepanjang seluruh life cycle.</p>
+        <p><strong>LCC (Life Cycle Cost)</strong> = total biaya sistem dari lahir sampai mati (cradle-to-grave). Tujuan: memilih alternatif desain yang paling cost-effective sepanjang seluruh life cycle.</p>
         <h4>4 Aspek (Kategori Biaya):</h4>
         <div class="tw"><table>
           <tr><th>#</th><th>Kategori</th><th>Contoh Komponen</th><th>% Tipikal</th></tr>
@@ -964,7 +964,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li><strong>Select evaluation model:</strong> present value, annual cost, payback period</li>
           <li><strong>Estimate cost factors:</strong> R&amp;D, production, O&amp;S, retirement per alternatif</li>
           <li><strong>Apply discount rate:</strong> PV = Future Value / (1+i)<sup>n</sup></li>
-          <li><strong>Establish evaluation criteria:</strong> minimize LCC, maximize ROI, target BEP</li>
+          <li><strong>Establish evaluation criteria:</strong> minimize LCC, maximize ROI (Return on Investment), target BEP (Break-Even Point)</li>
           <li><strong>Perform sensitivity analysis:</strong> variasikan parameter kritis &plusmn;10-20%</li>
           <li><strong>Rank alternatives:</strong> berdasarkan criteria yang ditetapkan</li>
           <li><strong>Document assumptions &amp; results</strong></li>
@@ -1003,14 +1003,14 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li><strong>Need:</strong> dry-docking mahal, memakan waktu berminggu-minggu, menghentikan produksi</li>
           <li><strong>Maintainability Process:</strong>
             <ul>
-              <li><em>Accessibility:</em> inspeksi in-situ oleh diver/ROV, tidak perlu pindahkan rig</li>
+              <li><em>Accessibility:</em> inspeksi in-situ oleh diver/ROV (Remotely Operated Vehicle), tidak perlu pindahkan rig</li>
               <li><em>Diagnostics:</em> ultrasonic thickness measurement, visual inspection via ROV camera</li>
               <li><em>Modular:</em> sacrificial anode diganti langsung oleh diver</li>
-              <li><em>Standardization:</em> mengikuti standar DNV/ABS untuk underwater survey</li>
+              <li><em>Standardization:</em> mengikuti standar DNV (Det Norske Veritas) / ABS (American Bureau of Shipping) untuk underwater survey</li>
               <li><em>Documentation:</em> laporan periodik digital, database kondisi struktur</li>
             </ul>
           </li>
-          <li><strong>Hasil:</strong> MDT turun signifikan, biaya maintenance berkurang, availability rig naik</li>
+          <li><strong>Hasil:</strong> MDT (Mean Down Time) turun signifikan, biaya maintenance berkurang, availability rig naik</li>
         </ul>
         <h4>(b) Human Error PT PLN Yogyakarta</h4>
         <ul>
@@ -1019,13 +1019,13 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li><strong>3 Tahap Pengendalian Risiko:</strong>
             <ol>
               <li>Identifikasi tipe error (omission, commission, timing, sequence)</li>
-              <li>Evaluasi faktor HF (shift malam, beban kerja, training level, interface peralatan)</li>
+              <li>Evaluasi faktor HF (Human Factors: shift malam, beban kerja, training level, interface peralatan)</li>
               <li>Implementasi pengendalian (training, perbaikan prosedur, ergonomi, fatigue management)</li>
             </ol>
           </li>
           <li><strong>Analisis:</strong> Fishbone (6M: Man, Machine, Method, Material, Measurement, Mother Nature)</li>
           <li><strong>Impact ke Reliability:</strong> human error &rarr; &lambda; naik &rarr; R turun &rarr; gangguan listrik lebih sering</li>
-          <li><strong>Rekomendasi:</strong> redesign interface, program self-awareness, SOP revision, fatigue monitoring</li>
+          <li><strong>Rekomendasi:</strong> redesign interface, program self-awareness, SOP (Standard Operating Procedure) revision, fatigue monitoring</li>
         </ul>
       </div></div>
 
@@ -1050,7 +1050,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><td>4</td><td>Inspeksi visual</td><td>Visibilitas rendah</td><td>Underwater lighting, camera</td></tr>
           <tr><td>5</td><td>Pengukuran ultrasonic</td><td>Arus bawah air</td><td>Tali pengaman, monitoring arus</td></tr>
           <tr><td>6</td><td>Penggantian anode</td><td>Material handling</td><td>Tool bag, buddy system</td></tr>
-          <tr><td>7</td><td>Cleaning marine growth</td><td>Luka/infeksi</td><td>APD, first aid standby</td></tr>
+          <tr><td>7</td><td>Cleaning marine growth</td><td>Luka/infeksi</td><td>APD (Alat Pelindung Diri), first aid standby</td></tr>
           <tr><td>8</td><td>Dokumentasi foto/video</td><td>Kehabisan udara</td><td>Air supply monitoring</td></tr>
           <tr><td>9</td><td>Naik ke permukaan</td><td>Dekompresi</td><td>Decompression stop, chamber</td></tr>
           <tr><td>10</td><td>Demobilisasi</td><td>Terjatuh, lelah</td><td>Post-dive medical, rest</td></tr>
@@ -1063,8 +1063,8 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><td><strong>Level</strong></td><td>Sistem (keseluruhan)</td><td>Sub-sistem</td><td>Komponen individual</td></tr>
           <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;APA yang dibutuhkan?&rdquo;</td><td>&ldquo;BAGAIMANA kerjanya?&rdquo;</td><td>&ldquo;BAGAIMANA membuatnya?&rdquo;</td></tr>
           <tr><td><strong>Fokus</strong></td><td>Need analysis, feasibility, konsep, operational requirements</td><td>Functional analysis, alokasi requirements ke subsistem, trade-off</td><td>Desain komponen, prototipe, pengujian, preparation for production</td></tr>
-          <tr><td><strong>Aktivitas</strong></td><td>Problem definition, studi kelayakan, maintenance concept, TPM, QFD</td><td>Functional decomposition, ICOM, subsystem specs, design reviews</td><td>Engineering drawings, prototipe, fab &amp; test, production planning</td></tr>
-          <tr><td><strong>Tim</strong></td><td>SE dominan, customer/stakeholder</td><td>SE + discipline engineers</td><td>Discipline engineers dominan, SE oversight</td></tr>
+          <tr><td><strong>Aktivitas</strong></td><td>Problem definition, studi kelayakan, maintenance concept, TPM (Technical Performance Measures), QFD (Quality Function Deployment)</td><td>Functional decomposition, ICOM (Input-Control-Output-Mechanism), subsystem specs, design reviews</td><td>Engineering drawings, prototipe, fab &amp; test, production planning</td></tr>
+          <tr><td><strong>Tim</strong></td><td>SE (Systems Engineering) dominan, customer/stakeholder</td><td>SE + discipline engineers</td><td>Discipline engineers dominan, SE oversight</td></tr>
           <tr><td><strong>Biaya perubahan</strong></td><td>Rendah (mudah berubah)</td><td>Sedang</td><td>Tinggi (sangat mahal berubah)</td></tr>
         </table></div>
       </div></div>
@@ -1072,21 +1072,21 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <div class="soal" id="s2024-4"><div class="soal-q"><span class="num">2024 #4</span> <span class="arsip-label">15 poin</span> Apa <strong>output</strong> dari masing-masing tahap design: conceptual, preliminary dan detailed design and development?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <div class="tw"><table>
           <tr><th>Fase</th><th>Specification</th><th>Baseline</th><th>Review Gate</th><th>Output Lain</th></tr>
-          <tr><td><strong>Conceptual</strong></td><td>System Spec (Type A)</td><td>Functional Baseline</td><td>SDR (System Design Review)</td><td>Operational requirements, maintenance concept, TPM, feasibility study, FFBD level 0-1</td></tr>
+          <tr><td><strong>Conceptual</strong></td><td>System Spec (Type A)</td><td>Functional Baseline</td><td>SDR (System Design Review)</td><td>Operational requirements, maintenance concept, TPM (Technical Performance Measures), feasibility study, FFBD (Functional Flow Block Diagram) level 0-1</td></tr>
           <tr><td><strong>Preliminary</strong></td><td>Development Spec (Type B)</td><td>Allocation Baseline</td><td>PDR (Preliminary Design Review)</td><td>Functional analysis, allocated requirements, trade-off studies, subsystem specs</td></tr>
-          <tr><td><strong>Detail</strong></td><td>Product/Process/Material Spec (Type C/D/E)</td><td>Product Baseline</td><td>CDR (Critical Design Review) + EOCDR</td><td>Engineering drawings, prototipe, test results, production planning</td></tr>
+          <tr><td><strong>Detail</strong></td><td>Product/Process/Material Spec (Type C/D/E)</td><td>Product Baseline</td><td>CDR (Critical Design Review) + EOCDR (Equipment/Component CDR)</td><td>Engineering drawings, prototipe, test results, production planning</td></tr>
         </table></div>
-        <p><strong>Prinsip penting:</strong> semakin lanjut fase, semakin detail dan semakin mahal untuk mengubah. Keputusan di conceptual menentukan 70-80% total LCC.</p>
+        <p><strong>Prinsip penting:</strong> semakin lanjut fase, semakin detail dan semakin mahal untuk mengubah. Keputusan di conceptual menentukan 70-80% total LCC (Life Cycle Cost).</p>
       </div></div>
 
       <div class="soal" id="s2024-5"><div class="soal-q"><span class="num">2024 #5</span> <span class="arsip-label">10 poin</span> Jelaskan tahap-tahap dari <strong>test dan evaluasi</strong> sistem selama life cycle, berikan contoh pada masing-masing tahap.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <div class="tw"><table>
           <tr><th>Kategori</th><th>Fase LC</th><th>Pelaku</th><th>Metode</th><th>Contoh</th></tr>
-          <tr><td><strong>0. Analitis/Simulasi</strong></td><td>Conceptual</td><td>SE team</td><td>Model komputer, simulasi, analisis matematis</td><td>Simulasi CFD turbin, stress analysis FEA, Monte Carlo LCC</td></tr>
+          <tr><td><strong>0. Analitis/Simulasi</strong></td><td>Conceptual</td><td>SE (Systems Engineering) team</td><td>Model komputer, simulasi, analisis matematis</td><td>Simulasi CFD (Computational Fluid Dynamics) turbin, stress analysis FEA (Finite Element Analysis), Monte Carlo LCC</td></tr>
           <tr><td><strong>1. Type 1</strong></td><td>Preliminary</td><td>Engineers + lab</td><td>Mock-up, bread-board, model skala, prototipe awal</td><td>Model skala jembatan di wind tunnel, breadboard elektronik</td></tr>
           <tr><td><strong>2. Type 2</strong></td><td>Detail</td><td>Test engineers</td><td>Prototipe mendekati final, pengujian kinerja subsistem</td><td>Uji ketahanan mesin 1000 jam, environmental testing (suhu, getaran)</td></tr>
-          <tr><td><strong>3. Type 3</strong></td><td>Production</td><td>Operator + QC</td><td>Uji di lingkungan nyata, acceptance test, commissioning</td><td>Pesawat diuji terbang oleh test pilot, commissioning PLTU</td></tr>
-          <tr><td><strong>4. Type 4</strong></td><td>Operational</td><td>User/operator</td><td>Evaluasi berkelanjutan, monitoring, field data analysis</td><td>Monitoring performa MRT Jakarta, tracking MTBF lapangan</td></tr>
+          <tr><td><strong>3. Type 3</strong></td><td>Production</td><td>Operator + QC (Quality Control)</td><td>Uji di lingkungan nyata, acceptance test, commissioning</td><td>Pesawat diuji terbang oleh test pilot, commissioning PLTU</td></tr>
+          <tr><td><strong>4. Type 4</strong></td><td>Operational</td><td>User/operator</td><td>Evaluasi berkelanjutan, monitoring, field data analysis</td><td>Monitoring performa MRT Jakarta, tracking MTBF (Mean Time Between Failures) lapangan</td></tr>
         </table></div>
         <div class="key"><strong>Validasi</strong> = "Are we building the RIGHT system?" (apakah sesuai kebutuhan?)<br><strong>Verifikasi</strong> = "Are we building the system RIGHT?" (apakah sesuai spesifikasi?)</div>
       </div></div>
@@ -1094,7 +1094,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <div class="soal" id="s2024-6"><div class="soal-q"><span class="num">2024 #6</span> <span class="arsip-label">10 poin</span> Apa tujuan dari perancangan <strong>maintainability system</strong>, apa elemen-elemennya?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>Tujuan Maintainability</h4>
         <ul>
-          <li>Minimasi system downtime (MDT) sehingga sistem lebih banyak beroperasi</li>
+          <li>Minimasi system downtime / MDT (Mean Down Time) sehingga sistem lebih banyak beroperasi</li>
           <li>Maksimasi operational availability (A<sub>o</sub>)</li>
           <li>Reduksi biaya maintenance dalam Life Cycle Cost (O&amp;S cost = 60-80% LCC)</li>
           <li>Memastikan sistem bisa diperbaiki dengan cepat, mudah, dan ekonomis</li>
@@ -1104,7 +1104,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <tr><th>Level</th><th>Lokasi</th><th>Aktivitas</th><th>Skill</th></tr>
           <tr><td><strong>Organizational</strong></td><td>Lapangan (in-situ)</td><td>Inspeksi rutin, penggantian modular sederhana, cleaning</td><td>Dasar</td></tr>
           <tr><td><strong>Intermediate</strong></td><td>Workshop/bengkel</td><td>Perbaikan moderat, kalibrasi, testing komponen</td><td>Menengah</td></tr>
-          <tr><td><strong>Depot</strong></td><td>Pabrik/depot/OEM</td><td>Overhaul besar, rebuild total, modifikasi mayor</td><td>Tinggi/spesialis</td></tr>
+          <tr><td><strong>Depot</strong></td><td>Pabrik/depot/OEM (Original Equipment Manufacturer)</td><td>Overhaul besar, rebuild total, modifikasi mayor</td><td>Tinggi/spesialis</td></tr>
         </table></div>
         <h4>Elemen-elemen Design for Maintainability</h4>
         <ul>
@@ -1139,7 +1139,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
           <li>% material yang bisa di-recycle (target &gt;80%)</li>
           <li>Biaya disposal per unit (dibandingkan total LCC)</li>
           <li>Waktu dekomisioning (minggu/bulan)</li>
-          <li>Compliance terhadap regulasi lingkungan (AMDAL, B3)</li>
+          <li>Compliance terhadap regulasi lingkungan (AMDAL/Analisis Mengenai Dampak Lingkungan, B3/Bahan Berbahaya dan Beracun)</li>
           <li>Volume limbah berbahaya yang dihasilkan</li>
         </ul>
         <h4>Sustainability</h4>
@@ -1158,14 +1158,14 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <h3 id="kisi2025">Kisi-kisi 2025 <span style="font-weight:400;font-size:.8rem;color:var(--fg-muted)">(Senin 5 Mei 2025 &bull; 100 menit &bull; Closed book &bull; 8 soal &bull; Nilai: 1.15; 2.15; 3.15; 4-7.10; 8.15)</span></h3>
 
       <div class="soal"><div class="soal-q"><span class="num">2025 #1</span> <span class="arsip-label">15 poin</span> (a) Gambarkan Flow Diagram Proses dan jelaskan bagaimana pembangkitan listrik di <strong>PT Geo Dipa Energi</strong>, jelaskan alat dan proses yang terjadi. (b) Jelaskan penerapan <strong>Design for Reliability</strong> pada komponen PLTP PT Geo Dipa.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) Flow Diagram Proses PLTP</h4>
+        <h4>(a) Flow Diagram Proses PLTP (Pembangkit Listrik Tenaga Panas Bumi)</h4>
         <p><strong>Reservoir</strong> (sumber panas bumi) &rarr; <strong>Production Well</strong> (uap + air panas naik) &rarr; <strong>Separator</strong> (pisahkan uap dari brine) &rarr; <strong>Demister/Scrubber</strong> (bersihkan uap dari partikel) &rarr; <strong>Steam Turbine</strong> (uap putar turbin) &rarr; <strong>Generator</strong> (mekanik &rarr; listrik) &rarr; <strong>Condenser</strong> (uap &rarr; air) &rarr; <strong>Cooling Tower</strong> (dinginkan air) &rarr; <strong>Injection Well</strong> (kembalikan air ke reservoir) &rarr; <strong>Switchyard</strong> &rarr; <strong>Grid PLN</strong></p>
         <p><strong>Alat kunci:</strong></p>
         <ul>
           <li><strong>Separator:</strong> gravitasi/cyclone, pisahkan uap dari brine</li>
           <li><strong>Steam Turbine:</strong> single/double flash atau binary cycle</li>
           <li><strong>Condenser:</strong> direct contact atau shell-and-tube, vakum untuk efisiensi</li>
-          <li><strong>NCG removal:</strong> ejector/vacuum pump untuk CO<sub>2</sub>, H<sub>2</sub>S</li>
+          <li><strong>NCG (Non-Condensable Gas) removal:</strong> ejector/vacuum pump untuk CO<sub>2</sub>, H<sub>2</sub>S</li>
         </ul>
         <h4>(b) Design for Reliability pada Komponen PLTP</h4>
         <ul>
@@ -1186,10 +1186,10 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
         <h4>Producibility (Design for Manufacturing)</h4>
         <ul>
           <li><strong>DFM:</strong> modul platform dirancang agar bisa difabrikasi di yard (darat) lalu diangkut ke laut</li>
-          <li><strong>Standardization:</strong> komponen offshore mengikuti standar API, ASME, DNV</li>
+          <li><strong>Standardization:</strong> komponen offshore mengikuti standar API (American Petroleum Institute), ASME (American Society of Mechanical Engineers), DNV (Det Norske Veritas)</li>
           <li><strong>Modular construction:</strong> modul besar prefab di workshop, mengurangi pekerjaan di laut</li>
-          <li><strong>QC:</strong> welding inspection (NDT: radiography, ultrasonic), hydrostatic test</li>
-          <li><strong>DFA:</strong> koneksi flange standar, lifting lug terintegrasi</li>
+          <li><strong>QC (Quality Control):</strong> welding inspection (NDT/Non-Destructive Testing: radiography, ultrasonic), hydrostatic test</li>
+          <li><strong>DFA (Design for Assembly):</strong> koneksi flange standar, lifting lug terintegrasi</li>
         </ul>
         <h4>Sustainability</h4>
         <ul>
@@ -1201,7 +1201,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
         <h4>Disposibility</h4>
         <ul>
           <li><strong>Decommissioning plan:</strong> dibuat sejak awal desain, mencakup well plugging, structure removal, seabed clearance</li>
-          <li>Pengelolaan limbah B3: asbestos, cat berbahaya, hydrocarbon residue</li>
+          <li>Pengelolaan limbah B3 (Bahan Berbahaya dan Beracun): asbestos, cat berbahaya, hydrocarbon residue</li>
           <li>Steel structure &gt;90% recyclable</li>
           <li>Compliance OSPAR convention dan Saudi Aramco standards</li>
         </ul>
@@ -1249,7 +1249,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <div class="soal"><div class="soal-q"><span class="num">2023 #1</span> <span class="arsip-label">30 poin</span> Jelaskan: (a) Desain Konseptual <strong>PLTBM Kalimantan Barat</strong> yang menggunakan biomassa. (b) Proses pembuatan semen di <strong>Pabrik Semen Bima.</strong> Gambarkan flow diagram proses masing-masing, jelaskan proses, kondisi operasinya dan alatnya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>(a) PLTBM Kalimantan Barat</h4>
         <p><strong>PLTBM</strong> = Pembangkit Listrik Tenaga Biomassa. Menggunakan limbah kelapa sawit (cangkang, fiber, tandan kosong).</p>
-        <p><strong>Flow Diagram:</strong> Biomassa (storage) &rarr; Conveyor &rarr; Boiler (800-1000&deg;C) &rarr; Steam Drum &rarr; Steam Turbine &rarr; Generator &rarr; Transformer &rarr; Grid PLN. Sisa: Flue Gas &rarr; Economizer &rarr; Bag Filter/ESP &rarr; Stack. Air: Condenser &rarr; Deaerator &rarr; Feed Water Pump &rarr; Boiler.</p>
+        <p><strong>Flow Diagram:</strong> Biomassa (storage) &rarr; Conveyor &rarr; Boiler (800-1000&deg;C) &rarr; Steam Drum &rarr; Steam Turbine &rarr; Generator &rarr; Transformer &rarr; Grid PLN. Sisa: Flue Gas &rarr; Economizer &rarr; Bag Filter/ESP (Electrostatic Precipitator) &rarr; Stack. Air: Condenser &rarr; Deaerator &rarr; Feed Water Pump &rarr; Boiler.</p>
         <p><strong>Alat utama:</strong> Boiler (stoker/fluidized bed), Steam Turbine, Generator, Condenser, Economizer, Bag Filter/ESP</p>
         <p><strong>Kondisi operasi:</strong> tekanan uap 40-65 bar, temperatur 400-485&deg;C, kapasitas 5-15 MW per unit</p>
         <h4>(b) Pabrik Semen Bima</h4>
@@ -1353,7 +1353,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
         <ul>
           <li>Menghitung probabilitas core damage (kerusakan teras)</li>
           <li>Mengidentifikasi initiating events dan failure sequences</li>
-          <li>Output: Core Damage Frequency (CDF)</li>
+          <li>Output: CDF (Core Damage Frequency)</li>
         </ul>
         <h4>FTA (Fault Tree Analysis): Langkah-langkah</h4>
         <ol>
@@ -1371,7 +1371,7 @@ BEP = Fixed Cost / (Revenue per unit - Variable Cost per unit)</div>
       <div class="card">
         <div class="card-header"><span class="badge">FTA</span> Struktur Fault Tree RSG-GAS</div>
         <h4>Top Event</h4>
-        <div class="formula"><span class="label">Top Event</span>LOSS OF COOLING FLOW (LOF)<br>Gate: OR &mdash; terjadi jika SALAH SATU intermediate event terjadi</div>
+        <div class="formula"><span class="label">Top Event</span>LOF (Loss of Cooling Flow) &mdash; hilangnya aliran pendingin<br>Gate: OR &mdash; terjadi jika SALAH SATU intermediate event terjadi</div>
         <h4>3 Intermediate Events</h4>
         <div class="cg">
           <div class="ci" style="border-top:3px solid var(--danger)"><h4>1. LOF-ISO-VAL</h4><p><strong>Kegagalan Isolation Valve</strong></p><p>Motor-operated valve gagal membuka/menutup. Aliran pendingin terisolasi.</p><p>Gate: OR (salah satu valve gagal = aliran terganggu)</p></div>
@@ -1448,7 +1448,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         </ol>
         <h4>Rekomendasi</h4>
         <ul>
-          <li><strong>Redundansi suplai listrik:</strong> tambah diesel generator, UPS, atau dual-feed PLN</li>
+          <li><strong>Redundansi suplai listrik:</strong> tambah diesel generator, UPS (Uninterruptible Power Supply), atau dual-feed PLN</li>
           <li><strong>Perawatan berbasis reliabilitas:</strong> fokuskan preventive maintenance pada pompa</li>
           <li><strong>Monitoring real-time:</strong> vibration monitoring pada pompa untuk deteksi dini degradasi</li>
           <li><strong>Evaluasi common cause failure:</strong> pisahkan suplai listrik pompa dari single PLN feeder</li>
@@ -1458,7 +1458,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <tr><th>Topik APTS</th><th>Penerapan dalam Kasus</th></tr>
           <tr><td>Design for Reliability (Ch 12)</td><td>Seluruh analisis FTA, failure rate, konfigurasi seri-paralel</td></tr>
           <tr><td>FTA top-down</td><td>Top event &rarr; intermediate &rarr; basic events, AND/OR gates</td></tr>
-          <tr><td>Minimal Cut Sets</td><td>101 MCS teridentifikasi, dominasi pompa</td></tr>
+          <tr><td>Minimal Cut Sets (MCS)</td><td>101 MCS teridentifikasi, dominasi pompa</td></tr>
           <tr><td>Importance Measures</td><td>F-Vesely dan Birnbaum untuk prioritisasi</td></tr>
           <tr><td>Redundansi (paralel)</td><td>3 pompa (2+1), 2 HE (50%+50%)</td></tr>
           <tr><td>Bathtub Curve</td><td>Relevan: reaktor &gt;35 tahun, masuk wear-out period</td></tr>
@@ -1542,7 +1542,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         <div class="tw"><table>
           <tr><th>Parameter</th><th>Detail</th></tr>
           <tr><td>Tanggal</td><td>9 April 2026, pukul 17:57 WIB</td></tr>
-          <tr><td>Penyebab</td><td>Gangguan suplai PLN dari Gardu Induk CSW (faktor eksternal)</td></tr>
+          <tr><td>Penyebab</td><td>Gangguan suplai PLN (Perusahaan Listrik Negara) dari Gardu Induk CSW (faktor eksternal)</td></tr>
           <tr><td>Dampak</td><td>7 stasiun elevated mengalami blackout total</td></tr>
           <tr><td>Penumpang terjebak</td><td>10 orang terjebak di dalam lift</td></tr>
           <tr><td>Korban</td><td><strong>0 korban jiwa</strong> (respons HF berhasil)</td></tr>
@@ -1561,7 +1561,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <tr><td>4 Agustus 2019</td><td>Kedua jalur suplai PLN terputus. Pemadaman massal. Operasi MRT dihentikan, 4 rangkaian berhenti, 3.410 penumpang dievakuasi.</td></tr>
           <tr><td>9 April 2026</td><td>Gangguan suplai PLN dari sisi CSW. Seluruh stasiun layang blackout. Penerangan, elevator, eskalator terganggu. Kereta tetap berjalan.</td></tr>
         </table></div>
-        <div class="key"><strong>Frekuensi:</strong> 2 kejadian besar dalam 7,5 tahun operasi = sekitar 0,27 kejadian/tahun, atau sekitar 1 kali per 3,7 tahun. Kejadian berulang menunjukkan perlunya evaluasi sistem cadangan melalui RCM.</div>
+        <div class="key"><strong>Frekuensi:</strong> 2 kejadian besar dalam 7,5 tahun operasi = sekitar 0,27 kejadian/tahun, atau sekitar 1 kali per 3,7 tahun. Kejadian berulang menunjukkan perlunya evaluasi sistem cadangan melalui RCM (Reliability-Centered Maintenance).</div>
       </div>
 
       <div class="card">
@@ -1576,7 +1576,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <tr><td><strong>CCTV</strong></td><td>Tidak berfungsi</td><td>Sampai listrik pulih</td></tr>
           <tr><td><strong>AC/ventilasi</strong></td><td>Padam</td><td>Sekitar 1 jam 10 menit</td></tr>
           <tr><td><strong>Suplai air</strong></td><td>Pompa air mati</td><td>Sekitar 1 jam 30 menit</td></tr>
-          <tr><td><strong>AFC/passenger gate</strong></td><td>Tidak berfungsi</td><td>Sampai listrik pulih</td></tr>
+          <tr><td><strong>AFC (Automatic Fare Collection) / passenger gate</strong></td><td>Tidak berfungsi</td><td>Sampai listrik pulih</td></tr>
           <tr><td><strong>Tim teknis</strong></td><td>Tidak tersedia di setiap stasiun</td><td>Memperlambat recovery</td></tr>
         </table></div>
         <div class="key"><strong>Temuan kritis:</strong> Listrik pulih dalam 4 menit, tetapi fasilitas pendukung memerlukan 2 sampai 3 jam untuk pulih sepenuhnya. <strong>Blackout tidak berakhir hanya ketika listrik menyala kembali, tetapi juga ketika fasilitas kritis yang lain bisa kembali digunakan.</strong></div>
@@ -1587,7 +1587,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         <h4>9 Tugas Manusia Saat Blackout</h4>
         <div class="tw"><table>
           <tr><th>#</th><th>Tugas</th><th>Pelaku</th></tr>
-          <tr><td>1</td><td>Deteksi gangguan (alarm/visual)</td><td>Operator OCC</td></tr>
+          <tr><td>1</td><td>Deteksi gangguan (alarm/visual)</td><td>Operator OCC (Operations Control Center)</td></tr>
           <tr><td>2</td><td>Komunikasi ke stasiun</td><td>OCC &rarr; Stasiun</td></tr>
           <tr><td>3</td><td>Evakuasi penumpang lift</td><td>Petugas stasiun</td></tr>
           <tr><td>4</td><td>Pengarahan penumpang</td><td>Petugas stasiun</td></tr>
@@ -1599,7 +1599,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         </table></div>
         <h4>Framework 4 Fase Respons (Deteksi-Kendali-Proteksi-Pemulihan)</h4>
         <div class="cg">
-          <div class="ci"><h4>1. Deteksi</h4><p>Alarm SCADA dan visual. OCC mendeteksi gangguan. Waktu: segera.</p></div>
+          <div class="ci"><h4>1. Deteksi</h4><p>Alarm SCADA (Supervisory Control and Data Acquisition) dan visual. OCC mendeteksi gangguan. Waktu: segera.</p></div>
           <div class="ci"><h4>2. Kendali</h4><p>Komunikasi ke stasiun, koordinasi PLN. Waktu: menit pertama.</p></div>
           <div class="ci"><h4>3. Proteksi</h4><p>Evakuasi lift, pengarahan penumpang, lampu darurat. Waktu: menit awal.</p></div>
           <div class="ci"><h4>4. Pemulihan</h4><p>Reset sistem, restart fasilitas, verifikasi. Waktu: menit sampai jam.</p></div>
@@ -1647,7 +1647,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <tr><th>Fasilitas</th><th>Kondisi</th><th>Indikasi Maintainability</th></tr>
           <tr><td>Elevator</td><td>Penumpang terjebak</td><td>ARD (Automatic Rescue Device) atau backup power perlu dievaluasi</td></tr>
           <tr><td>Elevator (setelah evakuasi)</td><td>Sebagian dibuka paksa dan rusak</td><td>Pemulihan belum sepenuhnya aman</td></tr>
-          <tr><td>PA</td><td>Tidak berfungsi 2-3 jam</td><td>Sistem cadangan lemah dan recovery lambat</td></tr>
+          <tr><td>PA (Public Address)</td><td>Tidak berfungsi 2-3 jam</td><td>Sistem cadangan lemah dan recovery lambat</td></tr>
           <tr><td>Komunikasi Hytera</td><td>Sempat terganggu</td><td>Sistem komunikasi belum sepenuhnya redundan</td></tr>
           <tr><td>Lampu emergency</td><td>Sebagian tidak menyala</td><td>Backup power belum optimal</td></tr>
           <tr><td>Tim teknis</td><td>Tidak tersedia di setiap stasiun</td><td>Proses tempuh memperlambat recovery</td></tr>
@@ -1777,7 +1777,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <li>Pemeliharaan yang dilakukan kemungkinan hanya <strong>pemeriksaan visual atau administratif</strong> (cek ada/tidak, kondisi fisik), bukan <strong>pengujian fungsi</strong></li>
           <li>Baterai UPS bisa mengalami degradasi kapasitas tanpa terlihat dari luar</li>
           <li>ARD elevator mungkin tidak pernah diuji dalam kondisi blackout sesungguhnya</li>
-          <li>Perpindahan otomatis (ATS) mungkin tidak aktif atau tidak terkonfigurasi benar</li>
+          <li>Perpindahan otomatis (ATS/Automatic Transfer Switch) mungkin tidak aktif atau tidak terkonfigurasi benar</li>
         </ul>
         <p><strong>Solusi RCM:</strong> <strong>Failure-finding task</strong>, yaitu pengujian berkala yang benar-benar mensimulasikan kondisi kegagalan (simulasi blackout) untuk memverifikasi bahwa sistem cadangan berfungsi saat dibutuhkan.</p>
       </div></div>
@@ -1915,15 +1915,15 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <li><strong>Teras reaktor:</strong> elemen bakar U<sub>3</sub>Si<sub>2</sub>-Al, daya 30 MWth, menghasilkan panas dari reaksi fisi</li>
           <li><strong>Pompa primer:</strong> 3 unit sentrifugal, konfigurasi 2oo3 (2 beroperasi, 1 standby hot). Memastikan aliran pendingin kontinyu ke teras</li>
           <li><strong>Heat exchanger:</strong> 2 unit shell-and-tube, masing-masing kapasitas 50% (15 MWth). Transfer panas dari loop primer ke loop sekunder</li>
-          <li><strong>Isolation valve:</strong> motor-operated valve pada pipa utama. Fungsi: isolasi darurat saat maintenance atau LOCA</li>
-          <li><strong>Sistem proteksi:</strong> SCRAM otomatis jika flow turun di bawah threshold</li>
+          <li><strong>Isolation valve:</strong> motor-operated valve pada pipa utama. Fungsi: isolasi darurat saat maintenance atau LOCA (Loss of Coolant Accident)</li>
+          <li><strong>Sistem proteksi:</strong> SCRAM (emergency shutdown) otomatis jika flow turun di bawah threshold</li>
         </ul>
         <h4>(b) Design for Reliability pada Komponen RSG-GAS</h4>
         <ul>
           <li><strong>Redundansi:</strong> pompa 2oo3 (paralel), HE 2 unit paralel &rarr; single failure tidak menyebabkan LOF</li>
           <li><strong>Diversity:</strong> suplai listrik dari PLN + diesel generator + UPS untuk sistem kritis</li>
           <li><strong>Fail-safe design:</strong> isolation valve gagal di posisi open (tidak menghentikan aliran); SCRAM otomatis</li>
-          <li><strong>Derating:</strong> pompa dioperasikan di bawah kapasitas maksimum untuk memperpanjang MTBF</li>
+          <li><strong>Derating:</strong> pompa dioperasikan di bawah kapasitas maksimum untuk memperpanjang MTBF (Mean Time Between Failure)</li>
           <li><strong>Material selection:</strong> stainless steel tahan korosi untuk komponen yang kontak dengan air pendingin</li>
           <li><strong>Condition monitoring:</strong> vibration monitoring pompa, flow measurement, temperature monitoring</li>
           <li><strong>Preventive maintenance:</strong> jadwal overhaul pompa, inspeksi tube HE, testing valve berkala</li>
@@ -1934,11 +1934,11 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
       <div class="soal"><div class="soal-q"><span class="num">Prediksi #4</span> <span class="arsip-label">Model 2025 #2 &bull; 15 poin</span> Masing-masing dijelaskan bagaimana <strong>Producibility, Sustainability</strong> dan <strong>Disposibility</strong> diterapkan pada sistem <strong>MRT Jakarta.</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>Producibility (Design for Manufacturing)</h4>
         <ul>
-          <li><strong>DFM:</strong> kereta MRT diproduksi oleh Nippon Sharyo (Jepang) dengan standar manufacturing ketat, lalu dikirim via kapal ke Indonesia</li>
+          <li><strong>DFM (Design for Manufacturing):</strong> kereta MRT diproduksi oleh Nippon Sharyo (Jepang) dengan standar manufacturing ketat, lalu dikirim via kapal ke Indonesia</li>
           <li><strong>Modular construction:</strong> stasiun dan viaduct menggunakan segmen precast concrete yang difabrikasi di batching plant, lalu dirakit di lokasi</li>
           <li><strong>Standardization:</strong> komponen mengikuti standar JIS (Japanese Industrial Standards) dan EN (European Norm) untuk interoperability</li>
-          <li><strong>QC:</strong> inspeksi rail alignment, pengujian sinyal CBTC, commissioning bertahap per seksi</li>
-          <li><strong>DFA:</strong> sistem modular pada peralatan stasiun (gate AFC, escalator, elevator) untuk kemudahan instalasi</li>
+          <li><strong>QC (Quality Control):</strong> inspeksi rail alignment, pengujian sinyal CBTC (Communications-Based Train Control), commissioning bertahap per seksi</li>
+          <li><strong>DFA (Design for Assembly):</strong> sistem modular pada peralatan stasiun (gate AFC/Automatic Fare Collection, escalator, elevator) untuk kemudahan instalasi</li>
         </ul>
         <h4>Sustainability</h4>
         <ul>
@@ -1953,8 +1953,8 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
           <li><strong>Kereta:</strong> umur desain 30 tahun. End-of-life: bodi aluminium 90%+ recyclable, komponen elektronik didaur ulang sesuai regulasi e-waste</li>
           <li><strong>Infrastruktur:</strong> beton dan baja viaduct/stasiun dapat di-demolish dan di-recycle. Tanah bekas konstruksi harus diremediasi</li>
           <li><strong>Peralatan stasiun:</strong> escalator, elevator, AFC gate memiliki umur pakai 15-20 tahun, diganti secara modular tanpa menghentikan operasi stasiun</li>
-          <li><strong>Limbah operasional:</strong> minyak pelumas, brake pad, filter AC &mdash; dikelola sesuai regulasi B3</li>
-          <li><strong>Decommissioning plan:</strong> belum urgent (MRT masih baru), tapi harus sudah masuk perhitungan LCC sejak fase conceptual</li>
+          <li><strong>Limbah operasional:</strong> minyak pelumas, brake pad, filter AC &mdash; dikelola sesuai regulasi B3 (Bahan Berbahaya dan Beracun)</li>
+          <li><strong>Decommissioning plan:</strong> belum urgent (MRT masih baru), tapi harus sudah masuk perhitungan LCC (Life Cycle Cost) sejak fase conceptual</li>
         </ul>
       </div></div>
 
@@ -2022,7 +2022,7 @@ Dominan: Pompa primer = <strong>91 dari 101</strong> cut sets (90%)</div>
         <li>Central divided difference: f'(h) &asymp; [f(h+&delta;) &minus; f(h&minus;&delta;)] / (2&delta;) <span class="vid">DDK 02 1:03:15</span></li></ul>
       </div>
 
-      <div class="session"><div class="session-num">03</div><div class="session-meta"><div class="title">ODE, Deret Taylor &amp; Metode Euler</div><div class="info">Ir. Ayodya P. Tenggara &bull; 01:25:27</div></div></div>
+      <div class="session"><div class="session-num">03</div><div class="session-meta"><div class="title">ODE (Ordinary Differential Equation), Deret Taylor &amp; Metode Euler</div><div class="info">Ir. Ayodya P. Tenggara &bull; 01:25:27</div></div></div>
       <div class="card"><div class="card-header">Deret Taylor &amp; Euler Forward</div>
         <ul><li><strong>Taylor Maju:</strong> Y(T+&Delta;T) = Y(T) + Y'(T)&middot;&Delta;T + &frac12;Y''(T)&middot;&Delta;T&sup2; + ... <span class="vid">DDK 03 34:05</span></li>
         <li>Ambil 2 suku pertama &rarr; <strong>Metode Euler</strong> <span class="vid">DDK 03 47:02</span></li></ul>
