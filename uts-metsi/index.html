@@ -3205,9 +3205,654 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
 <div class="day-panel" id="day-2">
   <div class="subject-picker">
     <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">SDTS</div><div class="sc-full">Statistika dalam Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Ir. Muhammad Mufti Azis</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">TI</div><div class="sc-full">Teknologi Informasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Noor Akhmad S. &amp; Dr. Ir. Guntur D.P.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
+    <div class="subject-card" data-subject="ti"><div class="sc-name">TI</div><div class="sc-full">Teknologi Informasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>4 sesi</span><span>1 arsip soal</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
   <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi SDTS &amp; TI akan ditambahkan.</p></div>
+
+  <!-- ====================== TI (Hari 2) ====================== -->
+  <div class="subject-view" id="sv-ti">
+    <button class="back-btn" data-back="2">&larr; Kembali ke Hari 2</button>
+    <div class="exam-banner"><strong>Pra Kuliah TI:</strong> Selasa, 20 Okt 2026 &bull; 13:00&ndash;15:00 WIB &bull; Buku Tertutup (60 menit)<br><strong>Dosen:</strong> Ir. Noor Akhmad Setiawan &amp; Dr. Ir. Guntur Dharma Putra<br><strong>Format:</strong> 4 soal essay</div>
+    <div class="content-tabs" data-tabgroup="ti">
+      <button class="ctab-btn active" data-ctab="ti-rangkuman">Rangkuman</button>
+      <button class="ctab-btn" data-ctab="ti-materi">Materi</button>
+      <button class="ctab-btn" data-ctab="ti-cheatsheet">Cheatsheet</button>
+      <button class="ctab-btn" data-ctab="ti-prediksi">Prediksi Soal</button>
+      <button class="ctab-btn" data-ctab="ti-latihan">Latihan Soal</button>
+    </div>
+
+    <!-- TI RANGKUMAN -->
+    <div class="ctab-panel active" id="ti-rangkuman">
+      <div class="toc"><a href="#ti1">Topik 1: TI &amp; Komputer</a><a href="#ti2">Topik 2: IoT &amp; CPS</a><a href="#ti3">Topik 3: ML &amp; Deep Learning</a><a href="#ti4">Topik 4: Dampak IoT &amp; AI</a></div>
+
+      <div class="card" id="ti1"><div class="card-header"><span class="badge">Topik 1</span> Teknologi Informasi &amp; Komputer</div>
+        <h4>Definisi Teknologi Informasi</h4>
+        <ul>
+          <li><strong>Teknologi:</strong> artefak (buatan manusia) yang membantu atau mengatasi kekurangan manusia</li>
+          <li><strong>Teknologi Informasi:</strong> teknologi yang digunakan untuk <strong>mengolah informasi</strong> &mdash; mencakup perangkat keras, perangkat lunak, jaringan, dan proses yang terlibat dalam pengumpulan, penyimpanan, pengolahan, dan distribusi data</li>
+        </ul>
+        <h4>Data vs Informasi</h4>
+        <div class="key"><strong>Data</strong> = fakta mentah, belum diolah. Contoh: beras, sabun, shampoo di rak supermarket.<br><strong>Informasi</strong> = data yang sudah diolah sehingga bermakna dan berguna. Contoh: tagihan total yang harus dibayar di kasir.<br><strong>Proses:</strong> Data &rarr; Pengolahan (sorting, kalkulasi, filtering) &rarr; Informasi</div>
+        <h4>5 Komponen Dasar Komputer</h4>
+        <div class="tw"><table>
+          <tr><th>#</th><th>Komponen</th><th>Fungsi</th><th>Contoh</th></tr>
+          <tr><td>1</td><td><strong>Input</strong></td><td>Memasukkan data ke dalam sistem</td><td>Keyboard, mouse, scanner, sensor, kamera, microphone, touchscreen</td></tr>
+          <tr><td>2</td><td><strong>Processing</strong></td><td>Mengolah data menjadi informasi</td><td>CPU (ALU + Control Unit), GPU, microprocessor, SoC (System on Chip)</td></tr>
+          <tr><td>3</td><td><strong>Output</strong></td><td>Menampilkan/menyampaikan hasil pengolahan</td><td>Monitor, printer, speaker, actuator, LED indicator</td></tr>
+          <tr><td>4</td><td><strong>Storage</strong></td><td>Menyimpan data secara sementara atau permanen</td><td>RAM (volatile), HDD/SSD (non-volatile), flash memory, cloud storage</td></tr>
+          <tr><td>5</td><td><strong>Communication</strong></td><td>Menghubungkan dan berkomunikasi dengan perangkat/jaringan lain</td><td>Wi-Fi, Bluetooth, Ethernet, NFC, 4G/5G, internet</td></tr>
+        </table></div>
+        <h4>Evolusi Komputer</h4>
+        <ul>
+          <li>Mainframe (ruangan) &rarr; Desktop (meja) &rarr; Laptop (portable) &rarr; Smartphone (saku) &rarr; IoT (smartwatch, sensor, embedded device)</li>
+          <li>Tren: semakin kecil, semakin murah, semakin terhubung, semakin cerdas</li>
+        </ul>
+        <h4>Contoh Komputer Sehari-hari</h4>
+        <div class="tw"><table>
+          <tr><th>Perangkat</th><th>Input</th><th>Processing</th><th>Output</th><th>Storage</th><th>Communication</th></tr>
+          <tr><td><strong>Smartphone</strong></td><td>Layar sentuh, kamera, mic, sensor (accelerometer, GPS)</td><td>SoC (misal Snapdragon/A-series)</td><td>Layar OLED, speaker, vibration motor</td><td>Flash memory (128-512 GB)</td><td>Wi-Fi, 4G/5G, Bluetooth, NFC</td></tr>
+          <tr><td><strong>Laptop</strong></td><td>Keyboard, touchpad, webcam, mic</td><td>CPU (Intel/AMD) + GPU</td><td>Layar LCD/OLED, speaker</td><td>SSD/HDD + RAM</td><td>Wi-Fi, Ethernet, Bluetooth</td></tr>
+          <tr><td><strong>Smartwatch</strong></td><td>Touchscreen, sensor detak jantung, accelerometer</td><td>Microprocessor (low-power)</td><td>Layar kecil, haptic vibration</td><td>Flash memory (8-32 GB)</td><td>Bluetooth, Wi-Fi, NFC</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card" id="ti2"><div class="card-header"><span class="badge">Topik 2</span> Internet of Things &amp; Cyber Physical System</div>
+        <h4>Internet of Things (IoT)</h4>
+        <ul>
+          <li><strong>IoT:</strong> jaringan perangkat fisik (<em>things</em>) yang saling terhubung melalui internet, mampu mengumpulkan dan bertukar data</li>
+          <li><strong>Things</strong> bukan hanya laptop/smartphone &mdash; termasuk sensor, microprocessor kecil, embedded computer, actuator, bahkan peralatan rumah tangga (smart home)</li>
+          <li>Setiap <em>thing</em> memiliki identitas unik (IP address) dan dapat berkomunikasi tanpa intervensi manusia (M2M: Machine-to-Machine)</li>
+        </ul>
+        <h4>Arsitektur Cyber Physical System (CPS)</h4>
+        <div class="key"><strong>Alur CPS:</strong><br>
+        <strong>Sensor</strong> (mengumpulkan data dari dunia fisik) &rarr; <strong>Komputer/Edge Device</strong> (pra-pemrosesan) &rarr; <strong>Router/Gateway</strong> (mengirim data) &rarr; <strong>Cloud</strong> (penyimpanan &amp; komputasi besar) &rarr; <strong>Analysis</strong> (AI/ML memproses data) &rarr; <strong>Decision</strong> (keputusan otomatis/rekomendasi) &rarr; <strong>Actuator</strong> (aksi di dunia fisik)<br><br>
+        CPS = integrasi dunia <strong>siber</strong> (software, data, AI) dengan dunia <strong>fisik</strong> (sensor, actuator, mesin)</div>
+        <h4>Manfaat IoT</h4>
+        <ul>
+          <li><strong>Automasi:</strong> proses otomatis tanpa intervensi manual (smart factory, smart farming)</li>
+          <li><strong>Efisiensi:</strong> optimasi penggunaan energi, waktu, dan sumber daya</li>
+          <li><strong>Alert &amp; Safety:</strong> deteksi dini bahaya (sensor kebakaran, gempa, kebocoran gas)</li>
+          <li><strong>Monitoring Real-time:</strong> pantau kondisi mesin, kesehatan, lingkungan secara langsung</li>
+          <li><strong>Data-Driven Decision:</strong> keputusan berdasarkan data aktual, bukan intuisi</li>
+        </ul>
+        <h4>Risiko IoT</h4>
+        <ul>
+          <li><strong>Security:</strong> perangkat IoT rentan terhadap hacking &mdash; lebih banyak titik masuk (attack surface)</li>
+          <li><strong>Data Leakage:</strong> data pribadi bisa bocor jika enkripsi lemah</li>
+          <li><strong>Ketergantungan Sistem:</strong> jika jaringan/server down, seluruh sistem terdampak</li>
+          <li><strong>Privasi:</strong> sensor terus mengumpulkan data &mdash; potensi surveillance tanpa consent</li>
+          <li><strong>Interoperability:</strong> standar berbeda antar vendor menyulitkan integrasi</li>
+        </ul>
+      </div>
+
+      <div class="card" id="ti3"><div class="card-header"><span class="badge">Topik 3</span> Machine Learning &amp; Deep Learning</div>
+        <h4>Hierarki AI</h4>
+        <div class="key"><strong>Artificial Intelligence</strong> (payung besar: mesin yang meniru kecerdasan manusia)<br>
+        &nbsp;&nbsp;&rarr; <strong>Machine Learning</strong> (subset AI: komputer belajar dari data, mengenali pola tanpa diprogram eksplisit)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&rarr; <strong>Deep Learning</strong> (subset ML: menggunakan neural network berlapis/deep)</div>
+        <h4>3 Jenis Pembelajaran Machine Learning</h4>
+        <div class="tw"><table>
+          <tr><th>Jenis</th><th>Data</th><th>Cara Kerja</th><th>Task</th><th>Contoh</th></tr>
+          <tr><td><strong>Supervised Learning</strong></td><td>Data + Label (ada jawaban benar)</td><td>Belajar dari pasangan input-output</td><td><strong>Regresi</strong> (prediksi nilai kontinu) &amp; <strong>Klasifikasi</strong> (prediksi kategori)</td><td>Prediksi harga rumah (regresi), deteksi spam (klasifikasi)</td></tr>
+          <tr><td><strong>Unsupervised Learning</strong></td><td>Data tanpa label</td><td>Menemukan pola/struktur tersembunyi</td><td>Clustering, dimensionality reduction, pattern discovery</td><td>Segmentasi pelanggan, deteksi anomali</td></tr>
+          <tr><td><strong>Reinforcement Learning</strong></td><td>Tidak ada dataset &mdash; belajar dari interaksi</td><td>Reward &amp; punishment (trial-and-error)</td><td>Sequential decision making</td><td>Game AI (AlphaGo), robotik, self-driving car</td></tr>
+        </table></div>
+        <h4>ChatGPT &amp; Generative AI</h4>
+        <div class="key"><strong>ChatGPT</strong> = Generative AI yang dibangun dengan:<br>
+        1. <strong>Supervised Pre-training</strong> &mdash; dilatih pada dataset teks besar untuk memprediksi kata berikutnya<br>
+        2. <strong>RLHF</strong> (Reinforcement Learning from Human Feedback) &mdash; respons di-ranking oleh manusia, model belajar menghasilkan output yang lebih baik<br><br>
+        <strong>Generative AI</strong> = AI yang mampu <em>menghasilkan</em> konten baru (teks, gambar, kode, musik) &mdash; bukan hanya mengklasifikasi/memprediksi</div>
+        <h4>Deep Learning</h4>
+        <ul>
+          <li>ML yang menggunakan <strong>neural network berlapis</strong> (perceptron &rarr; hidden layers &rarr; output layer)</li>
+          <li>Setiap neuron melakukan operasi: input &times; weight + bias &rarr; <strong>fungsi aktivasi non-linear</strong> (ReLU, sigmoid, tanh)</li>
+          <li>Semakin banyak hidden layer = semakin &ldquo;deep&rdquo; = mampu menangkap pola yang lebih kompleks</li>
+          <li>Contoh: image recognition (CNN), speech recognition, NLP (Transformer)</li>
+        </ul>
+        <h4>Discriminative vs Generative AI</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Discriminative AI</th><th>Generative AI</th></tr>
+          <tr><td><strong>Fungsi</strong></td><td>Membedakan/mengklasifikasi data yang ada</td><td>Menghasilkan data/konten baru</td></tr>
+          <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;Ini gambar kucing atau anjing?&rdquo;</td><td>&ldquo;Buatkan gambar kucing!&rdquo;</td></tr>
+          <tr><td><strong>Contoh</strong></td><td>Spam filter, face recognition, sentiment analysis</td><td>ChatGPT, DALL-E, Midjourney, GitHub Copilot</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card" id="ti4"><div class="card-header"><span class="badge">Topik 4</span> Dampak IoT &amp; AI</div>
+        <h4>Dampak Positif</h4>
+        <ol>
+          <li><strong>Efisiensi &amp; Automasi:</strong> proses produksi otomatis (Industry 4.0), smart farming, smart logistics mengurangi waktu dan biaya</li>
+          <li><strong>Keselamatan:</strong> sensor deteksi dini bencana (gempa, banjir), sistem peringatan kebakaran, ADAS pada kendaraan</li>
+          <li><strong>Produktivitas:</strong> AI membantu analisis data masif yang tidak mungkin dilakukan manusia secara manual</li>
+          <li><strong>Aksesibilitas:</strong> telemedicine menjangkau daerah terpencil, pendidikan online, asisten virtual untuk disabilitas</li>
+          <li><strong>Inovasi:</strong> smart city (transportasi, energi, waste management), personalized healthcare, precision agriculture</li>
+          <li><strong>Pengambilan Keputusan:</strong> data-driven decision making berbasis analisis real-time</li>
+        </ol>
+        <h4>Dampak Negatif</h4>
+        <ol>
+          <li><strong>Privasi:</strong> pengumpulan data masif tanpa consent yang jelas &mdash; surveillance society</li>
+          <li><strong>Bias AI:</strong> model ML mewarisi bias dari data training (diskriminasi gender, ras, sosial-ekonomi)</li>
+          <li><strong>Keamanan Siber:</strong> semakin banyak perangkat terhubung = semakin besar attack surface (DDoS, ransomware)</li>
+          <li><strong>Ketergantungan:</strong> masyarakat terlalu bergantung pada teknologi &mdash; jika sistem down, aktivitas lumpuh</li>
+          <li><strong>Dampak Lingkungan:</strong> e-waste dari perangkat usang, emisi karbon data center, konsumsi energi AI training</li>
+          <li><strong>Pengangguran:</strong> automasi menggantikan pekerjaan rutin/manual (disrupsi tenaga kerja)</li>
+          <li><strong>Deepfake &amp; Misinformasi:</strong> generative AI bisa digunakan untuk membuat konten palsu yang meyakinkan</li>
+        </ol>
+        <h4>Kesimpulan</h4>
+        <div class="key"><strong>Kebaikan IoT dan AI lebih mengungguli keburukannya</strong> &mdash; JIKA disertai:<br>
+        1. <strong>Regulasi</strong> yang jelas (UU perlindungan data, standar keamanan IoT)<br>
+        2. <strong>Etika Digital</strong> (responsible AI, transparency, accountability)<br>
+        3. <strong>Literasi Teknologi</strong> (edukasi masyarakat tentang risiko dan penggunaan yang bijak)<br>
+        4. <strong>Reskilling/Upskilling</strong> tenaga kerja untuk adaptasi dengan era digital<br><br>
+        Teknologi bersifat netral &mdash; dampaknya tergantung <strong>bagaimana manusia menggunakannya</strong>.</div>
+      </div>
+    </div>
+
+    <!-- TI MATERI -->
+    <div class="ctab-panel" id="ti-materi">
+      <h2>Materi Komprehensif Kuliah TI</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Berdasarkan 4 sesi kuliah Pra Kuliah Teknologi Informasi. Dosen: Ir. Noor Akhmad Setiawan &amp; Dr. Ir. Guntur Dharma Putra.</p>
+      <div class="toc"><a href="#tm1">Topik 1: TI &amp; Komputer</a><a href="#tm2">Topik 2: IoT &amp; CPS</a><a href="#tm3">Topik 3: ML &amp; Deep Learning</a><a href="#tm4">Topik 4: Dampak &amp; Etika</a></div>
+
+      <div class="card" id="tm1"><div class="card-header"><span class="badge">Topik 1</span> Teknologi Informasi &amp; Komputer &mdash; Detail</div>
+        <h4>Apa Itu Teknologi?</h4>
+        <ul>
+          <li><strong>Teknologi</strong> = artefak buatan manusia untuk membantu atau mengatasi kekurangan manusia</li>
+          <li>Bukan hanya gadget &mdash; palu, roda, tulisan, kacamata semua termasuk teknologi</li>
+          <li>Teknologi berkembang dari kebutuhan: manusia tidak bisa terbang &rarr; pesawat; tidak bisa hitung cepat &rarr; komputer</li>
+        </ul>
+        <h4>Informasi: Dari Data ke Knowledge</h4>
+        <ul>
+          <li><strong>Data:</strong> fakta mentah tanpa konteks (angka, teks, gambar yang belum diolah)</li>
+          <li><strong>Informasi:</strong> data yang sudah diolah, memiliki makna dan relevansi</li>
+          <li><strong>Knowledge:</strong> informasi yang dipahami dan dapat diterapkan untuk pengambilan keputusan</li>
+          <li><strong>Wisdom:</strong> kemampuan menerapkan knowledge dengan judgment yang tepat</li>
+        </ul>
+        <p>Hierarki: <strong>Data &rarr; Informasi &rarr; Knowledge &rarr; Wisdom</strong> (DIKW Pyramid)</p>
+        <h4>Komputer: Lebih dari Sekadar PC</h4>
+        <ul>
+          <li>Komputer = perangkat elektronik yang menerima input, memproses sesuai instruksi, dan menghasilkan output</li>
+          <li>Definisi luas: <strong>setiap perangkat dengan 5 komponen dasar adalah komputer</strong> (smartphone, smartwatch, ATM, smart TV, ECU mobil)</li>
+          <li>Embedded computer: komputer yang tertanam di perangkat lain (kulkas pintar, mesin cuci, sensor industri)</li>
+        </ul>
+        <h4>Detail 5 Komponen</h4>
+        <p><strong>1. Input Device</strong> &mdash; konversi data dari dunia luar ke sinyal digital:</p>
+        <ul>
+          <li>Manual: keyboard, mouse, touchscreen, stylus</li>
+          <li>Otomatis: sensor (suhu, tekanan, cahaya, gerak), kamera, barcode scanner, GPS receiver</li>
+          <li>Biometrik: fingerprint reader, face recognition, iris scanner</li>
+        </ul>
+        <p><strong>2. Processing Unit</strong> &mdash; otak komputer:</p>
+        <ul>
+          <li><strong>CPU:</strong> ALU (Arithmetic Logic Unit) + Control Unit + Register + Cache</li>
+          <li><strong>GPU:</strong> awalnya untuk grafis, kini digunakan juga untuk AI/ML training (parallel processing)</li>
+          <li><strong>SoC:</strong> System on Chip &mdash; CPU, GPU, modem, ISP terintegrasi dalam satu chip (contoh: Apple A-series, Qualcomm Snapdragon)</li>
+          <li>Kecepatan diukur dalam GHz (miliaran operasi per detik)</li>
+        </ul>
+        <p><strong>3. Output Device</strong> &mdash; menyampaikan hasil ke pengguna atau lingkungan:</p>
+        <ul>
+          <li>Visual: monitor, layar (LCD, OLED, E-ink)</li>
+          <li>Audio: speaker, headphone</li>
+          <li>Fisik: printer (2D/3D), actuator (motor, valve, relay)</li>
+          <li>Haptic: vibration motor (notifikasi getar di smartphone)</li>
+        </ul>
+        <p><strong>4. Storage</strong> &mdash; menyimpan data:</p>
+        <ul>
+          <li><strong>Volatile</strong> (hilang saat mati): RAM (DDR4/DDR5) &mdash; cepat tapi sementara</li>
+          <li><strong>Non-volatile</strong> (permanen): HDD (magnetic), SSD (flash/NAND), eMMC, cloud storage</li>
+          <li>Hierarki: Register &gt; Cache &gt; RAM &gt; SSD &gt; HDD &gt; Cloud (kecepatan &darr;, kapasitas &uarr;, harga/GB &darr;)</li>
+        </ul>
+        <p><strong>5. Communication</strong> &mdash; konektivitas:</p>
+        <ul>
+          <li><strong>Wired:</strong> Ethernet (LAN), USB, HDMI, Thunderbolt</li>
+          <li><strong>Wireless:</strong> Wi-Fi, Bluetooth, NFC, Zigbee, LoRa, 4G/5G, satelit</li>
+          <li>Internet = jaringan global yang menghubungkan miliaran perangkat</li>
+        </ul>
+        <h4>Sejarah Singkat Evolusi</h4>
+        <div class="tw"><table>
+          <tr><th>Era</th><th>Bentuk</th><th>Ciri Khas</th></tr>
+          <tr><td>1940-1950an</td><td>Mainframe (ENIAC, UNIVAC)</td><td>Sebesar ruangan, tabung vakum, hanya untuk militer/riset</td></tr>
+          <tr><td>1970-1980an</td><td>Personal Computer (Apple II, IBM PC)</td><td>Desktop, mikroprosesor, untuk individu</td></tr>
+          <tr><td>1990an</td><td>Laptop</td><td>Portable, baterai, layar terintegrasi</td></tr>
+          <tr><td>2000an</td><td>Smartphone</td><td>Komputer saku, touchscreen, always connected</td></tr>
+          <tr><td>2010an+</td><td>IoT &amp; Wearable</td><td>Smartwatch, sensor, embedded &mdash; komputer di mana-mana</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card" id="tm2"><div class="card-header"><span class="badge">Topik 2</span> Internet of Things &amp; Cyber Physical System &mdash; Detail</div>
+        <h4>Konsep Dasar IoT</h4>
+        <ul>
+          <li>IoT pertama kali dikonsepkan oleh <strong>Kevin Ashton</strong> (1999) &mdash; awalnya untuk RFID dan supply chain</li>
+          <li>Inti IoT: <strong>Things</strong> (perangkat fisik dengan sensor/actuator) + <strong>Internet</strong> (konektivitas) + <strong>Data</strong> (informasi yang dikumpulkan dan diolah)</li>
+          <li>Estimasi: miliaran perangkat IoT terhubung secara global &mdash; jauh melebihi jumlah manusia</li>
+        </ul>
+        <h4>Komponen Ekosistem IoT</h4>
+        <ol>
+          <li><strong>Sensor/Actuator:</strong> mata dan tangan IoT &mdash; sensor mengumpulkan data, actuator melakukan aksi fisik</li>
+          <li><strong>Edge Device:</strong> mikrokontroler/embedded computer yang melakukan pra-pemrosesan di lokasi (mengurangi latency)</li>
+          <li><strong>Gateway/Router:</strong> menghubungkan edge ke cloud, konversi protokol, filtering data</li>
+          <li><strong>Cloud Platform:</strong> penyimpanan masif, komputasi besar, AI/ML analysis</li>
+          <li><strong>Application Layer:</strong> dashboard, mobile app, API yang digunakan end-user</li>
+        </ol>
+        <h4>Cyber Physical System (CPS) &mdash; Detail</h4>
+        <ul>
+          <li>CPS = integrasi erat antara <strong>komponen siber</strong> (software, algoritma, data) dan <strong>komponen fisik</strong> (sensor, actuator, mesin)</li>
+          <li>Berbeda dari IoT biasa: CPS memiliki <strong>feedback loop</strong> tertutup &mdash; data dari sensor mempengaruhi keputusan yang menggerakkan actuator, yang kembali diukur sensor</li>
+          <li><strong>Contoh CPS:</strong> self-driving car (sensor lidar/kamera &rarr; algoritma navigasi &rarr; steering/braking), smart grid (sensor beban &rarr; optimasi distribusi energi &rarr; kontrol transformator)</li>
+        </ul>
+        <h4>Aplikasi IoT di Berbagai Bidang</h4>
+        <div class="tw"><table>
+          <tr><th>Bidang</th><th>Aplikasi</th><th>Sensor/Device</th></tr>
+          <tr><td><strong>Smart Home</strong></td><td>Automasi lampu, AC, kunci pintu, CCTV</td><td>Motion sensor, smart thermostat, smart lock</td></tr>
+          <tr><td><strong>Smart City</strong></td><td>Manajemen lalu lintas, parkir cerdas, pengelolaan sampah</td><td>Traffic camera, parking sensor, fill-level sensor</td></tr>
+          <tr><td><strong>Healthcare</strong></td><td>Remote patient monitoring, wearable health tracker</td><td>Heart rate sensor, SpO2, blood glucose monitor</td></tr>
+          <tr><td><strong>Manufacturing</strong></td><td>Predictive maintenance, quality control, digital twin</td><td>Vibration sensor, temperature sensor, vision system</td></tr>
+          <tr><td><strong>Agriculture</strong></td><td>Irigasi otomatis, monitoring kelembaban tanah, drone spraying</td><td>Soil moisture sensor, weather station, drone</td></tr>
+        </table></div>
+        <h4>Tantangan Keamanan IoT</h4>
+        <ul>
+          <li><strong>Attack Surface:</strong> lebih banyak perangkat = lebih banyak titik rawan yang bisa diserang</li>
+          <li><strong>Resource Constraints:</strong> perangkat IoT kecil, daya rendah &mdash; sulit menjalankan enkripsi berat</li>
+          <li><strong>Default Credentials:</strong> banyak perangkat tidak mengganti password default</li>
+          <li><strong>Update/Patch:</strong> firmware update sulit dilakukan pada jutaan perangkat sekaligus</li>
+          <li><strong>Contoh serangan:</strong> Mirai botnet (2016) &mdash; ratusan ribu perangkat IoT diretas untuk DDoS</li>
+        </ul>
+      </div>
+
+      <div class="card" id="tm3"><div class="card-header"><span class="badge">Topik 3</span> Machine Learning &amp; Deep Learning &mdash; Detail</div>
+        <h4>Dari AI ke Machine Learning</h4>
+        <ul>
+          <li><strong>AI (Artificial Intelligence):</strong> bidang ilmu komputer yang membuat mesin mampu meniru kecerdasan manusia (reasoning, learning, problem solving)</li>
+          <li><strong>Machine Learning:</strong> cabang AI di mana komputer <em>belajar dari data</em> tanpa diprogram secara eksplisit untuk setiap skenario</li>
+          <li>Paradigma tradisional: programmer menulis aturan (if-then). ML: komputer menemukan aturan sendiri dari data.</li>
+        </ul>
+        <h4>Supervised Learning &mdash; Detail</h4>
+        <ul>
+          <li>Data training memiliki <strong>label</strong> (jawaban yang benar sudah diketahui)</li>
+          <li>Model belajar memetakan input (fitur) &rarr; output (label)</li>
+          <li><strong>Regresi:</strong> output berupa nilai kontinu
+            <ul>
+              <li>Contoh: prediksi harga rumah berdasarkan luas, lokasi, jumlah kamar</li>
+              <li>Algoritma: Linear Regression, Polynomial Regression, Decision Tree Regression</li>
+              <li>Grafik: x = fitur, y = nilai target &rarr; garis/kurva best fit</li>
+            </ul>
+          </li>
+          <li><strong>Klasifikasi:</strong> output berupa kategori/kelas
+            <ul>
+              <li>Contoh: email spam vs. tidak spam, diagnosis penyakit, deteksi objek</li>
+              <li>Algoritma: Logistic Regression, SVM, Random Forest, Neural Network</li>
+            </ul>
+          </li>
+        </ul>
+        <h4>Unsupervised Learning &mdash; Detail</h4>
+        <ul>
+          <li>Data training <strong>tidak memiliki label</strong> &mdash; model menemukan pola sendiri</li>
+          <li><strong>Clustering:</strong> mengelompokkan data berdasarkan kemiripan (K-Means, DBSCAN, Hierarchical)</li>
+          <li><strong>Dimensionality Reduction:</strong> menyederhanakan data berdimensi tinggi (PCA, t-SNE)</li>
+          <li><strong>Association:</strong> menemukan hubungan antar item (market basket analysis &mdash; &ldquo;pembeli yang beli roti juga beli mentega&rdquo;)</li>
+        </ul>
+        <h4>Reinforcement Learning &mdash; Detail</h4>
+        <ul>
+          <li>Agent berinteraksi dengan environment, mengambil action, menerima reward atau punishment</li>
+          <li>Tujuan: memaksimalkan <strong>cumulative reward</strong> jangka panjang</li>
+          <li>Tidak ada dataset &mdash; agent belajar melalui trial-and-error</li>
+          <li>Contoh: AlphaGo (game Go), robot belajar berjalan, self-driving car, optimasi routing jaringan</li>
+        </ul>
+        <h4>Deep Learning &mdash; Detail</h4>
+        <ul>
+          <li><strong>Neural Network:</strong> terinspirasi dari neuron otak manusia</li>
+          <li><strong>Perceptron:</strong> unit dasar &mdash; menerima input, kalikan weight, tambah bias, lewatkan fungsi aktivasi</li>
+          <li>Rumus neuron: <strong>y = f(w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + ... + b)</strong> di mana f = fungsi aktivasi non-linear</li>
+          <li><strong>Arsitektur:</strong> Input Layer &rarr; Hidden Layer(s) &rarr; Output Layer</li>
+          <li>&ldquo;Deep&rdquo; = banyak hidden layer (puluhan hingga ratusan)</li>
+          <li><strong>Training:</strong> Forward propagation &rarr; Loss calculation &rarr; Backpropagation &rarr; Weight update (Gradient Descent)</li>
+        </ul>
+        <h4>Tipe Neural Network</h4>
+        <div class="tw"><table>
+          <tr><th>Tipe</th><th>Kegunaan</th><th>Contoh Aplikasi</th></tr>
+          <tr><td><strong>CNN</strong> (Convolutional)</td><td>Image/video processing</td><td>Image classification, object detection, face recognition</td></tr>
+          <tr><td><strong>RNN/LSTM</strong> (Recurrent)</td><td>Sequential data</td><td>Speech recognition, time series prediction, language modeling</td></tr>
+          <tr><td><strong>Transformer</strong></td><td>NLP, generative AI</td><td>GPT, BERT, machine translation, ChatGPT</td></tr>
+          <tr><td><strong>GAN</strong> (Generative Adversarial)</td><td>Generasi konten</td><td>Image generation, deepfake, style transfer</td></tr>
+        </table></div>
+        <h4>Generative AI &mdash; Cara Kerja ChatGPT</h4>
+        <ol>
+          <li><strong>Pre-training (Supervised):</strong> model dilatih pada miliaran teks internet &mdash; belajar memprediksi kata berikutnya (next-token prediction)</li>
+          <li><strong>SFT (Supervised Fine-Tuning):</strong> dilatih ulang pada contoh percakapan berkualitas tinggi</li>
+          <li><strong>RLHF:</strong> manusia memberi ranking pada respons model &rarr; reward model dilatih &rarr; model di-optimize dengan PPO (Proximal Policy Optimization)</li>
+        </ol>
+        <p>Hasilnya: model yang tidak hanya pintar menulis teks, tapi juga <strong>mengikuti instruksi</strong> dan <strong>menghindari output berbahaya</strong>.</p>
+      </div>
+
+      <div class="card" id="tm4"><div class="card-header"><span class="badge">Topik 4</span> Dampak IoT &amp; AI &mdash; Analisis Mendalam</div>
+        <h4>Industry 4.0 &mdash; Revolusi Industri Keempat</h4>
+        <ul>
+          <li>Integrasi IoT + AI + Cloud + Big Data + Robotics = <strong>Smart Factory</strong></li>
+          <li>Ciri: otomasi tingkat tinggi, customisasi massal, predictive maintenance, digital twin</li>
+          <li>Indonesia: Making Indonesia 4.0 &mdash; fokus pada 5 sektor: makanan &amp; minuman, tekstil, otomotif, elektronik, kimia</li>
+        </ul>
+        <h4>Dampak Positif &mdash; Elaborasi</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Dampak</th><th>Contoh Nyata</th></tr>
+          <tr><td><strong>Efisiensi</strong></td><td>Automasi mengurangi waktu &amp; biaya produksi 20-30%</td><td>Amazon warehouse (robot Kiva), smart farming (irigasi otomatis)</td></tr>
+          <tr><td><strong>Keselamatan</strong></td><td>Deteksi dini, respons cepat, minimasi human error</td><td>EWS tsunami, sensor gas di tambang, ADAS (Automatic Emergency Braking)</td></tr>
+          <tr><td><strong>Kesehatan</strong></td><td>Diagnosis lebih akurat, monitoring kontinu</td><td>AI radiology (deteksi kanker), wearable ECG, telemedicine</td></tr>
+          <tr><td><strong>Pendidikan</strong></td><td>Akses luas, personalisasi pembelajaran</td><td>Adaptive learning platform, online course, AI tutor</td></tr>
+          <tr><td><strong>Lingkungan</strong></td><td>Optimasi energi, monitoring polusi</td><td>Smart grid (hemat energi 10-15%), sensor kualitas udara</td></tr>
+        </table></div>
+        <h4>Dampak Negatif &mdash; Elaborasi</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Dampak</th><th>Contoh Nyata</th></tr>
+          <tr><td><strong>Privasi</strong></td><td>Data pribadi dikumpulkan tanpa batas</td><td>Cambridge Analytica, facial recognition tanpa consent</td></tr>
+          <tr><td><strong>Bias &amp; Diskriminasi</strong></td><td>AI mewarisi bias dari data training</td><td>Hiring AI Amazon (bias gender), predictive policing (bias rasial)</td></tr>
+          <tr><td><strong>Keamanan</strong></td><td>Serangan siber semakin canggih</td><td>Ransomware pada rumah sakit, hacking mobil otonom</td></tr>
+          <tr><td><strong>Tenaga Kerja</strong></td><td>Automasi menggantikan pekerjaan rutin</td><td>Kasir otomatis, chatbot customer service, robot warehouse</td></tr>
+          <tr><td><strong>Lingkungan</strong></td><td>Konsumsi energi &amp; limbah elektronik</td><td>Training GPT-4: emisi setara 500+ mobil/tahun; e-waste global jutaan ton/tahun</td></tr>
+          <tr><td><strong>Misinformasi</strong></td><td>Generative AI memproduksi konten palsu</td><td>Deepfake video pemimpin negara, artikel berita palsu AI-generated</td></tr>
+        </table></div>
+        <h4>Kerangka Argumentasi: Kebaikan vs Keburukan</h4>
+        <div class="key"><strong>Argumen bahwa kebaikan &gt; keburukan:</strong><br>
+        1. Dampak positif bersifat <strong>fundamental</strong> (menyelamatkan nyawa, efisiensi, aksesibilitas) sedangkan dampak negatif sebagian besar <strong>mitigable</strong> (bisa dimitigasi)<br>
+        2. Regulasi, etika digital, dan literasi teknologi mampu mengurangi dampak negatif tanpa menghilangkan manfaat<br>
+        3. Sejarah teknologi: setiap revolusi industri membawa disrupsi, namun jangka panjang selalu meningkatkan kualitas hidup<br>
+        4. <strong>Syarat:</strong> regulasi proaktif, responsible AI development, reskilling tenaga kerja, standar keamanan IoT, transparansi algoritma</div>
+      </div>
+    </div>
+
+    <!-- TI CHEATSHEET -->
+    <div class="ctab-panel" id="ti-cheatsheet">
+      <h2>Quick Reference &amp; Cheatsheet</h2>
+
+      <h3>5 Komponen Komputer &mdash; Mapping per Perangkat</h3>
+      <div class="tw"><table>
+        <tr><th>Komponen</th><th>Smartphone</th><th>Laptop</th><th>Smartwatch</th></tr>
+        <tr><td><strong>Input</strong></td><td>Touchscreen, kamera, mic, sensor (accelerometer, gyroscope, GPS)</td><td>Keyboard, touchpad, webcam, mic</td><td>Touchscreen, sensor detak jantung, accelerometer, gyroscope</td></tr>
+        <tr><td><strong>Processing</strong></td><td>SoC (Snapdragon / Apple A-series / Exynos)</td><td>CPU (Intel Core / AMD Ryzen) + GPU</td><td>Low-power microprocessor (Apple S-series / Qualcomm Wear)</td></tr>
+        <tr><td><strong>Output</strong></td><td>Layar OLED, speaker, vibration motor</td><td>Layar LCD/OLED, speaker, LED indicator</td><td>Layar kecil OLED/AMOLED, haptic vibration</td></tr>
+        <tr><td><strong>Storage</strong></td><td>Flash memory 128-512 GB + RAM 6-16 GB</td><td>SSD 256 GB-2 TB + RAM 8-32 GB</td><td>Flash memory 8-32 GB + RAM 1-2 GB</td></tr>
+        <tr><td><strong>Communication</strong></td><td>Wi-Fi, 4G/5G, Bluetooth, NFC, GPS</td><td>Wi-Fi, Ethernet (via adapter), Bluetooth, USB</td><td>Bluetooth, Wi-Fi, NFC, GPS (opsional LTE)</td></tr>
+      </table></div>
+
+      <h3>3 Jenis Machine Learning &mdash; Perbandingan</h3>
+      <div class="tw"><table>
+        <tr><th>Aspek</th><th>Supervised</th><th>Unsupervised</th><th>Reinforcement</th></tr>
+        <tr><td><strong>Data</strong></td><td>Berlabel (input + output benar)</td><td>Tanpa label</td><td>Tanpa dataset &mdash; belajar dari interaksi</td></tr>
+        <tr><td><strong>Tujuan</strong></td><td>Prediksi output untuk input baru</td><td>Temukan pola/struktur tersembunyi</td><td>Maksimalkan cumulative reward</td></tr>
+        <tr><td><strong>Task</strong></td><td>Regresi (kontinu) &amp; Klasifikasi (kategori)</td><td>Clustering, dimensionality reduction</td><td>Sequential decision making</td></tr>
+        <tr><td><strong>Contoh</strong></td><td>Prediksi harga, deteksi spam, diagnosis</td><td>Segmentasi pelanggan, anomaly detection</td><td>AlphaGo, robotik, self-driving car</td></tr>
+        <tr><td><strong>Algoritma</strong></td><td>Linear Regression, SVM, Random Forest, NN</td><td>K-Means, DBSCAN, PCA</td><td>Q-Learning, Policy Gradient, PPO</td></tr>
+      </table></div>
+
+      <h3>Arsitektur CPS (Flow)</h3>
+      <div class="key" style="text-align:center;font-size:1rem"><strong>Sensor</strong> (data fisik) &rarr; <strong>Edge/Komputer</strong> (pra-proses) &rarr; <strong>Gateway</strong> (kirim) &rarr; <strong>Cloud</strong> (simpan &amp; hitung) &rarr; <strong>AI Analysis</strong> (pola &amp; prediksi) &rarr; <strong>Decision</strong> (aksi) &rarr; <strong>Actuator</strong> (eksekusi fisik) &rarr; <em>kembali ke Sensor</em> (feedback loop)</div>
+
+      <h3>Supervised: Regresi vs Klasifikasi</h3>
+      <div class="tw"><table>
+        <tr><th>Aspek</th><th>Regresi</th><th>Klasifikasi</th></tr>
+        <tr><td><strong>Output</strong></td><td>Nilai kontinu (angka)</td><td>Kategori/kelas (diskrit)</td></tr>
+        <tr><td><strong>Pertanyaan</strong></td><td>&ldquo;Berapa?&rdquo;</td><td>&ldquo;Apa kategorinya?&rdquo;</td></tr>
+        <tr><td><strong>Contoh</strong></td><td>Prediksi suhu, harga saham, jumlah kendaraan</td><td>Spam/not-spam, kucing/anjing, sehat/sakit</td></tr>
+        <tr><td><strong>Evaluasi</strong></td><td>MSE, MAE, R&sup2;</td><td>Accuracy, Precision, Recall, F1-Score</td></tr>
+      </table></div>
+
+      <h3>Discriminative vs Generative AI</h3>
+      <div class="tw"><table>
+        <tr><th></th><th>Discriminative</th><th>Generative</th></tr>
+        <tr><td><strong>Fungsi</strong></td><td>Membedakan/klasifikasi</td><td>Menghasilkan konten baru</td></tr>
+        <tr><td><strong>Model</strong></td><td>P(y|x) &mdash; probabilitas label given input</td><td>P(x) atau P(x|y) &mdash; distribusi data</td></tr>
+        <tr><td><strong>Contoh</strong></td><td>Spam filter, face ID</td><td>ChatGPT, DALL-E, Midjourney</td></tr>
+      </table></div>
+
+      <h3>Glossary Istilah Kunci</h3>
+      <div class="tw"><table>
+        <tr><th>Istilah</th><th>Definisi Singkat</th></tr>
+        <tr><td><strong>AI</strong></td><td>Artificial Intelligence &mdash; mesin meniru kecerdasan manusia</td></tr>
+        <tr><td><strong>ML</strong></td><td>Machine Learning &mdash; komputer belajar dari data tanpa diprogram eksplisit</td></tr>
+        <tr><td><strong>DL</strong></td><td>Deep Learning &mdash; ML dengan neural network berlapis (deep)</td></tr>
+        <tr><td><strong>IoT</strong></td><td>Internet of Things &mdash; perangkat fisik saling terhubung via internet</td></tr>
+        <tr><td><strong>CPS</strong></td><td>Cyber Physical System &mdash; integrasi dunia siber (software) dan fisik (sensor/actuator)</td></tr>
+        <tr><td><strong>SoC</strong></td><td>System on Chip &mdash; CPU+GPU+modem dalam satu chip</td></tr>
+        <tr><td><strong>RLHF</strong></td><td>Reinforcement Learning from Human Feedback &mdash; teknik training ChatGPT</td></tr>
+        <tr><td><strong>CNN</strong></td><td>Convolutional Neural Network &mdash; untuk pengolahan gambar/video</td></tr>
+        <tr><td><strong>RNN/LSTM</strong></td><td>Recurrent/Long Short-Term Memory &mdash; untuk data sekuensial</td></tr>
+        <tr><td><strong>Transformer</strong></td><td>Arsitektur di balik GPT, BERT &mdash; mekanisme attention</td></tr>
+        <tr><td><strong>GAN</strong></td><td>Generative Adversarial Network &mdash; generator vs discriminator</td></tr>
+        <tr><td><strong>Volatile</strong></td><td>Penyimpanan sementara, hilang saat mati (RAM)</td></tr>
+        <tr><td><strong>Non-volatile</strong></td><td>Penyimpanan permanen (SSD, HDD, flash)</td></tr>
+        <tr><td><strong>Edge Computing</strong></td><td>Pemrosesan data di dekat sumber (bukan di cloud) untuk mengurangi latency</td></tr>
+        <tr><td><strong>M2M</strong></td><td>Machine-to-Machine &mdash; komunikasi langsung antar perangkat tanpa intervensi manusia</td></tr>
+      </table></div>
+    </div>
+
+    <!-- TI PREDIKSI -->
+    <div class="ctab-panel" id="ti-prediksi">
+      <h2>Prediksi Soal UTS 2026</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Berdasarkan kisi-kisi UTS Pra Kuliah TI. Format: 4 soal essay, 60 menit, buku tertutup.</p>
+
+      <div><button class="toggle-all" data-action="expand" data-target="ti-prediksi">Buka Semua</button><button class="toggle-all" data-action="collapse" data-target="ti-prediksi">Tutup Semua</button></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Pasti</span><strong>Soal #1: Komputer sehari-hari &amp; 5 komponen dasar</strong></div><div class="pred-b">
+        <p><strong>Soal:</strong> Berapa komputer yang Anda bawa sehari-hari? Kategorikan setiap perangkat sebagai komputer. Kaitkan dengan 5 komponen dasar komputer. Berikan deskripsi singkat per komponen per komputer.</p>
+        <h4>Jawaban Model:</h4>
+        <p>Saya membawa <strong>3 komputer</strong> sehari-hari: smartphone, laptop, dan smartwatch. Ketiga perangkat ini memenuhi definisi komputer karena memiliki 5 komponen dasar:</p>
+        <div class="tw"><table>
+          <tr><th>Komponen</th><th>Smartphone</th><th>Laptop</th><th>Smartwatch</th></tr>
+          <tr><td><strong>1. Input</strong></td><td>Layar sentuh, kamera (depan+belakang), microphone, sensor (accelerometer, gyroscope, proximity, GPS)</td><td>Keyboard, touchpad, webcam, microphone built-in</td><td>Touchscreen, sensor detak jantung (PPG), accelerometer, gyroscope</td></tr>
+          <tr><td><strong>2. Processing</strong></td><td>SoC (System on Chip): CPU+GPU+modem terintegrasi. Contoh: Snapdragon 8 Gen 3, Apple A17 Pro</td><td>CPU (Intel Core i7 / AMD Ryzen 7) untuk komputasi umum + GPU (integrated/discrete) untuk grafis</td><td>Low-power microprocessor. Contoh: Apple S9, Qualcomm Snapdragon W5+ &mdash; dirancang hemat daya</td></tr>
+          <tr><td><strong>3. Output</strong></td><td>Layar OLED (visual), speaker (audio), vibration motor (haptic feedback)</td><td>Layar LCD/OLED (visual), speaker stereo (audio), LED indicator (status)</td><td>Layar OLED/AMOLED kecil (visual), haptic vibration engine (notifikasi getar)</td></tr>
+          <tr><td><strong>4. Storage</strong></td><td>Flash memory 128-512 GB (non-volatile) + RAM 8-16 GB (volatile, untuk multitasking)</td><td>SSD 512 GB-2 TB (non-volatile, cepat) + RAM 16-32 GB (volatile)</td><td>Flash memory 32 GB (non-volatile) + RAM 1-2 GB (volatile)</td></tr>
+          <tr><td><strong>5. Communication</strong></td><td>Wi-Fi 6, 4G/5G (seluler), Bluetooth 5.3, NFC (pembayaran), GPS</td><td>Wi-Fi 6, Bluetooth 5, Ethernet (via adapter/dongle), USB-C</td><td>Bluetooth 5 (terhubung ke smartphone), Wi-Fi, NFC, GPS (opsional LTE)</td></tr>
+        </table></div>
+        <p><strong>Kesimpulan:</strong> Setiap perangkat memiliki kelima komponen dasar komputer yang lengkap &mdash; menjadikannya komputer. Perbedaannya terletak pada skala, daya, dan fungsi spesifik (smartphone: komunikasi + multimedia; laptop: produktivitas + komputasi berat; smartwatch: health monitoring + notifikasi).</p>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Pasti</span><strong>Soal #2: Jenis pembelajaran ML &amp; ChatGPT</strong></div><div class="pred-b">
+        <p><strong>Soal:</strong> Sebut dan jelaskan jenis pembelajaran (learning types) pada Machine Learning. ChatGPT digolongkan ke kategori apa?</p>
+        <h4>Jawaban Model:</h4>
+        <p>Terdapat <strong>3 jenis pembelajaran</strong> utama pada Machine Learning:</p>
+        <p><strong>1. Supervised Learning</strong> &mdash; model belajar dari data yang memiliki <strong>label</strong> (pasangan input-output yang benar).</p>
+        <ul>
+          <li><strong>Regresi:</strong> memprediksi nilai kontinu (berapa?). Contoh: prediksi harga rumah, suhu besok.</li>
+          <li><strong>Klasifikasi:</strong> memprediksi kategori/kelas (apa?). Contoh: email spam vs. bukan spam, diagnosis penyakit.</li>
+        </ul>
+        <p><strong>2. Unsupervised Learning</strong> &mdash; model belajar dari data <strong>tanpa label</strong>; menemukan pola atau struktur tersembunyi secara mandiri.</p>
+        <ul>
+          <li><strong>Clustering:</strong> mengelompokkan data berdasarkan kemiripan. Contoh: segmentasi pelanggan.</li>
+          <li><strong>Pattern Discovery:</strong> menemukan asosiasi atau anomali dalam data.</li>
+        </ul>
+        <p><strong>3. Reinforcement Learning</strong> &mdash; agent belajar melalui interaksi dengan lingkungan, menerima <strong>reward</strong> (imbalan) dan <strong>punishment</strong> (hukuman). Tidak menggunakan dataset melainkan trial-and-error.</p>
+        <ul>
+          <li>Contoh: AlphaGo (game AI), robot belajar berjalan, self-driving car.</li>
+        </ul>
+        <h4>ChatGPT termasuk kategori apa?</h4>
+        <p>ChatGPT <strong>tidak masuk satu kategori tunggal</strong> &mdash; ia menggabungkan dua jenis:</p>
+        <ol>
+          <li><strong>Supervised Pre-training:</strong> dilatih pada miliaran teks untuk memprediksi kata berikutnya (next-token prediction) + fine-tuning pada contoh percakapan berkualitas tinggi</li>
+          <li><strong>RLHF (Reinforcement Learning from Human Feedback):</strong> manusia memberi ranking pada respons model &rarr; reward model dilatih &rarr; model dioptimasi untuk menghasilkan respons yang lebih baik dan aman</li>
+        </ol>
+        <p>ChatGPT termasuk <strong>Generative AI</strong> &mdash; AI yang mampu menghasilkan konten baru (teks, bukan hanya mengklasifikasi).</p>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Pasti</span><strong>Soal #3: Prediksi kendaraan di Jl. Grafika &mdash; metode ML</strong></div><div class="pred-b">
+        <p><strong>Soal:</strong> Data kendaraan di Jalan Grafika FT: x = waktu (jam), y = jumlah kendaraan per bulan. Metode ML apa untuk memprediksi jumlah kendaraan pada waktu tertentu? Jelaskan!</p>
+        <h4>Jawaban Model:</h4>
+        <p>Metode yang paling tepat adalah <strong>Supervised Learning &mdash; Regresi</strong>.</p>
+        <h4>Alasan:</h4>
+        <ol>
+          <li><strong>Data berlabel:</strong> kita memiliki pasangan input (x = waktu jam) dan output (y = jumlah kendaraan) &mdash; data sudah memiliki label &rarr; <strong>Supervised Learning</strong></li>
+          <li><strong>Output kontinu:</strong> yang diprediksi adalah <em>jumlah kendaraan</em> (nilai numerik kontinu, bukan kategori) &rarr; <strong>Regresi</strong> (bukan klasifikasi)</li>
+          <li><strong>Tujuan prediktif:</strong> memprediksi y untuk nilai x baru yang belum ada di dataset &rarr; regression fitting</li>
+        </ol>
+        <h4>Implementasi:</h4>
+        <ul>
+          <li><strong>Linear Regression:</strong> jika hubungan x-y mendekati garis lurus (y = ax + b). Cocok jika tren kendaraan naik/turun secara linear.</li>
+          <li><strong>Polynomial Regression:</strong> jika hubungan x-y melengkung (y = ax&sup2; + bx + c). Lebih realistis karena jumlah kendaraan biasanya berfluktuasi (ramai pagi &amp; sore, sepi siang &amp; malam).</li>
+          <li>Model dilatih pada data historis (x<sub>1</sub>,y<sub>1</sub>), (x<sub>2</sub>,y<sub>2</sub>), ..., (x<sub>n</sub>,y<sub>n</sub>) &rarr; menemukan fungsi terbaik yang meminimalkan error antara prediksi dan data aktual.</li>
+        </ul>
+        <div class="key"><strong>Kunci jawaban:</strong><br>
+        1. <strong>Supervised</strong> karena data memiliki label (x,y sudah diketahui)<br>
+        2. <strong>Regresi</strong> karena output berupa nilai kontinu (jumlah kendaraan)<br>
+        3. Bukan klasifikasi (output bukan kategori), bukan unsupervised (data ada label), bukan reinforcement (bukan interaksi agent-environment)</div>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Pasti</span><strong>Soal #4: Dampak positif &amp; negatif IoT dan AI</strong></div><div class="pred-b">
+        <p><strong>Soal:</strong> Sebutkan dampak positif dan negatif dari IoT dan AI. Apakah kebaikan IoT dan AI lebih mengungguli keburukannya?</p>
+        <h4>Jawaban Model:</h4>
+        <h4>Dampak Positif:</h4>
+        <ol>
+          <li><strong>Efisiensi &amp; Automasi:</strong> proses produksi otomatis (Industry 4.0, smart factory), mengurangi waktu dan biaya operasional secara signifikan</li>
+          <li><strong>Keselamatan:</strong> sensor IoT mendeteksi dini bahaya (kebakaran, gempa, kebocoran gas), AI pada kendaraan (ADAS) mencegah kecelakaan</li>
+          <li><strong>Produktivitas:</strong> AI mampu menganalisis data masif yang tidak mungkin dilakukan manusia secara manual, mempercepat riset dan pengambilan keputusan</li>
+          <li><strong>Aksesibilitas:</strong> telemedicine menjangkau daerah terpencil, pendidikan online (MOOCs), asisten virtual untuk penyandang disabilitas</li>
+          <li><strong>Inovasi:</strong> smart city (transportasi, energi, waste management), precision agriculture, personalized medicine</li>
+          <li><strong>Kualitas Hidup:</strong> smart home (kenyamanan), wearable health monitoring (pencegahan penyakit), optimasi energi (ramah lingkungan)</li>
+        </ol>
+        <h4>Dampak Negatif:</h4>
+        <ol>
+          <li><strong>Privasi:</strong> pengumpulan data masif tanpa consent yang jelas, potensi surveillance society</li>
+          <li><strong>Bias AI:</strong> model ML mewarisi bias dari data training &mdash; diskriminasi dalam hiring, kredit, penegakan hukum</li>
+          <li><strong>Keamanan Siber:</strong> semakin banyak perangkat IoT terhubung = semakin besar attack surface (DDoS, ransomware, hacking)</li>
+          <li><strong>Ketergantungan:</strong> jika jaringan/server down, seluruh sistem lumpuh &mdash; single point of failure</li>
+          <li><strong>Dampak Lingkungan:</strong> e-waste dari perangkat usang, emisi karbon data center dan AI training, konsumsi energi masif</li>
+          <li><strong>Pengangguran:</strong> automasi menggantikan pekerjaan rutin/manual &mdash; disrupsi pasar tenaga kerja</li>
+          <li><strong>Deepfake &amp; Misinformasi:</strong> generative AI memproduksi konten palsu yang meyakinkan</li>
+        </ol>
+        <h4>Apakah kebaikan lebih mengungguli keburukan?</h4>
+        <p><strong>Ya, kebaikan lebih mengungguli keburukan &mdash; dengan syarat:</strong></p>
+        <ol>
+          <li><strong>Dampak positif bersifat fundamental:</strong> menyelamatkan nyawa (deteksi dini), meningkatkan efisiensi, memperluas aksesibilitas. Dampak negatif sebagian besar <strong>mitigable</strong> (bisa dimitigasi).</li>
+          <li><strong>Regulasi yang tegas:</strong> UU perlindungan data pribadi (GDPR, PDP), standar keamanan IoT, audit algoritma AI</li>
+          <li><strong>Etika Digital &amp; Responsible AI:</strong> transparency, accountability, fairness dalam pengembangan AI</li>
+          <li><strong>Literasi Teknologi:</strong> edukasi masyarakat tentang risiko dan penggunaan bijak teknologi</li>
+          <li><strong>Reskilling/Upskilling:</strong> program pelatihan ulang tenaga kerja untuk adaptasi era digital</li>
+        </ol>
+        <div class="key"><strong>Kesimpulan:</strong> Teknologi bersifat netral &mdash; dampaknya tergantung bagaimana manusia menggunakannya. Sejarah menunjukkan setiap revolusi industri membawa disrupsi jangka pendek namun peningkatan kualitas hidup jangka panjang. Kunci: <strong>regulasi proaktif + etika + literasi + adaptasi SDM</strong>.</div>
+      </div></div>
+    </div>
+
+    <!-- TI LATIHAN -->
+    <div class="ctab-panel" id="ti-latihan">
+      <h2>Arsip Soal UTS Pra Kuliah TI 2026</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Sifat: Buku Tertutup &bull; Waktu: 60 menit &bull; Dosen: Dr. Ir. Guntur Dharma Putra</p>
+
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="toggle-all" data-action="expand" data-target="ti-latihan">Buka Semua</button>
+        <button class="toggle-all" data-action="collapse" data-target="ti-latihan">Tutup Semua</button>
+      </div>
+
+      <div class="soal"><div class="soal-q"><span class="num">1</span> <span class="arsip-label">25 poin</span> <strong>Berapa komputer yang Anda bawa sehari-hari? Kategorikan sebagai komputer. Kaitkan dengan 5 komponen dasar komputer. Deskripsi singkat per komponen per komputer.</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Saya membawa <strong>3 komputer</strong> sehari-hari: <strong>smartphone</strong>, <strong>laptop</strong>, dan <strong>smartwatch</strong>. Ketiga perangkat ini memenuhi definisi komputer karena memiliki 5 komponen dasar yang lengkap.</p>
+        <div class="tw"><table>
+          <tr><th>Komponen</th><th>Fungsi</th><th>Smartphone</th><th>Laptop</th><th>Smartwatch</th></tr>
+          <tr><td><strong>1. Input</strong></td><td>Memasukkan data</td><td>Layar sentuh, kamera (depan+belakang), microphone, sensor (accelerometer, gyroscope, proximity, ambient light, GPS)</td><td>Keyboard fisik, touchpad, webcam, microphone built-in</td><td>Touchscreen, sensor PPG (detak jantung), accelerometer, gyroscope, barometer</td></tr>
+          <tr><td><strong>2. Processing</strong></td><td>Mengolah data</td><td>SoC (System on Chip) mengintegrasikan CPU + GPU + NPU + modem dalam satu chip. Contoh: Qualcomm Snapdragon, Apple A-series</td><td>CPU (Intel Core / AMD Ryzen) untuk komputasi umum. GPU (integrated/discrete) untuk grafis dan komputasi paralel</td><td>Microprocessor low-power yang dioptimasi untuk efisiensi daya. Contoh: Apple S-series, Qualcomm Snapdragon Wear</td></tr>
+          <tr><td><strong>3. Output</strong></td><td>Menampilkan hasil</td><td>Layar OLED/AMOLED (visual), speaker (audio), vibration motor (haptic), LED flash (pencahayaan)</td><td>Layar LCD/OLED (visual), speaker stereo (audio), LED indicator (power/charging)</td><td>Layar OLED/AMOLED kecil (1-2 inci), haptic engine (getaran notifikasi, navigasi)</td></tr>
+          <tr><td><strong>4. Storage</strong></td><td>Menyimpan data</td><td><strong>Non-volatile:</strong> flash memory 128-512 GB. <strong>Volatile:</strong> RAM 6-16 GB (multitasking aktif)</td><td><strong>Non-volatile:</strong> SSD 256 GB-2 TB. <strong>Volatile:</strong> RAM 8-32 GB</td><td><strong>Non-volatile:</strong> flash 8-32 GB. <strong>Volatile:</strong> RAM 1-2 GB</td></tr>
+          <tr><td><strong>5. Communication</strong></td><td>Konektivitas</td><td>Wi-Fi 6/6E, Bluetooth 5.3, NFC, 4G/5G seluler, GPS, USB-C (wired)</td><td>Wi-Fi 6, Bluetooth 5, Ethernet (via adapter), USB-C/Thunderbolt</td><td>Bluetooth 5 (tethering ke HP), Wi-Fi, NFC (pembayaran), GPS, opsional LTE</td></tr>
+        </table></div>
+        <p><strong>Kesimpulan:</strong> Smartphone, laptop, dan smartwatch adalah <strong>komputer</strong> karena memiliki kelima komponen dasar secara lengkap. Perbedaan terletak pada skala (ukuran, daya, kapasitas) dan fokus penggunaan (smartphone: komunikasi &amp; multimedia; laptop: produktivitas &amp; komputasi berat; smartwatch: health monitoring &amp; notifikasi cepat).</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2</span> <span class="arsip-label">25 poin</span> <strong>Sebut dan jelaskan jenis pembelajaran (learning types) pada Machine Learning. ChatGPT digolongkan ke kategori apa?</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Terdapat <strong>3 jenis pembelajaran</strong> utama pada Machine Learning:</p>
+        <h4>1. Supervised Learning (Pembelajaran Terawasi)</h4>
+        <p>Model belajar dari data yang memiliki <strong>label</strong> &mdash; setiap input memiliki output yang benar (jawaban sudah diketahui).</p>
+        <ul>
+          <li><strong>Regresi:</strong> memprediksi nilai kontinu. Contoh: prediksi harga rumah berdasarkan luas dan lokasi, prediksi suhu besok berdasarkan data historis.</li>
+          <li><strong>Klasifikasi:</strong> memprediksi kategori/kelas. Contoh: email spam vs. bukan spam, diagnosis penyakit (positif/negatif), deteksi wajah.</li>
+        </ul>
+        <h4>2. Unsupervised Learning (Pembelajaran Tidak Terawasi)</h4>
+        <p>Model belajar dari data <strong>tanpa label</strong> &mdash; menemukan pola, struktur, atau kelompok tersembunyi secara mandiri.</p>
+        <ul>
+          <li><strong>Clustering:</strong> mengelompokkan data berdasarkan kemiripan. Contoh: segmentasi pelanggan berdasarkan perilaku belanja.</li>
+          <li><strong>Dimensionality Reduction:</strong> menyederhanakan data berdimensi tinggi. Contoh: PCA untuk visualisasi data.</li>
+          <li><strong>Pattern Discovery:</strong> menemukan asosiasi. Contoh: market basket analysis (&ldquo;pembeli roti juga beli mentega&rdquo;).</li>
+        </ul>
+        <h4>3. Reinforcement Learning (Pembelajaran Penguatan)</h4>
+        <p>Agent belajar melalui interaksi dengan lingkungan. Tidak ada dataset &mdash; belajar dari <strong>trial-and-error</strong> dengan sistem reward (imbalan jika benar) dan punishment (hukuman jika salah). Tujuan: memaksimalkan cumulative reward jangka panjang.</p>
+        <ul>
+          <li>Contoh: AlphaGo (memenangkan game Go), robot belajar berjalan, self-driving car, optimasi routing jaringan.</li>
+        </ul>
+        <h4>ChatGPT &mdash; Kategori</h4>
+        <p>ChatGPT <strong>menggabungkan Supervised Learning dan Reinforcement Learning:</strong></p>
+        <ol>
+          <li><strong>Supervised Pre-training:</strong> dilatih pada miliaran teks internet untuk memprediksi kata berikutnya (next-token prediction). Kemudian di-fine-tune pada contoh percakapan berkualitas tinggi (SFT).</li>
+          <li><strong>RLHF (Reinforcement Learning from Human Feedback):</strong> manusia memberi ranking pada respons model (mana yang lebih baik) &rarr; reward model dilatih &rarr; model ChatGPT dioptimasi agar menghasilkan respons yang lebih baik, informatif, dan aman.</li>
+        </ol>
+        <p>ChatGPT termasuk <strong>Generative AI</strong> &mdash; AI yang mampu menghasilkan konten baru (teks), berbeda dari <strong>Discriminative AI</strong> yang hanya mengklasifikasi.</p>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">3</span> <span class="arsip-label">25 poin</span> <strong>Data kendaraan di Jalan Grafika FT: x = waktu (jam), y = jumlah kendaraan per bulan. Metode ML apa untuk memprediksi jumlah kendaraan pada waktu tertentu? Jelaskan!</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Metode yang paling tepat: <strong>Supervised Learning &mdash; Regresi.</strong></p>
+        <h4>Mengapa Supervised Learning?</h4>
+        <p>Karena data sudah <strong>berlabel</strong> &mdash; kita memiliki pasangan input-output yang diketahui:</p>
+        <ul>
+          <li><strong>Input (x):</strong> waktu dalam jam (fitur/variabel independen)</li>
+          <li><strong>Output (y):</strong> jumlah kendaraan per bulan (label/variabel dependen)</li>
+        </ul>
+        <p>Setiap titik data (x<sub>i</sub>, y<sub>i</sub>) adalah pasangan input-output yang sudah diketahui &rarr; memenuhi syarat <strong>Supervised Learning</strong>.</p>
+        <h4>Mengapa Regresi (bukan Klasifikasi)?</h4>
+        <p>Karena output yang diprediksi berupa <strong>nilai kontinu</strong> (jumlah kendaraan = angka numerik), bukan kategori/kelas diskrit.</p>
+        <ul>
+          <li><strong>Regresi:</strong> &ldquo;Berapa jumlah kendaraan pada jam 14:00?&rdquo; &rarr; jawaban angka (misal: 342 kendaraan)</li>
+          <li>Klasifikasi: &ldquo;Apakah lalu lintas padat atau lengang?&rdquo; &rarr; jawaban kategori (ini <strong>bukan</strong> yang diminta)</li>
+        </ul>
+        <h4>Implementasi</h4>
+        <ol>
+          <li><strong>Linear Regression</strong> (y = ax + b): jika hubungan x-y cenderung linear (naik/turun konstan). Sederhana dan mudah diinterpretasi.</li>
+          <li><strong>Polynomial Regression</strong> (y = ax&sup2; + bx + c): jika hubungan x-y melengkung. Lebih realistis karena pola lalu lintas biasanya berfluktuasi &mdash; ramai pagi (jam 7-9) dan sore (jam 16-18), sepi tengah malam.</li>
+        </ol>
+        <h4>Proses:</h4>
+        <ol>
+          <li>Kumpulkan data historis (x<sub>1</sub>,y<sub>1</sub>), (x<sub>2</sub>,y<sub>2</sub>), ..., (x<sub>n</sub>,y<sub>n</sub>)</li>
+          <li>Latih model regresi &mdash; temukan fungsi y = f(x) yang paling mendekati semua titik data (minimasi error/loss)</li>
+          <li>Gunakan model untuk memprediksi y pada nilai x baru (waktu tertentu)</li>
+        </ol>
+        <div class="key"><strong>Ringkasan:</strong><br>
+        &bull; Data berlabel (ada x dan y) &rarr; <strong>Supervised</strong> (bukan Unsupervised)<br>
+        &bull; Output kontinu (angka) &rarr; <strong>Regresi</strong> (bukan Klasifikasi)<br>
+        &bull; Bukan Reinforcement karena bukan interaksi agent-environment<br>
+        &bull; Algoritma: Linear Regression atau Polynomial Regression</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">4</span> <span class="arsip-label">25 poin</span> <strong>Sebutkan dampak positif dan negatif dari IoT dan AI. Apakah kebaikan IoT dan AI lebih mengungguli keburukannya?</strong></div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Dampak Positif IoT dan AI:</h4>
+        <ol>
+          <li><strong>Efisiensi &amp; Automasi:</strong> Industry 4.0 dan smart factory mengotomasi proses produksi, mengurangi waktu dan biaya operasional 20-30%. Contoh: robot warehouse Amazon, smart farming dengan irigasi otomatis.</li>
+          <li><strong>Keselamatan (Safety):</strong> sensor IoT mendeteksi dini bahaya &mdash; Early Warning System tsunami, sensor kebakaran, sensor gas di tambang. AI pada kendaraan (ADAS: Automatic Emergency Braking) mencegah kecelakaan lalu lintas.</li>
+          <li><strong>Produktivitas &amp; Pengambilan Keputusan:</strong> AI menganalisis data masif dalam hitungan detik &mdash; mustahil dilakukan manusia secara manual. Data-driven decision making berbasis analisis real-time menghasilkan keputusan yang lebih akurat.</li>
+          <li><strong>Aksesibilitas:</strong> telemedicine menjangkau daerah terpencil, pendidikan online (MOOCs) membuka akses belajar untuk siapa saja, asisten virtual membantu penyandang disabilitas.</li>
+          <li><strong>Inovasi &amp; Kualitas Hidup:</strong> smart city (transportasi cerdas, pengelolaan energi, waste management), precision agriculture, personalized medicine, smart home meningkatkan kenyamanan dan efisiensi energi.</li>
+          <li><strong>Monitoring Kesehatan:</strong> wearable health device (smartwatch dengan ECG, SpO2) memungkinkan monitoring kesehatan kontinu dan deteksi dini penyakit jantung.</li>
+        </ol>
+        <h4>Dampak Negatif IoT dan AI:</h4>
+        <ol>
+          <li><strong>Privasi:</strong> IoT mengumpulkan data pribadi secara masif tanpa consent yang jelas. Kamera pengawas, smart speaker, dan tracker mengancam privasi individu. Contoh: skandal Cambridge Analytica.</li>
+          <li><strong>Bias AI &amp; Diskriminasi:</strong> model ML mewarisi bias dari data training. Contoh: AI rekrutmen Amazon yang bias terhadap wanita, predictive policing yang diskriminatif terhadap kelompok rasial tertentu.</li>
+          <li><strong>Keamanan Siber:</strong> semakin banyak perangkat IoT terhubung = semakin besar attack surface. Perangkat IoT sering memiliki keamanan lemah. Contoh: Mirai botnet (2016) menginfeksi ratusan ribu perangkat IoT untuk DDoS.</li>
+          <li><strong>Ketergantungan Teknologi:</strong> masyarakat terlalu bergantung pada sistem digital. Jika jaringan/server down, aktivitas terganggu total &mdash; single point of failure.</li>
+          <li><strong>Dampak Lingkungan:</strong> e-waste dari perangkat usang (jutaan ton/tahun), emisi karbon data center, konsumsi energi masif untuk training AI (GPT-4 training setara emisi 500+ mobil/tahun).</li>
+          <li><strong>Pengangguran &amp; Disrupsi Tenaga Kerja:</strong> automasi menggantikan pekerjaan rutin/manual &mdash; kasir otomatis, chatbot customer service, robot warehouse.</li>
+          <li><strong>Deepfake &amp; Misinformasi:</strong> generative AI memproduksi konten palsu yang sangat meyakinkan (video, audio, teks) &mdash; mengancam kepercayaan publik.</li>
+        </ol>
+        <h4>Apakah kebaikan lebih mengungguli keburukan?</h4>
+        <p><strong>Ya, kebaikan IoT dan AI lebih mengungguli keburukannya &mdash; dengan syarat penting:</strong></p>
+        <ol>
+          <li><strong>Dampak positif bersifat fundamental</strong> &mdash; menyelamatkan nyawa (deteksi dini bencana, diagnosis penyakit), meningkatkan efisiensi, dan memperluas aksesibilitas. Ini adalah manfaat yang sulit digantikan.</li>
+          <li><strong>Dampak negatif sebagian besar mitigable</strong> &mdash; privasi bisa dilindungi regulasi (GDPR, UU PDP), bias AI bisa dikurangi dengan data training yang lebih representatif, keamanan siber bisa diperkuat.</li>
+          <li><strong>Sejarah menunjukkan</strong> setiap revolusi industri membawa disrupsi jangka pendek, namun jangka panjang selalu meningkatkan kualitas hidup (Revolusi Industri 1.0 &rarr; 2.0 &rarr; 3.0 &rarr; 4.0).</li>
+        </ol>
+        <div class="key"><strong>Syarat agar kebaikan mengungguli:</strong><br>
+        1. <strong>Regulasi proaktif</strong> &mdash; UU perlindungan data, standar keamanan IoT, audit algoritma AI<br>
+        2. <strong>Etika Digital &amp; Responsible AI</strong> &mdash; transparency, accountability, fairness<br>
+        3. <strong>Literasi Teknologi</strong> &mdash; edukasi masyarakat tentang risiko dan penggunaan bijak<br>
+        4. <strong>Reskilling/Upskilling</strong> &mdash; pelatihan ulang tenaga kerja untuk adaptasi era digital<br><br>
+        <strong>Kesimpulan:</strong> Teknologi bersifat netral. Dampaknya ditentukan oleh <strong>bagaimana manusia menggunakan, mengatur, dan mengembangkannya</strong>. Dengan regulasi, etika, dan literasi yang tepat, kebaikan IoT dan AI akan jauh mengungguli keburukannya.</div>
+      </div></div>
+    </div>
+
+  </div>
+
 </div>
 <div class="day-panel" id="day-3">
   <div class="subject-picker">
@@ -3219,9 +3864,705 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
 <div class="day-panel" id="day-4">
   <div class="subject-picker">
     <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">PSD</div><div class="sc-full">Pemodelan dan Simulasi Dinamika Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Ir. Agus Prasetya, Ph.D.</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">MST</div><div class="sc-full">Matematika dan Statistika Teknik</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Ir. Andi R.W. &amp; Dr. Ir. Nugroho D.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
+    <div class="subject-card" data-subject="mst"><div class="sc-name">MST</div><div class="sc-full">Matematika dan Statistika Teknik</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>4 sesi</span><span>3 arsip soal</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
   <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi PSD &amp; MST akan ditambahkan.</p></div>
+
+  <!-- ====================== MST (Hari 4) ====================== -->
+  <div class="subject-view" id="sv-mst">
+    <button class="back-btn" data-back="4">&larr; Kembali ke Hari 4</button>
+    <div class="exam-banner"><strong>Pra Kuliah MST:</strong> Kamis, 22 Okt 2026 &bull; 13:00&ndash;15:00 WIB &bull; Buku Terbuka / Open Resources<br><strong>Dosen:</strong> Ir. Andi Rahadiyan Wijaya &amp; Dr. Ir. Nugroho Dewayanto<br><strong>Format:</strong> 2&ndash;3 soal hitungan, terdapat tabel Z dan tabel t</div>
+    <div class="content-tabs" data-tabgroup="mst">
+      <button class="ctab-btn active" data-ctab="mst-rangkuman">Rangkuman</button>
+      <button class="ctab-btn" data-ctab="mst-materi">Materi</button>
+      <button class="ctab-btn" data-ctab="mst-cheatsheet">Cheatsheet</button>
+      <button class="ctab-btn" data-ctab="mst-prediksi">Prediksi Soal</button>
+      <button class="ctab-btn" data-ctab="mst-latihan">Latihan Soal</button>
+    </div>
+
+    <!-- MST RANGKUMAN -->
+    <div class="ctab-panel active" id="mst-rangkuman">
+      <div class="toc"><a href="#mst1">Statistik Deskriptif</a><a href="#mst2">Distribusi Empiris</a><a href="#mst3">Distribusi Normal</a><a href="#mst4">Uji Hipotesis</a><a href="#mst5">Regresi &amp; Korelasi</a><a href="#mst6">Interpolasi</a></div>
+
+      <div class="card" id="mst1"><div class="card-header"><span class="badge">Topik 1</span> Statistik Deskriptif</div>
+        <h4>Ukuran Pemusatan (Central Tendency)</h4>
+        <ul>
+          <li><strong>Mean (rata-rata):</strong> x&#772; = &Sigma;x<sub>i</sub> / n &mdash; jumlah seluruh data dibagi banyaknya data</li>
+          <li><strong>Median:</strong> nilai tengah data yang sudah diurutkan. Jika n genap: rata-rata dua nilai tengah</li>
+          <li><strong>Modus:</strong> nilai yang paling sering muncul (frekuensi tertinggi)</li>
+        </ul>
+        <h4>Ukuran Penyebaran (Dispersion)</h4>
+        <ul>
+          <li><strong>Range:</strong> max &minus; min</li>
+          <li><strong>Variance (ragam):</strong> s&sup2; = &Sigma;(x<sub>i</sub> &minus; x&#772;)&sup2; / (n&minus;1) &mdash; menggunakan n&minus;1 untuk sampel (Bessel&rsquo;s correction)</li>
+          <li><strong>Standard Deviation:</strong> s = &radic;s&sup2; &mdash; satuan sama dengan data asli</li>
+        </ul>
+        <h4>Penyajian Data</h4>
+        <ul>
+          <li><strong>Tabel frekuensi:</strong> mengelompokkan data ke dalam kelas interval, mencatat frekuensi tiap kelas</li>
+          <li><strong>Histogram:</strong> grafik batang dari tabel frekuensi, sumbu-x = kelas interval, sumbu-y = frekuensi</li>
+          <li><strong>Box plot:</strong> menampilkan Q1, median, Q3, min, max, dan outlier</li>
+        </ul>
+        <div class="key"><strong>Konteks Ujian:</strong> Digunakan untuk soal PT Sunrise (bola voli) &mdash; hitung mean, std dev, buat histogram, lalu interpretasi apakah produk memenuhi standar.</div>
+      </div>
+
+      <div class="card" id="mst2"><div class="card-header"><span class="badge">Topik 2</span> Distribusi Probabilitas Empiris</div>
+        <h4>Konsep Utama</h4>
+        <ul>
+          <li>Distribusi berdasarkan <strong>data observasi langsung</strong> (bukan asumsi distribusi teoritis)</li>
+          <li>Probabilitas dihitung dari frekuensi relatif data aktual</li>
+        </ul>
+        <h4>Langkah Penyusunan</h4>
+        <ol>
+          <li><strong>Tentukan sample space:</strong> daftar semua nilai unik yang muncul dalam data</li>
+          <li><strong>Buat tabel frekuensi:</strong> hitung berapa kali setiap nilai muncul (f<sub>i</sub>)</li>
+          <li><strong>Hitung probabilitas:</strong> P(X=x) = f(x) / n &mdash; frekuensi dibagi total observasi</li>
+        </ol>
+        <h4>Perhitungan Kunci</h4>
+        <ul>
+          <li><strong>Rata-rata distribusi:</strong> &mu; = &Sigma;[x<sub>i</sub> &times; P(x<sub>i</sub>)] &mdash; expected value</li>
+          <li><strong>Peluang range:</strong> P(a &le; X &le; b) = &Sigma; P(X=x<sub>i</sub>) untuk semua a &le; x<sub>i</sub> &le; b</li>
+          <li><strong>Variance:</strong> &sigma;&sup2; = &Sigma;[(x<sub>i</sub> &minus; &mu;)&sup2; &times; P(x<sub>i</sub>)]</li>
+          <li><strong>Std Dev:</strong> &sigma; = &radic;&sigma;&sup2;</li>
+        </ul>
+        <div class="key"><strong>Keyakinan 90% (one-sided upper):</strong> x<sub>max</sub> = &mu; + z<sub>0.90</sub> &times; &sigma; = &mu; + 1.282&sigma;<br>Artinya: 90% data diperkirakan &le; x<sub>max</sub></div>
+        <p><strong>Contoh khas:</strong> data perjalanan rumah-sekolah 15 atau 20 hari &mdash; hitung distribusi, rata-rata, peluang range, keyakinan 90%.</p>
+      </div>
+
+      <div class="card" id="mst3"><div class="card-header"><span class="badge">Topik 3</span> Distribusi Normal</div>
+        <h4>Karakteristik</h4>
+        <ul>
+          <li>Bell curve, simetris terhadap mean (&mu;)</li>
+          <li>Ditentukan oleh dua parameter: &mu; (mean) dan &sigma; (std dev)</li>
+          <li>Total area di bawah kurva = 1</li>
+          <li>Empirical rule: 68% dalam &plusmn;1&sigma;, 95% dalam &plusmn;2&sigma;, 99.7% dalam &plusmn;3&sigma;</li>
+        </ul>
+        <h4>Standardisasi (Z-Score)</h4>
+        <div class="formula"><strong>Z = (X &minus; &mu;) / &sigma;</strong><br>Mengubah distribusi normal N(&mu;, &sigma;&sup2;) menjadi N(0, 1)</div>
+        <h4>Penggunaan Tabel Z</h4>
+        <ul>
+          <li><strong>&Phi;(z) = P(Z &le; z):</strong> luasan di sebelah kiri nilai z pada kurva normal standar</li>
+          <li>P(a &le; X &le; b) = &Phi;((b&minus;&mu;)/&sigma;) &minus; &Phi;((a&minus;&mu;)/&sigma;)</li>
+          <li>P(X &ge; a) = 1 &minus; &Phi;((a&minus;&mu;)/&sigma;)</li>
+        </ul>
+        <h4>Confidence Interval</h4>
+        <ul>
+          <li><strong>CI 90% two-sided:</strong> x&#772; &plusmn; 1.645&sigma; &mdash; rentang yang memuat 90% data</li>
+          <li><strong>CI 90% one-sided upper:</strong> x<sub>max</sub> = &mu; + 1.282&sigma;</li>
+          <li><strong>CI 95% two-sided:</strong> x&#772; &plusmn; 1.960&sigma;</li>
+        </ul>
+        <div class="key"><strong>Perbedaan Empiris vs Normal:</strong><br>&bull; <strong>Empiris:</strong> dari data langsung, tanpa asumsi bentuk distribusi, cocok untuk sampel kecil<br>&bull; <strong>Normal:</strong> asumsi distribusi teoritis bell-curve, cocok untuk populasi besar atau data yang diketahui mendekati normal</div>
+      </div>
+
+      <div class="card" id="mst4"><div class="card-header"><span class="badge">Topik 4</span> Uji Hipotesis</div>
+        <h4>Langkah Uji Hipotesis</h4>
+        <ol>
+          <li><strong>Rumuskan hipotesis:</strong> H&#8320; (null) dan H&#8321; (alternatif)</li>
+          <li><strong>Pilih tingkat signifikansi:</strong> &alpha; (biasanya 0.05)</li>
+          <li><strong>Hitung statistik uji</strong> (t-hitung)</li>
+          <li><strong>Tentukan t<sub>tabel</sub></strong> berdasarkan &alpha; dan df</li>
+          <li><strong>Keputusan:</strong> bandingkan |t<sub>hitung</sub>| dengan t<sub>tabel</sub></li>
+        </ol>
+        <h4>Uji-t Dua Sampel Independen</h4>
+        <ul>
+          <li><strong>H&#8320;:</strong> &mu;&#8321; = &mu;&#8322; (tidak ada perbedaan rata-rata)</li>
+          <li><strong>H&#8321;:</strong> &mu;&#8321; &ne; &mu;&#8322; (ada perbedaan rata-rata)</li>
+        </ul>
+        <div class="formula"><strong>t = (x&#772;&#8321; &minus; x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)</strong></div>
+        <h4>Derajat Kebebasan (Welch&rsquo;s Approximation)</h4>
+        <div class="formula"><strong>df = (s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)&sup2; / [(s&#8321;&sup2;/n&#8321;)&sup2;/(n&#8321;&minus;1) + (s&#8322;&sup2;/n&#8322;)&sup2;/(n&#8322;&minus;1)]</strong></div>
+        <h4>Keputusan</h4>
+        <ul>
+          <li>|t<sub>hitung</sub>| &gt; t<sub>tabel</sub> &rarr; <strong>tolak H&#8320;</strong> &rarr; ada perbedaan signifikan</li>
+          <li>|t<sub>hitung</sub>| &le; t<sub>tabel</sub> &rarr; <strong>gagal tolak H&#8320;</strong> &rarr; tidak cukup bukti ada perbedaan</li>
+        </ul>
+        <div class="key"><strong>Contoh ujian:</strong> pakan impor (kelompok A) vs lokal (kelompok B) pada berat ayam &mdash; apakah ada perbedaan signifikan berat rata-rata?</div>
+      </div>
+
+      <div class="card" id="mst5"><div class="card-header"><span class="badge">Topik 5</span> Regresi &amp; Korelasi</div>
+        <h4>Regresi Linear Sederhana</h4>
+        <div class="formula"><strong>y = a + bx</strong><br><br>b = [n&Sigma;xy &minus; &Sigma;x&Sigma;y] / [n&Sigma;x&sup2; &minus; (&Sigma;x)&sup2;]<br>a = y&#772; &minus; bx&#772;</div>
+        <ul>
+          <li><strong>b (slope):</strong> perubahan y untuk setiap kenaikan satu unit x</li>
+          <li><strong>a (intercept):</strong> nilai y ketika x = 0</li>
+        </ul>
+        <h4>Koefisien Korelasi (r)</h4>
+        <ul>
+          <li><strong>r = 1:</strong> korelasi positif sempurna</li>
+          <li><strong>r = &minus;1:</strong> korelasi negatif sempurna</li>
+          <li><strong>r = 0:</strong> tidak ada korelasi linear</li>
+          <li><strong>|r| &gt; 0.8:</strong> korelasi kuat, <strong>0.5&ndash;0.8:</strong> sedang, <strong>&lt;0.5:</strong> lemah</li>
+        </ul>
+        <h4>Koefisien Determinasi (r&sup2;)</h4>
+        <ul>
+          <li>r&sup2; = persentase variasi y yang dapat dijelaskan oleh x</li>
+          <li>Contoh: r&sup2; = 0.85 berarti 85% variasi y dijelaskan model regresi</li>
+        </ul>
+        <h4>Regresi Polynomial</h4>
+        <div class="formula"><strong>y = a&#8320; + a&#8321;x + a&#8322;x&sup2; + a&#8323;x&sup3; + &hellip;</strong><br>Digunakan ketika hubungan x dan y tidak linear</div>
+      </div>
+
+      <div class="card" id="mst6"><div class="card-header"><span class="badge">Topik 6</span> Interpolasi</div>
+        <h4>Konsep</h4>
+        <p>Estimasi nilai di antara titik-titik data yang sudah diketahui. Berbeda dengan <strong>ekstrapolasi</strong> yang memperkirakan di luar rentang data.</p>
+        <h4>Interpolasi Linear (2 titik)</h4>
+        <div class="formula"><strong>y = y&#8321; + [(x &minus; x&#8321;) / (x&#8322; &minus; x&#8321;)] &times; (y&#8322; &minus; y&#8321;)</strong></div>
+        <p>Menghubungkan dua titik (x&#8321;, y&#8321;) dan (x&#8322;, y&#8322;) dengan garis lurus, lalu estimasi y untuk x di antara keduanya.</p>
+        <h4>Interpolasi Lagrange (n titik)</h4>
+        <div class="formula"><strong>L(x) = &Sigma; y<sub>i</sub> &times; &prod;<sub>j&ne;i</sub> (x &minus; x<sub>j</sub>) / (x<sub>i</sub> &minus; x<sub>j</sub>)</strong></div>
+        <p>Menggunakan semua n titik data untuk membuat polinomial berderajat (n&minus;1). Akurasi lebih tinggi daripada linear.</p>
+        <h4>Inverse Interpolation</h4>
+        <ul>
+          <li>Jika diketahui nilai y dan ingin mencari x &rarr; tukar peran x dan y dalam formula</li>
+          <li>Atau: gunakan interpolasi biasa dengan x sebagai fungsi dari y</li>
+        </ul>
+        <div class="key"><strong>Contoh ujian (Pirolisis):</strong> Data suhu vs komposisi produk (arang%, bio-oil%, gas%). Gas% = 100 &minus; arang% &minus; bio_oil%. Cari suhu untuk gas = 60% menggunakan interpolasi linear antara dua titik yang mengapit.</div>
+      </div>
+    </div>
+
+    <!-- MST MATERI -->
+    <div class="ctab-panel" id="mst-materi">
+      <h2>Materi Komprehensif MST</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Penjelasan detail dan contoh penyelesaian untuk setiap topik Matematika dan Statistika Teknik.</p>
+      <div class="toc"><a href="#mm1">Statistik Deskriptif</a><a href="#mm2">Distribusi Empiris</a><a href="#mm3">Distribusi Normal</a><a href="#mm4">Uji Hipotesis</a><a href="#mm5">Regresi &amp; Korelasi</a><a href="#mm6">Interpolasi</a></div>
+
+      <div class="card" id="mm1"><div class="card-header"><span class="badge">Topik 1</span> Statistik Deskriptif &mdash; Detail</div>
+        <h4>Mean: Langkah Perhitungan</h4>
+        <ol>
+          <li>Jumlahkan semua data: &Sigma;x<sub>i</sub></li>
+          <li>Bagi dengan jumlah data: x&#772; = &Sigma;x<sub>i</sub> / n</li>
+        </ol>
+        <h4>Contoh Worked Example</h4>
+        <p>Data berat bola voli (gram): 260, 262, 265, 268, 270, 271, 273, 275, 278, 280</p>
+        <ul>
+          <li>&Sigma;x<sub>i</sub> = 2702</li>
+          <li>n = 10</li>
+          <li>x&#772; = 2702/10 = 270.2 gram</li>
+        </ul>
+        <h4>Variance &amp; Std Dev: Langkah</h4>
+        <ol>
+          <li>Hitung mean (x&#772;)</li>
+          <li>Untuk setiap data, hitung deviasi: d<sub>i</sub> = x<sub>i</sub> &minus; x&#772;</li>
+          <li>Kuadratkan setiap deviasi: d<sub>i</sub>&sup2;</li>
+          <li>Jumlahkan: &Sigma;d<sub>i</sub>&sup2;</li>
+          <li>Bagi dengan (n&minus;1): s&sup2; = &Sigma;d<sub>i</sub>&sup2; / (n&minus;1)</li>
+          <li>Akar kuadrat: s = &radic;s&sup2;</li>
+        </ol>
+        <h4>Membuat Histogram</h4>
+        <ol>
+          <li>Tentukan jumlah kelas (Sturges: k = 1 + 3.322 log n)</li>
+          <li>Hitung lebar kelas: h = range / k</li>
+          <li>Tentukan batas kelas</li>
+          <li>Hitung frekuensi tiap kelas</li>
+          <li>Gambar batang dengan tinggi = frekuensi</li>
+        </ol>
+        <h4>Interpretasi</h4>
+        <ul>
+          <li>Jika histogram simetris &rarr; data mendekati normal</li>
+          <li>Skewness positif: ekor ke kanan (mean &gt; median)</li>
+          <li>Skewness negatif: ekor ke kiri (mean &lt; median)</li>
+          <li>Bandingkan mean &plusmn; std dev dengan spesifikasi produk untuk kesimpulan QC</li>
+        </ul>
+      </div>
+
+      <div class="card" id="mm2"><div class="card-header"><span class="badge">Topik 2</span> Distribusi Probabilitas Empiris &mdash; Detail</div>
+        <h4>Worked Example: Data Waktu Perjalanan</h4>
+        <p>Data 20 hari perjalanan rumah-sekolah (menit): 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 10</p>
+        <h4>Langkah 1: Tabel Distribusi Empiris</h4>
+        <div class="tw"><table>
+          <tr><th>x (menit)</th><th>Frekuensi (f)</th><th>P(X=x) = f/20</th><th>x &times; P(X=x)</th></tr>
+          <tr><td>2</td><td>1</td><td>0.05</td><td>0.10</td></tr>
+          <tr><td>3</td><td>2</td><td>0.10</td><td>0.30</td></tr>
+          <tr><td>4</td><td>3</td><td>0.15</td><td>0.60</td></tr>
+          <tr><td>5</td><td>4</td><td>0.20</td><td>1.00</td></tr>
+          <tr><td>6</td><td>3</td><td>0.15</td><td>0.90</td></tr>
+          <tr><td>7</td><td>3</td><td>0.15</td><td>1.05</td></tr>
+          <tr><td>8</td><td>2</td><td>0.10</td><td>0.80</td></tr>
+          <tr><td>9</td><td>1</td><td>0.05</td><td>0.45</td></tr>
+          <tr><td>10</td><td>1</td><td>0.05</td><td>0.50</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>20</strong></td><td><strong>1.00</strong></td><td><strong>&mu; = 5.70</strong></td></tr>
+        </table></div>
+        <h4>Langkah 2: Peluang Range</h4>
+        <p>P(3 &le; X &le; 7) = P(3) + P(4) + P(5) + P(6) + P(7) = 0.10 + 0.15 + 0.20 + 0.15 + 0.15 = <strong>0.75</strong></p>
+        <h4>Langkah 3: Variance &amp; Std Dev</h4>
+        <div class="formula">&sigma;&sup2; = &Sigma;[(x<sub>i</sub> &minus; &mu;)&sup2; &times; P(x<sub>i</sub>)] = (2&minus;5.7)&sup2;(0.05) + (3&minus;5.7)&sup2;(0.10) + &hellip; + (10&minus;5.7)&sup2;(0.05)<br>= 0.6845 + 0.729 + 0.4335 + 0.098 + 0.0135 + 0.2535 + 0.529 + 0.5445 + 0.9245<br>= <strong>4.21</strong><br>&sigma; = &radic;4.21 = <strong>2.052</strong></div>
+        <h4>Langkah 4: Keyakinan 90%</h4>
+        <div class="formula">x<sub>max</sub> = &mu; + z<sub>0.90</sub> &times; &sigma; = 5.70 + 1.282 &times; 2.052 = 5.70 + 2.631 = <strong>8.33 menit</strong><br>Interpretasi: Dengan keyakinan 90%, waktu perjalanan tidak akan melebihi 8.33 menit.</div>
+      </div>
+
+      <div class="card" id="mm3"><div class="card-header"><span class="badge">Topik 3</span> Distribusi Normal &mdash; Detail</div>
+        <h4>Worked Example: Menggunakan Data yang Sama</h4>
+        <p>Data perjalanan: &mu; = 5.70, &sigma; = 2.052. Asumsikan distribusi normal.</p>
+        <h4>Menghitung P(3 &le; X &le; 7)</h4>
+        <ol>
+          <li>Z<sub>1</sub> = (3 &minus; 5.70) / 2.052 = &minus;1.316</li>
+          <li>Z<sub>2</sub> = (7 &minus; 5.70) / 2.052 = 0.634</li>
+          <li>Dari tabel Z: &Phi;(&minus;1.316) = 1 &minus; &Phi;(1.316) &asymp; 1 &minus; 0.9059 = 0.0941</li>
+          <li>&Phi;(0.634) &asymp; 0.7370</li>
+          <li>P(3 &le; X &le; 7) = 0.7370 &minus; 0.0941 = <strong>0.6429</strong></li>
+        </ol>
+        <div class="key"><strong>Perbandingan:</strong> Distribusi empiris P(3&le;X&le;7) = 0.75 vs Normal = 0.6429. Perbedaan karena empiris menggunakan data diskret aktual, sedangkan normal mengasumsikan distribusi kontinu simetris.</div>
+        <h4>Menghitung P(X &ge; 8)</h4>
+        <ol>
+          <li>Z = (8 &minus; 5.70) / 2.052 = 1.121</li>
+          <li>&Phi;(1.121) &asymp; 0.8689</li>
+          <li>P(X &ge; 8) = 1 &minus; 0.8689 = <strong>0.1311</strong></li>
+        </ol>
+        <h4>Confidence Interval 90% (two-sided)</h4>
+        <div class="formula">CI = x&#772; &plusmn; z<sub>0.95</sub> &times; &sigma; = 5.70 &plusmn; 1.645 &times; 2.052<br>= 5.70 &plusmn; 3.376 = <strong>[2.324, 9.076]</strong><br>Interpretasi: 90% data diperkirakan berada dalam rentang 2.32 s.d. 9.08 menit.</div>
+        <h4>Kapan Menggunakan Distribusi Normal?</h4>
+        <ul>
+          <li>Ukuran sampel besar (n &ge; 30, Central Limit Theorem)</li>
+          <li>Data diketahui/diasumsikan berdistribusi normal</li>
+          <li>Histogram mendekati bentuk bell curve</li>
+          <li>Untuk sampel kecil dengan distribusi tidak diketahui &rarr; gunakan distribusi empiris</li>
+        </ul>
+      </div>
+
+      <div class="card" id="mm4"><div class="card-header"><span class="badge">Topik 4</span> Uji Hipotesis &mdash; Detail</div>
+        <h4>Worked Example: Pakan Ayam Impor vs Lokal</h4>
+        <p>Kelompok A (impor): n&#8321; = 10 ekor, x&#772;&#8321; = 2.5 kg, s&#8321; = 0.3 kg<br>
+        Kelompok B (lokal): n&#8322; = 10 ekor, x&#772;&#8322; = 2.2 kg, s&#8322; = 0.4 kg<br>
+        &alpha; = 0.05 (two-tailed)</p>
+        <h4>Langkah 1: Rumuskan Hipotesis</h4>
+        <ul>
+          <li>H&#8320;: &mu;&#8321; = &mu;&#8322; (tidak ada perbedaan berat rata-rata)</li>
+          <li>H&#8321;: &mu;&#8321; &ne; &mu;&#8322; (ada perbedaan berat rata-rata)</li>
+        </ul>
+        <h4>Langkah 2: Hitung t-hitung</h4>
+        <div class="formula">t = (x&#772;&#8321; &minus; x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)<br>= (2.5 &minus; 2.2) / &radic;(0.09/10 + 0.16/10)<br>= 0.3 / &radic;(0.009 + 0.016)<br>= 0.3 / &radic;0.025<br>= 0.3 / 0.1581<br>= <strong>1.897</strong></div>
+        <h4>Langkah 3: Derajat Kebebasan (Welch)</h4>
+        <div class="formula">df = (s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)&sup2; / [(s&#8321;&sup2;/n&#8321;)&sup2;/(n&#8321;&minus;1) + (s&#8322;&sup2;/n&#8322;)&sup2;/(n&#8322;&minus;1)]<br>= (0.025)&sup2; / [(0.009)&sup2;/9 + (0.016)&sup2;/9]<br>= 0.000625 / [0.000009 + 0.0000284]<br>= 0.000625 / 0.0000374<br>&asymp; <strong>16.7 &rarr; df = 16</strong></div>
+        <h4>Langkah 4: Bandingkan dengan t-tabel</h4>
+        <ul>
+          <li>t<sub>tabel</sub> (&alpha;=0.05, two-tailed, df=16) = <strong>2.120</strong></li>
+          <li>|t<sub>hitung</sub>| = 1.897 &lt; 2.120 = t<sub>tabel</sub></li>
+        </ul>
+        <h4>Langkah 5: Keputusan</h4>
+        <div class="key"><strong>Gagal tolak H&#8320;.</strong> Pada &alpha; = 0.05, tidak cukup bukti untuk menyatakan ada perbedaan signifikan antara berat rata-rata ayam yang diberi pakan impor dan lokal.</div>
+      </div>
+
+      <div class="card" id="mm5"><div class="card-header"><span class="badge">Topik 5</span> Regresi &amp; Korelasi &mdash; Detail</div>
+        <h4>Worked Example: Regresi Linear</h4>
+        <p>Data suhu (x, &deg;C) vs tekanan (y, kPa):</p>
+        <div class="tw"><table>
+          <tr><th>x</th><td>100</td><td>150</td><td>200</td><td>250</td><td>300</td></tr>
+          <tr><th>y</th><td>120</td><td>145</td><td>175</td><td>200</td><td>230</td></tr>
+        </table></div>
+        <h4>Langkah Perhitungan</h4>
+        <div class="tw"><table>
+          <tr><th>x</th><th>y</th><th>xy</th><th>x&sup2;</th></tr>
+          <tr><td>100</td><td>120</td><td>12000</td><td>10000</td></tr>
+          <tr><td>150</td><td>145</td><td>21750</td><td>22500</td></tr>
+          <tr><td>200</td><td>175</td><td>35000</td><td>40000</td></tr>
+          <tr><td>250</td><td>200</td><td>50000</td><td>62500</td></tr>
+          <tr><td>300</td><td>230</td><td>69000</td><td>90000</td></tr>
+          <tr><td><strong>&Sigma;x=1000</strong></td><td><strong>&Sigma;y=870</strong></td><td><strong>&Sigma;xy=187750</strong></td><td><strong>&Sigma;x&sup2;=225000</strong></td></tr>
+        </table></div>
+        <div class="formula">b = [n&Sigma;xy &minus; &Sigma;x&Sigma;y] / [n&Sigma;x&sup2; &minus; (&Sigma;x)&sup2;]<br>= [5(187750) &minus; (1000)(870)] / [5(225000) &minus; (1000)&sup2;]<br>= [938750 &minus; 870000] / [1125000 &minus; 1000000]<br>= 68750 / 125000 = <strong>0.55</strong><br><br>a = y&#772; &minus; bx&#772; = (870/5) &minus; 0.55(1000/5) = 174 &minus; 110 = <strong>64</strong><br><br><strong>y = 64 + 0.55x</strong></div>
+        <p>Interpretasi: setiap kenaikan 1&deg;C, tekanan naik 0.55 kPa.</p>
+      </div>
+
+      <div class="card" id="mm6"><div class="card-header"><span class="badge">Topik 6</span> Interpolasi &mdash; Detail</div>
+        <h4>Worked Example: Pirolisis Tandan Kosong Kelapa Sawit</h4>
+        <p>Cari suhu yang menghasilkan gas = 60%.</p>
+        <div class="tw"><table>
+          <tr><th>Suhu (&deg;C)</th><th>Arang (%)</th><th>Bio-oil (%)</th><th>Gas (%)</th></tr>
+          <tr><td>300</td><td>80</td><td>15</td><td>5</td></tr>
+          <tr><td>400</td><td>65</td><td>20</td><td>15</td></tr>
+          <tr><td>500</td><td>50</td><td>22</td><td>28</td></tr>
+          <tr><td>600</td><td>38</td><td>22</td><td>40</td></tr>
+          <tr><td>700</td><td>28</td><td>20</td><td>52</td></tr>
+          <tr><td>800</td><td>20</td><td>16</td><td>64</td></tr>
+          <tr><td>900</td><td>15</td><td>12</td><td>73</td></tr>
+        </table></div>
+        <h4>Langkah Penyelesaian</h4>
+        <ol>
+          <li><strong>Identifikasi rentang:</strong> gas = 60% berada di antara 700&deg;C (gas=52%) dan 800&deg;C (gas=64%)</li>
+          <li><strong>Interpolasi linear:</strong>
+            <div class="formula">T = T&#8321; + [(gas &minus; gas&#8321;) / (gas&#8322; &minus; gas&#8321;)] &times; (T&#8322; &minus; T&#8321;)<br>= 700 + [(60 &minus; 52) / (64 &minus; 52)] &times; (800 &minus; 700)<br>= 700 + [8/12] &times; 100<br>= 700 + 66.67<br>= <strong>766.67&deg;C</strong></div>
+          </li>
+        </ol>
+        <div class="key"><strong>Kesimpulan:</strong> Suhu pirolisis yang diperlukan untuk menghasilkan 60% gas adalah sekitar <strong>766.67&deg;C</strong>. Ini merupakan inverse interpolation (diketahui y, cari x).</div>
+      </div>
+    </div>
+
+    <!-- MST CHEATSHEET -->
+    <div class="ctab-panel" id="mst-cheatsheet">
+      <h2>Cheatsheet MST &mdash; Quick Reference</h2>
+
+      <div class="card"><div class="card-header"><span class="badge">Formula</span> Semua Rumus dalam Satu Tempat</div>
+        <h4>Statistik Deskriptif</h4>
+        <div class="formula"><strong>Mean:</strong> x&#772; = &Sigma;x<sub>i</sub> / n<br><strong>Variance:</strong> s&sup2; = &Sigma;(x<sub>i</sub> &minus; x&#772;)&sup2; / (n&minus;1)<br><strong>Std Dev:</strong> s = &radic;s&sup2;<br><strong>Range:</strong> max &minus; min</div>
+        <h4>Distribusi Empiris</h4>
+        <div class="formula"><strong>P(X=x):</strong> f(x) / n<br><strong>Mean:</strong> &mu; = &Sigma;[x<sub>i</sub> &times; P(x<sub>i</sub>)]<br><strong>Variance:</strong> &sigma;&sup2; = &Sigma;[(x<sub>i</sub> &minus; &mu;)&sup2; &times; P(x<sub>i</sub>)]<br><strong>90% upper:</strong> x<sub>max</sub> = &mu; + 1.282&sigma;</div>
+        <h4>Distribusi Normal</h4>
+        <div class="formula"><strong>Z-score:</strong> Z = (X &minus; &mu;) / &sigma;<br><strong>P(a&le;X&le;b):</strong> &Phi;((b&minus;&mu;)/&sigma;) &minus; &Phi;((a&minus;&mu;)/&sigma;)<br><strong>CI 90% two-sided:</strong> x&#772; &plusmn; 1.645&sigma;<br><strong>CI 95% two-sided:</strong> x&#772; &plusmn; 1.960&sigma;</div>
+        <h4>Uji Hipotesis (t-test)</h4>
+        <div class="formula"><strong>t-hitung:</strong> (x&#772;&#8321; &minus; x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)<br><strong>Welch df:</strong> (s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)&sup2; / [(s&#8321;&sup2;/n&#8321;)&sup2;/(n&#8321;&minus;1) + (s&#8322;&sup2;/n&#8322;)&sup2;/(n&#8322;&minus;1)]<br><strong>Tolak H&#8320; jika:</strong> |t<sub>hitung</sub>| &gt; t<sub>tabel</sub></div>
+        <h4>Regresi Linear</h4>
+        <div class="formula"><strong>y = a + bx</strong><br><strong>b:</strong> [n&Sigma;xy &minus; &Sigma;x&Sigma;y] / [n&Sigma;x&sup2; &minus; (&Sigma;x)&sup2;]<br><strong>a:</strong> y&#772; &minus; bx&#772;</div>
+        <h4>Interpolasi Linear</h4>
+        <div class="formula"><strong>y = y&#8321; + [(x&minus;x&#8321;)/(x&#8322;&minus;x&#8321;)] &times; (y&#8322;&minus;y&#8321;)</strong></div>
+      </div>
+
+      <div class="card"><div class="card-header"><span class="badge">Tabel</span> Nilai Z Penting</div>
+        <div class="tw"><table>
+          <tr><th>Confidence</th><th>z (one-sided)</th><th>z (two-sided)</th><th>Keterangan</th></tr>
+          <tr><td>90%</td><td><strong>z<sub>0.90</sub> = 1.282</strong></td><td><strong>z<sub>0.95</sub> = 1.645</strong></td><td>Paling sering di soal MST</td></tr>
+          <tr><td>95%</td><td>z<sub>0.95</sub> = 1.645</td><td><strong>z<sub>0.975</sub> = 1.960</strong></td><td>Standar umum</td></tr>
+          <tr><td>99%</td><td>z<sub>0.99</sub> = 2.326</td><td>z<sub>0.995</sub> = 2.576</td><td>Jarang di soal</td></tr>
+        </table></div>
+        <div class="key"><strong>Tips:</strong> One-sided &alpha; = 10% &rarr; z = 1.282. Two-sided &alpha; = 10% &rarr; z = 1.645 (karena &alpha;/2 = 5% di tiap sisi). Jangan tertukar!</div>
+      </div>
+
+      <div class="card"><div class="card-header"><span class="badge">Step</span> Panduan Langkah per Tipe Soal</div>
+        <h4>Soal Distribusi Empiris</h4>
+        <ol>
+          <li>Urutkan data, buat tabel frekuensi</li>
+          <li>Hitung P(X=x) = f/n untuk setiap nilai</li>
+          <li>Hitung &mu; = &Sigma;[x &times; P(x)]</li>
+          <li>Hitung &sigma;&sup2; = &Sigma;[(x&minus;&mu;)&sup2; &times; P(x)], lalu &sigma; = &radic;&sigma;&sup2;</li>
+          <li>P(range) = jumlahkan P(x) dalam range</li>
+          <li>Keyakinan 90%: x<sub>max</sub> = &mu; + 1.282&sigma;</li>
+        </ol>
+        <h4>Soal Distribusi Normal</h4>
+        <ol>
+          <li>Identifikasi &mu; dan &sigma; (dari data atau soal)</li>
+          <li>Hitung Z = (X&minus;&mu;)/&sigma; untuk setiap batas</li>
+          <li>Cari &Phi;(z) di tabel Z</li>
+          <li>P(a&le;X&le;b) = &Phi;(z<sub>b</sub>) &minus; &Phi;(z<sub>a</sub>)</li>
+          <li>CI: x&#772; &plusmn; z &times; &sigma;</li>
+        </ol>
+        <h4>Soal Uji-t</h4>
+        <ol>
+          <li>Tentukan H&#8320; dan H&#8321;</li>
+          <li>Pilih &alpha; (biasanya 0.05)</li>
+          <li>Hitung t = (x&#772;&#8321;&minus;x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)</li>
+          <li>Hitung df (Welch)</li>
+          <li>Cari t<sub>tabel</sub> dari tabel t</li>
+          <li>|t<sub>hitung</sub>| &gt; t<sub>tabel</sub>? &rarr; Tolak / Gagal tolak H&#8320;</li>
+          <li>Tulis kesimpulan dalam konteks soal</li>
+        </ol>
+        <h4>Soal Interpolasi</h4>
+        <ol>
+          <li>Identifikasi variabel: mana x, mana y</li>
+          <li>Cari dua titik yang mengapit nilai target</li>
+          <li>Terapkan rumus: y = y&#8321; + [(x&minus;x&#8321;)/(x&#8322;&minus;x&#8321;)] &times; (y&#8322;&minus;y&#8321;)</li>
+          <li>Untuk inverse: tukar peran x dan y</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- MST PREDIKSI -->
+    <div class="ctab-panel" id="mst-prediksi">
+      <h2>Prediksi Soal Pra Kuliah MST 2026</h2>
+      <p style="color:var(--fg-muted);font-size:.88rem">Berdasarkan arsip soal dan pola ujian sebelumnya. Format: 2&ndash;3 soal hitungan, open resources, terdapat tabel Z dan tabel t.</p>
+      <div><button class="toggle-all" data-action="expand" data-target="mst-prediksi">Buka Semua</button><button class="toggle-all" data-action="collapse" data-target="mst-prediksi">Tutup Semua</button></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Tinggi</span><strong>Soal 1: Data set &rarr; Distribusi Empiris (rata-rata, peluang range, keyakinan 90%)</strong></div><div class="pred-b">
+        <p><strong>Pola:</strong> Diberikan data pengukuran (waktu, jarak, berat, dll) sebanyak 15&ndash;20 observasi. Diminta:</p>
+        <ol>
+          <li>Buat tabel distribusi probabilitas empiris</li>
+          <li>Hitung rata-rata (&mu;) dan simpangan baku (&sigma;)</li>
+          <li>Hitung P(a &le; X &le; b) untuk range tertentu</li>
+          <li>Tentukan batas atas keyakinan 90% (x<sub>max</sub> = &mu; + 1.282&sigma;)</li>
+        </ol>
+        <h4>Strategi Jawab:</h4>
+        <ul>
+          <li>Buat tabel lengkap: x | f | P(X=x) | x&times;P(x) | (x&minus;&mu;)&sup2;&times;P(x)</li>
+          <li>Peluang range: jumlahkan P(x) dalam rentang</li>
+          <li>Gunakan z<sub>0.90</sub> = 1.282 untuk keyakinan 90% one-sided</li>
+          <li>Tuliskan interpretasi dalam konteks soal</li>
+        </ul>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Tinggi</span><strong>Soal 2: Data yang sama &rarr; Distribusi Normal (z-score, peluang, confidence)</strong></div><div class="pred-b">
+        <p><strong>Pola:</strong> Melanjutkan soal 1, gunakan &mu; dan &sigma; yang sama tetapi asumsikan distribusi normal. Diminta:</p>
+        <ol>
+          <li>Hitung P(a &le; X &le; b) menggunakan tabel Z</li>
+          <li>Hitung confidence interval 90% (two-sided)</li>
+          <li>Bandingkan hasil distribusi empiris vs normal</li>
+        </ol>
+        <h4>Strategi Jawab:</h4>
+        <ul>
+          <li>Hitung Z = (X&minus;&mu;)/&sigma; untuk setiap batas</li>
+          <li>Gunakan tabel Z: P = &Phi;(z<sub>2</sub>) &minus; &Phi;(z<sub>1</sub>)</li>
+          <li>CI 90% two-sided: x&#772; &plusmn; 1.645&sigma;</li>
+          <li>Bandingkan: empiris menghasilkan distribusi diskret (step function), normal menghasilkan kurva kontinu</li>
+        </ul>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob pm">Sedang</span><strong>Soal 3: Sampel produk &rarr; Statistik Deskriptif + Kesimpulan</strong></div><div class="pred-b">
+        <p><strong>Pola:</strong> Diberikan data QC produk (seperti bola voli PT Sunrise) sebanyak 20&ndash;30 sampel. Diminta:</p>
+        <ol>
+          <li>Deskripsikan data: mean, std dev, range</li>
+          <li>Buat tabel frekuensi dan histogram</li>
+          <li>Berikan kesimpulan: apakah produk memenuhi standar?</li>
+        </ol>
+        <h4>Strategi Jawab:</h4>
+        <ul>
+          <li>Hitung mean dan std dev lengkap dengan langkah</li>
+          <li>Tentukan jumlah kelas (Sturges), lebar kelas, batas kelas</li>
+          <li>Bandingkan mean &plusmn; 2s dengan spesifikasi &rarr; berapa % data dalam batas?</li>
+          <li>Kesimpulan: jika sebagian besar data dalam spesifikasi &rarr; produk memenuhi standar</li>
+        </ul>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">Tinggi</span><strong>Soal 4: Dua kelompok &rarr; Uji Hipotesis t-test</strong></div><div class="pred-b">
+        <p><strong>Pola:</strong> Dua kelompok sampel (treatment vs control, produk A vs B). Diminta uji apakah ada perbedaan signifikan.</p>
+        <ol>
+          <li>Rumuskan H&#8320; dan H&#8321;</li>
+          <li>Hitung t-hitung</li>
+          <li>Hitung df (Welch)</li>
+          <li>Bandingkan dengan t-tabel</li>
+          <li>Beri kesimpulan</li>
+        </ol>
+        <h4>Strategi Jawab:</h4>
+        <ul>
+          <li>Hitung x&#772; dan s untuk masing-masing kelompok terlebih dahulu</li>
+          <li>Gunakan rumus t = (x&#772;&#8321;&minus;x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)</li>
+          <li>df Welch: bulatkan ke bawah</li>
+          <li>Two-tailed: |t<sub>hitung</sub>| vs t<sub>&alpha;/2, df</sub></li>
+          <li>Kesimpulan HARUS dalam konteks soal, bukan hanya &ldquo;tolak H&#8320;&rdquo;</li>
+        </ul>
+      </div></div>
+
+      <div class="pred"><div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob pm">Sedang</span><strong>Soal 5: Data engineering &rarr; Interpolasi untuk nilai tertentu</strong></div><div class="pred-b">
+        <p><strong>Pola:</strong> Diberikan tabel data eksperimen (suhu-komposisi, tekanan-volume, dll). Diminta menentukan variabel input untuk output tertentu.</p>
+        <ol>
+          <li>Hitung variabel turunan jika perlu (misal: gas% = 100 &minus; arang% &minus; bio_oil%)</li>
+          <li>Identifikasi dua titik yang mengapit target</li>
+          <li>Lakukan interpolasi linear</li>
+        </ol>
+        <h4>Strategi Jawab:</h4>
+        <ul>
+          <li>Buat tabel lengkap termasuk variabel turunan</li>
+          <li>Temukan rentang: nilai mana yang &lt; target dan &gt; target</li>
+          <li>Rumus: y = y&#8321; + [(x&minus;x&#8321;)/(x&#8322;&minus;x&#8321;)] &times; (y&#8322;&minus;y&#8321;)</li>
+          <li>Untuk inverse interpolation: yang diketahui adalah y (output), cari x (input)</li>
+          <li>Nyatakan jawaban dengan satuan yang benar</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <!-- MST LATIHAN -->
+    <div class="ctab-panel" id="mst-latihan">
+      <h2>Arsip Soal &amp; Latihan MST</h2>
+
+      <!-- Section 1: Arsip Soal Distribusi -->
+      <h3>Arsip Soal Distribusi</h3>
+      <div class="exam-banner"><strong>Latihan Distribusi Probabilitas</strong><br>Buku Terbuka &bull; 75 menit &bull; 2 soal</div>
+
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="toggle-all" data-action="expand" data-target="mst-latihan">Buka Semua</button>
+        <button class="toggle-all" data-action="collapse" data-target="mst-latihan">Tutup Semua</button>
+      </div>
+
+      <div class="soal"><div class="soal-q"><span class="num">1</span> <span class="arsip-label">Distribusi</span> <strong>Distribusi Probabilitas Empiris &mdash; Data Perjalanan</strong><br>
+        Data waktu perjalanan rumah ke sekolah selama 20 hari (dalam menit):<br>
+        2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 10<br><br>
+        Tentukan:<br>
+        a) Tabel distribusi probabilitas empiris<br>
+        b) Rata-rata (&mu;) waktu perjalanan<br>
+        c) P(3 &le; X &le; 7)<br>
+        d) Simpangan baku (&sigma;)<br>
+        e) Batas atas keyakinan 90% (x<sub>max</sub>)</div>
+      <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>a) Tabel Distribusi Probabilitas Empiris</h4>
+        <div class="tw"><table>
+          <tr><th>x (menit)</th><th>Frekuensi (f)</th><th>P(X=x) = f/20</th><th>x &times; P(X=x)</th><th>(x&minus;&mu;)&sup2; &times; P(x)</th></tr>
+          <tr><td>2</td><td>1</td><td>0.05</td><td>0.10</td><td>(2&minus;5.70)&sup2; &times; 0.05 = 0.6845</td></tr>
+          <tr><td>3</td><td>2</td><td>0.10</td><td>0.30</td><td>(3&minus;5.70)&sup2; &times; 0.10 = 0.7290</td></tr>
+          <tr><td>4</td><td>3</td><td>0.15</td><td>0.60</td><td>(4&minus;5.70)&sup2; &times; 0.15 = 0.4335</td></tr>
+          <tr><td>5</td><td>4</td><td>0.20</td><td>1.00</td><td>(5&minus;5.70)&sup2; &times; 0.20 = 0.0980</td></tr>
+          <tr><td>6</td><td>3</td><td>0.15</td><td>0.90</td><td>(6&minus;5.70)&sup2; &times; 0.15 = 0.0135</td></tr>
+          <tr><td>7</td><td>3</td><td>0.15</td><td>1.05</td><td>(7&minus;5.70)&sup2; &times; 0.15 = 0.2535</td></tr>
+          <tr><td>8</td><td>2</td><td>0.10</td><td>0.80</td><td>(8&minus;5.70)&sup2; &times; 0.10 = 0.5290</td></tr>
+          <tr><td>9</td><td>1</td><td>0.05</td><td>0.45</td><td>(9&minus;5.70)&sup2; &times; 0.05 = 0.5445</td></tr>
+          <tr><td>10</td><td>1</td><td>0.05</td><td>0.50</td><td>(10&minus;5.70)&sup2; &times; 0.05 = 0.9245</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>20</strong></td><td><strong>1.00</strong></td><td><strong>5.70</strong></td><td><strong>4.21</strong></td></tr>
+        </table></div>
+        <h4>b) Rata-rata (&mu;)</h4>
+        <div class="formula">&mu; = &Sigma;[x<sub>i</sub> &times; P(x<sub>i</sub>)] = 0.10 + 0.30 + 0.60 + 1.00 + 0.90 + 1.05 + 0.80 + 0.45 + 0.50 = <strong>5.70 menit</strong></div>
+        <h4>c) P(3 &le; X &le; 7)</h4>
+        <div class="formula">P(3 &le; X &le; 7) = P(3) + P(4) + P(5) + P(6) + P(7)<br>= 0.10 + 0.15 + 0.20 + 0.15 + 0.15 = <strong>0.75</strong><br>Interpretasi: 75% kemungkinan waktu perjalanan antara 3 sampai 7 menit.</div>
+        <h4>d) Simpangan Baku (&sigma;)</h4>
+        <div class="formula">&sigma;&sup2; = &Sigma;[(x<sub>i</sub> &minus; &mu;)&sup2; &times; P(x<sub>i</sub>)]<br>= 0.6845 + 0.7290 + 0.4335 + 0.0980 + 0.0135 + 0.2535 + 0.5290 + 0.5445 + 0.9245<br>= <strong>4.21</strong><br><br>&sigma; = &radic;4.21 = <strong>2.052 menit</strong></div>
+        <h4>e) Batas Atas Keyakinan 90%</h4>
+        <div class="formula">x<sub>max</sub> = &mu; + z<sub>0.90</sub> &times; &sigma;<br>= 5.70 + 1.282 &times; 2.052<br>= 5.70 + 2.631<br>= <strong>8.33 menit</strong><br><br>Interpretasi: Dengan keyakinan 90%, waktu perjalanan diperkirakan tidak melebihi 8.33 menit.</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2</span> <span class="arsip-label">Distribusi</span> <strong>Distribusi Normal &mdash; Data Perjalanan (Lanjutan Soal 1)</strong><br>
+        Dengan menggunakan data yang sama (soal 1), asumsikan waktu perjalanan berdistribusi normal dengan &mu; = 5.70 menit dan &sigma; = 2.052 menit.<br><br>
+        Tentukan:<br>
+        a) P(3 &le; X &le; 7) menggunakan distribusi normal<br>
+        b) P(X &ge; 8)<br>
+        c) Confidence interval 90% (two-sided)<br>
+        d) Bandingkan hasil (a) dengan distribusi empiris</div>
+      <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>a) P(3 &le; X &le; 7) &mdash; Distribusi Normal</h4>
+        <div class="formula"><strong>Langkah 1: Hitung Z-score</strong><br>
+        Z<sub>1</sub> = (3 &minus; 5.70) / 2.052 = &minus;2.70 / 2.052 = <strong>&minus;1.316</strong><br>
+        Z<sub>2</sub> = (7 &minus; 5.70) / 2.052 = 1.30 / 2.052 = <strong>0.634</strong></div>
+        <div class="formula"><strong>Langkah 2: Tabel Z</strong><br>
+        &Phi;(1.316) &asymp; 0.9059 &rarr; &Phi;(&minus;1.316) = 1 &minus; 0.9059 = 0.0941<br>
+        &Phi;(0.634) &asymp; 0.7370</div>
+        <div class="formula"><strong>Langkah 3: Hitung Peluang</strong><br>
+        P(3 &le; X &le; 7) = &Phi;(0.634) &minus; &Phi;(&minus;1.316) = 0.7370 &minus; 0.0941 = <strong>0.6429</strong></div>
+        <h4>b) P(X &ge; 8)</h4>
+        <div class="formula">Z = (8 &minus; 5.70) / 2.052 = 2.30 / 2.052 = <strong>1.121</strong><br>
+        &Phi;(1.121) &asymp; 0.8689<br>
+        P(X &ge; 8) = 1 &minus; 0.8689 = <strong>0.1311</strong><br>
+        Interpretasi: ada sekitar 13.1% kemungkinan waktu perjalanan &ge; 8 menit.</div>
+        <h4>c) Confidence Interval 90% (two-sided)</h4>
+        <div class="formula">CI = &mu; &plusmn; z<sub>0.95</sub> &times; &sigma;<br>
+        = 5.70 &plusmn; 1.645 &times; 2.052<br>
+        = 5.70 &plusmn; 3.376<br>
+        = <strong>[2.324, 9.076]</strong><br><br>
+        Interpretasi: Dengan keyakinan 90%, waktu perjalanan berada dalam rentang 2.32 s.d. 9.08 menit.</div>
+        <h4>d) Perbandingan Empiris vs Normal</h4>
+        <div class="tw"><table>
+          <tr><th>Aspek</th><th>Empiris</th><th>Normal</th></tr>
+          <tr><td>P(3&le;X&le;7)</td><td><strong>0.75</strong></td><td><strong>0.6429</strong></td></tr>
+          <tr><td>Metode</td><td>Penjumlahan P(x) langsung</td><td>Z-score + tabel Z</td></tr>
+          <tr><td>Asumsi</td><td>Tidak ada (data apa adanya)</td><td>Data berdistribusi normal</td></tr>
+          <tr><td>Sifat</td><td>Diskret (step function)</td><td>Kontinu (bell curve)</td></tr>
+        </table></div>
+        <div class="key"><strong>Mengapa berbeda?</strong> Distribusi empiris menggunakan frekuensi data aktual yang diskret, sedangkan distribusi normal mengasumsikan kurva simetris kontinu. Untuk data kecil (n=20) yang tidak sempurna simetris, hasilnya akan berbeda. Semakin besar n dan semakin mendekati normal datanya, semakin konvergen kedua pendekatan.</div>
+      </div></div>
+
+      <!-- Section 2: Arsip Soal UA Pra Kuliah -->
+      <h3 style="margin-top:2rem">Arsip Soal UA Pra Kuliah MST</h3>
+      <div class="exam-banner"><strong>UA PRA KULIAH MATEMATIKA DAN STATISTIKA TEKNIK</strong><br>Dosen: Dr. Ir. Nugroho Dewayanto &bull; Kamis, 9 April 2026 &bull; Open Resources &bull; 1 jam<br><strong>Kerjakan 2 dari 3 soal</strong></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">1</span> <span class="arsip-label">UA Pra Kuliah 2026</span> <strong>PT Sunrise Indonesia &mdash; Statistik Deskriptif Bola Voli</strong><br>
+        PT Sunrise Indonesia memproduksi bola voli. Dari 30 sampel bola voli yang diambil secara acak dari lini produksi, diperoleh data berat (gram). Deskripsikan data tersebut secara statistik dan berikan kesimpulan mengenai kualitas produk!</div>
+      <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Langkah Penyelesaian Statistik Deskriptif</h4>
+        <p><strong>Langkah 1: Ukuran Pemusatan</strong></p>
+        <ul>
+          <li>Hitung <strong>Mean:</strong> x&#772; = &Sigma;x<sub>i</sub> / 30</li>
+          <li>Urutkan data, tentukan <strong>Median:</strong> rata-rata data ke-15 dan ke-16</li>
+          <li>Tentukan <strong>Modus:</strong> nilai yang paling sering muncul</li>
+        </ul>
+        <p><strong>Langkah 2: Ukuran Penyebaran</strong></p>
+        <ul>
+          <li><strong>Range:</strong> x<sub>max</sub> &minus; x<sub>min</sub></li>
+          <li><strong>Variance:</strong> s&sup2; = &Sigma;(x<sub>i</sub> &minus; x&#772;)&sup2; / (n&minus;1) = &Sigma;(x<sub>i</sub> &minus; x&#772;)&sup2; / 29</li>
+          <li><strong>Std Dev:</strong> s = &radic;s&sup2;</li>
+        </ul>
+        <p><strong>Langkah 3: Penyajian Data</strong></p>
+        <ul>
+          <li>Jumlah kelas (Sturges): k = 1 + 3.322 log(30) &asymp; 1 + 3.322(1.477) &asymp; 5.9 &rarr; <strong>6 kelas</strong></li>
+          <li>Lebar kelas: h = range / 6</li>
+          <li>Buat tabel frekuensi dan histogram</li>
+        </ul>
+        <p><strong>Langkah 4: Kesimpulan</strong></p>
+        <ul>
+          <li>Bandingkan mean dengan spesifikasi standar bola voli (260&ndash;280 gram menurut FIVB)</li>
+          <li>Hitung proporsi data dalam x&#772; &plusmn; 2s (harus &asymp; 95% jika normal)</li>
+          <li>Jika mean dalam spesifikasi DAN std dev kecil &rarr; produksi konsisten dan memenuhi standar</li>
+          <li>Jika std dev besar &rarr; variabilitas tinggi, perlu perbaikan proses produksi</li>
+          <li>Perhatikan bentuk histogram: simetris = proses stabil, skewed = ada systematic bias</li>
+        </ul>
+        <div class="key"><strong>Tips Ujian:</strong> Selalu akhiri dengan kesimpulan yang merujuk pada konteks industri. Jangan hanya menyebutkan angka &mdash; interpretasikan apa arti mean, std dev, dan histogram bagi kualitas produk.</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">2</span> <span class="arsip-label">UA Pra Kuliah 2026</span> <strong>Pakan Ayam &mdash; Uji Hipotesis t-test</strong><br>
+        Sebuah peternakan menguji dua jenis pakan:<br>
+        - Kandang A (pakan impor): 20 ekor ayam<br>
+        - Kandang B (pakan lokal): 20 ekor ayam<br><br>
+        Setelah 8 minggu, berat ayam diukur. Dengan menggunakan uji hipotesis, beri kesimpulan apakah ada perbedaan signifikan antara kedua jenis pakan! (&alpha; = 0.05)</div>
+      <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Prosedur Lengkap Uji-t Dua Sampel Independen</h4>
+        <p><strong>Langkah 1: Hitung Statistik Deskriptif per Kelompok</strong></p>
+        <ul>
+          <li>Kandang A: hitung x&#772;&#8321; = &Sigma;x<sub>A</sub>/20 dan s&#8321;&sup2; = &Sigma;(x<sub>A</sub>&minus;x&#772;&#8321;)&sup2;/19</li>
+          <li>Kandang B: hitung x&#772;&#8322; = &Sigma;x<sub>B</sub>/20 dan s&#8322;&sup2; = &Sigma;(x<sub>B</sub>&minus;x&#772;&#8322;)&sup2;/19</li>
+        </ul>
+        <p><strong>Langkah 2: Rumuskan Hipotesis</strong></p>
+        <ul>
+          <li>H&#8320;: &mu;&#8321; = &mu;&#8322; (tidak ada perbedaan berat rata-rata antara pakan impor dan lokal)</li>
+          <li>H&#8321;: &mu;&#8321; &ne; &mu;&#8322; (ada perbedaan berat rata-rata) &mdash; two-tailed test</li>
+          <li>&alpha; = 0.05</li>
+        </ul>
+        <p><strong>Langkah 3: Hitung t-hitung</strong></p>
+        <div class="formula">t = (x&#772;&#8321; &minus; x&#772;&#8322;) / &radic;(s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)<br>= (x&#772;&#8321; &minus; x&#772;&#8322;) / &radic;(s&#8321;&sup2;/20 + s&#8322;&sup2;/20)</div>
+        <p><strong>Langkah 4: Hitung Derajat Kebebasan (Welch)</strong></p>
+        <div class="formula">df = (s&#8321;&sup2;/n&#8321; + s&#8322;&sup2;/n&#8322;)&sup2; / [(s&#8321;&sup2;/n&#8321;)&sup2;/(n&#8321;&minus;1) + (s&#8322;&sup2;/n&#8322;)&sup2;/(n&#8322;&minus;1)]<br>= (s&#8321;&sup2;/20 + s&#8322;&sup2;/20)&sup2; / [(s&#8321;&sup2;/20)&sup2;/19 + (s&#8322;&sup2;/20)&sup2;/19]<br>Bulatkan df ke bawah (floor)</div>
+        <p><strong>Langkah 5: Tentukan t-tabel</strong></p>
+        <ul>
+          <li>Two-tailed, &alpha; = 0.05: gunakan &alpha;/2 = 0.025 per sisi</li>
+          <li>Cari t<sub>0.025, df</sub> dari tabel t yang disediakan</li>
+        </ul>
+        <p><strong>Langkah 6: Keputusan</strong></p>
+        <div class="tw"><table>
+          <tr><th>Kondisi</th><th>Keputusan</th><th>Kesimpulan</th></tr>
+          <tr><td>|t<sub>hitung</sub>| &gt; t<sub>tabel</sub></td><td>Tolak H&#8320;</td><td>Ada perbedaan signifikan antara berat rata-rata ayam dengan pakan impor dan lokal pada &alpha; = 0.05</td></tr>
+          <tr><td>|t<sub>hitung</sub>| &le; t<sub>tabel</sub></td><td>Gagal tolak H&#8320;</td><td>Tidak cukup bukti bahwa ada perbedaan signifikan antara kedua jenis pakan pada &alpha; = 0.05</td></tr>
+        </table></div>
+        <div class="key"><strong>Tips Ujian:</strong><br>
+        1. Jangan lupa tulis H&#8320; dan H&#8321; secara eksplisit<br>
+        2. Tunjukkan semua langkah perhitungan<br>
+        3. Kesimpulan HARUS dalam konteks soal: &ldquo;pakan impor vs lokal&rdquo;, bukan hanya &ldquo;tolak H&#8320;&rdquo;<br>
+        4. Jika gagal tolak H&#8320;, BUKAN berarti &ldquo;H&#8320; benar&rdquo; &mdash; hanya &ldquo;tidak cukup bukti untuk menolaknya&rdquo;</div>
+      </div></div>
+
+      <div class="soal"><div class="soal-q"><span class="num">3</span> <span class="arsip-label">UA Pra Kuliah 2026</span> <strong>Pirolisis Tandan Kosong Kelapa Sawit &mdash; Interpolasi</strong><br>
+        Berikut data hasil pirolisis tandan kosong kelapa sawit pada berbagai suhu:<br><br>
+        <div class="tw"><table>
+          <tr><th>Suhu (&deg;C)</th><th>Arang (%)</th><th>Bio-oil (%)</th></tr>
+          <tr><td>300</td><td>80</td><td>15</td></tr>
+          <tr><td>400</td><td>65</td><td>20</td></tr>
+          <tr><td>500</td><td>50</td><td>22</td></tr>
+          <tr><td>600</td><td>38</td><td>22</td></tr>
+          <tr><td>700</td><td>28</td><td>20</td></tr>
+          <tr><td>800</td><td>20</td><td>16</td></tr>
+          <tr><td>900</td><td>15</td><td>12</td></tr>
+        </table></div><br>
+        Diketahui: gas% = 100 &minus; arang% &minus; bio_oil%<br>
+        Tentukan suhu yang diperlukan agar gas yang dihasilkan = 60%!</div>
+      <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>Langkah 1: Hitung Gas% untuk Setiap Suhu</h4>
+        <div class="formula">Gas% = 100 &minus; Arang% &minus; Bio-oil%</div>
+        <div class="tw"><table>
+          <tr><th>Suhu (&deg;C)</th><th>Arang (%)</th><th>Bio-oil (%)</th><th>Gas (%)</th></tr>
+          <tr><td>300</td><td>80</td><td>15</td><td>100 &minus; 80 &minus; 15 = <strong>5</strong></td></tr>
+          <tr><td>400</td><td>65</td><td>20</td><td>100 &minus; 65 &minus; 20 = <strong>15</strong></td></tr>
+          <tr><td>500</td><td>50</td><td>22</td><td>100 &minus; 50 &minus; 22 = <strong>28</strong></td></tr>
+          <tr><td>600</td><td>38</td><td>22</td><td>100 &minus; 38 &minus; 22 = <strong>40</strong></td></tr>
+          <tr><td>700</td><td>28</td><td>20</td><td>100 &minus; 28 &minus; 20 = <strong>52</strong></td></tr>
+          <tr><td>800</td><td>20</td><td>16</td><td>100 &minus; 20 &minus; 16 = <strong>64</strong></td></tr>
+          <tr><td>900</td><td>15</td><td>12</td><td>100 &minus; 15 &minus; 12 = <strong>73</strong></td></tr>
+        </table></div>
+        <h4>Langkah 2: Identifikasi Rentang yang Mengapit Target</h4>
+        <p>Gas = 60% berada di antara:</p>
+        <ul>
+          <li>Suhu 700&deg;C &rarr; gas = 52% (di bawah target)</li>
+          <li>Suhu 800&deg;C &rarr; gas = 64% (di atas target)</li>
+        </ul>
+        <h4>Langkah 3: Interpolasi Linear (Inverse)</h4>
+        <p>Diketahui y (gas%), cari x (suhu). Titik: (x&#8321;, y&#8321;) = (700, 52) dan (x&#8322;, y&#8322;) = (800, 64)</p>
+        <div class="formula">T = T&#8321; + [(gas<sub>target</sub> &minus; gas&#8321;) / (gas&#8322; &minus; gas&#8321;)] &times; (T&#8322; &minus; T&#8321;)<br><br>
+        T = 700 + [(60 &minus; 52) / (64 &minus; 52)] &times; (800 &minus; 700)<br><br>
+        T = 700 + [8 / 12] &times; 100<br><br>
+        T = 700 + 0.6667 &times; 100<br><br>
+        T = 700 + 66.67<br><br>
+        T = <strong>766.67&deg;C</strong></div>
+        <h4>Langkah 4: Verifikasi</h4>
+        <ul>
+          <li>766.67&deg;C berada di antara 700&deg;C dan 800&deg;C &check;</li>
+          <li>60% berada di antara 52% dan 64% &check;</li>
+          <li>Proporsi: (60&minus;52)/(64&minus;52) = 8/12 = 0.667 sesuai dengan (766.67&minus;700)/(800&minus;700) = 66.67/100 = 0.667 &check;</li>
+        </ul>
+        <div class="key"><strong>Kesimpulan:</strong> Suhu pirolisis yang diperlukan agar gas yang dihasilkan mencapai 60% adalah <strong>766.67&deg;C</strong> (&asymp; 767&deg;C).<br><br>
+        <strong>Catatan:</strong> Ini merupakan <em>inverse interpolation</em> karena yang dicari adalah variabel input (suhu) berdasarkan variabel output (gas%). Metode yang sama berlaku: gunakan dua titik data yang mengapit nilai target, lalu terapkan interpolasi linear.</div>
+      </div></div>
+    </div>
+
+  </div>
+
 </div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
