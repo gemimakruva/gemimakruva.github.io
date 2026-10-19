@@ -3222,10 +3222,373 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
 <!-- ========================= HARI 2-4 ============================= -->
 <div class="day-panel" id="day-2">
   <div class="subject-picker">
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">SDTS</div><div class="sc-full">Statistika dalam Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Ir. Muhammad Mufti Azis</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
+    <div class="subject-card" data-subject="sdts"><div class="sc-name">SDTS</div><div class="sc-full">Statistika dalam Teknik Sistem</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>7 sesi</span><span>3 arsip soal</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
     <div class="subject-card" data-subject="ti"><div class="sc-name">TI</div><div class="sc-full">Teknologi Informasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>4 sesi</span><span>1 arsip soal</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
-  <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi SDTS &amp; TI akan ditambahkan.</p></div>
+  <!-- ====================== SDTS (Hari 2) ====================== -->
+  <div class="subject-view" id="sv-sdts">
+    <button class="back-btn" data-back="2">&larr; Kembali ke Hari 2</button>
+    <div class="exam-banner"><strong>UTS SDTS:</strong> Senin, 19 Okt 2026 &bull; 08:00&ndash;10:00 WIB &bull; Buku Terbuka + Komputer (Minitab)<br><strong>Dosen:</strong> Ir. Muhammad Mufti Azis, ST., M.Sc., Ph.D<br><strong>Format:</strong> 4 soal essay &bull; 120 menit &bull; Topik: Hypothesis Testing, RCBD, Fractional Factorial, RSM</div>
+    <div class="content-tabs" data-tabgroup="sdts">
+      <button class="ctab-btn active" data-ctab="sdts-rangkuman">Rangkuman</button>
+      <button class="ctab-btn" data-ctab="sdts-materi">Materi</button>
+      <button class="ctab-btn" data-ctab="sdts-cheatsheet">Cheatsheet</button>
+      <button class="ctab-btn" data-ctab="sdts-prediksi">Prediksi Soal</button>
+      <button class="ctab-btn" data-ctab="sdts-latihan">Latihan Soal</button>
+    </div>
+
+    <!-- SDTS RANGKUMAN -->
+    <div class="ctab-panel active" id="sdts-rangkuman">
+      <div class="toc"><a href="#sdts1">1: Pengantar DOE &amp; Statistik Dasar</a><a href="#sdts2">2: Uji Hipotesis &amp; ANOVA</a><a href="#sdts3">3: RCBD &amp; Latin Square</a><a href="#sdts4">4: Factorial Design 2<sup>k</sup></a><a href="#sdts5">5: Blocking &amp; Unreplicated</a><a href="#sdts6">6: Fractional Factorial</a><a href="#sdts7">7: Regresi &amp; RSM</a></div>
+
+      <div class="card" id="sdts1">
+        <div class="card-header">Topik 1: Pengantar DOE &amp; Statistik Dasar <span class="badge">SDTS 01</span></div>
+        <p><strong>Design of Experiments (DOE)</strong> adalah pendekatan statistik untuk merancang percobaan secara sistematis. Dikembangkan oleh <strong>Ronald A. Fisher</strong> (1890&ndash;1962) di Rothamsted Experimental Station, Inggris.</p>
+        <div class="key">3 Prinsip DOE: <strong>Randomization</strong> (acak urutan percobaan), <strong>Replication</strong> (ulang percobaan untuk estimasi error), <strong>Blocking</strong> (kelompokkan unit serupa untuk kurangi noise)</div>
+        <div class="key">3 Strategi Eksperimen: <strong>Best-guess</strong> (coba-coba), <strong>OFAT</strong> (One Factor At a Time), <strong>Statistically Designed</strong> (DOE &mdash; ubah semua faktor bersamaan secara terencana)</div>
+        <div class="tw"><table><thead><tr><th>Distribusi</th><th>Kapan Dipakai</th><th>Rumus / Syarat</th></tr></thead><tbody>
+          <tr><td><strong>Normal (Z)</strong></td><td>Data populasi, n besar (n&ge;30)</td><td>Z = (x&#x0304; &minus; &mu;) / (&sigma;/&radic;n)</td></tr>
+          <tr><td><strong>t-Student</strong></td><td>n kecil, &sigma; tidak diketahui</td><td>t = (x&#x0304; &minus; &mu;) / (s/&radic;n), df = n&minus;1</td></tr>
+          <tr><td><strong>Chi-square (&chi;&sup2;)</strong></td><td>Uji varians</td><td>&chi;&sup2; = (n&minus;1)s&sup2; / &sigma;&sup2;</td></tr>
+          <tr><td><strong>F</strong></td><td>Perbandingan 2 varians, ANOVA</td><td>F = s&sub1;&sup2; / s&sub2;&sup2;</td></tr>
+        </tbody></table></div>
+        <div class="key">Central Limit Theorem: Jika n &ge; 30, distribusi sampling mean mendekati normal terlepas dari distribusi populasi.</div>
+        <p><strong>Uji Hipotesis Dasar:</strong> H<sub>0</sub> (hipotesis nol) vs H<sub>1</sub> (hipotesis alternatif). &alpha; = 0.05 (default). Jika p-value &lt; &alpha; &rarr; tolak H<sub>0</sub>. <strong>Type I Error</strong> (&alpha;): tolak H<sub>0</sub> padahal benar. <strong>Type II Error</strong> (&beta;): gagal tolak H<sub>0</sub> padahal salah.</p>
+        <span class="vid">SDTS 01 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts2">
+        <div class="card-header">Topik 2: Uji Hipotesis &amp; ANOVA Satu Arah <span class="badge">SDTS 02</span></div>
+        <p><strong>t-test di Minitab:</strong> Stat &rarr; Basic Statistics &rarr; 1-Sample t / 2-Sample t. Interpretasi: p-value &lt; 0.05 = tolak H<sub>0</sub> = ada perbedaan signifikan.</p>
+        <div class="tw"><table><thead><tr><th>Jenis Uji</th><th>Tujuan</th><th>Menu Minitab</th></tr></thead><tbody>
+          <tr><td><strong>1-Sample t</strong></td><td>Uji mean sampel vs nilai tertentu</td><td>Stat &rarr; Basic Stat &rarr; 1-Sample t</td></tr>
+          <tr><td><strong>2-Sample t</strong></td><td>Bandingkan mean 2 kelompok</td><td>Stat &rarr; Basic Stat &rarr; 2-Sample t</td></tr>
+          <tr><td><strong>F-test (variance)</strong></td><td>Bandingkan 2 varians</td><td>Stat &rarr; Basic Stat &rarr; 2 Variances</td></tr>
+        </tbody></table></div>
+        <div class="key">Assume Equal Variance: Jika F-test menunjukkan varians tidak berbeda signifikan (p &gt; 0.05), gunakan "assume equal variances" di 2-Sample t.</div>
+        <p><strong>One-Way ANOVA:</strong> Perluasan t-test untuk &gt;2 kelompok. H<sub>0</sub>: semua mean sama. H<sub>1</sub>: minimal satu mean berbeda. Minitab: Stat &rarr; ANOVA &rarr; One-Way.</p>
+        <p><strong>Fisher LSD (Least Significant Difference):</strong> Post-hoc test setelah ANOVA signifikan untuk menentukan pasangan mana yang berbeda.</p>
+        <span class="vid">SDTS 02 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts3">
+        <div class="card-header">Topik 3: RCBD &amp; Latin Square Design <span class="badge">SDTS 03</span></div>
+        <p><strong>Randomized Complete Block Design (RCBD)</strong> = ANOVA 2 arah dengan blocking. Blocking adalah teknik mengelompokkan unit eksperimen yang serupa untuk mengurangi variabilitas (noise).</p>
+        <div class="formula">SS<sub>Total</sub> = SS<sub>Treatment</sub> + SS<sub>Block</sub> + SS<sub>Error</sub></div>
+        <div class="key">Blocking mengurangi SSE sehingga meningkatkan sensitivitas uji. Analogi: "Blocking is like wearing noise-cancelling headphones."</div>
+        <p><strong>Latin Square Design:</strong> Mengontrol 2 sumber variasi (baris &amp; kolom) + 1 treatment. Setiap treatment muncul tepat 1x di setiap baris dan kolom (seperti Sudoku). Cocok untuk 3 faktor.</p>
+        <p><strong>Graeco-Latin Square:</strong> Perluasan untuk 4 faktor &mdash; superposisi 2 Latin Square ortogonal.</p>
+        <div class="tw"><table><thead><tr><th>Design</th><th>Faktor</th><th>Partisi SS</th></tr></thead><tbody>
+          <tr><td>One-Way ANOVA</td><td>1 treatment</td><td>SS<sub>T</sub> + SS<sub>E</sub></td></tr>
+          <tr><td>RCBD</td><td>1 treatment + 1 block</td><td>SS<sub>Trt</sub> + SS<sub>Blk</sub> + SS<sub>E</sub></td></tr>
+          <tr><td>Latin Square</td><td>1 treatment + 2 blocking</td><td>SS<sub>Trt</sub> + SS<sub>Row</sub> + SS<sub>Col</sub> + SS<sub>E</sub></td></tr>
+        </tbody></table></div>
+        <span class="vid">SDTS 03 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts4">
+        <div class="card-header">Topik 4: Factorial Design 2<sup>k</sup> <span class="badge">SDTS 04</span></div>
+        <p><strong>Factorial Design 2<sup>k</sup></strong> (Fisher): k faktor, masing-masing 2 level (&minus;1 dan +1). Total percobaan = 2<sup>k</sup>. Keunggulan: mendeteksi <strong>efek interaksi</strong> yang tidak bisa ditemukan OFAT.</p>
+        <div class="key">Treatment Combination Naming: lowercase letter = faktor di level tinggi (+1). Contoh 2&sup3;: (1), a, b, ab, c, ac, bc, abc</div>
+        <div class="tw"><table><thead><tr><th>Istilah</th><th>Penjelasan</th></tr></thead><tbody>
+          <tr><td><strong>Main Effect</strong></td><td>Efek individu satu faktor terhadap respon</td></tr>
+          <tr><td><strong>Interaction Effect</strong></td><td>Efek gabungan 2+ faktor (AB, ABC, dst.)</td></tr>
+          <tr><td><strong>Contrast</strong></td><td>Selisih total respon antara level + dan &minus;</td></tr>
+          <tr><td><strong>Effect</strong></td><td>Contrast / (n &times; 2<sup>k&minus;1</sup>)</td></tr>
+          <tr><td><strong>Sum of Squares</strong></td><td>Contrast&sup2; / (n &times; 2<sup>k</sup>)</td></tr>
+        </tbody></table></div>
+        <div class="key">Sparsity of Effects: Semakin panjang huruf interaksi (ABC, ABCD), semakin kecil efeknya. Interaksi orde tinggi biasanya tidak signifikan.</div>
+        <p><strong>Interaction Plot:</strong> Garis paralel = tidak ada interaksi. Garis berpotongan = ada interaksi signifikan.</p>
+        <p><strong>Model Regresi:</strong> y = &beta;<sub>0</sub> + &beta;<sub>1</sub>x<sub>1</sub> + &beta;<sub>2</sub>x<sub>2</sub> + &beta;<sub>12</sub>x<sub>1</sub>x<sub>2</sub> + &epsilon;</p>
+        <span class="vid">SDTS 04 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts5">
+        <div class="card-header">Topik 5: Blocking dalam Factorial &amp; Unreplicated Design <span class="badge">SDTS 05</span></div>
+        <p><strong>Blocking in Factorial Design:</strong> Membagi percobaan menjadi block ketika tidak bisa menjalankan semua run dalam 1 waktu.</p>
+        <div class="key">Confounding: Mencampur efek block dengan efek interaksi orde tertinggi (misal ABC) karena efek interaksi tinggi biasanya kecil.</div>
+        <p><strong>Cara membagi ke 2 block:</strong> Generate kolom ABC (perkalian tanda A &times; B &times; C). Tanda negatif &rarr; Block 1, tanda positif &rarr; Block 2.</p>
+        <p><strong>Unreplicated 2<sup>k</sup> Design:</strong> Tanpa replikasi, gunakan <strong>Normal Probability Plot of Effects</strong> untuk identifikasi efek signifikan (titik yang menyimpang dari garis lurus).</p>
+        <div class="key">Minitab: DOE &rarr; Factorial &rarr; Create Factorial Design &rarr; Number of blocks. Custom: "Specify generators".</div>
+        <span class="vid">SDTS 05 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts6">
+        <div class="card-header">Topik 6: Fractional Factorial Design <span class="badge">SDTS 06</span></div>
+        <p><strong>Fractional Factorial (2<sup>k&minus;p</sup>):</strong> Mengurangi jumlah percobaan dengan mengorbankan kemampuan membedakan beberapa efek (alias).</p>
+        <div class="tw"><table><thead><tr><th>Resolution</th><th>Confounding</th><th>Kualitas</th></tr></thead><tbody>
+          <tr><td><strong>III</strong></td><td>Main &harr; 2-factor interaction</td><td>Screening awal</td></tr>
+          <tr><td><strong>IV</strong></td><td>Main &harr; 3FI; 2FI &harr; 2FI</td><td>Cukup baik</td></tr>
+          <tr><td><strong>V</strong></td><td>Main &harr; 4-factor interaction</td><td>Sangat baik</td></tr>
+        </tbody></table></div>
+        <div class="key">Generator &amp; Defining Relation: Misal 2<sup>5&minus;1</sup> dengan E = ABCD &rarr; I = ABCDE (resolusi V). Alias: A = BCDE.</div>
+        <p><strong>Contoh 2<sup>5&minus;2</sup><sub>III</sub>:</strong> D = BC, E = ABC &rarr; I = BCD = ABCE = ADE. Resolusi III karena main effect tercampur dengan 2FI.</p>
+        <div class="key">Alias Structure: Resolusi = panjang kata terpendek dalam defining relation. Semakin tinggi semakin baik.</div>
+        <p><strong>Plackett-Burman:</strong> Screening design untuk banyak faktor dengan percobaan minimal (kelipatan 4). Resolusi III.</p>
+        <span class="vid">SDTS 06 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts7">
+        <div class="card-header">Topik 7: Response Surface Methodology (RSM) <span class="badge">SDTS 07</span></div>
+        <p><strong>RSM</strong> dikembangkan oleh <strong>George Box</strong> untuk melakukan <strong>optimasi</strong> menggunakan DOE.</p>
+        <div class="key">RSM memperluas factorial design dari model first-order (linear) ke second-order (quadratic) agar bisa menangkap kurvatur dan menemukan titik optimum.</div>
+        <div class="formula">y = &beta;<sub>0</sub> + &sum;&beta;<sub>i</sub>x<sub>i</sub> + &sum;&beta;<sub>ii</sub>x<sub>i</sub>&sup2; + &sum;&beta;<sub>ij</sub>x<sub>i</sub>x<sub>j</sub> + &epsilon;</div>
+        <p><strong>Central Composite Design (CCD):</strong></p>
+        <div class="tw"><table><thead><tr><th>Komponen</th><th>Jumlah Titik</th><th>Penjelasan</th></tr></thead><tbody>
+          <tr><td>Factorial points</td><td>2<sup>k</sup></td><td>Sudut kubus (&plusmn;1)</td></tr>
+          <tr><td>Axial (star) points</td><td>2k</td><td>Di luar kubus, posisi &plusmn;&alpha;</td></tr>
+          <tr><td>Center points</td><td>n<sub>c</sub></td><td>Titik tengah (0,0,...,0)</td></tr>
+        </tbody></table></div>
+        <div class="formula">&alpha; = &radic;k (default rotatability) &emsp; FCC: &alpha; = 1</div>
+        <div class="key">Steepest Ascent: Sebelum RSM, gerakkan operating conditions ke arah kenaikan. Ketika kurvatur signifikan &rarr; buka RSM. Analogi: "Cari titik tertinggi di Jogja &mdash; jalan ke utara sampai Merapi."</div>
+        <span class="vid">SDTS 07 00:00:00</span>
+      </div>
+    </div>
+
+    <!-- SDTS MATERI -->
+    <div class="ctab-panel" id="sdts-materi">
+      <div class="toc"><a href="#sdts-m1">Session 1&ndash;2: Statistik &amp; Uji Hipotesis</a><a href="#sdts-m3">Session 3: RCBD &amp; Latin Square</a><a href="#sdts-m4">Session 4&ndash;5: Factorial Design</a><a href="#sdts-m6">Session 6: Fractional Factorial</a><a href="#sdts-m7">Session 7: RSM</a></div>
+
+      <div class="card" id="sdts-m1">
+        <div class="card-header">Session 1&ndash;2: Fondasi Statistik &amp; Uji Hipotesis</div>
+        <h4>Statistik Deskriptif</h4>
+        <div class="formula">Mean: x&#x0304; = &sum;x<sub>i</sub> / n &emsp; Variance: s&sup2; = &sum;(x<sub>i</sub> &minus; x&#x0304;)&sup2; / (n&minus;1)</div>
+        <h4>Prosedur Uji Hipotesis</h4>
+        <ol>
+          <li>Tentukan H<sub>0</sub> dan H<sub>1</sub></li>
+          <li>Pilih &alpha; (biasanya 0.05)</li>
+          <li>Hitung statistik uji (Z, t, F, atau &chi;&sup2;)</li>
+          <li>Bandingkan p-value dengan &alpha;</li>
+          <li>Keputusan: p-value &lt; &alpha; &rarr; Tolak H<sub>0</sub></li>
+        </ol>
+        <h4>Jenis-Jenis Uji di Minitab</h4>
+        <div class="tw"><table><thead><tr><th>Uji</th><th>H<sub>0</sub></th><th>Minitab Path</th></tr></thead><tbody>
+          <tr><td>1-Sample t</td><td>&mu; = &mu;<sub>0</sub></td><td>Stat &rarr; Basic Stat &rarr; 1-Sample t</td></tr>
+          <tr><td>2-Sample t</td><td>&mu;<sub>1</sub> = &mu;<sub>2</sub></td><td>Stat &rarr; Basic Stat &rarr; 2-Sample t</td></tr>
+          <tr><td>2 Variances</td><td>&sigma;<sub>1</sub>&sup2; = &sigma;<sub>2</sub>&sup2;</td><td>Stat &rarr; Basic Stat &rarr; 2 Variances</td></tr>
+          <tr><td>One-Way ANOVA</td><td>&mu;<sub>1</sub>=...=&mu;<sub>k</sub></td><td>Stat &rarr; ANOVA &rarr; One-Way</td></tr>
+        </tbody></table></div>
+        <div class="key">Alur 2 sampel: (1) F-test cek equal variance &rarr; (2) 2-Sample t-test (centang/uncentang "assume equal variances" sesuai hasil F-test).</div>
+        <span class="vid">SDTS 01 00:00:00</span> <span class="vid">SDTS 02 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts-m3">
+        <div class="card-header">Session 3: RCBD &amp; Latin Square Design</div>
+        <h4>RCBD</h4>
+        <p>Model: Y<sub>ij</sub> = &mu; + &tau;<sub>i</sub> + &beta;<sub>j</sub> + &epsilon;<sub>ij</sub></p>
+        <div class="tw"><table><thead><tr><th>Source</th><th>df</th><th>SS</th><th>MS</th><th>F</th></tr></thead><tbody>
+          <tr><td>Treatment</td><td>a&minus;1</td><td>SS<sub>Trt</sub></td><td>MS<sub>Trt</sub></td><td>MS<sub>Trt</sub>/MS<sub>E</sub></td></tr>
+          <tr><td>Block</td><td>b&minus;1</td><td>SS<sub>Blk</sub></td><td>MS<sub>Blk</sub></td><td>&mdash;</td></tr>
+          <tr><td>Error</td><td>(a&minus;1)(b&minus;1)</td><td>SS<sub>E</sub></td><td>MS<sub>E</sub></td><td>&mdash;</td></tr>
+          <tr><td>Total</td><td>N&minus;1</td><td>SS<sub>T</sub></td><td>&mdash;</td><td>&mdash;</td></tr>
+        </tbody></table></div>
+        <h4>Latin Square</h4>
+        <div class="formula">SS<sub>T</sub> = SS<sub>Trt</sub> + SS<sub>Row</sub> + SS<sub>Col</sub> + SS<sub>E</sub> &emsp; df<sub>E</sub> = (p&minus;1)(p&minus;2)</div>
+        <span class="vid">SDTS 03 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts-m4">
+        <div class="card-header">Session 4&ndash;5: Factorial Design 2<sup>k</sup></div>
+        <h4>Treatment Combinations (2&sup3;)</h4>
+        <div class="tw"><table><thead><tr><th>Label</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody>
+          <tr><td>(1)</td><td>&minus;</td><td>&minus;</td><td>&minus;</td></tr>
+          <tr><td>a</td><td>+</td><td>&minus;</td><td>&minus;</td></tr>
+          <tr><td>b</td><td>&minus;</td><td>+</td><td>&minus;</td></tr>
+          <tr><td>ab</td><td>+</td><td>+</td><td>&minus;</td></tr>
+          <tr><td>c</td><td>&minus;</td><td>&minus;</td><td>+</td></tr>
+          <tr><td>ac</td><td>+</td><td>&minus;</td><td>+</td></tr>
+          <tr><td>bc</td><td>&minus;</td><td>+</td><td>+</td></tr>
+          <tr><td>abc</td><td>+</td><td>+</td><td>+</td></tr>
+        </tbody></table></div>
+        <div class="formula">Contrast<sub>A</sub> = [a &minus; (1)] + [ab &minus; b] + [ac &minus; c] + [abc &minus; bc]</div>
+        <div class="formula">Effect = Contrast / (n &middot; 2<sup>k&minus;1</sup>) &emsp; SS = Contrast&sup2; / (n &middot; 2<sup>k</sup>)</div>
+        <h4>Blocking in 2<sup>k</sup></h4>
+        <p>Confound interaksi orde tertinggi (ABC) dengan block. Bagi run berdasarkan tanda kolom ABC.</p>
+        <h4>Unreplicated 2<sup>k</sup></h4>
+        <p>Gunakan <strong>Normal Probability Plot of Effects</strong> (Daniel Plot). Efek signifikan menyimpang dari garis lurus.</p>
+        <span class="vid">SDTS 04 00:00:00</span> <span class="vid">SDTS 05 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts-m6">
+        <div class="card-header">Session 6: Fractional Factorial Design</div>
+        <h4>Generator &amp; Defining Relation</h4>
+        <p>Contoh 2<sup>5&minus;1</sup><sub>V</sub>: E = ABCD &rarr; I = ABCDE &rarr; Resolusi V.</p>
+        <p>Contoh 2<sup>5&minus;2</sup><sub>III</sub>: D = BC, E = ABC &rarr; I = BCD = ABCE = ADE &rarr; Resolusi III.</p>
+        <h4>Cara Menentukan Alias</h4>
+        <ol>
+          <li>Tulis defining relation (I = ...)</li>
+          <li>Kalikan kedua sisi dengan efek yang ingin diketahui aliasnya</li>
+          <li>Sederhanakan (X&sup2; = I)</li>
+        </ol>
+        <div class="key">Resolusi = panjang kata terpendek dalam defining relation. Minimum acceptable = Resolusi IV.</div>
+        <span class="vid">SDTS 06 00:00:00</span>
+      </div>
+
+      <div class="card" id="sdts-m7">
+        <div class="card-header">Session 7: Response Surface Methodology</div>
+        <h4>Prosedur RSM</h4>
+        <ol>
+          <li><strong>Screening:</strong> Factorial design + steepest ascent ke arah optimum</li>
+          <li><strong>Optimization:</strong> Kurvatur signifikan &rarr; tambah axial points &rarr; CCD &rarr; fit second-order &rarr; cari optimum</li>
+        </ol>
+        <h4>CCD Details</h4>
+        <div class="tw"><table><thead><tr><th>k</th><th>Factorial</th><th>Axial</th><th>Center</th><th>Total</th><th>&alpha;</th></tr></thead><tbody>
+          <tr><td>2</td><td>4</td><td>4</td><td>5</td><td>13</td><td>&radic;2 &asymp; 1.414</td></tr>
+          <tr><td>3</td><td>8</td><td>6</td><td>6</td><td>20</td><td>&radic;3 &asymp; 1.682</td></tr>
+          <tr><td>4</td><td>16</td><td>8</td><td>7</td><td>31</td><td>2</td></tr>
+        </tbody></table></div>
+        <div class="tw"><table><thead><tr><th>Tipe CCD</th><th>&alpha;</th><th>Sifat</th></tr></thead><tbody>
+          <tr><td>CCC (Circumscribed)</td><td>&radic;k</td><td>Rotatable, titik di luar kubus</td></tr>
+          <tr><td>FCC (Face-Centered)</td><td>1</td><td>Titik di permukaan kubus, 3 level</td></tr>
+          <tr><td>CCI (Inscribed)</td><td>&radic;k (scaled)</td><td>Seluruh titik di dalam kubus</td></tr>
+        </tbody></table></div>
+        <span class="vid">SDTS 07 00:00:00</span>
+      </div>
+    </div>
+
+    <!-- SDTS CHEATSHEET -->
+    <div class="ctab-panel" id="sdts-cheatsheet">
+      <div class="card">
+        <div class="card-header">Formula Cheatsheet SDTS</div>
+        <h4>Uji Hipotesis</h4>
+        <div class="formula">t = (x&#x0304; &minus; &mu;<sub>0</sub>) / (s / &radic;n) &emsp; df = n &minus; 1</div>
+        <div class="formula">t<sub>2-sample</sub> = (x&#x0304;<sub>1</sub> &minus; x&#x0304;<sub>2</sub>) / &radic;(s<sub>p</sub>&sup2;(1/n<sub>1</sub> + 1/n<sub>2</sub>)) &emsp; F = s<sub>1</sub>&sup2; / s<sub>2</sub>&sup2;</div>
+        <h4>ANOVA</h4>
+        <div class="formula">F = MS<sub>Treatment</sub> / MS<sub>Error</sub> &emsp; MS = SS / df</div>
+        <h4>Factorial 2<sup>k</sup></h4>
+        <div class="formula">Effect = Contrast / (n &middot; 2<sup>k&minus;1</sup>) &emsp; SS = Contrast&sup2; / (n &middot; 2<sup>k</sup>)</div>
+        <h4>Fractional Factorial</h4>
+        <div class="formula">2<sup>k&minus;p</sup> runs &emsp; Resolution = shortest word in defining relation</div>
+        <h4>RSM / CCD</h4>
+        <div class="formula">y = &beta;<sub>0</sub> + &sum;&beta;<sub>i</sub>x<sub>i</sub> + &sum;&beta;<sub>ii</sub>x<sub>i</sub>&sup2; + &sum;&beta;<sub>ij</sub>x<sub>i</sub>x<sub>j</sub></div>
+        <div class="formula">&alpha; = &radic;k (rotatable) &emsp; &alpha; = 1 (face-centered) &emsp; Total = 2<sup>k</sup> + 2k + n<sub>c</sub></div>
+        <h4>Keputusan</h4>
+        <div class="tw"><table><thead><tr><th>p-value</th><th>Keputusan</th></tr></thead><tbody>
+          <tr><td>p &lt; &alpha;</td><td><strong>Tolak H<sub>0</sub></strong> &rarr; Signifikan</td></tr>
+          <tr><td>p &ge; &alpha;</td><td><strong>Gagal tolak H<sub>0</sub></strong> &rarr; Tidak cukup bukti</td></tr>
+        </tbody></table></div>
+        <h4>Minitab Quick Reference</h4>
+        <div class="tw"><table><thead><tr><th>Task</th><th>Menu</th></tr></thead><tbody>
+          <tr><td>Uji mean</td><td>Stat &rarr; Basic Stat &rarr; 1/2-Sample t</td></tr>
+          <tr><td>Uji varians</td><td>Stat &rarr; Basic Stat &rarr; 2 Variances</td></tr>
+          <tr><td>ANOVA</td><td>Stat &rarr; ANOVA &rarr; One-Way / GLM</td></tr>
+          <tr><td>Create DOE</td><td>Stat &rarr; DOE &rarr; Factorial &rarr; Create</td></tr>
+          <tr><td>Analyze DOE</td><td>Stat &rarr; DOE &rarr; Factorial &rarr; Analyze</td></tr>
+          <tr><td>Create RSM</td><td>Stat &rarr; DOE &rarr; Response Surface &rarr; Create</td></tr>
+          <tr><td>Contour Plot</td><td>Stat &rarr; DOE &rarr; Response Surface &rarr; Contour</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+
+    <!-- SDTS PREDIKSI SOAL -->
+    <div class="ctab-panel" id="sdts-prediksi">
+      <div class="card">
+        <div class="card-header">Analisis Pola Soal UTS SDTS</div>
+        <p>Berdasarkan 3 arsip UTS (2023, 2024, 2025), soal <strong>selalu 4 nomor</strong> dengan pola yang sangat konsisten:</p>
+        <div class="tw"><table><thead><tr><th>No.</th><th>Topik</th><th>Muncul</th><th>Probabilitas</th></tr></thead><tbody>
+          <tr><td>1</td><td>Hypothesis Testing (t-test / F-test)</td><td>3/3</td><td><span class="badge" style="background:#22c55e">100%</span></td></tr>
+          <tr><td>2</td><td>RCBD / Blocking Design</td><td>3/3</td><td><span class="badge" style="background:#22c55e">100%</span></td></tr>
+          <tr><td>3</td><td>Fractional Factorial (generator, alias)</td><td>3/3</td><td><span class="badge" style="background:#22c55e">100%</span></td></tr>
+          <tr><td>4</td><td>RSM / Central Composite Design</td><td>3/3</td><td><span class="badge" style="background:#22c55e">100%</span></td></tr>
+        </tbody></table></div>
+        <div class="key">Info Ujian: Open book + komputer (Minitab), 120 menit. Soal bersifat studi kasus dengan data &mdash; bukan teori hafalan.</div>
+      </div>
+
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #1: Hypothesis Testing <span class="badge" style="background:#22c55e">100%</span></div>
+        <div class="pred-b">
+          <p><strong>Pola:</strong> 2024 = 1-sample t (shelf life &gt; 120 hari). 2025 = F-test + 2-sample t (burning time). Strategi: Tuliskan H<sub>0</sub>/H<sub>1</sub>, input data ke Minitab, lihat p-value, tulis kesimpulan.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #2: RCBD / Blocking <span class="badge" style="background:#22c55e">100%</span></div>
+        <div class="pred-b">
+          <p><strong>Pola:</strong> 2023 = RCBD + Fisher LSD. 2024 = Latin Square. 2025 = RCBD + "bagaimana jika tanpa blocking?". Strategi: identifikasi treatment vs block, buat tabel ANOVA, Fisher LSD jika diminta.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #3: Fractional Factorial <span class="badge" style="background:#22c55e">100%</span></div>
+        <div class="pred-b">
+          <p><strong>Pola:</strong> Selalu ada: identifikasi design, tulis generator, tulis alias structure, tentukan resolusi. 2024 = pilih antara 2 design. Strategi: resolusi = panjang kata terpendek, kalikan I dengan efek untuk alias.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #4: RSM / CCD <span class="badge" style="background:#22c55e">100%</span></div>
+        <div class="pred-b">
+          <p><strong>Pola:</strong> Selalu CCD data, fit second-order, cari kondisi optimum. 2024 &amp; 2025 = multi-response optimization. Strategi: input CCD data, Analyze RSM, Surface/Contour Plot, Response Optimizer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SDTS LATIHAN SOAL -->
+    <div class="ctab-panel" id="sdts-latihan">
+      <h3>Arsip Soal UTS SDTS</h3>
+
+      <div class="card">
+        <div class="card-header">UTS Ganjil 2023/2024 <span class="badge">2 Nov 2023</span></div>
+        <p><em>Buku terbuka + komputer &bull; 120 menit</em></p>
+        <div class="soal">
+          <div class="soal-q"><strong>#1 RCBD:</strong> 3 brochure designs, 4 regions as blocks. (a) Analyze. (b) Fisher LSD comparisons.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Stat &rarr; ANOVA &rarr; GLM. Response: response, Factors: Design + Region. Fisher LSD: Comparisons &rarr; Pairwise. Design 2 tertinggi (mean 473.75).</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2 Factorial + Blocking:</strong> 2<sup>4</sup>, 4 faktor (Temp, Pressure, Conc, Speed), 2 block (ABCD confounded). Identifikasi run per block, buat ANOVA (3FI masuk error).</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Block 1 (ABCD=&minus;): (1), ab, ac, bc, d, abd, acd, bcd. Block 2 (ABCD=+): a, b, c, abc, ad, bd, cd, abcd. Pool 3FI ke error, hitung SS main + 2FI.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3 Fractional:</strong> 5 faktor, 8 run. (a) Identifikasi design + generator. (b) Alias structure. (c) Analisis.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>2<sup>5&minus;2</sup>. Identifikasi generator dari pola tanda x<sub>4</sub>, x<sub>5</sub>. Tulis defining relation. Kalikan I dengan setiap main effect. Normal plot untuk efek signifikan.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#4 RSM:</strong> Crystal growth CCD (3 var, &alpha;=1.682). Fit second-order, kondisi maximum growth?</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>DOE &rarr; RSM &rarr; Analyze. Cek R&sup2;, lack of fit. Surface/Contour Plot. Response Optimizer: maximize y. &alpha;=1.682=&radic;3 (CCD rotatable 3 faktor).</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">UTS Genap 2023/2024 <span class="badge">8 Mei 2024</span></div>
+        <p><em>Buku terbuka + komputer &bull; 120 menit</em></p>
+        <div class="soal">
+          <div class="soal-q"><strong>#1 Hypo Test:</strong> Shelf life 10 botol: {108,138,124,163,124,159,106,134,115,139}. H<sub>0</sub>: &mu;&le;120. Test &alpha;=0.01.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>1-Sample t. x&#x0304;&asymp;131, s&asymp;18.5, t&asymp;1.88, t<sub>0.01,9</sub>=2.821. 1.88&lt;2.821 &rarr; gagal tolak H<sub>0</sub>. p&asymp;0.047.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2 Latin Square:</strong> Octane number, 4 petrol quality, 4 hari, 4 teknisi. Apakah teknisi berbeda? Apakah kualitas berpengaruh?</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Latin Square: 3 faktor (Day=row, Tech=col, Quality=treatment). GLM &rarr; ANOVA. df<sub>E</sub> = (4&minus;1)(4&minus;2) = 6.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3 Fractional:</strong> 2<sup>5&minus;2</sup>. Pilih: (1) I=ABCD=ACE atau (2) I=ABC=CDE. Mana terbaik? Motivasi.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Keduanya Resolusi III (kata terpendek 3 huruf). Evaluasi alias: design mana yang mencampur main effect dengan interaksi yang lebih negligible.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#4 RSM:</strong> Coffee bag CCD (viscosity, pressure, plate gap). 2 respon (tear, leakage). Minimize leakage, keep tear &lt; 0.75.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Analyze RSM untuk kedua respon. Response Optimizer: minimize leakage, constraint tear &lt; 0.75. Multi-response = desirability function.</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">UTS Genap 2024/2025 <span class="badge">7 Mei 2025</span></div>
+        <p><em>Buku terbuka + komputer &bull; 120 menit</em></p>
+        <div class="soal">
+          <div class="soal-q"><strong>#1 Hypo Test:</strong> Burning times 2 tipe chemical flare. (a) F-test varians (&alpha;=0.05). (b) t-test mean (&alpha;=0.05, p-value?).</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>(a) 2 Variances &rarr; F-test. (b) Berdasarkan (a), pilih equal/unequal variance di 2-Sample t. Alur khas SDTS 02.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2 RCBD:</strong> Nitrogen analysis, 5 lab assistants, 3 hari sebagai block. Apakah ada perbedaan? Bagaimana tanpa blocking?</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>GLM: Treatment=Assistant, Block=Day. Tanpa blocking: One-Way ANOVA &rarr; SS<sub>Day</sub> masuk error &rarr; MS<sub>E</sub> membesar &rarr; F mengecil &rarr; bisa jadi tidak signifikan.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3 Fractional + Block:</strong> 5 variabel, 8 exp, 2 block. Suggest design tanpa confounding primary effects. Hitung efek &amp; signifikansi.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>2<sup>5</sup> dibagi 2 block: confound ABCDE (5-way) dengan block. Atau 2<sup>5&minus;2</sup> + 2 block. Hitung contrast, normal plot.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#4 RSM:</strong> 3-var CCD (Time, Temp, Catalyst). Maximize conversion, activity 55&ndash;60. 20 run data.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Analyze RSM kedua respon. Response Optimizer: maximize y<sub>1</sub>, target y<sub>2</sub>=57.5 (lower=55, upper=60). &alpha;=1.682=&radic;3.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- ====================== TI (Hari 2) ====================== -->
   <div class="subject-view" id="sv-ti">
@@ -3874,10 +4237,243 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
 </div>
 <div class="day-panel" id="day-3">
   <div class="subject-picker">
-    <div class="subject-card" style="cursor:default;opacity:0.7"><div class="sc-name">MAN-OP</div><div class="sc-full">Manajemen Operasi</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>Dr. Ir. Nugroho Dewayanto</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
+    <div class="subject-card" data-subject="manop"><div class="sc-name">MAN-OP</div><div class="sc-full">Manajemen Operasi</div><div class="sc-meta"><span>08:00&ndash;10:00</span><span>7 sesi</span><span>3 arsip soal</span></div><div class="sc-badge sc-badge-sem">Semester 1</div></div>
     <div class="subject-card" data-subject="ddk"><div class="sc-name">DDK</div><div class="sc-full">Dasar-Dasar Komputasi</div><div class="sc-meta"><span>13:00&ndash;15:00</span><span>Dr. Joko Wintoko &amp; Ir. Ayodya P.T.</span></div><div class="sc-badge sc-badge-pra">Pra Kuliah</div></div>
   </div>
-  <div class="placeholder"><div class="ph-icon">&#128218;</div><h3>Segera Hadir</h3><p>Materi MAN-OP &amp; DDK (ujian) akan ditambahkan.</p></div>
+  <!-- ====================== MAN-OP (Hari 3) ====================== -->
+  <div class="subject-view" id="sv-manop">
+    <button class="back-btn" data-back="3">&larr; Kembali ke Hari 3</button>
+    <div class="exam-banner"><strong>UTS MAN-OP:</strong> Rabu, 21 Okt 2026 &bull; 08:00&ndash;10:00 WIB &bull; Kemungkinan Closed Book (90 menit)<br><strong>Dosen:</strong> Dr. Ir. Nugroho Dewayanto<br><strong>Format:</strong> 3 soal essay &mdash; Soal 1 selalu Crossover Chart, Soal 2&ndash;3 essay aplikatif/studi kasus</div>
+    <div class="content-tabs" data-tabgroup="manop">
+      <button class="ctab-btn active" data-ctab="manop-rangkuman">Rangkuman</button>
+      <button class="ctab-btn" data-ctab="manop-materi">Materi</button>
+      <button class="ctab-btn" data-ctab="manop-prediksi">Prediksi Soal</button>
+      <button class="ctab-btn" data-ctab="manop-latihan">Latihan Soal</button>
+    </div>
+
+    <!-- MAN-OP RANGKUMAN -->
+    <div class="ctab-panel active" id="manop-rangkuman">
+      <div class="toc"><a href="#mo-r1">MO 01: Pengantar OM</a><a href="#mo-r2">MO 02: Product &amp; Quality</a><a href="#mo-r3">MO 03: Studi Kasus</a><a href="#mo-r4">MO 04: Process Strategy</a><a href="#mo-r5">MO 05: Location</a><a href="#mo-r6">MO 06: HR Strategy</a><a href="#mo-r7">MO 07: Diskusi MBG</a></div>
+
+      <div class="card" id="mo-r1"><div class="card-header"><span class="badge">MO 01</span> Pengantar Manajemen Operasi</div>
+        <div class="tw"><table><thead><tr><th>Konsep</th><th>Penjelasan</th></tr></thead><tbody>
+          <tr><td><strong>3 Fungsi Bisnis</strong></td><td>Marketing (demand), Finance/Accounting (modal &amp; laporan), Operations (produksi &amp; value creation)</td></tr>
+          <tr><td><strong>10 Keputusan OM</strong></td><td>1) Design Goods/Services, 2) Quality, 3) Process &amp; Capacity, 4) Location, 5) Layout, 6) HR &amp; Job Design, 7) SCM, 8) Inventory, 9) Scheduling, 10) Maintenance</td></tr>
+          <tr><td><strong>Produktivitas</strong></td><td>Productivity = Output / Input</td></tr>
+        </tbody></table></div>
+        <div class="key">OM bukan hanya manufacturing &mdash; mencakup seluruh kegiatan yang menciptakan value, termasuk services.</div>
+      </div>
+
+      <div class="card" id="mo-r2"><div class="card-header"><span class="badge">MO 02</span> Product Development &amp; Quality</div>
+        <div class="tw"><table><thead><tr><th>Konsep</th><th>Penjelasan</th></tr></thead><tbody>
+          <tr><td><strong>QFD / House of Quality</strong></td><td>Menerjemahkan customer requirements (WHATs) menjadi engineering specifications (HOWs)</td></tr>
+          <tr><td><strong>Robust Design (Taguchi)</strong></td><td>Desain produk yang konsisten meskipun ada variasi kondisi</td></tr>
+          <tr><td><strong>Modular Design</strong></td><td>Modul standar dikombinasi &rarr; variasi tinggi, biaya rendah</td></tr>
+          <tr><td><strong>Quality &rarr; Profitability</strong></td><td>(1) Increased sales (reputasi) &amp; (2) Reduced costs (rework &darr;, scrap &darr;)</td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div class="card" id="mo-r3"><div class="card-header"><span class="badge">MO 03</span> Studi Kasus: Atari, SEGA, Compaq</div>
+        <ul>
+          <li><strong>Atari:</strong> Kegagalan quality control E.T. (1983) &rarr; Video Game Crash</li>
+          <li><strong>SEGA:</strong> Terlambat adaptasi 3D, kalah dari Sony PlayStation</li>
+          <li><strong>Compaq:</strong> Disrupted oleh Dell direct-sales model</li>
+        </ul>
+      </div>
+
+      <div class="card" id="mo-r4"><div class="card-header"><span class="badge">MO 04</span> Process &amp; Capacity Strategy</div>
+        <div class="tw"><table><thead><tr><th>Process Strategy</th><th>Karakteristik</th><th>Contoh</th></tr></thead><tbody>
+          <tr><td><strong>Process Focus</strong></td><td>Low volume, high variety, job shop</td><td>Bengkel custom, rumah sakit</td></tr>
+          <tr><td><strong>Repetitive Focus</strong></td><td>Assembly line, semi-standardized</td><td>Pabrik motor Honda</td></tr>
+          <tr><td><strong>Product Focus</strong></td><td>High volume, low variety, continuous</td><td>Pabrik semen</td></tr>
+          <tr><td><strong>Mass Customization</strong></td><td>High volume + high variety, modular</td><td>Dell BTO, Nike ID</td></tr>
+        </tbody></table></div>
+        <h4>Crossover Chart</h4>
+        <div class="formula">TC = FC + VC &times; Q &emsp; Crossover: Q = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)</div>
+        <div class="key">5 Process Analysis Tools: Flowchart, Time Function Mapping, Process Chart, Value Stream Mapping, Service Blueprinting</div>
+      </div>
+
+      <div class="card" id="mo-r5"><div class="card-header"><span class="badge">MO 05</span> Location Strategy</div>
+        <div class="tw"><table><thead><tr><th>Level</th><th>Faktor Kunci</th></tr></thead><tbody>
+          <tr><td><strong>Country</strong></td><td>Political risk, labor, market, exchange rates</td></tr>
+          <tr><td><strong>Region</strong></td><td>Labor availability, utilities, government incentives</td></tr>
+          <tr><td><strong>Site</strong></td><td>Land cost, access, zoning, environmental impact</td></tr>
+        </tbody></table></div>
+        <ul>
+          <li><strong>Industrial:</strong> Minimize cost (dekat bahan baku, labor murah)</li>
+          <li><strong>Service:</strong> Maximize revenue (dekat pasar/customer)</li>
+        </ul>
+        <div class="key">Studi Kasus FedEx Memphis: lokasi sentral AS, cuaca stabil, generous tax incentives Tennessee.</div>
+      </div>
+
+      <div class="card" id="mo-r6"><div class="card-header"><span class="badge">MO 06</span> Human Resource Strategy</div>
+        <div class="tw"><table><thead><tr><th>Konsep</th><th>Penjelasan</th></tr></thead><tbody>
+          <tr><td><strong>HR vs Human Capital</strong></td><td>Resource = dieksploitasi; Capital = diinvestasi untuk return</td></tr>
+          <tr><td><strong>Job Specialization</strong></td><td>Tugas spesifik &amp; berulang, efisien tapi monoton</td></tr>
+          <tr><td><strong>Job Enlargement</strong></td><td>Horizontal: tambah variasi tugas selevel</td></tr>
+          <tr><td><strong>Job Enrichment</strong></td><td>Vertical: tambah tanggung jawab &amp; otonomi</td></tr>
+          <tr><td><strong>Job Rotation</strong></td><td>Rotasi antar posisi &rarr; multi-skill</td></tr>
+          <tr><td><strong>Employee Empowerment</strong></td><td>Delegasi wewenang keputusan ke pekerja</td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div class="card" id="mo-r7"><div class="card-header"><span class="badge">MO 07</span> Diskusi: Program MBG</div>
+        <p>Analisis Makan Bergizi Gratis dari perspektif OM:</p>
+        <ul>
+          <li>Rekrutmen kejar target, kualifikasi tidak seragam</li>
+          <li>Peran mitra/pengelola tumpang tindih</li>
+          <li>Belum ada KPI yang jelas</li>
+          <li>Analogi NASCAR Pit Crew: 7 orang, 16 detik, tugas jelas</li>
+        </ul>
+        <div class="key">Rekomendasi: pembagian tugas jelas, standar baku, KPI terukur, pelatihan &amp; evaluasi berkala.</div>
+      </div>
+    </div>
+
+    <!-- MAN-OP MATERI -->
+    <div class="ctab-panel" id="manop-materi">
+      <div class="card"><div class="card-header"><span class="badge">MO 01&ndash;02</span> Fondasi OM &amp; Product Development</div>
+        <h4>QFD / House of Quality</h4>
+        <p>Matriks yang menghubungkan voice of customer (WHATs) dengan engineering characteristics (HOWs). Langkah: identifikasi wants, identifikasi HOWs, hubungkan dengan bobot, evaluasi kompetitor, target teknis.</p>
+        <span class="vid">MO 02 00:15:00</span>
+        <h4>Robust Design (Taguchi)</h4>
+        <p>Desain produk agar tidak sensitif terhadap variasi. Signal-to-Noise ratio.</p>
+      </div>
+
+      <div class="card"><div class="card-header"><span class="badge">MO 04</span> Process Strategy &amp; Crossover Chart (DETAIL)</div>
+        <h4>Crossover Chart &mdash; Langkah Penyelesaian</h4>
+        <div class="formula">
+        <strong>Data (selalu sama 3 tahun berturut-turut):</strong><br>
+        GPE: FC = Rp 1.000.000.000 | VC = Rp 150.000/unit<br>
+        FMS: FC = Rp 2.000.000.000 | VC = Rp 140.000/unit<br>
+        DM: FC = Rp 5.000.000.000 | VC = Rp 130.000/unit<br><br>
+        TC pada Q=200.000: GPE=31B, FMS=<strong>30B (terbaik)</strong>, DM=31B<br>
+        Crossover GPE-FMS: Q = 1B/10K = <strong>100.000</strong><br>
+        Crossover FMS-DM: Q = 3B/10K = <strong>300.000</strong><br>
+        Crossover GPE-DM: Q = 4B/20K = <strong>200.000</strong><br><br>
+        Q &lt; 100K &rarr; GPE | 100K&ndash;300K &rarr; FMS | Q &gt; 300K &rarr; DM
+        </div>
+        <span class="vid">MO 04 00:25:00</span>
+        <h4>5 Process Analysis Tools</h4>
+        <div class="tw"><table><thead><tr><th>Tool</th><th>Fungsi</th></tr></thead><tbody>
+          <tr><td>Flowchart</td><td>Visualisasi alur proses</td></tr>
+          <tr><td>Time Function Mapping</td><td>Flowchart + sumbu waktu &rarr; identifikasi delay</td></tr>
+          <tr><td>Process Chart</td><td>Detail: operation, transport, inspect, delay, store</td></tr>
+          <tr><td>Value Stream Mapping</td><td>Material &amp; info flow, identifikasi waste (Lean)</td></tr>
+          <tr><td>Service Blueprinting</td><td>Line of visibility, onstage/backstage</td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div class="card"><div class="card-header"><span class="badge">MO 05</span> Location Strategy (Detail)</div>
+        <h4>Industrial vs. Service Location</h4>
+        <p><strong>Industrial:</strong> Cost-driven. Dekat bahan baku, labor murah, insentif pajak.</p>
+        <p><strong>Service:</strong> Revenue-driven. Dekat customer. Virtual location juga penting.</p>
+        <span class="vid">MO 05 00:16:30</span>
+        <h4>Metode Analisis Lokasi</h4>
+        <div class="tw"><table><thead><tr><th>Metode</th><th>Deskripsi</th></tr></thead><tbody>
+          <tr><td><strong>Factor Rating</strong></td><td>Bobot &times; skor &rarr; weighted score tertinggi</td></tr>
+          <tr><td><strong>Center of Gravity</strong></td><td>C<sub>x</sub> = &Sigma;(d<sub>ix</sub>&middot;W<sub>i</sub>) / &Sigma;W<sub>i</sub></td></tr>
+          <tr><td><strong>Break-Even</strong></td><td>TC = FC + VC&middot;Q antar lokasi</td></tr>
+          <tr><td><strong>Transportation Model</strong></td><td>Minimize total shipping cost</td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div class="card"><div class="card-header"><span class="badge">MO 06&ndash;07</span> HR Strategy &amp; Job Design</div>
+        <h4>5 Komponen Job Design</h4>
+        <div class="tw"><table><thead><tr><th>Komponen</th><th>Definisi</th><th>Contoh</th></tr></thead><tbody>
+          <tr><td>Job Specialization</td><td>Tugas spesifik &amp; berulang</td><td>Operator mesin CNC tunggal</td></tr>
+          <tr><td>Job Enlargement</td><td>Horizontal: tambah variasi tugas</td><td>Kasir + stocking shelf</td></tr>
+          <tr><td>Job Enrichment</td><td>Vertical: tambah tanggung jawab</td><td>Operator + QC + troubleshoot</td></tr>
+          <tr><td>Job Rotation</td><td>Pindah antar posisi berkala</td><td>Management trainee rotasi</td></tr>
+          <tr><td>Employee Empowerment</td><td>Delegasi keputusan ke pekerja</td><td>Barista kompensasi pelanggan</td></tr>
+        </tbody></table></div>
+        <h4>Staffing Fluctuating Demand</h4>
+        <ul>
+          <li>Core staff (full-time) untuk baseline</li>
+          <li>Seasonal/contract untuk peak</li>
+          <li>Cross-training core staff</li>
+          <li>Overtime dengan kompensasi adil</li>
+        </ul>
+        <span class="vid">MO 06 00:03:00</span>
+      </div>
+    </div>
+
+    <!-- MAN-OP PREDIKSI SOAL -->
+    <div class="ctab-panel" id="manop-prediksi">
+      <div class="card">
+        <div class="card-header">Analisis Pola Soal UTS MAN-OP</div>
+        <div class="tw"><table><thead><tr><th>Tahun</th><th>Sifat</th><th>Soal 1</th><th>Soal 2</th><th>Soal 3</th></tr></thead><tbody>
+          <tr><td>2023</td><td>Open Book 120m</td><td>Crossover Chart</td><td>Job Design (5 komponen)</td><td>CSR Program</td></tr>
+          <tr><td>2024</td><td>Open Book 90m</td><td>Crossover Chart</td><td>Novel Madre (HR)</td><td>Slotting Fee (Layout)</td></tr>
+          <tr><td>2025</td><td>Closed Book 90m</td><td>Crossover Chart</td><td>MBG Inspection (Quality)</td><td>Pariwisata HR (Staffing)</td></tr>
+        </tbody></table></div>
+        <div class="key">Soal 1 SELALU crossover chart dengan tabel biaya IDENTIK. HR/Job Design muncul 3/3 tahun. Topik berrotasi: Quality, Layout, HR.</div>
+      </div>
+
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #1: Crossover Chart GPE/FMS/DM <span class="badge" style="background:#22c55e">99%</span></div>
+        <div class="pred-b">
+          <p>Tabel biaya kemungkinan besar IDENTIK (3 tahun sama). Hafal: Q&lt;100K&rarr;GPE, 100K&ndash;300K&rarr;FMS, Q&gt;300K&rarr;DM. FMS terbaik untuk 200K.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #2: Location Strategy <span class="badge" style="background:#f59e0b">75%</span></div>
+        <div class="pred-b">
+          <p>Belum pernah keluar sebagai soal UTS. Kemungkinan: studi kasus pemilihan lokasi dengan Factor Rating atau Break-Even antar lokasi.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #3: HR &amp; Job Design <span class="badge" style="background:#f59e0b">70%</span></div>
+        <div class="pred-b">
+          <p>HR muncul 3/3 tahun. Bisa studi kasus tentang program pemerintah, perusahaan lokal, atau isu WLB. Format: analisis masalah HR dari perspektif job design &amp; work measurement.</p>
+        </div>
+      </div>
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #4: Quality / Inspection <span class="badge" style="background:#6366f1">50%</span></div>
+        <div class="pred-b">
+          <p>Keluar di 2025 (MBG). Bisa muncul lagi: proses produksi makanan, manufaktur, atau layanan publik.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAN-OP LATIHAN SOAL -->
+    <div class="ctab-panel" id="manop-latihan">
+      <h3>Arsip Soal UTS MAN-OP</h3>
+
+      <div class="card">
+        <div class="card-header">UTS Gasal 2023/2024 <span class="badge">Open Book 120m</span></div>
+        <div class="soal">
+          <div class="soal-q"><strong>#1 (30 poin):</strong> Unisocks kontrak Adidas 200K pasang. Bandingkan GPE/FMS/DM. Proses terbaik untuk 75K, 275K, 350K.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>FMS terbaik untuk 200K (TC=30B). Crossover GPE-FMS=100K, FMS-DM=300K. 75K&rarr;GPE, 275K&rarr;FMS, 350K&rarr;DM.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2 (30 poin):</strong> Contoh job enrichment, job enlargement, job rotation, job specialization, employee empowerment.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Specialization: operator jahit kerah saja. Enlargement: + jahit lengan &amp; badan. Enrichment: + QC &amp; melatih operator baru. Rotation: setiap 3 bulan pindah jahit/cutting/packing. Empowerment: boleh stop lini (andon) jika defect.</p></div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3 (40 poin):</strong> Buat program CSR untuk migas/manufaktur/perbankan.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>Contoh manufaktur semen: reklamasi lahan quarry, pelatihan UMKM, beasiswa, klinik kesehatan gratis. Target terukur.</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">UTS Genap 2024 <span class="badge">Open Book 90m</span></div>
+        <div class="soal">
+          <div class="soal-q"><strong>#1:</strong> Crossover chart (tabel identik). <strong>#2:</strong> Novel Madre &mdash; strategi HR Tansen. <strong>#3:</strong> Slotting fee &mdash; ethical dilemma layout.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>#1: Identik. #2: Labor planning (staf sesuai demand, cross-training, part-time peak) + job design (pembagian tugas, enrichment, empowerment). #3: Slotting fee pro (revenue model) vs kontra (harga naik, barrier UMKM). Perlu regulasi: batas fee, kuota rak produk lokal.</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">UTS Genap 2025 <span class="badge">Closed Book 90m</span></div>
+        <div class="soal">
+          <div class="soal-q"><strong>#1:</strong> Crossover chart (tabel identik). <strong>#2:</strong> MBG 5000 siswa DIY &mdash; titik inspeksi &amp; parameter. <strong>#3:</strong> Pariwisata seasonal &mdash; kebijakan staffing.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle(\'open\')">Lihat Jawaban</button><div class="soal-a"><p>#1: Identik. #2: Inspeksi: penerimaan bahan, penyimpanan, memasak, pengemasan, distribusi, penerimaan sekolah. Parameter: suhu, waktu, berat, kebersihan. #3: Core staff baseline + seasonal peak + cross-training + overtime kompensasi + partnership vendor.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 <div class="day-panel" id="day-4">
   <div class="subject-picker">
