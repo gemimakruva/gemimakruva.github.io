@@ -4716,52 +4716,74 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <div class="soal">
           <div class="soal-q"><span class="num">2023 #1</span> <span class="arsip-label">30 poin</span> Unisocks Shoes and Apparel mendapatkan kontrak dari Adidas untuk memproduksi sepatu tipe Ultraboost-20 sebanyak 200.000 pasang dalam waktu 1 tahun. Ada 3 alternatif sistem produksi: general-purpose equipment (GPE), flexible manufacturing system (FMS), dan dedicated machine (DM). (a) Proses manakah yang terbaik dari ketiga alternatif tersebut, apabila diperoleh data struktur biaya dari tabel berikut. (b) Tentukan sistem produksi terbaik apabila kapasitas produksi adalah 75.000, 275.000, dan 350.000 unit per tahun. Data: GPE (FC=Rp 1B, VC=Rp 150K), FMS (FC=Rp 2B, VC=Rp 140K), DM (FC=Rp 5B, VC=Rp 130K).</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Untuk menentukan proses produksi yang terbaik, kita menggunakan analisis <strong>Crossover Chart</strong> dengan menghitung Total Cost (TC) masing-masing alternatif menggunakan rumus TC = FC + (VC &times; Q).</p>
+            <p>Untuk menentukan proses produksi yang terbaik, kita menggunakan analisis <strong>Crossover Chart</strong>.</p>
 
-            <p><strong>(a) Perhitungan TC untuk Q = 200.000 unit:</strong></p>
-            <p>TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1.000.000.000 + 30.000.000.000 = Rp 31.000.000.000. TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2.000.000.000 + 28.000.000.000 = Rp 30.000.000.000. TC<sub>DM</sub> = 5.000.000.000 + (130.000 &times; 200.000) = 5.000.000.000 + 26.000.000.000 = Rp 31.000.000.000. Dari ketiga alternatif, <strong>FMS memiliki total cost terendah (Rp 30 miliar)</strong>, sehingga FMS adalah proses yang terbaik untuk memproduksi 200.000 pasang sepatu.</p>
-
-            <p>Untuk memahami rentang volume optimal setiap proses, kita perlu menghitung <strong>crossover points</strong> menggunakan rumus Q = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>):</p>
+            <h4>Tahap 1: Hitung TC (Total Cost) untuk Q = 200.000</h4>
+            <p>Rumus: <strong>TC = FC (Fixed Cost / biaya tetap) + VC (Variable Cost / biaya variabel) &times; Q (Quantity / volume produksi)</strong></p>
             <ul>
-              <li>Crossover GPE&ndash;FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
-              <li>Crossover FMS&ndash;DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
-              <li>Crossover GPE&ndash;DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
+              <li>TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1.000.000.000 + 30.000.000.000 = <strong>Rp 31.000.000.000</strong></li>
+              <li>TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2.000.000.000 + 28.000.000.000 = <strong>Rp 30.000.000.000</strong></li>
+              <li>TC<sub>DM</sub> = 5.000.000.000 + (130.000 &times; 200.000) = 5.000.000.000 + 26.000.000.000 = <strong>Rp 31.000.000.000</strong></li>
+            </ul>
+            <p><strong>Jawaban: FMS adalah proses terbaik</strong> karena memiliki total cost terendah (Rp 30 miliar).</p>
+
+            <h4>Tahap 2: Hitung Crossover Points</h4>
+            <div class="formula">Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)</div>
+            <ul>
+              <li>GPE&ndash;FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
+              <li>FMS&ndash;DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
+              <li>GPE&ndash;DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
             </ul>
 
-            <p><strong>(b) Proses terbaik untuk setiap volume:</strong></p>
-            <p>Untuk Q = 75.000: TC<sub>GPE</sub> = 1B + 11,25B = <strong>Rp 12,25B</strong>, TC<sub>FMS</sub> = 12,5B, TC<sub>DM</sub> = 14,75B. <strong>GPE terbaik</strong> karena pada volume rendah, fixed cost GPE yang paling kecil mendominasi. Untuk Q = 275.000: TC<sub>GPE</sub> = 42,25B, TC<sub>FMS</sub> = <strong>Rp 40,5B</strong>, TC<sub>DM</sub> = 40,75B. <strong>FMS terbaik</strong> karena volume berada di antara crossover GPE-FMS (100K) dan FMS-DM (300K). Untuk Q = 350.000: TC<sub>GPE</sub> = 53,5B, TC<sub>FMS</sub> = 51B, TC<sub>DM</sub> = <strong>Rp 50,5B</strong>. <strong>DM terbaik</strong> karena pada volume tinggi, variable cost DM yang paling rendah (Rp 130K) menghasilkan penghematan terbesar meskipun fixed cost-nya paling tinggi.</p>
+            <h4>Tahap 3: Tentukan proses terbaik per volume</h4>
+            <p>Berdasarkan crossover points di atas, kita bisa menentukan <strong>rentang volume</strong> di mana masing-masing proses menjadi pilihan termurah. Ini adalah panduan umum tanpa perlu menghitung TC satu per satu.</p>
+            <div class="tw"><table><thead><tr><th>Volume</th><th>Proses Terbaik</th><th>Alasan</th></tr></thead><tbody>
+              <tr><td>Q &lt; 100.000</td><td><strong>GPE</strong></td><td>FC paling rendah, dominan di volume kecil</td></tr>
+              <tr><td>100.000 &le; Q &le; 300.000</td><td><strong>FMS</strong></td><td>Balance antara FC dan VC</td></tr>
+              <tr><td>Q &gt; 300.000</td><td><strong>DM</strong></td><td>VC paling rendah, FC ter-justify di volume besar</td></tr>
+            </tbody></table></div>
 
-            <p><strong>Kesimpulan:</strong> Q &lt; 100.000 &rarr; GPE. 100.000 &le; Q &le; 300.000 &rarr; FMS. Q &gt; 300.000 &rarr; DM. Semakin tinggi volume, semakin menguntungkan menggunakan proses dengan fixed cost tinggi tapi variable cost rendah.</p>
+            <h4>Tahap 4: Jawaban per volume yang ditanya</h4>
+            <p>Sekarang kita <strong>hitung TC aktual</strong> untuk setiap volume spesifik yang ditanya soal, menggunakan rumus TC = FC + VC &times; Q. Nilai terkecil di setiap baris menunjukkan proses terbaik.</p>
+            <div class="tw"><table><thead><tr><th>Q</th><th>TC GPE</th><th>TC FMS</th><th>TC DM</th><th>Terbaik</th></tr></thead><tbody>
+              <tr><td>75.000</td><td><strong>12,25B</strong></td><td>12,5B</td><td>14,75B</td><td><strong>GPE</strong></td></tr>
+              <tr><td>200.000</td><td>31B</td><td><strong>30B</strong></td><td>31B</td><td><strong>FMS</strong></td></tr>
+              <tr><td>275.000</td><td>42,25B</td><td><strong>40,5B</strong></td><td>40,75B</td><td><strong>FMS</strong></td></tr>
+              <tr><td>350.000</td><td>53,5B</td><td>51B</td><td><strong>50,5B</strong></td><td><strong>DM</strong></td></tr>
+            </tbody></table></div>
+
+            <h4>Kesimpulan</h4>
+            <p>Untuk Q = 200.000 unit, <strong>FMS adalah proses terbaik</strong> dengan TC = Rp 30 miliar. Crossover chart menunjukkan tiga garis TC linear berpotongan di Q = 100.000 dan Q = 300.000. Sumbu X = volume produksi, sumbu Y = total cost. Area terendah bergantian: GPE &rarr; FMS &rarr; DM seiring bertambahnya volume. Semakin tinggi volume, semakin menguntungkan menggunakan proses dengan FC tinggi namun VC rendah.</p>
           </div>
         </div>
 
         <div class="soal">
           <div class="soal-q"><span class="num">2023 #2</span> <span class="arsip-label">30 poin</span> Berikanlah contoh mengenai job enrichment, job enlargement, job rotation, job specialization, dan employee empowerment pada suatu perusahaan.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Kelima komponen job design menurut Heizer &amp; Render merupakan strategi untuk mengelola tenaga kerja agar produktif sekaligus termotivasi. Berikut penerapannya pada contoh perusahaan garmen:</p>
+            <p>Kelima komponen <em>job design</em> (perancangan pekerjaan) menurut Heizer &amp; Render merupakan strategi untuk mengelola tenaga kerja agar produktif sekaligus termotivasi. Berikut penerapannya pada contoh perusahaan garmen:</p>
 
-            <p><strong>1. Job Specialization</strong> adalah pembagian tugas yang sangat spesifik dan berulang. Pada perusahaan garmen, operator A hanya bertugas menjahit kerah kemeja sepanjang hari. Keunggulannya: operator menjadi sangat terampil dan cepat dalam satu tugas. Kelemahannya: monoton dan bisa menurunkan motivasi jangka panjang.</p>
+            <p><strong>1. Job Specialization (spesialisasi pekerjaan)</strong> adalah pembagian tugas yang sangat spesifik dan berulang. Pada perusahaan garmen, operator A hanya bertugas menjahit kerah kemeja sepanjang hari. Keunggulannya: operator menjadi sangat terampil dan cepat dalam satu tugas. Kelemahannya: monoton dan bisa menurunkan motivasi jangka panjang.</p>
 
-            <p><strong>2. Job Enlargement (horizontal expansion)</strong> adalah menambah variasi tugas pada level yang sama. Operator A yang tadinya hanya jahit kerah, sekarang juga jahit lengan dan badan kemeja. Jumlah tugas bertambah, tetapi level tanggung jawab tetap sama. Tujuannya mengurangi kebosanan akibat specialization yang terlalu sempit.</p>
+            <p><strong>2. Job Enlargement (perluasan pekerjaan secara horizontal)</strong> adalah menambah variasi tugas pada level yang sama. Operator A yang tadinya hanya jahit kerah, sekarang juga jahit lengan dan badan kemeja. Jumlah tugas bertambah, tetapi level tanggung jawab tetap sama. Tujuannya mengurangi kebosanan akibat specialization yang terlalu sempit.</p>
 
-            <p><strong>3. Job Enrichment (vertical expansion)</strong> adalah menambah tanggung jawab dan otonomi, bukan hanya variasi. Operator A tidak hanya menjahit, tetapi juga melakukan quality control pada hasil jahitannya sendiri, melatih operator baru, dan ikut merancang SOP jahit yang lebih efisien. Ini meningkatkan sense of ownership dan motivasi intrinsik.</p>
+            <p><strong>3. Job Enrichment (pengayaan pekerjaan secara vertikal)</strong> adalah menambah tanggung jawab dan otonomi, bukan hanya variasi. Operator A tidak hanya menjahit, tetapi juga melakukan quality control pada hasil jahitannya sendiri, melatih operator baru, dan ikut merancang SOP jahit yang lebih efisien. Ini meningkatkan sense of ownership dan motivasi intrinsik.</p>
 
-            <p><strong>4. Job Rotation</strong> adalah rotasi posisi secara berkala. Operator A setiap 3 bulan dirotasi: bulan 1&ndash;3 di bagian jahit, bulan 4&ndash;6 di bagian cutting, bulan 7&ndash;9 di bagian packing, bulan 10&ndash;12 di bagian QC. Hasilnya: operator memiliki multi-skill, memahami proses end-to-end, dan bisa saling menggantikan saat ada yang absen.</p>
+            <p><strong>4. Job Rotation (rotasi pekerjaan)</strong> adalah perpindahan posisi secara berkala. Operator A setiap 3 bulan dirotasi: bulan 1&ndash;3 di bagian jahit, bulan 4&ndash;6 di bagian cutting, bulan 7&ndash;9 di bagian packing, bulan 10&ndash;12 di bagian QC. Hasilnya: operator memiliki multi-skill, memahami proses end-to-end, dan bisa saling menggantikan saat ada yang absen.</p>
 
-            <p><strong>5. Employee Empowerment</strong> adalah mendelegasikan wewenang keputusan ke level pekerja. Setiap operator garmen diberi wewenang untuk menghentikan lini produksi (sistem andon) jika menemukan defect, tanpa harus menunggu persetujuan supervisor. Operator juga diikutsertakan dalam improvement meeting mingguan. Ini mempercepat respons terhadap masalah dan meningkatkan rasa memiliki terhadap kualitas produk.</p>
+            <p><strong>5. Employee Empowerment (pemberdayaan karyawan)</strong> adalah mendelegasikan wewenang pengambilan keputusan ke level pekerja. Setiap operator garmen diberi wewenang untuk menghentikan lini produksi (sistem andon &mdash; sinyal visual untuk menandakan masalah) jika menemukan defect, tanpa harus menunggu persetujuan supervisor. Operator juga diikutsertakan dalam improvement meeting mingguan. Ini mempercepat respons terhadap masalah dan meningkatkan rasa memiliki terhadap kualitas produk.</p>
           </div>
         </div>
 
         <div class="soal">
           <div class="soal-q"><span class="num">2023 #3</span> <span class="arsip-label">40 poin</span> Anda diminta untuk membuat program Corporate Social Responsibility di salah satu perusahaan. Buatlah deskripsi program yang anda usulkan meliputi latar belakang program, rencana kegiatan pelaksanaan program, serta target yang ingin dicapai oleh program tersebut. Pilih salah satu dari 3 jenis perusahaan: migas, manufaktur, perbankan.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p><strong>Program CSR Perusahaan Manufaktur Semen</strong></p>
+            <p><strong>Program CSR (Corporate Social Responsibility / Tanggung Jawab Sosial Perusahaan) &mdash; Perusahaan Manufaktur Semen</strong></p>
 
             <p><strong>Latar Belakang:</strong> Perusahaan semen memiliki dampak lingkungan signifikan: penambangan limestone (quarry) merusak bentang alam, emisi debu dan CO<sub>2</sub> dari proses kiln mempengaruhi kualitas udara, dan getaran blasting mengganggu permukiman sekitar. Di sisi lain, perusahaan menjadi penyerap tenaga kerja terbesar di daerah dan memiliki resources untuk memberikan dampak sosial positif. Program CSR dirancang sebagai bentuk tanggung jawab perusahaan sekaligus menjaga social license to operate.</p>
 
             <p><strong>Rencana Kegiatan Pelaksanaan:</strong></p>
             <p>(1) <em>Reklamasi Lahan Bekas Tambang:</em> Setiap area quarry yang sudah tidak digunakan ditanami kembali dengan tanaman lokal dan pohon produksi (jati, sengon). Dilakukan bertahap: tahun 1 penanaman, tahun 2&ndash;3 perawatan, tahun 4&ndash;5 monitoring dan serah terima ke masyarakat. Melibatkan kelompok tani lokal sebagai pelaksana (paid).</p>
-            <p>(2) <em>Pemberdayaan UMKM:</em> Pendampingan 50 UMKM per tahun di desa ring 1 (radius 5 km). Program: pelatihan produksi, packaging, digital marketing, akses modal (kerjasama dengan bank lokal). Target: 30% UMKM binaan menjadi supplier kantin pabrik.</p>
+            <p>(2) <em>Pemberdayaan UMKM (Usaha Mikro Kecil Menengah):</em> Pendampingan 50 UMKM per tahun di desa ring 1 (radius 5 km). Program: pelatihan produksi, packaging, digital marketing, akses modal (kerjasama dengan bank lokal). Target: 30% UMKM binaan menjadi supplier kantin pabrik.</p>
             <p>(3) <em>Pendidikan:</em> Beasiswa penuh untuk 20 siswa berprestasi dari keluarga tidak mampu di desa ring 1 ke perguruan tinggi teknik. Alumni beasiswa mendapat prioritas rekrutmen di perusahaan.</p>
             <p>(4) <em>Kesehatan:</em> Klinik kesehatan gratis 2x/bulan di 5 desa ring 1. Pemeriksaan paru-paru gratis untuk warga yang tinggal dekat pabrik (monitoring dampak debu). Mobile clinic dengan dokter umum dan spesialis paru.</p>
 
@@ -4794,7 +4816,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <div class="soal">
           <div class="soal-q"><span class="num">2024 #1</span> <span class="arsip-label">Hitungan</span> Unisocks Shoes and Apparel mendapatkan kontrak dari Adidas untuk memproduksi sepatu tipe Adizero-Pro sebanyak 200.000 pasang dalam waktu 1 tahun. Ada 3 alternatif sistem produksi: general-purpose equipment (GPE), flexible manufacturing system (FMS), dan dedicated machine (DM). (a) Proses manakah yang terbaik? (b) Tentukan sistem produksi terbaik apabila kapasitas produksi adalah 75.000, 275.000, dan 350.000 unit per tahun. Data: GPE (FC=Rp 1B, VC=Rp 150K), FMS (FC=Rp 2B, VC=Rp 140K), DM (FC=Rp 5B, VC=Rp 130K).</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Soal ini identik dengan 2023 #1 (data biaya sama persis). Analisis menggunakan Crossover Chart dengan rumus TC = FC + (VC &times; Q).</p>
+            <p>Soal ini identik dengan 2023 #1 (data biaya sama persis). Analisis menggunakan Crossover Chart dengan rumus TC (Total Cost) = FC (Fixed Cost) + VC (Variable Cost) &times; Q (Quantity).</p>
 
             <p><strong>(a) Perhitungan TC untuk Q = 200.000:</strong> TC<sub>GPE</sub> = 1B + (150K &times; 200K) = Rp 31B. TC<sub>FMS</sub> = 2B + (140K &times; 200K) = Rp 30B. TC<sub>DM</sub> = 5B + (130K &times; 200K) = Rp 31B. <strong>FMS terbaik</strong> dengan total cost terendah Rp 30 miliar.</p>
 
@@ -4822,11 +4844,11 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <div class="soal">
           <div class="soal-q"><span class="num">2024 #3</span> <span class="arsip-label">Essay</span> Berikan pendapat Anda mengenai praktek <em>slotting fee</em> (biaya penempatan produk di rak tertentu) pada penataan layout pasar swalayan. Analisis dari perspektif operations management.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Slotting fee adalah biaya yang dibebankan retailer kepada produsen/supplier agar produknya ditempatkan di lokasi rak strategis (eye-level, dekat kasir, ujung lorong/endcap). Dari perspektif operations management, praktik ini memiliki dua sisi yang perlu dianalisis secara kritis.</p>
+            <p>Slotting fee (biaya penempatan rak) adalah biaya yang dibebankan retailer kepada produsen/supplier agar produknya ditempatkan di lokasi rak strategis (eye-level / setinggi mata, dekat kasir, ujung lorong/endcap). Dari perspektif operations management, praktik ini memiliki dua sisi yang perlu dianalisis secara kritis.</p>
 
             <p><strong>Argumen Pro (Perspektif Retailer):</strong> Slotting fee merupakan mekanisme alokasi shelf space yang terbatas secara efisien. Swalayan modern memiliki ribuan SKU yang bersaing untuk rak terbatas, sehingga fee berfungsi sebagai sinyal pasar &mdash; produsen yang yakin produknya laku bersedia membayar lebih untuk lokasi premium. Fee ini juga menjadi revenue stream tambahan bagi retailer yang margin-nya tipis (1&ndash;3% net profit). Dari sisi layout strategy, slotting fee mendorong retailer untuk mengoptimalkan <strong>retail layout</strong> berdasarkan data penjualan, sehingga produk high-demand berada di posisi yang memaksimalkan impulse buying dan customer flow.</p>
 
-            <p><strong>Argumen Kontra (Perspektif Konsumen &amp; UMKM):</strong> Biaya slotting fee pada akhirnya dibebankan ke harga jual produk, sehingga konsumen membayar lebih mahal. Lebih kritis, praktik ini menjadi barrier to entry bagi produk UMKM dan merek lokal yang tidak mampu membayar fee jutaan rupiah per SKU per toko. Akibatnya, pilihan konsumen menyempit &mdash; yang terlihat di rak hanya produk dari perusahaan besar yang mampu bayar. Ini bertentangan dengan prinsip <strong>fair competition</strong> dan mengurangi consumer welfare.</p>
+            <p><strong>Argumen Kontra (Perspektif Konsumen &amp; UMKM):</strong> Biaya slotting fee pada akhirnya dibebankan ke harga jual produk, sehingga konsumen membayar lebih mahal. Lebih kritis, praktik ini menjadi barrier to entry (hambatan masuk pasar) bagi produk UMKM (Usaha Mikro Kecil Menengah) dan merek lokal yang tidak mampu membayar fee jutaan rupiah per SKU (Stock Keeping Unit / kode produk unik) per toko. Akibatnya, pilihan konsumen menyempit &mdash; yang terlihat di rak hanya produk dari perusahaan besar yang mampu bayar. Ini bertentangan dengan prinsip <strong>fair competition</strong> dan mengurangi consumer welfare.</p>
 
             <p><strong>Rekomendasi:</strong> (1) Regulasi pemerintah untuk membatasi persentase slotting fee terhadap harga produk. (2) Kewajiban kuota rak 20&ndash;30% untuk produk UMKM/lokal tanpa fee (seperti yang sudah diterapkan beberapa daerah). (3) Transparansi: retailer wajib mengungkapkan struktur fee kepada konsumen. (4) Alternatif model: performance-based fee &mdash; produsen hanya membayar jika produknya benar-benar terjual, bukan pay-to-play. Ini lebih adil dan mendorong produsen fokus pada kualitas produk, bukan kemampuan finansial untuk membayar rak.</p>
           </div>
@@ -4840,7 +4862,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
             <p>Soal Crossover Chart identik 3 tahun berturut-turut (2023, 2024, 2025) dengan data biaya yang sama persis. Ini menunjukkan dosen sangat menekankan pemahaman konsep process strategy ini.</p>
 
-            <p><strong>(a)</strong> Untuk Q = 200.000: TC<sub>GPE</sub> = 1B + 30B = Rp 31B. TC<sub>FMS</sub> = 2B + 28B = <strong>Rp 30B (TERBAIK)</strong>. TC<sub>DM</sub> = 5B + 26B = Rp 31B. FMS dipilih karena pada volume 200K, keseimbangan antara fixed cost dan variable cost FMS menghasilkan total cost terendah.</p>
+            <p><strong>(a)</strong> Rumus: TC (Total Cost) = FC (Fixed Cost) + VC (Variable Cost) &times; Q (Quantity). Untuk Q = 200.000: TC<sub>GPE</sub> = 1B + 30B = Rp 31B. TC<sub>FMS</sub> = 2B + 28B = <strong>Rp 30B (TERBAIK)</strong>. TC<sub>DM</sub> = 5B + 26B = Rp 31B. FMS dipilih karena pada volume 200K, keseimbangan antara fixed cost dan variable cost FMS menghasilkan total cost terendah.</p>
 
             <p><strong>Crossover points:</strong> GPE&ndash;FMS di Q = 100.000. FMS&ndash;DM di Q = 300.000. GPE&ndash;DM di Q = 200.000.</p>
 
@@ -4853,12 +4875,12 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <div class="soal">
           <div class="soal-q"><span class="num">2025 #2</span> <span class="arsip-label">Essay</span> Anda memenangkan tender program Makan Bergizi Gratis (MBG) untuk menyediakan makanan bergizi kepada 5.000 siswa di Daerah Istimewa Yogyakarta setiap hari. Tentukan titik-titik inspeksi yang diperlukan beserta parameter yang perlu diinspeksi pada setiap titik.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Untuk menjamin kualitas dan keamanan makanan bergizi yang didistribusikan ke 5.000 siswa setiap hari, kita perlu menerapkan <strong>7 titik inspeksi</strong> menurut Heizer &amp; Render. Setiap titik berfungsi sebagai gatekeeper untuk mencegah produk cacat atau tidak aman lolos ke tahap berikutnya.</p>
+            <p>Untuk menjamin kualitas dan keamanan makanan bergizi yang didistribusikan ke 5.000 siswa setiap hari, kita perlu menerapkan <strong>7 titik inspeksi (inspection points)</strong> menurut Heizer &amp; Render. Setiap titik berfungsi sebagai gatekeeper untuk mencegah produk cacat atau tidak aman lolos ke tahap berikutnya.</p>
 
             <div class="tw"><table><thead><tr><th>#</th><th>Titik Inspeksi</th><th>Parameter yang Diinspeksi</th><th>Metode</th></tr></thead><tbody>
-              <tr><td>1</td><td><strong>Di pabrik/gudang supplier</strong> (saat bahan diproduksi)</td><td>Sertifikat halal MUI, izin BPOM, hasil uji laboratorium mikrobiologi, standar SNI</td><td>Audit supplier berkala (2x/tahun)</td></tr>
-              <tr><td>2</td><td><strong>Penerimaan bahan baku</strong> di dapur produksi</td><td>Kesegaran visual (warna, tekstur, bau), suhu saat datang (daging &lt;4&deg;C, frozen &lt;&minus;18&deg;C), tanggal kadaluarsa, kesesuaian PO (jumlah, jenis, berat)</td><td>Inspeksi fisik + termometer probe</td></tr>
-              <tr><td>3</td><td><strong>Penyimpanan &amp; persiapan</strong> (sebelum proses mahal/irreversible)</td><td>Suhu penyimpanan (kulkas 2&ndash;4&deg;C, freezer &le;&minus;18&deg;C), prinsip FIFO, kebersihan alat masak, sanitasi pekerja (sarung tangan, hairnet, masker)</td><td>Checklist harian + swab test alat</td></tr>
+              <tr><td>1</td><td><strong>Di pabrik/gudang supplier</strong> (saat bahan diproduksi)</td><td>Sertifikat halal MUI (Majelis Ulama Indonesia), izin BPOM (Badan Pengawas Obat dan Makanan), hasil uji laboratorium mikrobiologi, standar SNI</td><td>Audit supplier berkala (2x/tahun)</td></tr>
+              <tr><td>2</td><td><strong>Penerimaan bahan baku</strong> di dapur produksi</td><td>Kesegaran visual (warna, tekstur, bau), suhu saat datang (daging &lt;4&deg;C, frozen &lt;&minus;18&deg;C), tanggal kadaluarsa, kesesuaian PO (Purchase Order / surat pesanan) dalam hal jumlah, jenis, dan berat</td><td>Inspeksi fisik + termometer probe</td></tr>
+              <tr><td>3</td><td><strong>Penyimpanan &amp; persiapan</strong> (sebelum proses mahal/irreversible)</td><td>Suhu penyimpanan (kulkas 2&ndash;4&deg;C, freezer &le;&minus;18&deg;C), prinsip FIFO (First In First Out / bahan yang datang lebih dulu digunakan lebih dulu), kebersihan alat masak, sanitasi pekerja (sarung tangan, hairnet, masker)</td><td>Checklist harian + swab test alat</td></tr>
               <tr><td>4</td><td><strong>Selama pemasakan</strong> (proses produksi)</td><td>Suhu inti masakan &gt;70&deg;C (pasteurisasi), waktu masak sesuai SOP, higienitas petugas, cross-contamination prevention</td><td>Termometer probe + timer + sampling rasa</td></tr>
               <tr><td>5</td><td><strong>Setelah masak selesai</strong> (completion)</td><td>Berat porsi (standar gizi Kemenkes: karbohidrat, protein, sayur seimbang), kelengkapan komponen menu, visual plating, suhu &gt;60&deg;C saat packing</td><td>Timbangan digital + checklist menu</td></tr>
               <tr><td>6</td><td><strong>Distribusi ke sekolah</strong> (before delivery)</td><td>Seal kemasan utuh, label (tanggal produksi, komposisi, kadaluarsa), suhu transit (thermal box/insulated), waktu tempuh &le;2 jam dari produksi</td><td>GPS tracking + temperature logger</td></tr>
@@ -4904,8 +4926,8 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
           <tr><td>Per unit variable cost</td><td>Rp 150.000</td><td>Rp 140.000</td><td>Rp 130.000</td></tr>
         </tbody></table></div>
       </div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-        <h4>(a) Proses terbaik untuk Q = 200.000</h4>
-        <p>Menggunakan rumus <strong>TC = FC + (VC &times; Q)</strong>:</p>
+        <h4>Tahap 1: Hitung TC (Total Cost) untuk Q = 200.000</h4>
+        <p>Menggunakan rumus <strong>TC (Total Cost) = FC (Fixed Cost) + VC (Variable Cost) &times; Q (Quantity)</strong>:</p>
         <ul>
           <li>TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1.000.000.000 + 30.000.000.000 = <strong>Rp 31.000.000.000</strong></li>
           <li>TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2.000.000.000 + 28.000.000.000 = <strong>Rp 30.000.000.000</strong></li>
@@ -4913,22 +4935,33 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         </ul>
         <p><strong>Jawaban: FMS adalah proses terbaik</strong> karena memiliki total cost terendah (Rp 30 miliar).</p>
 
-        <h4>(b) Proses terbaik untuk setiap volume</h4>
-        <div class="tw"><table><thead><tr><th>Volume</th><th>TC GPE</th><th>TC FMS</th><th>TC DM</th><th>Terbaik</th></tr></thead><tbody>
-          <tr><td>75.000</td><td>1B + 11,25B = <strong>12,25B</strong></td><td>2B + 10,5B = 12,5B</td><td>5B + 9,75B = 14,75B</td><td><strong>GPE</strong></td></tr>
-          <tr><td>275.000</td><td>1B + 41,25B = 42,25B</td><td>2B + 38,5B = <strong>40,5B</strong></td><td>5B + 35,75B = 40,75B</td><td><strong>FMS</strong></td></tr>
-          <tr><td>350.000</td><td>1B + 52,5B = 53,5B</td><td>2B + 49B = 51B</td><td>5B + 45,5B = <strong>50,5B</strong></td><td><strong>DM</strong></td></tr>
+        <h4>Tahap 2: Hitung Crossover Points</h4>
+        <div class="formula">Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)</div>
+        <ul>
+          <li>GPE&ndash;FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
+          <li>FMS&ndash;DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
+          <li>GPE&ndash;DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
+        </ul>
+
+        <h4>Tahap 3: Tentukan proses terbaik per volume</h4>
+        <p>Berdasarkan crossover points di atas, kita bisa menentukan <strong>rentang volume</strong> di mana masing-masing proses menjadi pilihan termurah. Ini adalah panduan umum tanpa perlu menghitung TC satu per satu.</p>
+        <div class="tw"><table><thead><tr><th>Volume</th><th>Proses Terbaik</th><th>Alasan</th></tr></thead><tbody>
+          <tr><td>Q &lt; 100.000</td><td><strong>GPE</strong></td><td>FC paling rendah, dominan di volume kecil</td></tr>
+          <tr><td>100.000 &le; Q &le; 300.000</td><td><strong>FMS</strong></td><td>Balance antara FC dan VC</td></tr>
+          <tr><td>Q &gt; 300.000</td><td><strong>DM</strong></td><td>VC paling rendah, FC ter-justify di volume besar</td></tr>
         </tbody></table></div>
 
-        <h4>(c) Crossover Points</h4>
-        <p>Rumus: <strong>Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)</strong></p>
-        <ul>
-          <li>GPE &harr; FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
-          <li>FMS &harr; DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
-          <li>GPE &harr; DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
-        </ul>
-        <p><strong>Kesimpulan:</strong> Q &lt; 100.000 &rarr; GPE (FC rendah cocok volume kecil). 100.000 &le; Q &le; 300.000 &rarr; FMS (balance FC dan VC). Q &gt; 300.000 &rarr; DM (VC rendah ter-justify di volume besar).</p>
-        <p><em>Crossover chart: sumbu X = volume produksi, sumbu Y = total cost. Tiga garis linear berpotongan di Q = 100K dan Q = 300K. Area di bawah (paling murah) bergantian: GPE &rarr; FMS &rarr; DM.</em></p>
+        <h4>Tahap 4: Jawaban per volume yang ditanya</h4>
+        <p>Sekarang kita <strong>hitung TC aktual</strong> untuk setiap volume spesifik yang ditanya soal, menggunakan rumus TC = FC + VC &times; Q. Nilai terkecil di setiap baris menunjukkan proses terbaik.</p>
+        <div class="tw"><table><thead><tr><th>Q</th><th>TC GPE</th><th>TC FMS</th><th>TC DM</th><th>Terbaik</th></tr></thead><tbody>
+          <tr><td>75.000</td><td><strong>12,25B</strong></td><td>12,5B</td><td>14,75B</td><td><strong>GPE</strong></td></tr>
+          <tr><td>200.000</td><td>31B</td><td><strong>30B</strong></td><td>31B</td><td><strong>FMS</strong></td></tr>
+          <tr><td>275.000</td><td>42,25B</td><td><strong>40,5B</strong></td><td>40,75B</td><td><strong>FMS</strong></td></tr>
+          <tr><td>350.000</td><td>53,5B</td><td>51B</td><td><strong>50,5B</strong></td><td><strong>DM</strong></td></tr>
+        </tbody></table></div>
+
+        <h4>Kesimpulan</h4>
+        <p>Untuk Q = 200.000 unit, <strong>FMS adalah proses terbaik</strong> dengan TC = Rp 30 miliar. Crossover chart menunjukkan tiga garis TC linear yang berpotongan di Q = 100.000 dan Q = 300.000. Sumbu X = volume produksi, sumbu Y = total cost. Area terendah (proses termurah) bergantian: GPE &rarr; FMS &rarr; DM seiring bertambahnya volume. Semakin tinggi volume, semakin menguntungkan menggunakan proses dengan FC tinggi namun VC rendah.</p>
       </div></div>
 
       <!-- PREDIKSI SOAL #2: HR & JOB DESIGN -->
@@ -4953,7 +4986,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <h4>(a) Titik Inspeksi dan Parameter</h4>
         <p>Mengacu pada 7 titik inspeksi Heizer &amp; Render, diterapkan pada produksi makanan siap saji:</p>
         <div class="tw"><table><thead><tr><th>#</th><th>Titik Inspeksi</th><th>Parameter</th></tr></thead><tbody>
-          <tr><td>1</td><td><strong>Di pabrik supplier</strong> (saat bahan baku diproduksi)</td><td>Sertifikat halal, hasil lab mikrobiologi, standar BPOM</td></tr>
+          <tr><td>1</td><td><strong>Di pabrik supplier</strong> (saat bahan baku diproduksi)</td><td>Sertifikat halal, hasil lab mikrobiologi, standar BPOM (Badan Pengawas Obat dan Makanan)</td></tr>
           <tr><td>2</td><td><strong>Penerimaan bahan baku</strong> di fasilitas kita</td><td>Kesegaran (visual, bau), suhu saat datang, tanggal kadaluarsa, berat/volume sesuai PO</td></tr>
           <tr><td>3</td><td><strong>Sebelum proses pemasakan</strong> (proses mahal/irreversible)</td><td>Kebersihan alat, sanitasi pekerja (sarung tangan, hairnet), suhu minyak/air</td></tr>
           <tr><td>4</td><td><strong>Selama proses produksi</strong> step-by-step</td><td>Suhu masak (&gt;70&deg;C core temperature), waktu masak, konsistensi rasa (sampling)</td></tr>
@@ -4965,16 +4998,16 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <h4>(b) 4 Tipe Cost of Quality</h4>
         <p>Diterapkan pada konteks produksi makanan:</p>
         <ul>
-          <li><strong>Prevention costs:</strong> Biaya mencegah defect sebelum terjadi. Contoh: training food handler (Rp 50 juta/tahun), program HACCP, SOP kebersihan, maintenance mesin berkala. <em>Investasi di sini mengurangi 3 biaya lainnya.</em></li>
-          <li><strong>Appraisal costs:</strong> Biaya evaluasi dan inspeksi. Contoh: gaji QC inspector (3 orang), biaya lab uji mikrobiologi (Rp 500K/sampel), termometer probe, timbangan digital.</li>
+          <li><strong>Prevention costs:</strong> Biaya mencegah defect sebelum terjadi. Contoh: training food handler (Rp 50 juta/tahun), program HACCP (Hazard Analysis Critical Control Points / sistem manajemen keamanan pangan), SOP (Standard Operating Procedure / prosedur operasi baku) kebersihan, maintenance mesin berkala. <em>Investasi di sini mengurangi 3 biaya lainnya.</em></li>
+          <li><strong>Appraisal costs:</strong> Biaya evaluasi dan inspeksi. Contoh: gaji QC (Quality Control) inspector (3 orang), biaya lab uji mikrobiologi (Rp 500K/sampel), termometer probe, timbangan digital.</li>
           <li><strong>Internal failure costs:</strong> Defect ditemukan sebelum sampai customer. Contoh: batch makanan yang gagal rasa harus dibuang (scrap), nasi yang kurang matang harus dimasak ulang (rework), downtime saat mesin packaging rusak.</li>
-          <li><strong>External failure costs:</strong> Defect ditemukan setelah sampai customer. Contoh: recall produk karena kontaminasi (biaya logistik + penggantian), kehilangan kontrak minimarket (lost goodwill), tuntutan hukum jika konsumen sakit (liability). <em>Ini biaya termahal dan paling merusak reputasi.</em></li>
+          <li><strong>External failure costs:</strong> Defect ditemukan setelah sampai customer. Contoh: recall (penarikan kembali) produk karena kontaminasi (biaya logistik + penggantian), kehilangan kontrak minimarket (lost goodwill), tuntutan hukum jika konsumen sakit (liability). <em>Ini biaya termahal dan paling merusak reputasi.</em></li>
         </ul>
 
         <h4>(c) Konsep TQM yang Diterapkan</h4>
         <ul>
-          <li><strong>Continuous Improvement (PDCA):</strong> Plan (target zero waste 5%), Do (implementasi SOP baru), Check (audit mingguan), Act (perbaiki SOP). Siklus terus berulang.</li>
-          <li><strong>Six Sigma (DMAIC):</strong> Define (masalah: 3% reject rate), Measure (data harian), Analyze (root cause: suhu tidak konsisten), Improve (pasang thermostat otomatis), Control (monitoring dashboard).</li>
+          <li><strong>Continuous Improvement / PDCA (Plan-Do-Check-Act):</strong> Plan (target zero waste 5%), Do (implementasi SOP baru), Check (audit mingguan), Act (perbaiki SOP). Siklus terus berulang.</li>
+          <li><strong>Six Sigma / DMAIC (Define-Measure-Analyze-Improve-Control):</strong> Define (masalah: 3% reject rate), Measure (data harian), Analyze (root cause: suhu tidak konsisten), Improve (pasang thermostat otomatis), Control (monitoring dashboard).</li>
           <li><strong>Employee Empowerment:</strong> Setiap pekerja di lini produksi berhak menghentikan lini jika menemukan kontaminasi &mdash; tanpa menunggu approval supervisor.</li>
           <li><strong>Benchmarking:</strong> Bandingkan reject rate dengan industri makanan siap saji terbaik (benchmark: &lt;1%).</li>
           <li><strong>Just-in-Time:</strong> Bahan baku dikirim harian oleh supplier, zero raw material inventory &rarr; selalu segar, zero waste.</li>
@@ -5001,7 +5034,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <p><strong>Warehouse Layout</strong> dengan penerapan:</p>
         <ul>
           <li><strong>Cross-docking:</strong> Barang dari supplier langsung disortir dan dikirim ke customer tanpa penyimpanan. Ideal untuk barang fast-moving (elektronik, fashion). Mengurangi handling cost dan waktu delivery.</li>
-          <li><strong>Random stocking:</strong> Barang disimpan di lokasi mana saja yang tersedia, dilacak oleh Warehouse Management System (WMS). Mengoptimalkan penggunaan ruang dibanding fixed-location.</li>
+          <li><strong>Random stocking:</strong> Barang disimpan di lokasi mana saja yang tersedia, dilacak oleh WMS (Warehouse Management System / sistem manajemen gudang). Mengoptimalkan penggunaan ruang dibanding fixed-location.</li>
           <li><strong>Customizing:</strong> Gudang bukan hanya menyimpan, tapi juga menambah value: labeling, bundling, gift wrapping, quality check. Ini yang membedakan gudang e-commerce dari gudang konvensional.</li>
         </ul>
         <p>Objective warehouse layout: <strong>optimum trade-off antara handling cost dan warehouse space cost</strong>. Semakin cepat barang bergerak (throughput tinggi), semakin rendah biaya penyimpanan per unit.</p>
@@ -5034,7 +5067,7 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
       </div></div>
 
       <!-- PREDIKSI SOAL #6: PRODUCT LIFE CYCLE -->
-      <div class="soal"><div class="soal-q"><span class="num">Prediksi #6</span> <span class="arsip-label">Essay &bull; 30 poin</span> Sebuah perusahaan FMCG meluncurkan produk minuman kesehatan baru. (a) Jelaskan strategi operations management yang harus diterapkan di setiap fase product life cycle. (b) Bagaimana QFD (Quality Function Deployment) digunakan pada tahap pengembangan produk ini? (c) Jelaskan Garvin&rsquo;s 8 Dimensions of Quality untuk produk minuman kesehatan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #6</span> <span class="arsip-label">Essay &bull; 30 poin</span> Sebuah perusahaan FMCG (Fast-Moving Consumer Goods / barang konsumsi yang cepat habis) meluncurkan produk minuman kesehatan baru. (a) Jelaskan strategi operations management yang harus diterapkan di setiap fase product life cycle. (b) Bagaimana QFD (Quality Function Deployment) digunakan pada tahap pengembangan produk ini? (c) Jelaskan Garvin&rsquo;s 8 Dimensions of Quality untuk produk minuman kesehatan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
         <h4>(a) Strategi OM di Setiap Fase Product Life Cycle</h4>
         <div class="tw"><table><thead><tr><th>Fase</th><th>Kondisi Pasar</th><th>Strategi OM</th></tr></thead><tbody>
           <tr><td><strong>Introduction</strong></td><td>Sales rendah, awareness rendah, biaya R&amp;D tinggi</td><td>Short production runs (batch kecil), high-skill workers untuk QC ketat, distribusi terbatas (kota besar dulu), packaging premium untuk brand building. Fokus: quality over quantity.</td></tr>
@@ -5045,13 +5078,13 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         <div class="key">Leader companies generate 30&ndash;60% revenue dari produk &lt;5 tahun &rarr; product development harus terus berjalan bahkan saat produk saat ini masih di fase growth.</div>
 
         <h4>(b) QFD / House of Quality</h4>
-        <p>Quality Function Deployment menerjemahkan suara pelanggan (Voice of Customer) menjadi spesifikasi teknis produk. Untuk minuman kesehatan:</p>
+        <p>QFD (Quality Function Deployment / penyebaran fungsi kualitas) menerjemahkan VOC (Voice of Customer / suara pelanggan) menjadi spesifikasi teknis produk. Untuk minuman kesehatan:</p>
         <div class="tw"><table><thead><tr><th>WHATs (Customer Wants)</th><th>HOWs (Engineering Specs)</th></tr></thead><tbody>
           <tr><td>Rasa enak, tidak pahit</td><td>Formulasi sweetener, pH level, flavor masking technology</td></tr>
           <tr><td>Benar-benar sehat/berkhasiat</td><td>Kadar vitamin (mg/100ml), uji klinis, sertifikasi BPOM</td></tr>
           <tr><td>Praktis dibawa</td><td>Ukuran botol 250ml, berat &lt;300g, leak-proof cap</td></tr>
-          <tr><td>Harga terjangkau</td><td>COGS target &lt;Rp 5.000/unit, margin 40%</td></tr>
-          <tr><td>Shelf life panjang</td><td>Proses UHT/pasteurisasi, preservative food-grade, target 6 bulan</td></tr>
+          <tr><td>Harga terjangkau</td><td>COGS (Cost of Goods Sold / harga pokok produksi) target &lt;Rp 5.000/unit, margin 40%</td></tr>
+          <tr><td>Shelf life panjang</td><td>Proses UHT (Ultra-High Temperature) / pasteurisasi, preservative food-grade, target 6 bulan</td></tr>
         </tbody></table></div>
         <p>Matriks House of Quality menghubungkan WHATs dan HOWs dengan bobot korelasi (kuat/sedang/lemah), lalu membandingkan dengan produk kompetitor untuk menentukan target teknis prioritas.</p>
 
