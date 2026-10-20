@@ -4512,36 +4512,197 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
     <div class="ctab-panel" id="manop-prediksi">
       <div class="card">
         <div class="card-header">Analisis Pola Soal UTS MAN-OP</div>
-        <div class="tw"><table><thead><tr><th>Tahun</th><th>Sifat</th><th>Soal 1</th><th>Soal 2</th><th>Soal 3</th></tr></thead><tbody>
-          <tr><td>2023</td><td>Open Book 120m</td><td>Crossover Chart</td><td>Job Design (5 komponen)</td><td>CSR Program</td></tr>
-          <tr><td>2024</td><td>Open Book 90m</td><td>Crossover Chart</td><td>Novel Madre (HR)</td><td>Slotting Fee (Layout)</td></tr>
-          <tr><td>2025</td><td>Closed Book 90m</td><td>Crossover Chart</td><td>MBG Inspection (Quality)</td><td>Pariwisata HR (Staffing)</td></tr>
+        <div class="tw"><table><thead><tr><th>Tahun</th><th>Sifat</th><th>Soal 1</th><th>Soal 2</th><th>Soal 3</th><th>Soal 4</th></tr></thead><tbody>
+          <tr><td>2023</td><td>Open 120m</td><td>Crossover Chart</td><td>Job Design (5 komponen)</td><td>CSR Program</td><td>Work Cell Capacity (hitungan)</td></tr>
+          <tr><td>2024</td><td>Open 90m</td><td>Crossover Chart</td><td>Novel Madre (HR)</td><td>Slotting Fee (Layout)</td><td>&mdash;</td></tr>
+          <tr><td>2025</td><td>Closed 90m</td><td>Crossover Chart</td><td>MBG Inspection (Quality)</td><td>Pariwisata HR (Staffing)</td><td>&mdash;</td></tr>
         </tbody></table></div>
-        <div class="key">Soal 1 SELALU crossover chart dengan tabel biaya IDENTIK. HR/Job Design muncul 3/3 tahun. Topik berrotasi: Quality, Layout, HR.</div>
+        <div class="key">Soal 1 SELALU crossover chart (tabel IDENTIK 3 tahun). HR muncul 3/3 tahun. Dosen bilang kemungkinan ada hitungan &rarr; crossover pasti, work cell/capacity mungkin. Tren: closed book + essay.</div>
       </div>
 
+      <!-- PREDIKSI #1: CROSSOVER CHART -->
       <div class="pred">
-        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #1: Crossover Chart GPE/FMS/DM <span class="badge" style="background:#22c55e">99%</span></div>
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">99%</span><strong>Prediksi #1: Crossover Chart GPE/FMS/DM (HITUNGAN)</strong></div>
         <div class="pred-b">
-          <p>Tabel biaya kemungkinan besar IDENTIK (3 tahun sama). Hafal: Q&lt;100K&rarr;GPE, 100K&ndash;300K&rarr;FMS, Q&gt;300K&rarr;DM. FMS terbaik untuk 200K.</p>
+          <p><strong>Soal:</strong> Perusahaan kontrak produksi 200.000 unit/tahun. Ada 3 alternatif: GPE, FMS, DM. Tentukan proses terbaik berdasarkan data biaya. Tentukan juga untuk Q = 75.000, 275.000, 350.000.</p>
+          <div class="formula"><strong>Data (HAFAL &mdash; selalu sama):</strong><br>
+          GPE: FC = Rp 1.000.000.000 &ensp; VC = Rp 150.000/unit<br>
+          FMS: FC = Rp 2.000.000.000 &ensp; VC = Rp 140.000/unit<br>
+          DM &ensp;: FC = Rp 5.000.000.000 &ensp; VC = Rp 130.000/unit</div>
+
+          <h4>Langkah Penyelesaian:</h4>
+          <p><strong>1. Hitung TC untuk Q = 200.000:</strong></p>
+          <div class="formula">TC = FC + (VC &times; Q)<br><br>
+          TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1B + 30B = <strong>Rp 31.000.000.000</strong><br>
+          TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2B + 28B = <strong>Rp 30.000.000.000</strong> &larr; TERBAIK<br>
+          TC<sub>DM</sub> &ensp;= 5.000.000.000 + (130.000 &times; 200.000) = 5B + 26B = <strong>Rp 31.000.000.000</strong></div>
+
+          <p><strong>2. Hitung Crossover Points:</strong></p>
+          <div class="formula">Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)<br><br>
+          GPE&ndash;FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000</strong><br>
+          FMS&ndash;DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000</strong><br>
+          GPE&ndash;DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000</strong></div>
+
+          <p><strong>3. Tentukan proses terbaik per volume:</strong></p>
+          <div class="tw"><table><thead><tr><th>Volume</th><th>Proses Terbaik</th><th>Alasan</th></tr></thead><tbody>
+            <tr><td>Q &lt; 100.000</td><td><strong>GPE</strong></td><td>FC paling rendah, dominan di volume kecil</td></tr>
+            <tr><td>100.000 &le; Q &le; 300.000</td><td><strong>FMS</strong></td><td>Balance antara FC dan VC</td></tr>
+            <tr><td>Q &gt; 300.000</td><td><strong>DM</strong></td><td>VC paling rendah, FC ter-justify di volume besar</td></tr>
+          </tbody></table></div>
+
+          <p><strong>4. Jawaban per volume yang ditanya:</strong></p>
+          <div class="tw"><table><thead><tr><th>Q</th><th>TC GPE</th><th>TC FMS</th><th>TC DM</th><th>Terbaik</th></tr></thead><tbody>
+            <tr><td>75.000</td><td>12,25B</td><td>12,5B</td><td>14,75B</td><td><strong>GPE</strong></td></tr>
+            <tr><td>200.000</td><td>31B</td><td>30B</td><td>31B</td><td><strong>FMS</strong></td></tr>
+            <tr><td>275.000</td><td>42,25B</td><td>40,5B</td><td>40,75B</td><td><strong>FMS</strong></td></tr>
+            <tr><td>350.000</td><td>53,5B</td><td>51B</td><td>50,5B</td><td><strong>DM</strong></td></tr>
+          </tbody></table></div>
         </div>
       </div>
+
+      <!-- PREDIKSI #2: HR & JOB DESIGN -->
       <div class="pred">
-        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #2: Location Strategy <span class="badge" style="background:#f59e0b">75%</span></div>
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">90%</span><strong>Prediksi #2: HR &amp; Job Design (Studi Kasus)</strong></div>
         <div class="pred-b">
-          <p>Belum pernah keluar sebagai soal UTS. Kemungkinan: studi kasus pemilihan lokasi dengan Factor Rating atau Break-Even antar lokasi.</p>
+          <p><strong>Soal:</strong> Anda mengelola [perusahaan X]. Jelaskan penerapan 5 komponen job design dan kebijakan staffing.</p>
+          <h4>5 Komponen Job Design (HAFAL):</h4>
+          <div class="tw"><table><thead><tr><th>Komponen</th><th>Definisi</th><th>Contoh Konkret (Restoran)</th></tr></thead><tbody>
+            <tr><td><strong>Job Specialization</strong></td><td>Tugas spesifik &amp; berulang</td><td>Koki A khusus grill, koki B khusus saus</td></tr>
+            <tr><td><strong>Job Enlargement</strong></td><td>Horizontal: tambah variasi tugas selevel</td><td>Koki juga prep sayuran dan plating</td></tr>
+            <tr><td><strong>Job Enrichment</strong></td><td>Vertical: tambah tanggung jawab &amp; otonomi</td><td>Koki boleh desain menu baru + training junior</td></tr>
+            <tr><td><strong>Job Rotation</strong></td><td>Pindah posisi berkala</td><td>Rotasi grill &rarr; pastry &rarr; sushi tiap 3 bulan</td></tr>
+            <tr><td><strong>Employee Empowerment</strong></td><td>Delegasi keputusan ke pekerja</td><td>Waiter boleh beri kompensasi langsung ke customer tanpa approval manager</td></tr>
+          </tbody></table></div>
+          <h4>Kebijakan Staffing Fluktuasi Demand:</h4>
+          <ul>
+            <li><strong>Core staff (full-time):</strong> untuk baseline demand sepanjang tahun</li>
+            <li><strong>Seasonal/contract:</strong> tambahan saat peak (liburan, event)</li>
+            <li><strong>Cross-training:</strong> core staff bisa isi multiple role</li>
+            <li><strong>Overtime:</strong> dengan kompensasi adil, bukan default</li>
+            <li><strong>Demand management:</strong> promo off-peak, diskon weekday</li>
+          </ul>
+          <h4>Labor Standards (jika diminta metode pengukuran kerja):</h4>
+          <ol>
+            <li><strong>Historical experience:</strong> berapa lama task terakhir kali</li>
+            <li><strong>Time studies:</strong> timing pekerja, buat standar</li>
+            <li><strong>Predetermined time standards:</strong> elemen dasar (reach, grasp, move) punya waktu baku</li>
+            <li><strong>Work sampling:</strong> observasi random idle vs. produktif</li>
+          </ol>
         </div>
       </div>
+
+      <!-- PREDIKSI #3: QUALITY / INSPECTION -->
       <div class="pred">
-        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #3: HR &amp; Job Design <span class="badge" style="background:#f59e0b">70%</span></div>
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">75%</span><strong>Prediksi #3: Quality Management &amp; Inspection</strong></div>
         <div class="pred-b">
-          <p>HR muncul 3/3 tahun. Bisa studi kasus tentang program pemerintah, perusahaan lokal, atau isu WLB. Format: analisis masalah HR dari perspektif job design &amp; work measurement.</p>
+          <p><strong>Soal:</strong> Perusahaan Anda memproduksi [produk X]. Tentukan titik inspeksi dan jelaskan konsep TQM yang diterapkan.</p>
+          <h4>7 Titik Inspeksi (HAFAL):</h4>
+          <ol>
+            <li>Di <strong>pabrik supplier</strong> saat produksi</li>
+            <li>Di <strong>fasilitas kita</strong> saat barang diterima</li>
+            <li>Sebelum <strong>proses mahal/irreversible</strong></li>
+            <li>Selama <strong>proses produksi</strong> step-by-step</li>
+            <li>Saat <strong>produksi selesai</strong></li>
+            <li>Sebelum <strong>delivery</strong> ke customer</li>
+            <li>Di <strong>titik kontak customer</strong></li>
+          </ol>
+          <h4>Cost of Quality (4 tipe &mdash; HAFAL):</h4>
+          <div class="tw"><table><thead><tr><th>Tipe</th><th>Kapan</th><th>Contoh</th></tr></thead><tbody>
+            <tr><td><strong>Prevention</strong></td><td>Sebelum produksi</td><td>Training, quality improvement, SOP</td></tr>
+            <tr><td><strong>Appraisal</strong></td><td>Selama produksi</td><td>Testing, inspeksi, lab, audit</td></tr>
+            <tr><td><strong>Internal Failure</strong></td><td>Defect ditemukan sebelum kirim</td><td>Rework, scrap, downtime</td></tr>
+            <tr><td><strong>External Failure</strong></td><td>Defect ditemukan setelah kirim</td><td>Warranty, returns, lost goodwill</td></tr>
+          </tbody></table></div>
+          <h4>TQM Concepts (6 konsep &mdash; HAFAL):</h4>
+          <ul>
+            <li><strong>Continuous Improvement:</strong> PDCA (Plan-Do-Check-Act)</li>
+            <li><strong>Six Sigma:</strong> DMAIC (Define-Measure-Analyze-Improve-Control), target 3.4 defects/million</li>
+            <li><strong>Employee Empowerment:</strong> libatkan karyawan di setiap langkah</li>
+            <li><strong>Benchmarking:</strong> bandingkan dengan best practices industri</li>
+            <li><strong>Just-in-Time:</strong> zero inventory, paksa kualitas tinggi</li>
+            <li><strong>Taguchi:</strong> robust design, tahan variasi</li>
+          </ul>
+          <h4>Garvin&rsquo;s 8 Dimensi Quality (HAFAL):</h4>
+          <p><strong>P-F-R-C-D-S-A-P:</strong> Performance, Features, Reliability, Conformance, Durability, Serviceability, Aesthetics, Perceived Quality</p>
         </div>
       </div>
+
+      <!-- PREDIKSI #4: LOCATION/LAYOUT -->
       <div class="pred">
-        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')">Prediksi #4: Quality / Inspection <span class="badge" style="background:#6366f1">50%</span></div>
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">60%</span><strong>Prediksi #4: Location atau Layout Strategy</strong></div>
         <div class="pred-b">
-          <p>Keluar di 2025 (MBG). Bisa muncul lagi: proses produksi makanan, manufaktur, atau layanan publik.</p>
+          <p><strong>Soal:</strong> Perusahaan ingin membuka cabang baru / menata ulang fasilitas. Jelaskan metode pemilihan lokasi / tipe layout yang sesuai.</p>
+          <h4>Metode Pemilihan Lokasi:</h4>
+          <div class="tw"><table><thead><tr><th>Metode</th><th>Cara Kerja</th><th>Kapan Dipakai</th></tr></thead><tbody>
+            <tr><td><strong>Factor Rating</strong></td><td>List faktor &rarr; beri bobot &rarr; skor tiap lokasi &rarr; weighted score tertinggi</td><td>Multiple faktor kualitatif + kuantitatif</td></tr>
+            <tr><td><strong>Center of Gravity</strong></td><td>C<sub>x</sub> = &Sigma;(d<sub>ix</sub>&middot;W<sub>i</sub>) / &Sigma;W<sub>i</sub></td><td>Warehouse: minimize jarak distribusi</td></tr>
+            <tr><td><strong>Break-Even</strong></td><td>TC = FC + VC&middot;Q per lokasi, bandingkan</td><td>Perbandingan biaya antar lokasi</td></tr>
+            <tr><td><strong>Transportation Model</strong></td><td>LP: minimize total shipping cost</td><td>Multiple supply points &amp; destinations</td></tr>
+          </tbody></table></div>
+          <h4>6 Tipe Layout (HAFAL):</h4>
+          <div class="tw"><table><thead><tr><th>Layout</th><th>Inti 1 Kalimat</th><th>Contoh</th></tr></thead><tbody>
+            <tr><td><strong>Office</strong></td><td>Aliran informasi, Muther Grid (A/E/I/O/U/X)</td><td>Kantor, co-working</td></tr>
+            <tr><td><strong>Retail</strong></td><td>Maximize profitability per sqft</td><td>Supermarket</td></tr>
+            <tr><td><strong>Warehouse</strong></td><td>Cross-docking, random stocking</td><td>Gudang logistik</td></tr>
+            <tr><td><strong>Fixed-Position</strong></td><td>Produk diam, pekerja datang</td><td>Kapal, jembatan, RS</td></tr>
+            <tr><td><strong>Process-Oriented</strong></td><td>Low vol, high var, mesin dikelompokkan</td><td>Job shop, RS</td></tr>
+            <tr><td><strong>Product-Oriented</strong></td><td>High vol, low var, assembly line</td><td>Pabrik makanan</td></tr>
+          </tbody></table></div>
+          <h4>Studi Kasus FedEx Memphis (HAFAL):</h4>
+          <ul>
+            <li>Central hub system: lebih efisien dari city-to-city (fewer aircraft, reroute flexibility)</li>
+            <li>Alasan Memphis: (1) sentral AS, (2) cuaca stabil, (3) tax incentives Tennessee</li>
+            <li><strong>Industrial</strong> = minimize cost. <strong>Service</strong> = maximize revenue.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PREDIKSI #5: WORK CELL / CAPACITY -->
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">50%</span><strong>Prediksi #5: Work Cell / Capacity Calculation (HITUNGAN)</strong></div>
+        <div class="pred-b">
+          <p><strong>Soal:</strong> Sel kerja N stasiun, beberapa paralel. Operasi X jam/hari, Y hari/minggu, Z minggu/tahun. Hitung kapasitas tahunan.</p>
+          <h4>Langkah Penyelesaian:</h4>
+          <ol>
+            <li><strong>Identifikasi waktu proses setiap stasiun</strong> (dari data soal, dalam menit)</li>
+            <li><strong>Hitung effective time stasiun paralel:</strong> jika 2 mesin paralel &rarr; effective time = waktu mesin / 2</li>
+            <li><strong>Cari bottleneck:</strong> stasiun dengan effective time terlama = cycle time</li>
+            <li><strong>Capacity per jam:</strong> 60 / cycle time (menit)</li>
+            <li><strong>Capacity per tahun:</strong> capacity/jam &times; jam/hari &times; hari/minggu &times; minggu/tahun</li>
+          </ol>
+          <h4>Contoh Perhitungan:</h4>
+          <div class="formula">
+          <strong>Data:</strong> 3 stasiun. St.1: 2 mesin paralel, 10 min/unit. St.2: 8 min. St.3: 6 min.<br>
+          Operasi: 8 jam/hari, 6 hari/minggu, 50 minggu/tahun.<br><br>
+          <strong>Effective time:</strong><br>
+          St.1 = 10/2 = <strong>5 min</strong> (paralel)<br>
+          St.2 = <strong>8 min</strong> &larr; BOTTLENECK<br>
+          St.3 = <strong>6 min</strong><br><br>
+          Cycle time = 8 min (bottleneck)<br>
+          Capacity/jam = 60/8 = <strong>7,5 unit/jam</strong><br>
+          Jam/tahun = 8 &times; 6 &times; 50 = <strong>2.400 jam</strong><br>
+          Capacity/tahun = 7,5 &times; 2.400 = <strong>18.000 unit/tahun</strong>
+          </div>
+          <div class="key">Kunci: SELALU cari bottleneck dulu. Paralel = bagi waktu. Seri = ambil yang terlama.</div>
+        </div>
+      </div>
+
+      <!-- PREDIKSI #6: PRODUCT LIFE CYCLE -->
+      <div class="pred">
+        <div class="pred-h" onclick="this.parentElement.classList.toggle('open')"><span class="arrow">&#9654;</span><span class="prob ph">40%</span><strong>Prediksi #6: Product Life Cycle &amp; Design Strategy</strong></div>
+        <div class="pred-b">
+          <p><strong>Soal:</strong> Jelaskan strategi OM di setiap fase product life cycle. / Bagaimana QFD diterapkan?</p>
+          <h4>4 Fase Product Life Cycle (HAFAL):</h4>
+          <div class="tw"><table><thead><tr><th>Fase</th><th>Ciri</th><th>Strategi OM</th></tr></thead><tbody>
+            <tr><td><strong>Introduction</strong></td><td>Sales rendah, biaya R&amp;D tinggi</td><td>Short production runs, high skill, limited distribution</td></tr>
+            <tr><td><strong>Growth</strong></td><td>Sales naik cepat</td><td>Scale up capacity, forecasting kritis</td></tr>
+            <tr><td><strong>Maturity</strong></td><td>Sales stabil/puncak, kompetitor banyak</td><td>Cost reduction, efisiensi, differensiasi</td></tr>
+            <tr><td><strong>Decline</strong></td><td>Sales turun, produk usang</td><td>Phase out, harvest, ganti produk baru</td></tr>
+          </tbody></table></div>
+          <h4>QFD / House of Quality:</h4>
+          <p>Matriks yang menerjemahkan <strong>WHATs</strong> (customer requirements) menjadi <strong>HOWs</strong> (engineering specifications). Langkah: identifikasi wants &rarr; identifikasi HOWs &rarr; relationship matrix &rarr; competitive assessment &rarr; technical targets.</p>
+          <h4>6 Product Design Issues (HAFAL):</h4>
+          <p><strong>R-M-C-V-S-V:</strong> Robust Design (Taguchi), Modular Design, CAD/CAM, Value Analysis, Sustainability/LCA, Virtual Reality prototyping</p>
         </div>
       </div>
     </div>
@@ -4562,23 +4723,98 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
         </div>
         <div class="soal">
           <div class="soal-q"><strong>#3 (40 poin):</strong> Buat program CSR untuk migas/manufaktur/perbankan.</div>
-          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>Contoh manufaktur semen: reklamasi lahan quarry, pelatihan UMKM, beasiswa, klinik kesehatan gratis. Target terukur.</p></div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p>Contoh: perusahaan manufaktur semen.</p>
+            <ul>
+              <li><strong>Latar belakang:</strong> dampak lingkungan quarry &amp; emisi debu terhadap komunitas sekitar</li>
+              <li><strong>Program:</strong> reklamasi lahan bekas tambang, pelatihan UMKM warga, beasiswa pendidikan, klinik kesehatan gratis</li>
+              <li><strong>Target:</strong> 100% lahan reklamasi dalam 5 tahun, 50 UMKM binaan/tahun, zero community complaint</li>
+            </ul>
+          </div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#4 (30 poin) &mdash; HITUNGAN:</strong> Sel kerja 3 stasiun. Stasiun pertama: 2 mesin paralel (produk hanya diproses di salah satu). Operasi 8 jam/hari, 6 hari/minggu, 50 minggu/tahun. Hitung kapasitas produksi tahunan.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p><strong>Langkah:</strong></p>
+            <ol>
+              <li>Identifikasi waktu proses setiap stasiun (dari data soal)</li>
+              <li><strong>Bottleneck</strong> = stasiun dengan waktu proses terlama &rarr; menentukan cycle time</li>
+              <li>Stasiun 1: 2 mesin paralel &rarr; effective time = waktu mesin / 2</li>
+              <li>Capacity/jam = 60 / cycle time (menit)</li>
+              <li>Capacity/tahun = capacity/jam &times; 8 jam &times; 6 hari &times; 50 minggu</li>
+            </ol>
+            <div class="formula">Jam kerja/tahun = 8 &times; 6 &times; 50 = <strong>2.400 jam</strong><br>Kapasitas = 2.400 &times; (60 / bottleneck time in minutes)</div>
+            <div class="key">Kunci: cari bottleneck dulu. Paralel di stasiun 1 berarti effective capacity stasiun 1 = 2&times; lipat dibanding single machine.</div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">UTS Genap 2024 <span class="badge">Open Book 90m</span></div>
+        <div class="card-header">UTS Genap 2023/2024 <span class="badge">Open Book 90m</span></div>
         <div class="soal">
-          <div class="soal-q"><strong>#1:</strong> Crossover chart (tabel identik). <strong>#2:</strong> Novel Madre &mdash; strategi HR Tansen. <strong>#3:</strong> Slotting fee &mdash; ethical dilemma layout.</div>
-          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>#1: Identik. #2: Labor planning (staf sesuai demand, cross-training, part-time peak) + job design (pembagian tugas, enrichment, empowerment). #3: Slotting fee pro (revenue model) vs kontra (harga naik, barrier UMKM). Perlu regulasi: batas fee, kuota rak produk lokal.</p></div>
+          <div class="soal-q"><strong>#1:</strong> Unisocks kontrak Adidas Adizero 200K pasang. Crossover chart GPE/FMS/DM (tabel identik). Proses terbaik untuk 75K, 275K, 350K.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p>Identik dengan 2023. TC = FC + VC&times;Q.</p>
+            <div class="formula">TC GPE = 1B + 150K&times;Q<br>TC FMS = 2B + 140K&times;Q<br>TC DM = 5B + 130K&times;Q<br><br>Q=200K &rarr; GPE=31B, FMS=<strong>30B (terbaik)</strong>, DM=31B<br>75K&rarr;GPE | 275K&rarr;FMS | 350K&rarr;DM</div>
+          </div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2:</strong> Dari novel &ldquo;Madre&rdquo;, jelaskan strategi Tansen mengelola human capital, khususnya labor planning dan job design.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <ul>
+              <li><strong>Labor planning:</strong> staf sesuai demand, cross-training, part-time saat peak</li>
+              <li><strong>Job design:</strong> pembagian tugas jelas, enrichment (barista juga handle customer complaint), empowerment (keputusan di level pekerja)</li>
+              <li><strong>Motivation:</strong> sense of ownership, profit sharing, mentoring</li>
+            </ul>
+          </div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3:</strong> Pendapat mengenai praktek <em>slotting fee</em> pada penataan layout pasar swalayan (ethical dilemma).</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <ul>
+              <li><strong>Pro:</strong> revenue model bagi retailer, mengelola shelf space yang terbatas secara efisien</li>
+              <li><strong>Kontra:</strong> harga produk naik (biaya dibebankan ke konsumen), barrier UMKM/produk lokal yang tidak mampu bayar fee, mengurangi pilihan konsumen</li>
+              <li><strong>Rekomendasi:</strong> regulasi batas fee, kuota rak untuk produk lokal/UMKM, transparansi biaya</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header">UTS Genap 2025 <span class="badge">Closed Book 90m</span></div>
+        <div class="card-header">UTS Genap 2024/2025 <span class="badge">Closed Book 90m</span></div>
         <div class="soal">
-          <div class="soal-q"><strong>#1:</strong> Crossover chart (tabel identik). <strong>#2:</strong> MBG 5000 siswa DIY &mdash; titik inspeksi &amp; parameter. <strong>#3:</strong> Pariwisata seasonal &mdash; kebijakan staffing.</div>
-          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>#1: Identik. #2: Inspeksi: penerimaan bahan, penyimpanan, memasak, pengemasan, distribusi, penerimaan sekolah. Parameter: suhu, waktu, berat, kebersihan. #3: Core staff baseline + seasonal peak + cross-training + overtime kompensasi + partnership vendor.</p></div>
+          <div class="soal-q"><strong>#1:</strong> Kontrak manufaktur otomotif 200K komponen. Crossover chart GPE/FMS/DM (tabel identik). Proses terbaik untuk 75K, 275K, 350K.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p>Identik. Q=200K &rarr; FMS terbaik (TC=30B). 75K&rarr;GPE, 275K&rarr;FMS, 350K&rarr;DM.</p>
+          </div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#2:</strong> Menang tender MBG 5.000 siswa di DIY. Tentukan titik inspeksi dan parameter yang perlu diinspeksi.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <div class="tw"><table><thead><tr><th>Titik Inspeksi</th><th>Parameter</th></tr></thead><tbody>
+              <tr><td>1. Penerimaan bahan baku (supplier)</td><td>Kesegaran, tanggal kadaluarsa, sertifikat halal, suhu penyimpanan</td></tr>
+              <tr><td>2. Penyimpanan</td><td>Suhu kulkas/freezer, FIFO, kebersihan gudang</td></tr>
+              <tr><td>3. Persiapan/pencucian</td><td>Kebersihan air, sanitasi alat</td></tr>
+              <tr><td>4. Pemasakan</td><td>Suhu masak (&gt;70&deg;C), waktu masak, higienitas petugas</td></tr>
+              <tr><td>5. Pengemasan</td><td>Berat porsi, kelengkapan gizi, kebersihan wadah</td></tr>
+              <tr><td>6. Distribusi</td><td>Suhu selama transit, waktu tempuh, kondisi kendaraan</td></tr>
+              <tr><td>7. Penerimaan di sekolah</td><td>Kondisi makanan saat tiba, waktu penyajian, feedback siswa</td></tr>
+            </tbody></table></div>
+            <div class="key">Mengacu pada 7 titik inspeksi Heizer &amp; Render: from supplier &rarr; receipt &rarr; before costly process &rarr; during production &rarr; completion &rarr; before delivery &rarr; customer contact.</div>
+          </div>
+        </div>
+        <div class="soal">
+          <div class="soal-q"><strong>#3:</strong> Perusahaan jasa pariwisata dengan demand fluktuatif (puncak saat liburan, rendah hari biasa). Kebijakan jumlah karyawan?</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <ul>
+              <li><strong>Core staff (full-time):</strong> baseline demand &rarr; tour guides senior, admin, management</li>
+              <li><strong>Seasonal/contract:</strong> tambahan saat peak season (liburan sekolah, Lebaran, Natal)</li>
+              <li><strong>Cross-training:</strong> admin bisa bantu front desk saat peak</li>
+              <li><strong>Overtime:</strong> dengan kompensasi adil untuk core staff</li>
+              <li><strong>Partnership vendor:</strong> outsource transportasi, catering ke mitra saat peak</li>
+              <li><strong>Demand management:</strong> promo off-peak, paket weekday, early bird discount</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
