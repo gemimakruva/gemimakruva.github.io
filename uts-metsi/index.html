@@ -4714,37 +4714,77 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
       <div class="card">
         <div class="card-header">UTS Gasal 2023/2024 <span class="badge">Open Book 120m</span></div>
         <div class="soal">
-          <div class="soal-q"><strong>#1 (30 poin):</strong> Unisocks kontrak Adidas 200K pasang. Bandingkan GPE/FMS/DM. Proses terbaik untuk 75K, 275K, 350K.</div>
-          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>FMS terbaik untuk 200K (TC=30B). Crossover GPE-FMS=100K, FMS-DM=300K. 75K&rarr;GPE, 275K&rarr;FMS, 350K&rarr;DM.</p></div>
-        </div>
-        <div class="soal">
-          <div class="soal-q"><strong>#2 (30 poin):</strong> Contoh job enrichment, job enlargement, job rotation, job specialization, employee empowerment.</div>
-          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a"><p>Specialization: operator jahit kerah saja. Enlargement: + jahit lengan &amp; badan. Enrichment: + QC &amp; melatih operator baru. Rotation: setiap 3 bulan pindah jahit/cutting/packing. Empowerment: boleh stop lini (andon) jika defect.</p></div>
-        </div>
-        <div class="soal">
-          <div class="soal-q"><strong>#3 (40 poin):</strong> Buat program CSR untuk migas/manufaktur/perbankan.</div>
+          <div class="soal-q"><span class="num">2023 #1</span> <span class="arsip-label">30 poin</span> Unisocks Shoes and Apparel mendapatkan kontrak dari Adidas untuk memproduksi sepatu tipe Ultraboost-20 sebanyak 200.000 pasang dalam waktu 1 tahun. Ada 3 alternatif sistem produksi: general-purpose equipment (GPE), flexible manufacturing system (FMS), dan dedicated machine (DM). (a) Proses manakah yang terbaik dari ketiga alternatif tersebut, apabila diperoleh data struktur biaya dari tabel berikut. (b) Tentukan sistem produksi terbaik apabila kapasitas produksi adalah 75.000, 275.000, dan 350.000 unit per tahun. Data: GPE (FC=Rp 1B, VC=Rp 150K), FMS (FC=Rp 2B, VC=Rp 140K), DM (FC=Rp 5B, VC=Rp 130K).</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Contoh: perusahaan manufaktur semen.</p>
+            <p>Untuk menentukan proses produksi yang terbaik, kita menggunakan analisis <strong>Crossover Chart</strong> dengan menghitung Total Cost (TC) masing-masing alternatif menggunakan rumus TC = FC + (VC &times; Q).</p>
+
+            <p><strong>(a) Perhitungan TC untuk Q = 200.000 unit:</strong></p>
+            <p>TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1.000.000.000 + 30.000.000.000 = Rp 31.000.000.000. TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2.000.000.000 + 28.000.000.000 = Rp 30.000.000.000. TC<sub>DM</sub> = 5.000.000.000 + (130.000 &times; 200.000) = 5.000.000.000 + 26.000.000.000 = Rp 31.000.000.000. Dari ketiga alternatif, <strong>FMS memiliki total cost terendah (Rp 30 miliar)</strong>, sehingga FMS adalah proses yang terbaik untuk memproduksi 200.000 pasang sepatu.</p>
+
+            <p>Untuk memahami rentang volume optimal setiap proses, kita perlu menghitung <strong>crossover points</strong> menggunakan rumus Q = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>):</p>
             <ul>
-              <li><strong>Latar belakang:</strong> dampak lingkungan quarry &amp; emisi debu terhadap komunitas sekitar</li>
-              <li><strong>Program:</strong> reklamasi lahan bekas tambang, pelatihan UMKM warga, beasiswa pendidikan, klinik kesehatan gratis</li>
-              <li><strong>Target:</strong> 100% lahan reklamasi dalam 5 tahun, 50 UMKM binaan/tahun, zero community complaint</li>
+              <li>Crossover GPE&ndash;FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
+              <li>Crossover FMS&ndash;DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
+              <li>Crossover GPE&ndash;DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
             </ul>
+
+            <p><strong>(b) Proses terbaik untuk setiap volume:</strong></p>
+            <p>Untuk Q = 75.000: TC<sub>GPE</sub> = 1B + 11,25B = <strong>Rp 12,25B</strong>, TC<sub>FMS</sub> = 12,5B, TC<sub>DM</sub> = 14,75B. <strong>GPE terbaik</strong> karena pada volume rendah, fixed cost GPE yang paling kecil mendominasi. Untuk Q = 275.000: TC<sub>GPE</sub> = 42,25B, TC<sub>FMS</sub> = <strong>Rp 40,5B</strong>, TC<sub>DM</sub> = 40,75B. <strong>FMS terbaik</strong> karena volume berada di antara crossover GPE-FMS (100K) dan FMS-DM (300K). Untuk Q = 350.000: TC<sub>GPE</sub> = 53,5B, TC<sub>FMS</sub> = 51B, TC<sub>DM</sub> = <strong>Rp 50,5B</strong>. <strong>DM terbaik</strong> karena pada volume tinggi, variable cost DM yang paling rendah (Rp 130K) menghasilkan penghematan terbesar meskipun fixed cost-nya paling tinggi.</p>
+
+            <p><strong>Kesimpulan:</strong> Q &lt; 100.000 &rarr; GPE. 100.000 &le; Q &le; 300.000 &rarr; FMS. Q &gt; 300.000 &rarr; DM. Semakin tinggi volume, semakin menguntungkan menggunakan proses dengan fixed cost tinggi tapi variable cost rendah.</p>
           </div>
         </div>
+
         <div class="soal">
-          <div class="soal-q"><strong>#4 (30 poin) &mdash; HITUNGAN:</strong> Sel kerja 3 stasiun. Stasiun pertama: 2 mesin paralel (produk hanya diproses di salah satu). Operasi 8 jam/hari, 6 hari/minggu, 50 minggu/tahun. Hitung kapasitas produksi tahunan.</div>
+          <div class="soal-q"><span class="num">2023 #2</span> <span class="arsip-label">30 poin</span> Berikanlah contoh mengenai job enrichment, job enlargement, job rotation, job specialization, dan employee empowerment pada suatu perusahaan.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p><strong>Langkah:</strong></p>
-            <ol>
-              <li>Identifikasi waktu proses setiap stasiun (dari data soal)</li>
-              <li><strong>Bottleneck</strong> = stasiun dengan waktu proses terlama &rarr; menentukan cycle time</li>
-              <li>Stasiun 1: 2 mesin paralel &rarr; effective time = waktu mesin / 2</li>
-              <li>Capacity/jam = 60 / cycle time (menit)</li>
-              <li>Capacity/tahun = capacity/jam &times; 8 jam &times; 6 hari &times; 50 minggu</li>
-            </ol>
-            <div class="formula">Jam kerja/tahun = 8 &times; 6 &times; 50 = <strong>2.400 jam</strong><br>Kapasitas = 2.400 &times; (60 / bottleneck time in minutes)</div>
-            <div class="key">Kunci: cari bottleneck dulu. Paralel di stasiun 1 berarti effective capacity stasiun 1 = 2&times; lipat dibanding single machine.</div>
+            <p>Kelima komponen job design menurut Heizer &amp; Render merupakan strategi untuk mengelola tenaga kerja agar produktif sekaligus termotivasi. Berikut penerapannya pada contoh perusahaan garmen:</p>
+
+            <p><strong>1. Job Specialization</strong> adalah pembagian tugas yang sangat spesifik dan berulang. Pada perusahaan garmen, operator A hanya bertugas menjahit kerah kemeja sepanjang hari. Keunggulannya: operator menjadi sangat terampil dan cepat dalam satu tugas. Kelemahannya: monoton dan bisa menurunkan motivasi jangka panjang.</p>
+
+            <p><strong>2. Job Enlargement (horizontal expansion)</strong> adalah menambah variasi tugas pada level yang sama. Operator A yang tadinya hanya jahit kerah, sekarang juga jahit lengan dan badan kemeja. Jumlah tugas bertambah, tetapi level tanggung jawab tetap sama. Tujuannya mengurangi kebosanan akibat specialization yang terlalu sempit.</p>
+
+            <p><strong>3. Job Enrichment (vertical expansion)</strong> adalah menambah tanggung jawab dan otonomi, bukan hanya variasi. Operator A tidak hanya menjahit, tetapi juga melakukan quality control pada hasil jahitannya sendiri, melatih operator baru, dan ikut merancang SOP jahit yang lebih efisien. Ini meningkatkan sense of ownership dan motivasi intrinsik.</p>
+
+            <p><strong>4. Job Rotation</strong> adalah rotasi posisi secara berkala. Operator A setiap 3 bulan dirotasi: bulan 1&ndash;3 di bagian jahit, bulan 4&ndash;6 di bagian cutting, bulan 7&ndash;9 di bagian packing, bulan 10&ndash;12 di bagian QC. Hasilnya: operator memiliki multi-skill, memahami proses end-to-end, dan bisa saling menggantikan saat ada yang absen.</p>
+
+            <p><strong>5. Employee Empowerment</strong> adalah mendelegasikan wewenang keputusan ke level pekerja. Setiap operator garmen diberi wewenang untuk menghentikan lini produksi (sistem andon) jika menemukan defect, tanpa harus menunggu persetujuan supervisor. Operator juga diikutsertakan dalam improvement meeting mingguan. Ini mempercepat respons terhadap masalah dan meningkatkan rasa memiliki terhadap kualitas produk.</p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <div class="soal-q"><span class="num">2023 #3</span> <span class="arsip-label">40 poin</span> Anda diminta untuk membuat program Corporate Social Responsibility di salah satu perusahaan. Buatlah deskripsi program yang anda usulkan meliputi latar belakang program, rencana kegiatan pelaksanaan program, serta target yang ingin dicapai oleh program tersebut. Pilih salah satu dari 3 jenis perusahaan: migas, manufaktur, perbankan.</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p><strong>Program CSR Perusahaan Manufaktur Semen</strong></p>
+
+            <p><strong>Latar Belakang:</strong> Perusahaan semen memiliki dampak lingkungan signifikan: penambangan limestone (quarry) merusak bentang alam, emisi debu dan CO<sub>2</sub> dari proses kiln mempengaruhi kualitas udara, dan getaran blasting mengganggu permukiman sekitar. Di sisi lain, perusahaan menjadi penyerap tenaga kerja terbesar di daerah dan memiliki resources untuk memberikan dampak sosial positif. Program CSR dirancang sebagai bentuk tanggung jawab perusahaan sekaligus menjaga social license to operate.</p>
+
+            <p><strong>Rencana Kegiatan Pelaksanaan:</strong></p>
+            <p>(1) <em>Reklamasi Lahan Bekas Tambang:</em> Setiap area quarry yang sudah tidak digunakan ditanami kembali dengan tanaman lokal dan pohon produksi (jati, sengon). Dilakukan bertahap: tahun 1 penanaman, tahun 2&ndash;3 perawatan, tahun 4&ndash;5 monitoring dan serah terima ke masyarakat. Melibatkan kelompok tani lokal sebagai pelaksana (paid).</p>
+            <p>(2) <em>Pemberdayaan UMKM:</em> Pendampingan 50 UMKM per tahun di desa ring 1 (radius 5 km). Program: pelatihan produksi, packaging, digital marketing, akses modal (kerjasama dengan bank lokal). Target: 30% UMKM binaan menjadi supplier kantin pabrik.</p>
+            <p>(3) <em>Pendidikan:</em> Beasiswa penuh untuk 20 siswa berprestasi dari keluarga tidak mampu di desa ring 1 ke perguruan tinggi teknik. Alumni beasiswa mendapat prioritas rekrutmen di perusahaan.</p>
+            <p>(4) <em>Kesehatan:</em> Klinik kesehatan gratis 2x/bulan di 5 desa ring 1. Pemeriksaan paru-paru gratis untuk warga yang tinggal dekat pabrik (monitoring dampak debu). Mobile clinic dengan dokter umum dan spesialis paru.</p>
+
+            <p><strong>Target:</strong> (1) 100% lahan bekas tambang tereklamasi dalam 5 tahun. (2) 50 UMKM binaan per tahun, 30% menjadi supplier. (3) 20 beasiswa per tahun, 80% lulus tepat waktu. (4) Zero community complaint terkait kesehatan dalam 3 tahun. (5) Peningkatan Community Development Index dari 60 ke 80 (skala 100) dalam 5 tahun.</p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <div class="soal-q"><span class="num">2023 #4</span> <span class="arsip-label">30 poin &bull; Hitungan</span> Suatu perusahaan manufaktur memiliki sistem sel kerja dengan tiga stasiun. Pada stasiun pertama terdapat dua buah mesin yang bekerja secara paralel, di mana produk hanya perlu diproses di salah satu mesin sebelum dilanjutkan dengan proses pada stasiun kedua. Jika perusahaan beroperasi selama 8 jam per hari, 6 hari dalam seminggu, hitunglah kapasitas produksi tahunan dari sistem sel kerja ini (1 tahun = 50 minggu efektif).</div>
+          <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p>Untuk menghitung kapasitas produksi tahunan sel kerja, kita perlu mengidentifikasi <strong>bottleneck</strong> terlebih dahulu, yaitu stasiun dengan waktu proses efektif terlama yang membatasi throughput keseluruhan sistem.</p>
+
+            <p><strong>Langkah 1: Hitung effective time setiap stasiun.</strong> Untuk stasiun dengan mesin paralel, effective time = waktu proses / jumlah mesin, karena kedua mesin dapat memproses produk yang berbeda secara bersamaan. Stasiun 1 memiliki 2 mesin paralel, sehingga jika waktu proses per mesin misalnya T<sub>1</sub> menit, maka effective time Stasiun 1 = T<sub>1</sub>/2 menit. Stasiun 2 dan 3 masing-masing memiliki 1 mesin, sehingga effective time = waktu proses langsung.</p>
+
+            <p><strong>Langkah 2: Identifikasi bottleneck.</strong> Bandingkan effective time ketiga stasiun. Stasiun dengan effective time terlama adalah bottleneck. Bottleneck ini menentukan cycle time seluruh sistem &mdash; tidak peduli seberapa cepat stasiun lain, output maksimum dibatasi oleh stasiun terlambat.</p>
+
+            <p><strong>Langkah 3: Hitung kapasitas per jam.</strong> Kapasitas per jam = 60 menit / cycle time (menit per unit).</p>
+
+            <p><strong>Langkah 4: Hitung total jam kerja per tahun.</strong> Jam kerja/tahun = 8 jam/hari &times; 6 hari/minggu &times; 50 minggu/tahun = <strong>2.400 jam/tahun</strong>.</p>
+
+            <p><strong>Langkah 5: Hitung kapasitas tahunan.</strong> Kapasitas tahunan = kapasitas per jam &times; 2.400 jam.</p>
+
+            <p><em>Catatan: soal asli menyertakan data waktu proses per stasiun dalam gambar yang perlu dimasukkan ke perhitungan di atas. Prinsip kuncinya: selalu cari bottleneck dulu, mesin paralel membagi waktu proses, dan kapasitas sistem = kapasitas bottleneck.</em></p>
           </div>
         </div>
       </div>
@@ -4752,30 +4792,43 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
       <div class="card">
         <div class="card-header">UTS Genap 2023/2024 <span class="badge">Open Book 90m</span></div>
         <div class="soal">
-          <div class="soal-q"><strong>#1:</strong> Unisocks kontrak Adidas Adizero 200K pasang. Crossover chart GPE/FMS/DM (tabel identik). Proses terbaik untuk 75K, 275K, 350K.</div>
+          <div class="soal-q"><span class="num">2024 #1</span> <span class="arsip-label">Hitungan</span> Unisocks Shoes and Apparel mendapatkan kontrak dari Adidas untuk memproduksi sepatu tipe Adizero-Pro sebanyak 200.000 pasang dalam waktu 1 tahun. Ada 3 alternatif sistem produksi: general-purpose equipment (GPE), flexible manufacturing system (FMS), dan dedicated machine (DM). (a) Proses manakah yang terbaik? (b) Tentukan sistem produksi terbaik apabila kapasitas produksi adalah 75.000, 275.000, dan 350.000 unit per tahun. Data: GPE (FC=Rp 1B, VC=Rp 150K), FMS (FC=Rp 2B, VC=Rp 140K), DM (FC=Rp 5B, VC=Rp 130K).</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Identik dengan 2023. TC = FC + VC&times;Q.</p>
-            <div class="formula">TC GPE = 1B + 150K&times;Q<br>TC FMS = 2B + 140K&times;Q<br>TC DM = 5B + 130K&times;Q<br><br>Q=200K &rarr; GPE=31B, FMS=<strong>30B (terbaik)</strong>, DM=31B<br>75K&rarr;GPE | 275K&rarr;FMS | 350K&rarr;DM</div>
+            <p>Soal ini identik dengan 2023 #1 (data biaya sama persis). Analisis menggunakan Crossover Chart dengan rumus TC = FC + (VC &times; Q).</p>
+
+            <p><strong>(a) Perhitungan TC untuk Q = 200.000:</strong> TC<sub>GPE</sub> = 1B + (150K &times; 200K) = Rp 31B. TC<sub>FMS</sub> = 2B + (140K &times; 200K) = Rp 30B. TC<sub>DM</sub> = 5B + (130K &times; 200K) = Rp 31B. <strong>FMS terbaik</strong> dengan total cost terendah Rp 30 miliar.</p>
+
+            <p><strong>Crossover points:</strong> GPE&ndash;FMS = (2B&minus;1B)/(150K&minus;140K) = <strong>100.000 unit</strong>. FMS&ndash;DM = (5B&minus;2B)/(140K&minus;130K) = <strong>300.000 unit</strong>.</p>
+
+            <p><strong>(b)</strong> Q = 75.000 &rarr; <strong>GPE</strong> (TC = Rp 12,25B, paling murah karena volume di bawah crossover 100K). Q = 275.000 &rarr; <strong>FMS</strong> (TC = Rp 40,5B, volume antara crossover 100K dan 300K). Q = 350.000 &rarr; <strong>DM</strong> (TC = Rp 50,5B, volume di atas crossover 300K sehingga VC rendah DM menguntungkan).</p>
+
+            <p><em>Jawaban lengkap: lihat 2023 #1 di atas.</em></p>
           </div>
         </div>
+
         <div class="soal">
-          <div class="soal-q"><strong>#2:</strong> Dari novel &ldquo;Madre&rdquo;, jelaskan strategi Tansen mengelola human capital, khususnya labor planning dan job design.</div>
+          <div class="soal-q"><span class="num">2024 #2</span> <span class="arsip-label">Essay</span> Dari novel &ldquo;Madre&rdquo; karya Dewi Lestari, jelaskan strategi Tansen dalam mengelola human capital di kedai kopi miliknya, khususnya terkait labor planning dan job design.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <ul>
-              <li><strong>Labor planning:</strong> staf sesuai demand, cross-training, part-time saat peak</li>
-              <li><strong>Job design:</strong> pembagian tugas jelas, enrichment (barista juga handle customer complaint), empowerment (keputusan di level pekerja)</li>
-              <li><strong>Motivation:</strong> sense of ownership, profit sharing, mentoring</li>
-            </ul>
+            <p>Novel &ldquo;Madre&rdquo; menggambarkan Tansen sebagai pemilik kedai kopi kecil yang menghadapi tantangan mengelola SDM terbatas agar tetap bisa memberikan layanan berkualitas tinggi. Strategi yang diterapkan dapat dianalisis melalui kerangka Human Resource Strategy dari Heizer &amp; Render.</p>
+
+            <p><strong>Labor Planning:</strong> Tansen menerapkan staffing yang disesuaikan dengan demand (match capacity to demand). Ia memiliki staf inti yang menangani operasional harian, dan merekrut tenaga kerja tambahan (part-time) saat peak hours. Cross-training menjadi kunci: barista tidak hanya membuat kopi, tetapi juga bisa melayani kasir dan menyiapkan makanan. Ini memberikan fleksibilitas penjadwalan sehingga operasi tetap berjalan meskipun ada yang absen.</p>
+
+            <p><strong>Job Design:</strong> Tansen menerapkan beberapa komponen job design secara terintegrasi. <em>Job enrichment:</em> barista tidak hanya meracik kopi, tetapi juga menangani keluhan pelanggan dan memberikan rekomendasi menu &mdash; ini menambah dimensi vertikal (tanggung jawab lebih tinggi). <em>Job enlargement:</em> setiap pekerja menangani beberapa tugas horizontal seperti menyiapkan bahan, membersihkan, dan mengatur display. <em>Employee empowerment:</em> pekerja diberi kebebasan untuk membuat keputusan terkait pelayanan pelanggan tanpa harus menunggu instruksi Tansen, misalnya memberikan free drink jika ada keluhan.</p>
+
+            <p><strong>Motivasi dan Retensi:</strong> Tansen membangun budaya kerja yang mengutamakan sense of ownership. Pekerja merasa memiliki kedai tersebut melalui profit sharing, mentoring langsung dari Tansen, dan lingkungan kerja yang menghargai kreativitas. Ini selaras dengan teori Herzberg bahwa motivasi intrinsik (tanggung jawab, pengakuan, pertumbuhan) lebih efektif daripada hanya mengandalkan gaji.</p>
           </div>
         </div>
+
         <div class="soal">
-          <div class="soal-q"><strong>#3:</strong> Pendapat mengenai praktek <em>slotting fee</em> pada penataan layout pasar swalayan (ethical dilemma).</div>
+          <div class="soal-q"><span class="num">2024 #3</span> <span class="arsip-label">Essay</span> Berikan pendapat Anda mengenai praktek <em>slotting fee</em> (biaya penempatan produk di rak tertentu) pada penataan layout pasar swalayan. Analisis dari perspektif operations management.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <ul>
-              <li><strong>Pro:</strong> revenue model bagi retailer, mengelola shelf space yang terbatas secara efisien</li>
-              <li><strong>Kontra:</strong> harga produk naik (biaya dibebankan ke konsumen), barrier UMKM/produk lokal yang tidak mampu bayar fee, mengurangi pilihan konsumen</li>
-              <li><strong>Rekomendasi:</strong> regulasi batas fee, kuota rak untuk produk lokal/UMKM, transparansi biaya</li>
-            </ul>
+            <p>Slotting fee adalah biaya yang dibebankan retailer kepada produsen/supplier agar produknya ditempatkan di lokasi rak strategis (eye-level, dekat kasir, ujung lorong/endcap). Dari perspektif operations management, praktik ini memiliki dua sisi yang perlu dianalisis secara kritis.</p>
+
+            <p><strong>Argumen Pro (Perspektif Retailer):</strong> Slotting fee merupakan mekanisme alokasi shelf space yang terbatas secara efisien. Swalayan modern memiliki ribuan SKU yang bersaing untuk rak terbatas, sehingga fee berfungsi sebagai sinyal pasar &mdash; produsen yang yakin produknya laku bersedia membayar lebih untuk lokasi premium. Fee ini juga menjadi revenue stream tambahan bagi retailer yang margin-nya tipis (1&ndash;3% net profit). Dari sisi layout strategy, slotting fee mendorong retailer untuk mengoptimalkan <strong>retail layout</strong> berdasarkan data penjualan, sehingga produk high-demand berada di posisi yang memaksimalkan impulse buying dan customer flow.</p>
+
+            <p><strong>Argumen Kontra (Perspektif Konsumen &amp; UMKM):</strong> Biaya slotting fee pada akhirnya dibebankan ke harga jual produk, sehingga konsumen membayar lebih mahal. Lebih kritis, praktik ini menjadi barrier to entry bagi produk UMKM dan merek lokal yang tidak mampu membayar fee jutaan rupiah per SKU per toko. Akibatnya, pilihan konsumen menyempit &mdash; yang terlihat di rak hanya produk dari perusahaan besar yang mampu bayar. Ini bertentangan dengan prinsip <strong>fair competition</strong> dan mengurangi consumer welfare.</p>
+
+            <p><strong>Rekomendasi:</strong> (1) Regulasi pemerintah untuk membatasi persentase slotting fee terhadap harga produk. (2) Kewajiban kuota rak 20&ndash;30% untuk produk UMKM/lokal tanpa fee (seperti yang sudah diterapkan beberapa daerah). (3) Transparansi: retailer wajib mengungkapkan struktur fee kepada konsumen. (4) Alternatif model: performance-based fee &mdash; produsen hanya membayar jika produknya benar-benar terjual, bukan pay-to-play. Ini lebih adil dan mendorong produsen fokus pada kualitas produk, bukan kemampuan finansial untuk membayar rak.</p>
           </div>
         </div>
       </div>
@@ -4783,40 +4836,238 @@ y<sub>2,j</sub> = y<sub>2,j-1</sub> + a<sub>2,j-1</sub>&middot;&Delta;T &nbsp; |
       <div class="card">
         <div class="card-header">UTS Genap 2024/2025 <span class="badge">Closed Book 90m</span></div>
         <div class="soal">
-          <div class="soal-q"><strong>#1:</strong> Kontrak manufaktur otomotif 200K komponen. Crossover chart GPE/FMS/DM (tabel identik). Proses terbaik untuk 75K, 275K, 350K.</div>
+          <div class="soal-q"><span class="num">2025 #1</span> <span class="arsip-label">Hitungan</span> Sebuah perusahaan manufaktur otomotif mendapatkan kontrak untuk memproduksi 200.000 komponen per tahun. Ada 3 alternatif sistem produksi: general-purpose equipment (GPE), flexible manufacturing system (FMS), dan dedicated machine (DM). (a) Tentukan proses yang terbaik. (b) Tentukan proses terbaik jika kapasitas 75.000, 275.000, dan 350.000 unit/tahun. Data: GPE (FC=Rp 1B, VC=Rp 150K), FMS (FC=Rp 2B, VC=Rp 140K), DM (FC=Rp 5B, VC=Rp 130K).</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <p>Identik. Q=200K &rarr; FMS terbaik (TC=30B). 75K&rarr;GPE, 275K&rarr;FMS, 350K&rarr;DM.</p>
+            <p>Soal Crossover Chart identik 3 tahun berturut-turut (2023, 2024, 2025) dengan data biaya yang sama persis. Ini menunjukkan dosen sangat menekankan pemahaman konsep process strategy ini.</p>
+
+            <p><strong>(a)</strong> Untuk Q = 200.000: TC<sub>GPE</sub> = 1B + 30B = Rp 31B. TC<sub>FMS</sub> = 2B + 28B = <strong>Rp 30B (TERBAIK)</strong>. TC<sub>DM</sub> = 5B + 26B = Rp 31B. FMS dipilih karena pada volume 200K, keseimbangan antara fixed cost dan variable cost FMS menghasilkan total cost terendah.</p>
+
+            <p><strong>Crossover points:</strong> GPE&ndash;FMS di Q = 100.000. FMS&ndash;DM di Q = 300.000. GPE&ndash;DM di Q = 200.000.</p>
+
+            <p><strong>(b)</strong> 75.000 &rarr; <strong>GPE</strong> (di bawah crossover 100K; FC rendah mendominasi). 275.000 &rarr; <strong>FMS</strong> (di antara 100K&ndash;300K; balance terbaik). 350.000 &rarr; <strong>DM</strong> (di atas crossover 300K; VC paling rendah menguntungkan di volume tinggi).</p>
+
+            <p><em>Karena soal ini pasti muncul di UTS 2026 dengan data yang kemungkinan sama, pastikan hafal rumus TC = FC + VC&times;Q dan Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>). Jawaban lengkap: lihat 2023 #1.</em></p>
           </div>
         </div>
+
         <div class="soal">
-          <div class="soal-q"><strong>#2:</strong> Menang tender MBG 5.000 siswa di DIY. Tentukan titik inspeksi dan parameter yang perlu diinspeksi.</div>
+          <div class="soal-q"><span class="num">2025 #2</span> <span class="arsip-label">Essay</span> Anda memenangkan tender program Makan Bergizi Gratis (MBG) untuk menyediakan makanan bergizi kepada 5.000 siswa di Daerah Istimewa Yogyakarta setiap hari. Tentukan titik-titik inspeksi yang diperlukan beserta parameter yang perlu diinspeksi pada setiap titik.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
-            <div class="tw"><table><thead><tr><th>Titik Inspeksi</th><th>Parameter</th></tr></thead><tbody>
-              <tr><td>1. Penerimaan bahan baku (supplier)</td><td>Kesegaran, tanggal kadaluarsa, sertifikat halal, suhu penyimpanan</td></tr>
-              <tr><td>2. Penyimpanan</td><td>Suhu kulkas/freezer, FIFO, kebersihan gudang</td></tr>
-              <tr><td>3. Persiapan/pencucian</td><td>Kebersihan air, sanitasi alat</td></tr>
-              <tr><td>4. Pemasakan</td><td>Suhu masak (&gt;70&deg;C), waktu masak, higienitas petugas</td></tr>
-              <tr><td>5. Pengemasan</td><td>Berat porsi, kelengkapan gizi, kebersihan wadah</td></tr>
-              <tr><td>6. Distribusi</td><td>Suhu selama transit, waktu tempuh, kondisi kendaraan</td></tr>
-              <tr><td>7. Penerimaan di sekolah</td><td>Kondisi makanan saat tiba, waktu penyajian, feedback siswa</td></tr>
+            <p>Untuk menjamin kualitas dan keamanan makanan bergizi yang didistribusikan ke 5.000 siswa setiap hari, kita perlu menerapkan <strong>7 titik inspeksi</strong> menurut Heizer &amp; Render. Setiap titik berfungsi sebagai gatekeeper untuk mencegah produk cacat atau tidak aman lolos ke tahap berikutnya.</p>
+
+            <div class="tw"><table><thead><tr><th>#</th><th>Titik Inspeksi</th><th>Parameter yang Diinspeksi</th><th>Metode</th></tr></thead><tbody>
+              <tr><td>1</td><td><strong>Di pabrik/gudang supplier</strong> (saat bahan diproduksi)</td><td>Sertifikat halal MUI, izin BPOM, hasil uji laboratorium mikrobiologi, standar SNI</td><td>Audit supplier berkala (2x/tahun)</td></tr>
+              <tr><td>2</td><td><strong>Penerimaan bahan baku</strong> di dapur produksi</td><td>Kesegaran visual (warna, tekstur, bau), suhu saat datang (daging &lt;4&deg;C, frozen &lt;&minus;18&deg;C), tanggal kadaluarsa, kesesuaian PO (jumlah, jenis, berat)</td><td>Inspeksi fisik + termometer probe</td></tr>
+              <tr><td>3</td><td><strong>Penyimpanan &amp; persiapan</strong> (sebelum proses mahal/irreversible)</td><td>Suhu penyimpanan (kulkas 2&ndash;4&deg;C, freezer &le;&minus;18&deg;C), prinsip FIFO, kebersihan alat masak, sanitasi pekerja (sarung tangan, hairnet, masker)</td><td>Checklist harian + swab test alat</td></tr>
+              <tr><td>4</td><td><strong>Selama pemasakan</strong> (proses produksi)</td><td>Suhu inti masakan &gt;70&deg;C (pasteurisasi), waktu masak sesuai SOP, higienitas petugas, cross-contamination prevention</td><td>Termometer probe + timer + sampling rasa</td></tr>
+              <tr><td>5</td><td><strong>Setelah masak selesai</strong> (completion)</td><td>Berat porsi (standar gizi Kemenkes: karbohidrat, protein, sayur seimbang), kelengkapan komponen menu, visual plating, suhu &gt;60&deg;C saat packing</td><td>Timbangan digital + checklist menu</td></tr>
+              <tr><td>6</td><td><strong>Distribusi ke sekolah</strong> (before delivery)</td><td>Seal kemasan utuh, label (tanggal produksi, komposisi, kadaluarsa), suhu transit (thermal box/insulated), waktu tempuh &le;2 jam dari produksi</td><td>GPS tracking + temperature logger</td></tr>
+              <tr><td>7</td><td><strong>Penerimaan di sekolah</strong> (customer contact)</td><td>Kondisi makanan saat tiba (suhu, visual, bau), waktu penyajian &le;4 jam dari produksi, feedback siswa dan guru, dokumentasi foto</td><td>Form penerimaan + survey kepuasan</td></tr>
             </tbody></table></div>
-            <div class="key">Mengacu pada 7 titik inspeksi Heizer &amp; Render: from supplier &rarr; receipt &rarr; before costly process &rarr; during production &rarr; completion &rarr; before delivery &rarr; customer contact.</div>
+
+            <p><strong>Prinsip kunci:</strong> Inspeksi bukan hanya di akhir, tetapi di <em>setiap tahap kritis</em> (from source to consumer). Lebih baik menangkap masalah di titik 2 (bahan baku ditolak) daripada di titik 7 (makanan sudah sampai ke siswa). Prevention selalu lebih murah daripada failure &mdash; sesuai konsep Cost of Quality.</p>
           </div>
         </div>
+
         <div class="soal">
-          <div class="soal-q"><strong>#3:</strong> Perusahaan jasa pariwisata dengan demand fluktuatif (puncak saat liburan, rendah hari biasa). Kebijakan jumlah karyawan?</div>
+          <div class="soal-q"><span class="num">2025 #3</span> <span class="arsip-label">Essay</span> Anda mengelola perusahaan jasa pariwisata di Yogyakarta yang mengalami fluktuasi demand tinggi (puncak saat liburan sekolah, Lebaran, Natal/tahun baru, dan rendah di hari biasa). Jelaskan kebijakan employment-stability yang sebaiknya diterapkan untuk mengelola jumlah karyawan.</div>
           <button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+            <p>Perusahaan jasa pariwisata menghadapi tantangan utama: demand bersifat <strong>seasonal dan tidak bisa disimpan</strong> (jasa tidak bisa di-inventori). Menurut Heizer &amp; Render, ada 3 kebijakan employment-stability yang bisa dikombinasikan:</p>
+
+            <p><strong>1. Follow Demand Exactly (Chase Strategy):</strong> Jumlah karyawan mengikuti persis fluktuasi demand. Saat peak season (libur sekolah, Lebaran, Natal), merekrut temporary staff. Saat low season, mengurangi. <em>Kelebihan:</em> biaya tenaga kerja efisien. <em>Kekurangan:</em> biaya hiring/firing tinggi, kualitas layanan tidak konsisten karena staf baru kurang terlatih. Untuk pariwisata Yogyakarta, strategi ini riskan karena kualitas layanan tour guide sangat bergantung pada pengalaman.</p>
+
+            <p><strong>2. Hold Employment Constant (Level Strategy):</strong> Mempertahankan jumlah karyawan tetap sepanjang tahun berdasarkan rata-rata demand. Saat low season, karyawan melakukan pekerjaan lain (training, maintenance, content marketing). <em>Kelebihan:</em> kualitas konsisten, moral tinggi, investasi training tidak terbuang. <em>Kekurangan:</em> biaya tetap tinggi saat low season, risiko understaff saat peak.</p>
+
+            <p><strong>3. Strategi Hybrid (Rekomendasi):</strong> Kombinasi terbaik untuk pariwisata Yogyakarta:</p>
             <ul>
-              <li><strong>Core staff (full-time):</strong> baseline demand &rarr; tour guides senior, admin, management</li>
-              <li><strong>Seasonal/contract:</strong> tambahan saat peak season (liburan sekolah, Lebaran, Natal)</li>
-              <li><strong>Cross-training:</strong> admin bisa bantu front desk saat peak</li>
-              <li><strong>Overtime:</strong> dengan kompensasi adil untuk core staff</li>
-              <li><strong>Partnership vendor:</strong> outsource transportasi, catering ke mitra saat peak</li>
-              <li><strong>Demand management:</strong> promo off-peak, paket weekday, early bird discount</li>
+              <li><strong>Core staff (full-time):</strong> Tour guide senior, driver, admin, management. Dipertahankan sepanjang tahun karena mereka adalah aset utama yang sulit diganti. Di low season, mereka fokus pada training, developing new tour packages, dan digital marketing.</li>
+              <li><strong>Seasonal/contract staff:</strong> Tour guide junior dan helper tambahan direkrut 1 bulan sebelum peak season. Kontrak 3&ndash;4 bulan. Harus sudah di-training oleh core staff sebelum peak dimulai.</li>
+              <li><strong>Cross-training:</strong> Staff admin di-cross-train agar bisa membantu front desk dan customer service saat peak. Ini meningkatkan fleksibilitas tanpa menambah headcount.</li>
+              <li><strong>Overtime dengan kompensasi adil:</strong> Core staff bekerja overtime saat peak dengan kompensasi 1,5&ndash;2x upah normal. Lebih murah daripada merekrut orang baru.</li>
+              <li><strong>Partnership vendor:</strong> Outsource fungsi non-core ke mitra: transportasi (sewa bus/mobil), catering, akomodasi. Kapasitas mereka elastis tanpa menambah fixed cost kita.</li>
+              <li><strong>Demand management:</strong> Alih-alih hanya menyesuaikan supply, kelola juga demand. Tawarkan promo off-peak (paket weekday murah, early bird discount), paket khusus corporate training di hari biasa, dan event-based tour saat low season untuk meratakan demand sepanjang tahun.</li>
             </ul>
+
+            <p><strong>Kesimpulan:</strong> Kunci employment-stability di industri jasa pariwisata adalah menjaga core team yang berkualitas sebagai fondasi, lalu menggunakan mekanisme fleksibel (seasonal hire, cross-training, vendor, overtime) untuk mengakomodasi fluktuasi. Ditambah demand management untuk mengurangi gap antara peak dan off-peak.</p>
           </div>
         </div>
       </div>
+
+      <h3 style="margin-top:2.5rem">Soal Prediksi UTS MAN-OP 2026 (Closed Book, 90 menit)</h3>
+      <p style="color:var(--fg-muted);font-size:.88rem">6 soal prediksi berdasarkan pola 3 tahun terakhir. Jawaban ditulis lengkap dalam format essay untuk persiapan closed book.</p>
+
+      <!-- PREDIKSI SOAL #1: CROSSOVER CHART -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #1</span> <span class="arsip-label">Hitungan &bull; 30 poin</span> PT Metalindo mendapatkan kontrak dari sebuah pabrikan otomotif untuk memproduksi bracket suspensi sebanyak 200.000 unit dalam 1 tahun. Ada 3 alternatif sistem produksi: GPE, FMS, dan DM. (a) Proses mana yang terbaik berdasarkan data biaya di bawah? (b) Tentukan proses terbaik jika kapasitas 75.000, 275.000, dan 350.000 unit/tahun. (c) Gambarkan crossover chart dan tentukan titik perpotongannya.
+        <div class="tw" style="margin-top:.5rem"><table><thead><tr><th></th><th>GPE</th><th>FMS</th><th>DM</th></tr></thead><tbody>
+          <tr><td>Annual contracted unit</td><td>200.000</td><td>200.000</td><td>200.000</td></tr>
+          <tr><td>Annual fixed cost</td><td>Rp 1.000.000.000</td><td>Rp 2.000.000.000</td><td>Rp 5.000.000.000</td></tr>
+          <tr><td>Per unit variable cost</td><td>Rp 150.000</td><td>Rp 140.000</td><td>Rp 130.000</td></tr>
+        </tbody></table></div>
+      </div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Proses terbaik untuk Q = 200.000</h4>
+        <p>Menggunakan rumus <strong>TC = FC + (VC &times; Q)</strong>:</p>
+        <ul>
+          <li>TC<sub>GPE</sub> = 1.000.000.000 + (150.000 &times; 200.000) = 1.000.000.000 + 30.000.000.000 = <strong>Rp 31.000.000.000</strong></li>
+          <li>TC<sub>FMS</sub> = 2.000.000.000 + (140.000 &times; 200.000) = 2.000.000.000 + 28.000.000.000 = <strong>Rp 30.000.000.000</strong></li>
+          <li>TC<sub>DM</sub> = 5.000.000.000 + (130.000 &times; 200.000) = 5.000.000.000 + 26.000.000.000 = <strong>Rp 31.000.000.000</strong></li>
+        </ul>
+        <p><strong>Jawaban: FMS adalah proses terbaik</strong> karena memiliki total cost terendah (Rp 30 miliar).</p>
+
+        <h4>(b) Proses terbaik untuk setiap volume</h4>
+        <div class="tw"><table><thead><tr><th>Volume</th><th>TC GPE</th><th>TC FMS</th><th>TC DM</th><th>Terbaik</th></tr></thead><tbody>
+          <tr><td>75.000</td><td>1B + 11,25B = <strong>12,25B</strong></td><td>2B + 10,5B = 12,5B</td><td>5B + 9,75B = 14,75B</td><td><strong>GPE</strong></td></tr>
+          <tr><td>275.000</td><td>1B + 41,25B = 42,25B</td><td>2B + 38,5B = <strong>40,5B</strong></td><td>5B + 35,75B = 40,75B</td><td><strong>FMS</strong></td></tr>
+          <tr><td>350.000</td><td>1B + 52,5B = 53,5B</td><td>2B + 49B = 51B</td><td>5B + 45,5B = <strong>50,5B</strong></td><td><strong>DM</strong></td></tr>
+        </tbody></table></div>
+
+        <h4>(c) Crossover Points</h4>
+        <p>Rumus: <strong>Q<sub>crossover</sub> = (FC<sub>B</sub> &minus; FC<sub>A</sub>) / (VC<sub>A</sub> &minus; VC<sub>B</sub>)</strong></p>
+        <ul>
+          <li>GPE &harr; FMS: (2B &minus; 1B) / (150K &minus; 140K) = 1.000.000.000 / 10.000 = <strong>100.000 unit</strong></li>
+          <li>FMS &harr; DM: (5B &minus; 2B) / (140K &minus; 130K) = 3.000.000.000 / 10.000 = <strong>300.000 unit</strong></li>
+          <li>GPE &harr; DM: (5B &minus; 1B) / (150K &minus; 130K) = 4.000.000.000 / 20.000 = <strong>200.000 unit</strong></li>
+        </ul>
+        <p><strong>Kesimpulan:</strong> Q &lt; 100.000 &rarr; GPE (FC rendah cocok volume kecil). 100.000 &le; Q &le; 300.000 &rarr; FMS (balance FC dan VC). Q &gt; 300.000 &rarr; DM (VC rendah ter-justify di volume besar).</p>
+        <p><em>Crossover chart: sumbu X = volume produksi, sumbu Y = total cost. Tiga garis linear berpotongan di Q = 100K dan Q = 300K. Area di bawah (paling murah) bergantian: GPE &rarr; FMS &rarr; DM.</em></p>
+      </div></div>
+
+      <!-- PREDIKSI SOAL #2: HR & JOB DESIGN -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #2</span> <span class="arsip-label">Essay &bull; 30 poin</span> Anda mengelola sebuah perusahaan startup teknologi yang berkembang pesat. Jumlah karyawan bertambah dari 20 menjadi 150 orang dalam 2 tahun. Jelaskan penerapan 5 komponen job design untuk menjaga produktivitas dan motivasi karyawan. Sertakan contoh konkret untuk setiap komponen.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <p>Lima komponen job design menurut Heizer &amp; Render perlu diterapkan secara holistik dalam perusahaan startup yang tumbuh cepat:</p>
+
+        <p><strong>1. Job Specialization</strong> &mdash; Pembagian tugas spesifik dan berulang untuk efisiensi. Pada startup yang berkembang, spesialisasi menjadi kebutuhan. Contoh: tim engineering dibagi menjadi backend developer, frontend developer, dan DevOps engineer. Masing-masing fokus pada domain keahliannya sehingga output lebih berkualitas dan waktu delivery lebih cepat.</p>
+
+        <p><strong>2. Job Enlargement (horizontal expansion)</strong> &mdash; Menambah variasi tugas pada level yang sama untuk mengurangi kebosanan. Contoh: customer support agent tidak hanya menjawab tiket, tetapi juga menulis FAQ, membuat tutorial video, dan menganalisis tren keluhan. Variasi ini membuat pekerjaan lebih menarik tanpa menambah beban tanggung jawab.</p>
+
+        <p><strong>3. Job Enrichment (vertical expansion)</strong> &mdash; Menambah tanggung jawab, otonomi, dan kesempatan pengembangan diri. Contoh: senior developer diberi wewenang untuk merancang arsitektur fitur baru, melakukan code review, dan mentoring junior developer. Ini meningkatkan sense of ownership dan motivasi intrinsik.</p>
+
+        <p><strong>4. Job Rotation</strong> &mdash; Rotasi antar posisi secara berkala untuk mengembangkan multi-skill. Contoh: management trainee dirotasi setiap 3 bulan ke divisi marketing, product, operations, dan finance. Hasilnya: pemahaman bisnis holistik dan cross-functional collaboration lebih baik.</p>
+
+        <p><strong>5. Employee Empowerment</strong> &mdash; Mendelegasikan wewenang pengambilan keputusan kepada level pekerja. Contoh: setiap engineer diberi budget Rp 5 juta/bulan untuk tools dan learning tanpa approval manager. Tim product boleh langsung release fitur minor tanpa menunggu approval C-level. Ini mempercepat decision-making dan meningkatkan rasa tanggung jawab.</p>
+
+        <p><strong>Kesimpulan:</strong> Kelima komponen saling melengkapi. Specialization menjaga efisiensi, enlargement dan enrichment menjaga motivasi, rotation membangun versatility, dan empowerment mempercepat organisasi. Dalam konteks startup yang tumbuh cepat, kombinasi kelimanya mencegah bureaucratic bloat yang sering terjadi saat scaling.</p>
+      </div></div>
+
+      <!-- PREDIKSI SOAL #3: QUALITY & INSPECTION -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #3</span> <span class="arsip-label">Essay &bull; 30 poin</span> PT Nusantara Food mendapat kontrak memproduksi 10.000 paket makanan siap saji per hari untuk distribusi ke minimarket seluruh Jawa. (a) Tentukan titik-titik inspeksi yang diperlukan beserta parameter yang diukur. (b) Jelaskan 4 tipe Cost of Quality yang relevan. (c) Konsep TQM apa yang sebaiknya diterapkan?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Titik Inspeksi dan Parameter</h4>
+        <p>Mengacu pada 7 titik inspeksi Heizer &amp; Render, diterapkan pada produksi makanan siap saji:</p>
+        <div class="tw"><table><thead><tr><th>#</th><th>Titik Inspeksi</th><th>Parameter</th></tr></thead><tbody>
+          <tr><td>1</td><td><strong>Di pabrik supplier</strong> (saat bahan baku diproduksi)</td><td>Sertifikat halal, hasil lab mikrobiologi, standar BPOM</td></tr>
+          <tr><td>2</td><td><strong>Penerimaan bahan baku</strong> di fasilitas kita</td><td>Kesegaran (visual, bau), suhu saat datang, tanggal kadaluarsa, berat/volume sesuai PO</td></tr>
+          <tr><td>3</td><td><strong>Sebelum proses pemasakan</strong> (proses mahal/irreversible)</td><td>Kebersihan alat, sanitasi pekerja (sarung tangan, hairnet), suhu minyak/air</td></tr>
+          <tr><td>4</td><td><strong>Selama proses produksi</strong> step-by-step</td><td>Suhu masak (&gt;70&deg;C core temperature), waktu masak, konsistensi rasa (sampling)</td></tr>
+          <tr><td>5</td><td><strong>Setelah produksi selesai</strong></td><td>Berat porsi (standar &plusmn;5%), kelengkapan komponen, visual plating</td></tr>
+          <tr><td>6</td><td><strong>Sebelum distribusi</strong></td><td>Seal packaging utuh, label lengkap (expired, komposisi, halal), suhu cold chain</td></tr>
+          <tr><td>7</td><td><strong>Di titik kontak customer</strong> (minimarket)</td><td>Suhu display chiller, visual saat diterima, feedback konsumen, tracking expired</td></tr>
+        </tbody></table></div>
+
+        <h4>(b) 4 Tipe Cost of Quality</h4>
+        <p>Diterapkan pada konteks produksi makanan:</p>
+        <ul>
+          <li><strong>Prevention costs:</strong> Biaya mencegah defect sebelum terjadi. Contoh: training food handler (Rp 50 juta/tahun), program HACCP, SOP kebersihan, maintenance mesin berkala. <em>Investasi di sini mengurangi 3 biaya lainnya.</em></li>
+          <li><strong>Appraisal costs:</strong> Biaya evaluasi dan inspeksi. Contoh: gaji QC inspector (3 orang), biaya lab uji mikrobiologi (Rp 500K/sampel), termometer probe, timbangan digital.</li>
+          <li><strong>Internal failure costs:</strong> Defect ditemukan sebelum sampai customer. Contoh: batch makanan yang gagal rasa harus dibuang (scrap), nasi yang kurang matang harus dimasak ulang (rework), downtime saat mesin packaging rusak.</li>
+          <li><strong>External failure costs:</strong> Defect ditemukan setelah sampai customer. Contoh: recall produk karena kontaminasi (biaya logistik + penggantian), kehilangan kontrak minimarket (lost goodwill), tuntutan hukum jika konsumen sakit (liability). <em>Ini biaya termahal dan paling merusak reputasi.</em></li>
+        </ul>
+
+        <h4>(c) Konsep TQM yang Diterapkan</h4>
+        <ul>
+          <li><strong>Continuous Improvement (PDCA):</strong> Plan (target zero waste 5%), Do (implementasi SOP baru), Check (audit mingguan), Act (perbaiki SOP). Siklus terus berulang.</li>
+          <li><strong>Six Sigma (DMAIC):</strong> Define (masalah: 3% reject rate), Measure (data harian), Analyze (root cause: suhu tidak konsisten), Improve (pasang thermostat otomatis), Control (monitoring dashboard).</li>
+          <li><strong>Employee Empowerment:</strong> Setiap pekerja di lini produksi berhak menghentikan lini jika menemukan kontaminasi &mdash; tanpa menunggu approval supervisor.</li>
+          <li><strong>Benchmarking:</strong> Bandingkan reject rate dengan industri makanan siap saji terbaik (benchmark: &lt;1%).</li>
+          <li><strong>Just-in-Time:</strong> Bahan baku dikirim harian oleh supplier, zero raw material inventory &rarr; selalu segar, zero waste.</li>
+        </ul>
+      </div></div>
+
+      <!-- PREDIKSI SOAL #4: LOCATION / LAYOUT -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #4</span> <span class="arsip-label">Essay &bull; 30 poin</span> Sebuah perusahaan logistik e-commerce ingin membuka gudang distribusi baru di Pulau Jawa. (a) Jelaskan faktor-faktor yang mempengaruhi keputusan lokasi pada 3 level (country, region, site). (b) Metode analisis lokasi apa yang paling sesuai? Jelaskan. (c) Tipe layout apa yang optimal untuk gudang distribusi e-commerce? Jelaskan alasannya.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Faktor Keputusan Lokasi 3 Level</h4>
+        <p>Karena sudah ditentukan di Indonesia (Jawa), keputusan dimulai dari level region:</p>
+        <div class="tw"><table><thead><tr><th>Level</th><th>Faktor</th><th>Aplikasi</th></tr></thead><tbody>
+          <tr><td><strong>Country</strong></td><td>Political risk, regulasi, labor, market proximity</td><td>Indonesia dipilih karena pasar domestik e-commerce terbesar di Asia Tenggara, regulasi mendukung (BKPM), labor cost kompetitif</td></tr>
+          <tr><td><strong>Region</strong></td><td>Labor availability, infrastruktur, insentif pemerintah, proximity to market</td><td>Jawa Tengah/Jawa Timur: upah lebih rendah dari Jabodetabek, akses tol trans-Jawa, KEK/kawasan industri, dekat populasi 150 juta jiwa</td></tr>
+          <tr><td><strong>Site</strong></td><td>Land cost, akses jalan, zoning, utilitas</td><td>Dekat exit tol, zona industri/pergudangan, listrik &amp; air memadai, lahan datar minimal 5.000 m&sup2;</td></tr>
+        </tbody></table></div>
+
+        <h4>(b) Metode Analisis Lokasi</h4>
+        <p>Untuk gudang distribusi e-commerce, metode paling sesuai adalah <strong>Center of Gravity Method</strong>:</p>
+        <div class="formula">C<sub>x</sub> = &Sigma;(d<sub>ix</sub> &times; W<sub>i</sub>) / &Sigma;W<sub>i</sub> &emsp;&emsp; C<sub>y</sub> = &Sigma;(d<sub>iy</sub> &times; W<sub>i</sub>) / &Sigma;W<sub>i</sub></div>
+        <p>Dimana d<sub>i</sub> = koordinat kota tujuan, W<sub>i</sub> = volume pengiriman ke kota tersebut. Metode ini meminimasi total jarak distribusi berbobot. Cocok karena gudang e-commerce melayani banyak titik tujuan dengan volume berbeda.</p>
+        <p>Alternatif: <strong>Factor Rating Method</strong> jika faktor kualitatif (keamanan, ketersediaan tenaga kerja, infrastruktur digital) juga perlu dipertimbangkan secara bersamaan.</p>
+
+        <h4>(c) Tipe Layout Optimal</h4>
+        <p><strong>Warehouse Layout</strong> dengan penerapan:</p>
+        <ul>
+          <li><strong>Cross-docking:</strong> Barang dari supplier langsung disortir dan dikirim ke customer tanpa penyimpanan. Ideal untuk barang fast-moving (elektronik, fashion). Mengurangi handling cost dan waktu delivery.</li>
+          <li><strong>Random stocking:</strong> Barang disimpan di lokasi mana saja yang tersedia, dilacak oleh Warehouse Management System (WMS). Mengoptimalkan penggunaan ruang dibanding fixed-location.</li>
+          <li><strong>Customizing:</strong> Gudang bukan hanya menyimpan, tapi juga menambah value: labeling, bundling, gift wrapping, quality check. Ini yang membedakan gudang e-commerce dari gudang konvensional.</li>
+        </ul>
+        <p>Objective warehouse layout: <strong>optimum trade-off antara handling cost dan warehouse space cost</strong>. Semakin cepat barang bergerak (throughput tinggi), semakin rendah biaya penyimpanan per unit.</p>
+      </div></div>
+
+      <!-- PREDIKSI SOAL #5: WORK CELL CAPACITY -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #5</span> <span class="arsip-label">Hitungan &bull; 30 poin</span> Sebuah pabrik komponen elektronik memiliki sel kerja dengan 4 stasiun. Stasiun 1 memiliki 3 mesin paralel (waktu proses 12 menit/unit). Stasiun 2 memiliki 1 mesin (waktu proses 5 menit/unit). Stasiun 3 memiliki 2 mesin paralel (waktu proses 8 menit/unit). Stasiun 4 memiliki 1 mesin (waktu proses 3 menit/unit). Pabrik beroperasi 8 jam/hari, 5 hari/minggu, 50 minggu/tahun. (a) Tentukan bottleneck. (b) Hitung kapasitas produksi per jam dan per tahun. (c) Jika demand 20.000 unit/tahun, apakah kapasitas cukup?</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Identifikasi Bottleneck</h4>
+        <p>Hitung effective time setiap stasiun (mesin paralel = waktu / jumlah mesin):</p>
+        <div class="tw"><table><thead><tr><th>Stasiun</th><th>Mesin</th><th>Waktu/unit</th><th>Effective Time</th></tr></thead><tbody>
+          <tr><td>Stasiun 1</td><td>3 paralel</td><td>12 min</td><td>12 / 3 = <strong>4 min</strong></td></tr>
+          <tr><td>Stasiun 2</td><td>1 mesin</td><td>5 min</td><td><strong>5 min &larr; BOTTLENECK</strong></td></tr>
+          <tr><td>Stasiun 3</td><td>2 paralel</td><td>8 min</td><td>8 / 2 = <strong>4 min</strong></td></tr>
+          <tr><td>Stasiun 4</td><td>1 mesin</td><td>3 min</td><td><strong>3 min</strong></td></tr>
+        </tbody></table></div>
+        <p><strong>Bottleneck = Stasiun 2</strong> dengan effective time 5 menit/unit (terlama).</p>
+
+        <h4>(b) Kapasitas Produksi</h4>
+        <div class="formula">
+        Cycle time = bottleneck = <strong>5 menit/unit</strong><br><br>
+        Kapasitas per jam = 60 / 5 = <strong>12 unit/jam</strong><br><br>
+        Jam kerja per tahun = 8 &times; 5 &times; 50 = <strong>2.000 jam/tahun</strong><br><br>
+        Kapasitas per tahun = 12 &times; 2.000 = <strong>24.000 unit/tahun</strong>
+        </div>
+
+        <h4>(c) Evaluasi terhadap Demand</h4>
+        <p>Demand = 20.000 unit/tahun. Kapasitas = 24.000 unit/tahun.</p>
+        <p><strong>Kapasitas CUKUP</strong> &mdash; tersisa buffer 4.000 unit (utilization = 20.000/24.000 = 83,3%). Buffer 16,7% ini sehat untuk mengakomodasi maintenance downtime, setup time, dan fluktuasi demand.</p>
+        <p>Jika demand naik menjadi &gt;24.000, solusinya: tambah mesin di Stasiun 2 (bottleneck) menjadi 2 paralel &rarr; effective time turun menjadi 2,5 min &rarr; bottleneck pindah ke Stasiun 1 dan 3 (4 min) &rarr; kapasitas naik menjadi 60/4 = 15 unit/jam = 30.000/tahun.</p>
+      </div></div>
+
+      <!-- PREDIKSI SOAL #6: PRODUCT LIFE CYCLE -->
+      <div class="soal"><div class="soal-q"><span class="num">Prediksi #6</span> <span class="arsip-label">Essay &bull; 30 poin</span> Sebuah perusahaan FMCG meluncurkan produk minuman kesehatan baru. (a) Jelaskan strategi operations management yang harus diterapkan di setiap fase product life cycle. (b) Bagaimana QFD (Quality Function Deployment) digunakan pada tahap pengembangan produk ini? (c) Jelaskan Garvin&rsquo;s 8 Dimensions of Quality untuk produk minuman kesehatan.</div><button class="soal-toggle" onclick="this.parentElement.classList.toggle('open')">Lihat Jawaban</button><div class="soal-a">
+        <h4>(a) Strategi OM di Setiap Fase Product Life Cycle</h4>
+        <div class="tw"><table><thead><tr><th>Fase</th><th>Kondisi Pasar</th><th>Strategi OM</th></tr></thead><tbody>
+          <tr><td><strong>Introduction</strong></td><td>Sales rendah, awareness rendah, biaya R&amp;D tinggi</td><td>Short production runs (batch kecil), high-skill workers untuk QC ketat, distribusi terbatas (kota besar dulu), packaging premium untuk brand building. Fokus: quality over quantity.</td></tr>
+          <tr><td><strong>Growth</strong></td><td>Sales naik cepat, demand meningkat, kompetitor mulai masuk</td><td>Scale up capacity (tambah lini produksi), forecasting demand kritis (jangan stockout), mulai standardisasi proses, expand distribusi ke kota-kota tier 2. Fokus: reliability supply.</td></tr>
+          <tr><td><strong>Maturity</strong></td><td>Sales stabil/puncak, kompetitor banyak, margin tertekan</td><td>Cost reduction (efisiensi proses, negosiasi supplier), product differentiation (varian rasa baru, ukuran baru), optimasi distribusi. Fokus: cost leadership + innovation.</td></tr>
+          <tr><td><strong>Decline</strong></td><td>Sales turun, pasar jenuh/beralih</td><td>Reduce production, harvest remaining profit, phase out varian yang tidak laku, alokasi resources ke produk baru (next generation). Fokus: graceful exit + reinvestment.</td></tr>
+        </tbody></table></div>
+        <div class="key">Leader companies generate 30&ndash;60% revenue dari produk &lt;5 tahun &rarr; product development harus terus berjalan bahkan saat produk saat ini masih di fase growth.</div>
+
+        <h4>(b) QFD / House of Quality</h4>
+        <p>Quality Function Deployment menerjemahkan suara pelanggan (Voice of Customer) menjadi spesifikasi teknis produk. Untuk minuman kesehatan:</p>
+        <div class="tw"><table><thead><tr><th>WHATs (Customer Wants)</th><th>HOWs (Engineering Specs)</th></tr></thead><tbody>
+          <tr><td>Rasa enak, tidak pahit</td><td>Formulasi sweetener, pH level, flavor masking technology</td></tr>
+          <tr><td>Benar-benar sehat/berkhasiat</td><td>Kadar vitamin (mg/100ml), uji klinis, sertifikasi BPOM</td></tr>
+          <tr><td>Praktis dibawa</td><td>Ukuran botol 250ml, berat &lt;300g, leak-proof cap</td></tr>
+          <tr><td>Harga terjangkau</td><td>COGS target &lt;Rp 5.000/unit, margin 40%</td></tr>
+          <tr><td>Shelf life panjang</td><td>Proses UHT/pasteurisasi, preservative food-grade, target 6 bulan</td></tr>
+        </tbody></table></div>
+        <p>Matriks House of Quality menghubungkan WHATs dan HOWs dengan bobot korelasi (kuat/sedang/lemah), lalu membandingkan dengan produk kompetitor untuk menentukan target teknis prioritas.</p>
+
+        <h4>(c) Garvin&rsquo;s 8 Dimensions of Quality</h4>
+        <div class="tw"><table><thead><tr><th>#</th><th>Dimensi</th><th>Aplikasi Minuman Kesehatan</th></tr></thead><tbody>
+          <tr><td>1</td><td><strong>Performance</strong></td><td>Efek kesehatan nyata: energi meningkat, imunitas lebih baik (klaim terukur)</td></tr>
+          <tr><td>2</td><td><strong>Features</strong></td><td>Fitur tambahan: ditambah probiotik, low sugar, vegan-friendly</td></tr>
+          <tr><td>3</td><td><strong>Reliability</strong></td><td>Rasa dan khasiat konsisten di setiap botol, batch demi batch</td></tr>
+          <tr><td>4</td><td><strong>Conformance</strong></td><td>Memenuhi standar BPOM, SNI, halal MUI, label gizi akurat</td></tr>
+          <tr><td>5</td><td><strong>Durability</strong></td><td>Shelf life 6 bulan tanpa perubahan rasa/warna/khasiat</td></tr>
+          <tr><td>6</td><td><strong>Serviceability</strong></td><td>Kemudahan komplain: hotline, refund/replace jika defect</td></tr>
+          <tr><td>7</td><td><strong>Aesthetics</strong></td><td>Desain botol menarik, warna minuman appealing, aroma segar</td></tr>
+          <tr><td>8</td><td><strong>Perceived Quality</strong></td><td>Brand image: endorsement ahli gizi, testimoni, packaging premium</td></tr>
+        </tbody></table></div>
+      </div></div>
+
     </div>
 
   </div>
