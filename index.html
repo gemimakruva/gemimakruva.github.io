@@ -3,268 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gede Sangu Gemi</title>
-<meta name="description" content="Founder of Makruva, Master's Student at UGM. Building decision intelligence ventures with AI-assisted engineering.">
+<title>Gede Sangu Gemi — Research Director, Makruva</title>
+<meta name="description" content="Research Director at Makruva Venture Intelligence Lab. Graduate Researcher in Systems Engineering at Universitas Gadjah Mada. AI, stochastic optimization, IoT, and sustainable technology.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0a0a0b;
-  --bg-card:#141416;
-  --bg-card-hover:#1a1a1e;
-  --text:#e8e6e3;
-  --text-dim:#9a9590;
-  --text-muted:#6b6560;
-  --accent:#c4704b;
-  --accent-light:#d4896a;
-  --accent-glow:rgba(196,112,75,0.15);
-  --border:#222226;
-  --border-hover:#333338;
-  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --bg:#fafaf8;
+  --bg-card:#ffffff;
+  --bg-card-hover:#f5f3f0;
+  --fg:#2a2520;
+  --fg-sec:#5c5650;
+  --fg-dim:#7a7470;
+  --fg-muted:#9a9590;
+  --accent:#4f46e5;
+  --accent-hover:#4338ca;
+  --accent-light:#6366f1;
+  --accent-subtle:#eef2ff;
+  --accent-glow:rgba(79,70,229,0.08);
+  --border:#e8e5e0;
+  --border-hover:#d6d1ca;
+  --shadow-sm:0 1px 3px rgba(42,37,32,0.06),0 1px 2px rgba(42,37,32,0.04);
+  --shadow-md:0 4px 12px rgba(42,37,32,0.08),0 2px 4px rgba(42,37,32,0.04);
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --serif:'Newsreader','Georgia',serif;
   --mono:'JetBrains Mono',monospace;
-  --max-w:1100px;
-  --gap:1.5rem;
+  --max-w:1060px;
+  --radius:14px;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f0e0c;
+    --bg-card:#1c1a17;
+    --bg-card-hover:#252320;
+    --fg:#f0eeeb;
+    --fg-sec:#b5aea5;
+    --fg-dim:#8a8480;
+    --fg-muted:#6b6560;
+    --accent:#818cf8;
+    --accent-hover:#a5b4fc;
+    --accent-light:#a5b4fc;
+    --accent-subtle:rgba(99,102,241,0.12);
+    --accent-glow:rgba(129,140,248,0.10);
+    --border:#2e2b27;
+    --border-hover:#3d3935;
+    --shadow-sm:0 1px 3px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.15);
+    --shadow-md:0 4px 12px rgba(0,0,0,0.25),0 2px 4px rgba(0,0,0,0.15);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f0e0c;
+  --bg-card:#1c1a17;
+  --bg-card-hover:#252320;
+  --fg:#f0eeeb;
+  --fg-sec:#b5aea5;
+  --fg-dim:#8a8480;
+  --fg-muted:#6b6560;
+  --accent:#818cf8;
+  --accent-hover:#a5b4fc;
+  --accent-light:#a5b4fc;
+  --accent-subtle:rgba(99,102,241,0.12);
+  --accent-glow:rgba(129,140,248,0.10);
+  --border:#2e2b27;
+  --border-hover:#3d3935;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.15);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.25),0 2px 4px rgba(0,0,0,0.15);
+  color-scheme:dark;
 }
 html{scroll-behavior:smooth;font-size:16px}
-body{
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-a{color:var(--accent-light);text-decoration:none;transition:color .2s}
-a:hover{color:var(--accent)}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent-hover)}
 img{max-width:100%;display:block}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
-section{padding:5rem 0}
+section{padding:4rem 0}
 section+section{border-top:1px solid var(--border)}
 
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(10,10,11,0.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-nav .container{
-  display:flex;align-items:center;justify-content:space-between;
-  height:3.5rem;
-}
-nav .logo{font-weight:600;font-size:.95rem;letter-spacing:-.02em;color:var(--text)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:3.25rem}
+nav .logo{font-weight:700;font-size:.9rem;letter-spacing:-.02em;color:var(--fg)}
 nav .logo span{color:var(--accent)}
-nav ul{list-style:none;display:flex;gap:1.75rem}
-nav ul a{color:var(--text-dim);font-size:.85rem;font-weight:500;transition:color .2s}
-nav ul a:hover{color:var(--text)}
-.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+nav ul{list-style:none;display:flex;gap:1.5rem}
+nav ul a{color:var(--fg-dim);font-size:.82rem;font-weight:500;transition:color .2s}
+nav ul a:hover{color:var(--fg)}
+.nav-toggle{display:none;background:none;border:none;color:var(--fg);font-size:1.4rem;cursor:pointer}
 
 /* HERO */
-.hero{
-  min-height:100vh;display:flex;align-items:center;
-  padding-top:6rem;padding-bottom:4rem;
-}
-.hero .container{display:flex;gap:4rem;align-items:center}
-.hero-photo{flex-shrink:0}
-.hero-photo img{
-  width:200px;height:200px;border-radius:50%;
-  object-fit:cover;object-position:center top;
-  border:3px solid var(--border);
-  filter:grayscale(20%);
-  transition:filter .3s;
-}
-.hero-photo img:hover{filter:grayscale(0)}
-.hero-text h1{
-  font-size:2.8rem;font-weight:700;letter-spacing:-.04em;
-  line-height:1.1;margin-bottom:.75rem;
-}
+.hero{min-height:85vh;display:flex;align-items:center;padding-top:5rem;padding-bottom:3rem}
+.hero .container{display:flex;gap:3rem;align-items:center}
+.hero-photo img{width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid var(--border);flex-shrink:0}
+.hero-text h1{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;line-height:1.12;margin-bottom:.5rem}
 .hero-text h1 span{color:var(--accent)}
-.hero-text .tagline{
-  font-size:1.15rem;color:var(--text-dim);
-  max-width:540px;line-height:1.7;margin-bottom:1.5rem;
-}
-.hero-links{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-links a{
-  display:inline-flex;align-items:center;gap:.4rem;
-  padding:.5rem 1rem;border-radius:6px;
-  font-size:.85rem;font-weight:500;
-  border:1px solid var(--border);color:var(--text-dim);
-  transition:all .2s;
-}
-.hero-links a:hover{border-color:var(--accent);color:var(--accent-light);background:var(--accent-glow)}
+.hero-text .role{font-size:1.05rem;color:var(--fg-sec);font-weight:500;margin-bottom:.35rem}
+.hero-text .affiliations{font-size:.88rem;color:var(--fg-dim);display:flex;flex-direction:column;gap:.1rem;margin-bottom:1rem}
+.hero-text .about{font-size:.92rem;color:var(--fg-sec);max-width:560px;line-height:1.65;margin-bottom:1.25rem}
+.hero-links{display:flex;gap:.6rem;flex-wrap:wrap}
+.hero-links a{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;font-size:.82rem;font-weight:500;border:1px solid var(--border);color:var(--fg-dim);transition:all .2s}
+.hero-links a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow)}
 
-/* STATS */
-.stats{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:1rem;margin-top:2rem;
-}
-.stat{
-  padding:1rem;border-radius:8px;
-  background:var(--bg-card);border:1px solid var(--border);
-  text-align:center;
-}
-.stat .num{font-size:1.5rem;font-weight:700;color:var(--accent);font-family:var(--mono)}
-.stat .label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:.25rem}
+/* Research areas */
+.areas{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.area-tag{background:var(--accent-subtle);color:var(--accent);font-size:.78rem;font-weight:600;padding:.3rem .65rem;border-radius:6px;letter-spacing:.01em}
 
 /* SECTION HEADERS */
-.section-header{margin-bottom:2.5rem}
-.section-header h2{
-  font-size:1.6rem;font-weight:700;letter-spacing:-.03em;
-  margin-bottom:.5rem;
-}
+.section-header{margin-bottom:2rem}
+.section-header h2{font-size:1.4rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.35rem}
 .section-header h2 span{color:var(--accent)}
-.section-header p{color:var(--text-dim);font-size:.95rem;max-width:600px}
+.section-header p{color:var(--fg-dim);font-size:.9rem;max-width:600px}
 
 /* PROJECTS */
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--gap)}
-.project-card{
-  background:var(--bg-card);border:1px solid var(--border);
-  border-radius:10px;padding:1.5rem;
-  transition:all .25s;position:relative;overflow:hidden;
-}
-.project-card:hover{
-  border-color:var(--border-hover);background:var(--bg-card-hover);
-  transform:translateY(-2px);
-}
-.project-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--accent),transparent);
-  opacity:0;transition:opacity .25s;
-}
-.project-card:hover::before{opacity:1}
-.project-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.25rem;letter-spacing:-.01em}
-.project-card .meta{
-  display:flex;gap:.75rem;margin-bottom:.75rem;
-  font-size:.75rem;color:var(--text-muted);font-family:var(--mono);
-}
-.project-card .meta .tag{
-  padding:.15rem .5rem;border-radius:4px;
-  background:var(--accent-glow);color:var(--accent-light);
-}
-.project-card p{font-size:.875rem;color:var(--text-dim);line-height:1.6}
-.project-card .stack{
-  margin-top:.75rem;display:flex;gap:.4rem;flex-wrap:wrap;
-}
-.project-card .stack span{
-  font-size:.7rem;padding:.2rem .5rem;border-radius:4px;
-  background:rgba(255,255,255,.05);color:var(--text-muted);
-  font-family:var(--mono);
-}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
+.project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.35rem;transition:all .2s;box-shadow:var(--shadow-sm)}
+.project-card:hover{border-color:var(--border-hover);background:var(--bg-card-hover);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.project-card h3{font-size:1rem;font-weight:600;margin-bottom:.2rem;letter-spacing:-.01em}
+.project-card .meta{display:flex;gap:.6rem;margin-bottom:.6rem;font-size:.72rem;color:var(--fg-muted);font-family:var(--mono)}
+.project-card .meta .tag{padding:.12rem .45rem;border-radius:5px;background:var(--accent-subtle);color:var(--accent);font-weight:500}
+.project-card p{font-size:.85rem;color:var(--fg-sec);line-height:1.55;min-width:0}
+.project-card .stack{margin-top:.6rem;display:flex;gap:.35rem;flex-wrap:wrap}
+.project-card .stack span{font-size:.68rem;padding:.18rem .45rem;border-radius:5px;background:var(--accent-glow);color:var(--fg-dim);font-family:var(--mono)}
 
 /* RESEARCH */
-.research-list{display:flex;flex-direction:column;gap:1rem}
-.research-item{
-  display:flex;gap:1.25rem;padding:1.25rem;
-  background:var(--bg-card);border:1px solid var(--border);
-  border-radius:10px;transition:border-color .2s;
-}
-.research-item:hover{border-color:var(--border-hover)}
-.research-item .year{
-  font-family:var(--mono);font-size:.8rem;color:var(--accent);
-  white-space:nowrap;padding-top:.15rem;min-width:70px;
-}
-.research-item h3{font-size:.95rem;font-weight:600;margin-bottom:.25rem}
-.research-item p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+.research-list{display:flex;flex-direction:column;gap:.75rem}
+.research-item{display:flex;gap:1rem;padding:1.15rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .2s;box-shadow:var(--shadow-sm)}
+.research-item:hover{border-color:var(--border-hover);box-shadow:var(--shadow-md)}
+.research-item .year{font-family:var(--mono);font-size:.78rem;color:var(--accent);white-space:nowrap;padding-top:.12rem;min-width:68px;font-weight:500}
+.research-item .ri-body{min-width:0}
+.research-item h3{font-size:.92rem;font-weight:600;margin-bottom:.2rem}
+.research-item p{font-size:.82rem;color:var(--fg-sec);line-height:1.55}
+.research-item .collab{font-size:.78rem;color:var(--fg-dim);margin-top:.3rem;font-style:italic}
 
 /* WRITING */
-.writing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--gap)}
-.writing-card{
-  padding:1.5rem;background:var(--bg-card);
-  border:1px solid var(--border);border-radius:10px;
-  transition:all .25s;
-}
+.writing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.writing-card{padding:1.35rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .2s;box-shadow:var(--shadow-sm)}
 .writing-card:hover{border-color:var(--border-hover);background:var(--bg-card-hover)}
-.writing-card .type{
-  font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--accent);font-weight:600;margin-bottom:.5rem;
-}
-.writing-card h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;line-height:1.4}
-.writing-card p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+.writing-card .type{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:.4rem}
+.writing-card h3{font-size:.95rem;font-weight:600;margin-bottom:.35rem;line-height:1.35}
+.writing-card p{font-size:.82rem;color:var(--fg-sec);line-height:1.55}
 
 /* EXPERIENCE */
-.timeline{display:flex;flex-direction:column;gap:1.5rem}
-.timeline-item{
-  display:grid;grid-template-columns:160px 1fr;gap:1.5rem;
-  padding:1.25rem;background:var(--bg-card);
-  border:1px solid var(--border);border-radius:10px;
-}
-.timeline-item .period{
-  font-family:var(--mono);font-size:.8rem;color:var(--accent);
-  padding-top:.15rem;
-}
-.timeline-item h3{font-size:1rem;font-weight:600;margin-bottom:.15rem}
-.timeline-item .org{font-size:.85rem;color:var(--text-dim);margin-bottom:.5rem}
-.timeline-item p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+.timeline{display:flex;flex-direction:column;gap:1rem}
+.timeline-item{display:grid;grid-template-columns:140px 1fr;gap:1.25rem;padding:1.15rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.timeline-item .period{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-top:.1rem;font-weight:500}
+.timeline-item h3{font-size:.95rem;font-weight:600;margin-bottom:.1rem}
+.timeline-item .org{font-size:.82rem;color:var(--fg-dim);margin-bottom:.35rem}
+.timeline-item p{font-size:.82rem;color:var(--fg-sec);line-height:1.55}
 
 /* SKILLS */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--gap)}
-.skill-group{
-  padding:1.5rem;background:var(--bg-card);
-  border:1px solid var(--border);border-radius:10px;
-}
-.skill-group h3{
-  font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--accent);font-weight:600;margin-bottom:1rem;
-}
-.skill-group .tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.skill-group .tags span{
-  font-size:.8rem;padding:.35rem .7rem;border-radius:5px;
-  background:rgba(255,255,255,.04);color:var(--text-dim);
-  border:1px solid rgba(255,255,255,.06);
-  transition:all .2s;
-}
-.skill-group .tags span:hover{
-  background:var(--accent-glow);color:var(--accent-light);
-  border-color:rgba(196,112,75,.3);
-}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.skill-group{padding:1.35rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.skill-group h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:.75rem}
+.skill-group .tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.skill-group .tags span{font-size:.78rem;padding:.3rem .6rem;border-radius:6px;background:var(--accent-glow);color:var(--fg-sec);border:1px solid var(--border);transition:all .2s}
+.skill-group .tags span:hover{background:var(--accent-subtle);color:var(--accent);border-color:var(--accent)}
 
 /* CONTACT */
-.contact-section{text-align:center;padding:5rem 0}
-.contact-section h2{font-size:1.6rem;font-weight:700;margin-bottom:.75rem}
-.contact-section p{color:var(--text-dim);margin-bottom:2rem;font-size:.95rem}
-.contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.contact-links a{
-  display:inline-flex;align-items:center;gap:.5rem;
-  padding:.65rem 1.25rem;border-radius:8px;
-  font-size:.9rem;font-weight:500;
-  border:1px solid var(--border);color:var(--text-dim);
-  transition:all .2s;
-}
-.contact-links a:hover{
-  border-color:var(--accent);color:var(--accent-light);
-  background:var(--accent-glow);
-}
+.contact-section{text-align:center;padding:4rem 0}
+.contact-section h2{font-size:1.4rem;font-weight:700;margin-bottom:.5rem}
+.contact-section p{color:var(--fg-dim);margin-bottom:1.5rem;font-size:.9rem}
+.contact-links{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.contact-links a{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;border:1px solid var(--border);color:var(--fg-dim);transition:all .2s}
+.contact-links a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-glow)}
 
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);padding:2rem 0;
-  text-align:center;font-size:.8rem;color:var(--text-muted);
-}
+footer{border-top:1px solid var(--border);padding:1.5rem 0;text-align:center;font-size:.78rem;color:var(--fg-muted)}
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero .container{flex-direction:column;text-align:center;gap:2rem}
-  .hero-text h1{font-size:2rem}
-  .hero-text .tagline{margin-left:auto;margin-right:auto}
+  .hero .container{flex-direction:column;text-align:center;gap:1.5rem}
+  .hero-text .affiliations{align-items:center}
+  .hero-text .about{margin-left:auto;margin-right:auto}
   .hero-links{justify-content:center}
-  .hero-photo img{width:160px;height:160px}
-  nav ul{display:none;position:absolute;top:3.5rem;left:0;right:0;background:var(--bg);
-    flex-direction:column;padding:1rem 1.5rem;border-bottom:1px solid var(--border);gap:.75rem}
+  .hero-photo img{width:150px;height:150px}
+  .hero-text h1{font-size:1.9rem}
+  .areas{justify-content:center}
+  nav ul{display:none;position:absolute;top:3.25rem;left:0;right:0;background:var(--bg);flex-direction:column;padding:.75rem 1.5rem;border-bottom:1px solid var(--border);gap:.5rem}
   nav ul.open{display:flex}
   .nav-toggle{display:block}
-  .projects-grid{grid-template-columns:1fr}
-  .writing-grid{grid-template-columns:1fr}
-  .timeline-item{grid-template-columns:1fr;gap:.5rem}
+  .projects-grid,.writing-grid{grid-template-columns:1fr}
+  .timeline-item{grid-template-columns:1fr;gap:.35rem}
   .timeline-item .period{padding-top:0}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  section{padding:3.5rem 0}
-  .research-item{flex-direction:column;gap:.5rem}
+  section{padding:3rem 0}
+  .research-item{flex-direction:column;gap:.35rem}
   .research-item .year{min-width:auto}
 }
 @media(max-width:400px){
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .hero-text h1{font-size:1.7rem}
+  .hero-text h1{font-size:1.6rem}
   .skills-grid{grid-template-columns:1fr}
 }
 </style>
@@ -273,12 +199,12 @@ footer{
 
 <nav>
   <div class="container">
-    <a href="#" class="logo">gede<span>.</span></a>
+    <a href="#" class="logo">gede<span>.</span>gemi</a>
     <button class="nav-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Menu">&#9776;</button>
     <ul>
-      <li><a href="#projects" onclick="closeNav()">Projects</a></li>
       <li><a href="#research" onclick="closeNav()">Research</a></li>
-      <li><a href="#writing" onclick="closeNav()">Writing</a></li>
+      <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+      <li><a href="#publications" onclick="closeNav()">Publications</a></li>
       <li><a href="#experience" onclick="closeNav()">Experience</a></li>
       <li><a href="#contact" onclick="closeNav()">Contact</a></li>
     </ul>
@@ -288,89 +214,42 @@ footer{
 <section class="hero">
   <div class="container">
     <div class="hero-photo">
-      <img src="assets/photo.png" alt="Gede Sangu Gemi" width="200" height="200">
+      <img src="assets/photo.png" alt="Gede Sangu Gemi" width="180" height="180">
     </div>
     <div class="hero-text">
       <h1>Gede Sangu <span>Gemi</span></h1>
-      <p class="tagline">Founder of <strong>Makruva</strong>, a decision intelligence venture studio. Master's student in Systems Engineering at Universitas Gadjah Mada. I ship production software end-to-end with AI, then turn that practice into tools and standards other people can use.</p>
+      <p class="role">Research Director, Makruva &middot; Graduate Researcher</p>
+      <div class="affiliations">
+        <span>Makruva &mdash; Venture Intelligence Lab, Yogyakarta</span>
+        <span>Faculty of Engineering, Universitas Gadjah Mada</span>
+      </div>
+      <p class="about">I lead applied research at Makruva, a venture intelligence studio building AI-powered tools and systems for emerging-market challenges. My graduate research at UGM focuses on stochastic decision frameworks using machine learning and Monte Carlo simulation for agroindustry supply chain optimization. I work across the full research-to-product pipeline: algorithmic design, systems engineering, IoT prototyping, and AI agent architecture.</p>
       <div class="hero-links">
+        <a href="mailto:gemi@makruva.com">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM16 11.801V4.697l-5.803 3.546L16 11.801Z"/></svg>
+          gemi@makruva.com
+        </a>
         <a href="https://github.com/gemimakruva" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           GitHub
         </a>
         <a href="https://linkedin.com/in/gede-sangu-gemi" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
           LinkedIn
         </a>
         <a href="https://makruva.com" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/></svg>
           makruva.com
         </a>
-        <a href="mailto:gemigede@gmail.com">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM16 11.801V4.697l-5.803 3.546L16 11.801Z"/></svg>
-          Email
-        </a>
       </div>
-      <div class="stats">
-        <div class="stat"><div class="num">3,100+</div><div class="label">AI Sessions</div></div>
-        <div class="stat"><div class="num">44.1B</div><div class="label">Tokens Processed</div></div>
-        <div class="stat"><div class="num">7+</div><div class="label">Repos Built</div></div>
-        <div class="stat"><div class="num">2</div><div class="label">Books Published</div></div>
+      <div class="areas">
+        <span class="area-tag">Machine Learning</span>
+        <span class="area-tag">Stochastic Optimization</span>
+        <span class="area-tag">AI Agent Systems</span>
+        <span class="area-tag">Supply Chain Modeling</span>
+        <span class="area-tag">IoT</span>
+        <span class="area-tag">Sustainable Tech</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="container">
-    <div class="section-header">
-      <h2>Selected <span>Projects</span></h2>
-      <p>Production systems and open-source tools built end-to-end with AI-assisted engineering.</p>
-    </div>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>Produkteev CRM</h3>
-        <div class="meta"><span class="tag">Production</span><span>468 commits</span><span>14 deploys</span></div>
-        <p>Omnichannel CRM platform for Indonesian SMBs. Monorepo architecture, zero-downtime deploys with Caddy, webhook proxy routing, Developer API plugin, and AI chatbot optimization.</p>
-        <div class="stack"><span>Express</span><span>React</span><span>PostgreSQL</span><span>Caddy</span></div>
-      </div>
-
-      <div class="project-card">
-        <h3>Kompas Founder</h3>
-        <div class="meta"><span class="tag">Active</span><span>258 commits</span></div>
-        <p>Founder assessment and development platform. Structured learning, Venture Intelligence principles, 36-item UI/UX audit cycle, and a design system defined as machine-readable tokens.</p>
-        <div class="stack"><span>Next.js</span><span>React</span><span>Vercel</span></div>
-      </div>
-
-      <div class="project-card">
-        <h3>Export Aggregator</h3>
-        <div class="meta"><span class="tag">Development</span></div>
-        <p>AI-powered curated B2B aggregator connecting international buyers with Indonesian suppliers. Matching engine with registration, curation, contact facilitation, and trust ratings.</p>
-        <div class="stack"><span>AI/ML</span><span>Node.js</span><span>REST API</span></div>
-      </div>
-
-      <div class="project-card">
-        <h3>claude-eksekusi</h3>
-        <div class="meta"><span class="tag">Open Source</span><span>MIT</span></div>
-        <p>Execution mode selector skill for Claude Code. Asks how a plan should run (Subagent, Inline, Auto, Bypass, Full Power) before any work starts.</p>
-        <div class="stack"><span>Markdown</span><span>Claude Skills</span></div>
-      </div>
-
-      <div class="project-card">
-        <h3>claude-mem</h3>
-        <div class="meta"><span class="tag">Plugin</span></div>
-        <p>Persistent memory plugin for Claude Code. Captures tool usage, compresses observations, and injects relevant context into future sessions via 6 lifecycle hooks.</p>
-        <div class="stack"><span>TypeScript</span><span>SQLite</span><span>Bun</span></div>
-      </div>
-
-      <div class="project-card">
-        <h3>Makruva Engineering Standard</h3>
-        <div class="meta"><span class="tag">Studio-wide</span><span>v1.2</span></div>
-        <p>Full SDLC standard from idea to handover, distributed as Claude Code skills, hooks, templates, and CLAUDE.md. Every project in the studio runs the same reviewed process.</p>
-        <div class="stack"><span>Claude Skills</span><span>Hooks</span><span>CI/CD</span></div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -379,67 +258,138 @@ footer{
   <div class="container">
     <div class="section-header">
       <h2>Research &amp; <span>Frameworks</span></h2>
-      <p>Applied research spanning venture intelligence, precision agriculture, and value-chain optimization.</p>
+      <p>Applied research spanning stochastic optimization, AI systems, precision agriculture, and value-chain analysis.</p>
     </div>
     <div class="research-list">
       <div class="research-item">
-        <div class="year">2024 &ndash;</div>
-        <div>
-          <h3>MLAF (Multi-Layer Analysis Framework)</h3>
-          <p>Multi-dimensional framework for assessing venture feasibility, risk, and opportunity across business, market, and operational layers.</p>
-        </div>
-      </div>
-      <div class="research-item">
         <div class="year">2025 &ndash;</div>
-        <div>
-          <h3>Makruva Intelligence Platform (MIP)</h3>
-          <p>AI-powered decision intelligence operating system for venture analysis, decision support, and knowledge management.</p>
+        <div class="ri-body">
+          <h3>Stochastic Decision Framework for Agroindustry Supply Chains</h3>
+          <p>Developing a stochastic decision-making framework combining machine learning with Monte Carlo simulation to optimize coconut agroindustry supply chain operations under uncertainty. Graduate thesis research.</p>
+          <p class="collab">Collaborative research with BRIN (National Research and Innovation Agency) on coconut downstream processing.</p>
         </div>
       </div>
       <div class="research-item">
         <div class="year">2024 &ndash;</div>
-        <div>
-          <h3>SmartFarm IoT &mdash; Soil Fertility System</h3>
-          <p>IoT-based precision agriculture measurement system. Collaboration with Prof. Ir. Moh. Khairudin, M.T., Ph.D., IPU (Universitas Negeri Yogyakarta).</p>
+        <div class="ri-body">
+          <h3>MLAF &mdash; Multi-Layer Analysis Framework</h3>
+          <p>Multi-dimensional venture feasibility framework combining market sizing, competitive mapping, technical feasibility scoring, and financial modeling into a structured decision matrix. Now at v2.0.</p>
         </div>
       </div>
       <div class="research-item">
         <div class="year">2024 &ndash;</div>
-        <div>
-          <h3>Coconut Downstream Processing</h3>
-          <p>Value-added processing of coconut derivatives for economic optimization. Collaboration with Dr. Arry Darmawan, S.Si., M.Sc. (BRIN).</p>
+        <div class="ri-body">
+          <h3>SmartTani IoT &mdash; Soil Fertility System</h3>
+          <p>IoT-based precision agriculture measurement and monitoring system. Real-time sensor data collection with agronomic decision support dashboard.</p>
+          <p class="collab">Collaboration with Prof. Ir. Moh. Khairudin, M.T., Ph.D., IPU &mdash; Universitas Negeri Yogyakarta.</p>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="year">2024 &ndash;</div>
+        <div class="ri-body">
+          <h3>Coconut Downstream Processing Optimization</h3>
+          <p>Value-added processing of coconut derivatives for economic optimization across the agroindustry value chain.</p>
+          <p class="collab">Collaboration with Dr. Arry Darmawan, S.Si., M.Sc. &mdash; BRIN.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="writing">
+<section id="projects">
   <div class="container">
     <div class="section-header">
-      <h2>Writing &amp; <span>Speaking</span></h2>
-      <p>Books, talks, and mentorship on entrepreneurship, technology, and AI-assisted work.</p>
+      <h2>Lab <span>Projects</span></h2>
+      <p>Production systems, hardware prototypes, and open-source tools from the Makruva Venture Intelligence Lab.</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>AquaPress 3D</h3>
+        <div class="meta"><span class="tag">Hardware</span><span>Prototype</span></div>
+        <p>3D-printed water filtration system for rural and underserved communities. Combines additive manufacturing with locally sourced filter media to produce affordable, field-replaceable purification units.</p>
+        <div class="stack"><span>3D Printing</span><span>CAD</span><span>Filtration</span><span>Material Science</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>ATM Sampah</h3>
+        <div class="meta"><span class="tag">Social Impact</span><span>Prototype</span></div>
+        <p>Automated waste collection and incentive system for community recycling. Handles weighing, material identification, and credit disbursement for sorted recyclable deposits.</p>
+        <div class="stack"><span>IoT</span><span>Embedded Systems</span><span>Payment</span><span>Mechanical</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>Kompas Founder</h3>
+        <div class="meta"><span class="tag">Production</span><span>AI Assessment</span></div>
+        <p>Psychometric founder assessment platform profiling entrepreneurs across 48 dimensions into four archetypes. DNA-style profiling with automated development recommendations.</p>
+        <div class="stack"><span>Laravel</span><span>Filament</span><span>Livewire</span><span>MySQL</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>Konduktor</h3>
+        <div class="meta"><span class="tag">Open Source</span><span>MIT</span></div>
+        <p>Multi-agent orchestrator for AI development workflows. Real-time WebSocket coordination, session lifecycle management, and monitoring dashboard. Monorepo architecture.</p>
+        <div class="stack"><span>TypeScript</span><span>Express</span><span>React</span><span>WebSocket</span><span>SQLite</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>Makruva Engineering Standard</h3>
+        <div class="meta"><span class="tag">Framework</span><span>v1.3</span></div>
+        <p>Comprehensive SDLC framework covering nine phases from business requirements through deployment. Automated quality gates, security checklists, and AI-assisted review workflows.</p>
+        <div class="stack"><span>SDLC</span><span>CI/CD</span><span>Quality Engineering</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>claude-mem</h3>
+        <div class="meta"><span class="tag">Plugin</span><span>Open Source</span></div>
+        <p>Persistent contextual memory system for AI coding agents. Lifecycle-aware observation capture, vector-based semantic search, and temporal context retrieval.</p>
+        <div class="stack"><span>TypeScript</span><span>SQLite</span><span>Vector Search</span><span>React</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>Produkteev CRM</h3>
+        <div class="meta"><span class="tag">Production</span><span>SaaS</span></div>
+        <p>Omnichannel CRM platform for Indonesian SMBs. Monorepo architecture, zero-downtime deploys, webhook proxy routing, and Developer API plugin system.</p>
+        <div class="stack"><span>Express</span><span>React</span><span>PostgreSQL</span><span>Caddy</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3>Export Aggregator</h3>
+        <div class="meta"><span class="tag">Development</span><span>AI</span></div>
+        <p>AI-powered B2B aggregator connecting international buyers with Indonesian suppliers. Matching engine with curation, contact facilitation, and trust ratings.</p>
+        <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <div class="section-header">
+      <h2>Publications &amp; <span>Speaking</span></h2>
+      <p>Books, research publications, talks, and mentorship on entrepreneurship, technology, and AI.</p>
     </div>
     <div class="writing-grid">
       <div class="writing-card">
-        <div class="type">Speaker</div>
-        <h3>Go Digital With AI: Using AI in Administration and Finance</h3>
-        <p>Legal Kreatif, August 2026. Built and published the full session as a live web app rather than a slide file.</p>
+        <div class="type">ISBN Publication</div>
+        <h3>Peta Jalan Hilirisasi Kelapa</h3>
+        <p>Coconut Downstream Processing Roadmap. Collaborative research with Dr. Arry Darmawan, BRIN on value-chain optimization for coconut agroindustry.</p>
       </div>
       <div class="writing-card">
         <div class="type">Book</div>
         <h3>Mulai Usaha dari Nol</h3>
-        <p>Starting a Business from Zero. A practical guide from mindset and idea through validation to execution.</p>
+        <p>Starting a Business from Zero. A practical guide from mindset and idea through validation to execution for first-time founders.</p>
       </div>
       <div class="writing-card">
         <div class="type">Book</div>
         <h3>Kenapa Banyak Bisnis Gagal Sebelum Dimulai</h3>
-        <p>Why Most Businesses Fail Before They Start. On the psychology of how people begin building.</p>
+        <p>Why Most Businesses Fail Before They Start. Analysis of venture failure patterns and prevention frameworks.</p>
       </div>
       <div class="writing-card">
-        <div class="type">Mentor</div>
-        <h3>Venture Intelligence Mentorship</h3>
-        <p>Strategic decision-making guidance for founders and executives through Makruva's frameworks and methodology.</p>
+        <div class="type">Speaker</div>
+        <h3>Go Digital With AI</h3>
+        <p>Using AI in Administration and Finance. Invited talk at Legal Kreatif, August 2026.</p>
       </div>
     </div>
   </div>
@@ -454,9 +404,9 @@ footer{
       <div class="timeline-item">
         <div class="period">2024 &ndash; Now</div>
         <div>
-          <h3>Director</h3>
+          <h3>Director &amp; Research Lead</h3>
           <div class="org">Makruva (Venture Intelligence), Yogyakarta</div>
-          <p>Lead a decision intelligence venture studio that builds and empowers new ventures through research, frameworks, technology, and ecosystem. Own digital product development, business strategy, and the studio's AI-assisted engineering practice.</p>
+          <p>Lead a decision intelligence venture studio building and empowering new ventures through research, frameworks, technology, and ecosystem. Own digital product development, research direction, and AI-assisted engineering practice.</p>
         </div>
       </div>
       <div class="timeline-item">
@@ -464,7 +414,7 @@ footer{
         <div>
           <h3>Co-Founder</h3>
           <div class="org">Makruva Digital Solusi, Bantul, Yogyakarta</div>
-          <p>Develop digital and technology solutions supporting business transformation and data-driven, AI-driven operations for small and mid-sized clients.</p>
+          <p>Develop digital and technology solutions supporting business transformation and data-driven operations for small and mid-sized clients.</p>
         </div>
       </div>
       <div class="timeline-item">
@@ -479,16 +429,15 @@ footer{
         <div class="period">In Progress</div>
         <div>
           <h3>M.Eng. Systems Engineering</h3>
-          <div class="org">Universitas Gadjah Mada, Yogyakarta</div>
-          <p>Magister Teknik Sistem, Faculty of Engineering. Research focus on value-chain optimization and decision intelligence.</p>
+          <div class="org">Universitas Gadjah Mada, Faculty of Engineering</div>
+          <p>Magister Teknik Sistem. Thesis: Stochastic decision framework using ML and Monte Carlo simulation for coconut agroindustry supply chain optimization.</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="period">Completed</div>
         <div>
-          <h3>Bachelor of Education</h3>
+          <h3>B.Ed. Electrical Engineering Education</h3>
           <div class="org">Universitas Negeri Yogyakarta</div>
-          <p>Electrical Engineering Education.</p>
         </div>
       </div>
     </div>
@@ -498,48 +447,45 @@ footer{
 <section id="skills-section">
   <div class="container">
     <div class="section-header">
-      <h2>Technical <span>Skills</span></h2>
+      <h2>Technical <span>Expertise</span></h2>
     </div>
     <div class="skills-grid">
       <div class="skill-group">
-        <h3>AI &amp; Agentic Tooling</h3>
+        <h3>AI &amp; Machine Learning</h3>
         <div class="tags">
-          <span>Claude Code</span>
-          <span>Claude API</span>
-          <span>Skills & Plugins</span>
-          <span>Hooks</span>
-          <span>Subagents</span>
-          <span>MCP</span>
+          <span>Claude Code &amp; API</span>
           <span>Prompt Engineering</span>
           <span>Context Engineering</span>
-          <span>AI-Assisted SDLC</span>
+          <span>Multi-Agent Systems</span>
+          <span>MCP Protocol</span>
+          <span>Scikit-learn</span>
+          <span>Monte Carlo Methods</span>
+          <span>Stochastic Modeling</span>
         </div>
       </div>
       <div class="skill-group">
         <h3>Engineering</h3>
         <div class="tags">
           <span>TypeScript</span>
-          <span>Node.js</span>
-          <span>Next.js</span>
-          <span>React</span>
-          <span>PHP</span>
           <span>Python</span>
+          <span>Node.js</span>
+          <span>React</span>
+          <span>Laravel</span>
+          <span>PostgreSQL</span>
           <span>REST APIs</span>
-          <span>GitHub Actions</span>
-          <span>Caddy</span>
-          <span>Vercel</span>
           <span>IoT Systems</span>
+          <span>3D Printing</span>
         </div>
       </div>
       <div class="skill-group">
-        <h3>Domain</h3>
+        <h3>Research &amp; Strategy</h3>
         <div class="tags">
+          <span>Systems Engineering</span>
           <span>Venture Analysis</span>
-          <span>Financial Modelling</span>
-          <span>Product Strategy</span>
-          <span>Go-to-Market</span>
+          <span>Supply Chain Modeling</span>
+          <span>Financial Modeling</span>
           <span>Research Design</span>
-          <span>Systems Thinking</span>
+          <span>Decision Science</span>
         </div>
       </div>
     </div>
@@ -549,22 +495,22 @@ footer{
 <section id="contact" class="contact-section">
   <div class="container">
     <h2>Get in <span style="color:var(--accent)">Touch</span></h2>
-    <p>Open to collaborations, speaking invitations, and interesting conversations.</p>
+    <p>Open to research collaborations, speaking invitations, and interesting conversations.</p>
     <div class="contact-links">
-      <a href="mailto:gemigede@gmail.com">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM16 11.801V4.697l-5.803 3.546L16 11.801Z"/></svg>
-        gemigede@gmail.com
+      <a href="mailto:gemi@makruva.com">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM16 11.801V4.697l-5.803 3.546L16 11.801Z"/></svg>
+        gemi@makruva.com
       </a>
       <a href="https://linkedin.com/in/gede-sangu-gemi" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
         LinkedIn
       </a>
       <a href="https://github.com/gemimakruva" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         GitHub
       </a>
       <a href="https://makruva.com" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/></svg>
         makruva.com
       </a>
     </div>
@@ -573,7 +519,7 @@ footer{
 
 <footer>
   <div class="container">
-    <p>&copy; 2024 Gede Sangu Gemi. Yogyakarta, Indonesia.</p>
+    <p>&copy; 2024 Gede Sangu Gemi &middot; Makruva Venture Intelligence &middot; Yogyakarta, Indonesia</p>
   </div>
 </footer>
 
